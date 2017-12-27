@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1801.29" height="136.37" viewBox="0 0 1801.29 136.37">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1801.29" y1="68.18" x2="0" y2="68.18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f3449"/>
+      <stop offset="0.7" stop-color="#3f4563" stop-opacity="0.8"/>
+      <stop offset="0.85" stop-color="#3f4563" stop-opacity="0.93"/>
+      <stop offset="1" stop-color="#3f4563"/>
+    </linearGradient>
+  </defs>
+  <title>bg-bt</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Stats">
+        <polygon points="0 116.38 1801.29 136.37 1801.29 41.98 0 0 0 116.38" style="opacity: 0.45;fill: url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

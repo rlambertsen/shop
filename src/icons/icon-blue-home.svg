@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.34" height="12.51" viewBox="0 0 12.34 12.51">
+  <title>icon-blue-home</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Benefits_-_1200" data-name="Benefits - 1200">
+      <g id="Header">
+        <g id="Home_Icon" data-name="Home Icon">
+          <path d="M.18,4.63,6,.1a.46.46,0,0,1,.57,0l5.57,4.53A.46.46,0,0,1,12.3,5v7a.46.46,0,0,1-.46.46H.46A.46.46,0,0,1,0,12V5A.46.46,0,0,1,.18,4.63Z" style="fill: #03a9f4"/>
+          <polyline points="7.54 12.51 7.54 8.88 4.9 8.88 4.9 12.51" style="fill: #fff"/>
+          <path d="M12.34,5,11,3.85a.38.38,0,0,1-.13-.29V.65a.38.38,0,0,0-.38-.38H9.73a.38.38,0,0,0-.38.38v1A.38.38,0,0,1,8.74,2L6.41.21a.38.38,0,0,0-.46,0L.08,4.8" style="fill: #03a9f4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000.58" height="157.66" viewBox="0 0 1000.58 157.66">
+  <defs>
+    <linearGradient id="linear-gradient" x1="16.01" y1="89.8" x2="989.86" y2="89.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f3449"/>
+      <stop offset="0.1" stop-color="#2f3449"/>
+      <stop offset="0.9" stop-color="#3f4563"/>
+      <stop offset="1" stop-color="#3f4563"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="29.52" x2="1000.5" y2="29.52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3f4563" stop-opacity="0.6"/>
+      <stop offset="0.32" stop-color="#455879" stop-opacity="0.64"/>
+      <stop offset="0.72" stop-color="#4c6a8e" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#4e7096" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="1000.58" y1="119.82" x2="0" y2="119.82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f3449"/>
+      <stop offset="0.7" stop-color="#3f4563" stop-opacity="0.8"/>
+      <stop offset="0.85" stop-color="#3f4563" stop-opacity="0.93"/>
+      <stop offset="1" stop-color="#3f4563"/>
+    </linearGradient>
+  </defs>
+  <title>blue-bg</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <polygon points="1000.58 149.72 0 138.75 0 29.88 1000.58 38.1 1000.58 149.72" style="fill: url(#linear-gradient)"/>
+      <polygon points="1000.5 59.03 0 31.31 0 0 999.94 0 1000.5 59.03" style="fill: url(#linear-gradient-2)"/>
+      <polygon points="0 146.56 1000.58 157.66 1000.58 105.28 0 81.98 0 146.56" style="opacity: 0.45;fill: url(#linear-gradient-3)"/>
+    </g>
+  </g>
+</svg>

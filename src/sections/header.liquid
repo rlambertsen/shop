@@ -1,0 +1,274 @@
+<section class="malware-banner">
+  <div class="container">
+    <div class=" d-flex align-items-center justify-content-around  position-relative ">
+      <div class="text-shadow work position-relative ">Got Malware?</div>
+      <div class="border-bottom border-white lato fs15 white-text">Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}</div>
+      <div class="text-shadow work position-relative ">Or Call (888) 222-2222</div>
+    </div>
+  </div>
+</section>
+{% if template == 'index' %}
+  <section class="hero pt-3">
+{% else %}
+  <section class="hero pt-3" style="background:none;min-height:518px;">
+{% endif %}
+
+  <nav class="navbar navbar-expand-lg container">
+    <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+      {% if section.settings.logo != blank %}
+        {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+        <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+      {% else %}
+        {{ shop.name }}
+      {% endif %}
+    </a>
+    <button class="navbar-toggler collapsed p-0" type="button" data-toggle="collapse" data-target=".mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="50" height="30" focusable="false">
+        <title>Menu</title>
+        <path stroke="#969C9C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h35M4 15h35M4 23h45"></path></svg>
+    </button>
+    <!-- start search, account and cart links -->
+    <div class="collapse navbar-collapse justify-content-end  mainNav search-desktop" >
+      {% if shop.customer_accounts_enabled %}
+       <ul class="navbar-nav work ">
+          <li class="nav-item">
+            <!--<form action="/search" method="get" role="search">-->
+              <a class="nav-link" href="/search">
+                {% include 'icon-search' %}
+                <span class="icon-fallback-text sr-only">{{ 'general.search.submit' | t }}</span>
+              </a>
+            <!-- </form> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs15">1-888-555-5555</a>
+          </li>
+          {% if customer %}
+            <li class="nav-item">
+              {% if customer.first_name != blank %}
+                <a class="nav-link fs12" href="/account">{{ 'customer.account.title' | t }}</a>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              {{ 'layout.customer.log_out' | t | customer_logout_link }}
+            </li>
+          {% else %}
+            <li class="nav-item">
+              {{ 'layout.customer.log_in' | t | customer_login_link }}
+            </li>
+            <li class="nav-item nav-link fs12">/</li>
+            <li class="nav-item">
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li>
+          {% endif %}
+          <li class="nav-item">
+            <a  class="nav-link" href="/cart">
+              <div class="d-flex flex-row fs12">
+                <div class="">Cart</div>
+                <div class="position-relative">
+                  {% include 'icon-cart' %}
+                  <span class="badge badge-primary position-absolute">({{ cart.item_count }}<!-- {{ 'layout.cart.items_count' | t: count: cart.item_count }} -->)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg container mobile-navbar">
+    <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile" >
+      {% if shop.customer_accounts_enabled %}
+       <ul class="navbar-nav work ">
+          <li class="nav-item">
+            <!--<form action="/search" method="get" role="search">-->
+              <a class="nav-link" href="/search">
+                {% include 'icon-search' %}
+                <span class="icon-fallback-text sr-only">{{ 'general.search.submit' | t }}</span>
+              </a>
+            <!-- </form> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs15">1-888-555-5555</a>
+          </li>
+          {% if customer %}
+            <li class="nav-item">
+              {% if customer.first_name != blank %}
+                <a class="nav-link fs12" href="/account">{{ 'customer.account.title' | t }}</a>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              {{ 'layout.customer.log_out' | t | customer_logout_link }}
+            </li>
+          {% else %}
+            <li class="nav-item">
+              {{ 'layout.customer.log_in' | t | customer_login_link }}
+            </li>
+            <li class="nav-item nav-link fs12">/</li>
+            <li class="nav-item">
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li>
+          {% endif %}
+          <li class="nav-item">
+            <a  class="nav-link" href="/cart">
+              <div class="d-flex flex-row fs12">
+                <div class="">Cart</div>
+                <div class="position-relative">
+                  {% include 'icon-cart' %}
+                  <span class="badge badge-primary position-absolute">({{ cart.item_count }}<!-- {{ 'layout.cart.items_count' | t: count: cart.item_count }} -->)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
+    <div class="collapse navbar-collapse justify-content-end mainNav" >
+      <ul class="navbar-nav mont fs16 main-links chrome-fw500">
+          {% assign menu = linklists.main-menu %}
+          {% for link in menu.links %}
+            {% if forloop.last == true %}
+              {% if link.links != blank %}
+                <li class="nav-item dropdown">
+                  <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+                    <div class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
+                      {% for sub_link in link.links %}
+                        <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                      {% endfor %}
+                    </div>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a href="{{ link.url }}" class="nav-link darkish-blue-text">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% else %}
+              {% if link.links != blank %}
+                <li class="nav-item dropdown mr-5">
+                  <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+                    <div class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
+                      {% for sub_link in link.links %}
+                        <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                      {% endfor %}
+                    </div>
+                </li>
+              {% else %}
+                <li class="nav-item mr-5">
+                  <a href="{{ link.url }}" class="nav-link darkish-blue-text">{{ link.title }}</a>
+                </li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  <!-- end nav -->
+  <!-- Mobile malware banner -->
+  <section class="malware-banner-mobile hidden py-4">
+    <div class="container white-text">
+      <div class="row text-center">
+        <div class="col-12 HeaderB-Level3">
+          <p class="mb-2">Got Malware?</p>
+        </div>
+        <div class="col-12">
+          <div class="border-bottom border-white lato fs15 white-text w-75 m-auto">
+            Get <strong>FREE</strong> Malware Removeal Now
+          </div>
+        </div>
+        <div class="col-12 work position-relative ">
+          <p class="my-2"><a href="tel:" class="white-text">(888) 222-2222</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End -->
+  <!-- start banner -->
+  {% if template == 'index' %}
+    <div class="hero__cta">
+      <div class="container">
+        <div class="row flex-column align-items-center mt-5">
+          <div class="hero__cta--1 row position-relative word-lines" style=" ">
+            <span class="col-1 border-bottom border-grey position-relative"></span>
+            <span class="col-auto mont fs15 lsp1 text-uppercase lsp2">cwatch web</span>
+            <span class="col-1 border-bottom border-grey position-relative"></span>
+          </div>
+          <div class="hero__cta--2 work font-weight-light fs35">The Only Website Security-as-a-Service Driven by Human Expertise</div>
+          <div class="hero__cta--3 row text-center position-relative mt-3">
+            <span class="mont font-italic fs12 position-relative">Plans Starting At</span>
+            <span class="work dollar-sign fs28 position-relative">$</span>
+            <span class="work dollar-sign fs70 font-weight-light">9.</span>
+            <span class="work dollar-sign fs19 position-relative">90</span>
+            <span class="work dollar-sign fs16 position-relative">/ mo.</span>
+          </div>
+          <div class="hero__cta--4 position-relative mt-2">
+            <a href="#" class="btn btn-success btn-cta-rd text-uppercase mont fs17 p-0"><p class="btn-text btn-success-text-shadow m-0 chrome-fw600">protect your site today</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if template contains 'benefits' %}
+    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">The Benefits of cWatch Web to Your Business</h1>
+             <p class="FeatureText-Level3">We keep your website safe so you can stay focused on your business</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+  {% if template contains 'csoc' %}
+    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)</h1>
+             <p class="FeatureText-Level3">Affordably Outsource or Expand Your IT Security Team with cWatch Web’s CSOC</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+  {% if template contains 'firewall' %}
+    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">Advanced Threat Protection — Web Application Firewall (WAF)</h1>
+             <p class="FeatureText-Level3">Instantly Leverage Best-of-Breed Defense Against Cyber Threats with cWatch Web’s WAF </p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo image"
+      },
+      {
+        "type": "range",
+        "id": "logo_max_width",
+        "min": 50,
+        "max": 450,
+        "step": 10,
+        "unit": "px",
+        "label": "Custom logo width",
+        "default": 250
+      },
+      {
+        "type": "link_list",
+        "id": "main_linklist",
+        "label": "Menu",
+        "default": "main-menu"
+      }
+    ]
+  }
+{% endschema %}

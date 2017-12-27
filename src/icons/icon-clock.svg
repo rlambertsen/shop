@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.22" height="32.03" viewBox="0 0 39.22 32.03">
+  <title>icon-clock</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="First_Module" data-name="First Module">
+        <g id="Advantages">
+          <g id="Icon_Group" data-name="Icon Group">
+            <g id="icon">
+              <g>
+                <g>
+                  <path d="M28.08,4.12a14.65,14.65,0,0,1,4.56,7.53,14.49,14.49,0,0,1,.18,6" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+                  <polygon points="29.09 13.85 29.9 13.26 32.77 17.27 36.56 14.12 37.2 14.89 32.59 18.73 29.09 13.85" style="fill: #3f4563"/>
+                </g>
+                <path d="M7.36,5.63A14.59,14.59,0,0,1,28.08,4.12" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 2.2586264610290527,3.0115020275115967"/>
+              </g>
+              <g>
+                <g>
+                  <path d="M9.09,26.16A14.59,14.59,0,0,1,4.36,12.6" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+                  <polygon points="8.12 16.4 7.31 16.99 4.41 13 0.65 16.18 0 15.42 4.59 11.54 8.12 16.4" style="fill: #3f4563"/>
+                </g>
+                <path d="M22,29.4A14.61,14.61,0,0,1,9.09,26.16" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 2.2586264610290527,3.0115020275115967"/>
+              </g>
+              <circle cx="17.8" cy="15.81" r="0.84" style="fill: none;stroke: #3f4563;stroke-miterlimit: 10;stroke-width: 0.752875506877899px"/>
+              <polyline points="17.8 10.99 17.8 15.81 23.69 15.81" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <text transform="translate(24.76 27.97)" style="font-size: 12px;fill: #3f4563;font-family: WorkSans-SemiBold, Work Sans;font-weight: 700;letter-spacing: -0.019002278645833332em">2<tspan x="6.86" y="0" style="letter-spacing: 0.000040690104166666664em">4</tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

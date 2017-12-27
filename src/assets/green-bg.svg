@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1800" height="614.26" viewBox="0 0 1800 614.26">
+  <defs>
+    <linearGradient id="linear-gradient" x1="22.05" y1="291.27" x2="515.48" y2="300.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1fc469" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#1fc469" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="53.24" x2="1800" y2="53.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23e390"/>
+      <stop offset="0.18" stop-color="#23e390" stop-opacity="0.86"/>
+      <stop offset="0.41" stop-color="#23e390" stop-opacity="0.71"/>
+      <stop offset="0.64" stop-color="#23e390" stop-opacity="0.59"/>
+      <stop offset="0.84" stop-color="#23e390" stop-opacity="0.52"/>
+      <stop offset="1" stop-color="#23e390" stop-opacity="0.5"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="556.02" x2="1800" y2="556.02" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#23e390"/>
+      <stop offset="0.19" stop-color="#23e390" stop-opacity="0.77"/>
+      <stop offset="0.38" stop-color="#23e390" stop-opacity="0.56"/>
+      <stop offset="0.56" stop-color="#23e390" stop-opacity="0.41"/>
+      <stop offset="0.73" stop-color="#23e390" stop-opacity="0.29"/>
+      <stop offset="0.88" stop-color="#23e390" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#23e390" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <title>green-bg</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Malware_Removal" data-name="Malware Removal">
+        <g id="Module_Background_Green" data-name="Module Background Green">
+          <polygon id="gradient" points="1800 613.95 0 553.95 0 0 1800 60 1800 613.95" style="fill: url(#linear-gradient)"/>
+          <polygon id="gradient-2" data-name="gradient" points="1800 613.95 0 553.95 0 0 1800 60 1800 613.95" style="fill: #23e390"/>
+          <polygon id="gradient-3" data-name="gradient" points="1800 106.48 0 56.48 0 0 1800 0 1800 106.48" style="fill: url(#linear-gradient-2)"/>
+          <polygon id="gradient-4" data-name="gradient" points="0 604.26 1800 614.26 1800 519.78 0 497.78 0 604.26" style="fill: url(#linear-gradient-3)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

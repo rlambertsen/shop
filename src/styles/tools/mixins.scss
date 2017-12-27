@@ -1,0 +1,188 @@
+/*================ Mixins ================*/
+@mixin clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  // sass-lint:disable
+  *zoom: 1;
+}
+
+/*============================================================================
+  Prefix mixin for generating vendor prefixes.
+  Based on https://github.com/thoughtbot/bourbon/blob/v4-stable/app/assets/stylesheets/addons/_prefixer.scss
+
+  Usage:
+    // Input:
+    .element {
+      @include prefix(transform, scale(1), ms webkit spec);
+    }
+
+    // Output:
+    .element {
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+==============================================================================*/
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}: $value;
+    } @else if $prefix == moz {
+      -moz-#{$property}: $value;
+    } @else if $prefix == ms {
+      -ms-#{$property}: $value;
+    } @else if $prefix == o {
+      -o-#{$property}: $value;
+    } @else if $prefix == spec {
+      #{$property}: $value;
+    } @else  {
+      @warn 'Unrecognized prefix: #{$prefix}';
+    }
+  }
+}
+
+/*================ Media Query Mixin ================*/
+@mixin media-query($media-query) {
+  $breakpoint-found: false;
+
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @if $media-query == $name and $declaration {
+      $breakpoint-found: true;
+
+      @media only screen and #{$declaration} {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint-found == false {
+    @warn 'Breakpoint "#{$media-query}" does not exist';
+  }
+}
+
+/*================ Responsive Show/Hide Helper ================*/
+@mixin responsive-display-helper($breakpoint: '') {
+  // sass-lint:disable no-important
+  .#{$breakpoint}show {
+    display: block !important;
+  }
+
+  .#{$breakpoint}hide {
+    display: none !important;
+  }
+}
+
+
+/*================ Responsive Text Alignment Helper ================*/
+@mixin responsive-text-align-helper($breakpoint: '') {
+  // sass-lint:disable no-important
+  .#{$breakpoint}text-left {
+    text-align: left !important;
+  }
+
+  .#{$breakpoint}text-right {
+    text-align: right !important;
+  }
+
+  .#{$breakpoint}text-center {
+    text-align: center !important;
+  }
+}
+
+@mixin visually-hidden() {
+  // sass-lint:disable no-important
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin visually-shown($position: inherit) {
+  // sass-lint:disable no-important
+  position: $position !important;
+  overflow: auto;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+
+@mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
+  $shadow: '';
+  @if $skew == false or $type == text{
+    @if $direction == right {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+    }
+    @if $direction == left {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+       }
+      }
+     }
+        
+   @if $fadeout == true{
+    @for $i from 1 to $length - 1 {
+      @if $type == text or $skew == false{
+        @if $direction == right{
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left{
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+      @if ($type == box) and $skew == true{
+        @if $direction == right {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+  }
+  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+ }
+ @if $fadeout == false{
+   @if $skew == true and ( $type == box ){
+     @for $i from 0 to $length - 1 {
+            $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
+      }
+   }
+    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+ }
+ $shadow: unquote($shadow);
+  @if $type == 'box' {box-shadow: $shadow;}
+  @if $type == 'text' {text-shadow: $shadow;}
+}
+
+
+@mixin border($width, $style, $color){
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+@function rem($pixels, $context: 20px) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

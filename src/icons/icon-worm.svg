@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81.18" height="115.69" viewBox="0 0 81.18 115.69">
+  <title>icon-worm</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Malware_Removal" data-name="Malware Removal">
+        <g id="Worm">
+          <g id="Worm-2" data-name="Worm">
+            <g>
+              <path d="M24.35,89.37c4.77-.44,4.46-10.25,2.15-17.11C14.61,36.84,45,14.39,58.69,8.48a11.56,11.56,0,1,1,9.19,21.21C65.61,30.72,45.63,41,50,68.77c2.12,13.6.68,23.48-4.42,30.22A20.9,20.9,0,0,1,31,107.2,25.71,25.71,0,0,1,4.7,91.88l-.43-1.31,20.61-1.35" style="fill: #fff"/>
+              <path d="M73.06,17.48a13.15,13.15,0,0,0-4.77-7.28.41.41,0,0,1,0-.69,10.66,10.66,0,0,1,3.5-1.15,3.57,3.57,0,0,1,3.31,1.49L76,11.06a3.65,3.65,0,0,1,.46,3.49,8.56,8.56,0,0,1-2.38,3.24A.64.64,0,0,1,73.06,17.48Z" style="fill: #fff"/>
+              <circle cx="76.89" cy="11.4" r="1.1" transform="translate(32.65 75.31) rotate(-63.74)" style="fill: #fff"/>
+              <circle cx="75.19" cy="9.17" r="1.1" transform="translate(33.7 72.54) rotate(-63.74)" style="fill: #fff"/>
+            </g>
+            <g>
+              <path d="M24.35,89.37c4.77-.44,4.46-10.25,2.15-17.11C14.61,36.84,45,14.39,58.69,8.48a11.56,11.56,0,1,1,9.19,21.21C65.61,30.72,45.63,41,50,68.77c2.12,13.6.68,23.48-4.42,30.22A20.9,20.9,0,0,1,31,107.2,25.71,25.71,0,0,1,4.7,91.88l-.43-1.31,20.61-1.35" style="fill: #fff;stroke: #4e7096;stroke-miterlimit: 10"/>
+              <path d="M73.06,17.48a13.15,13.15,0,0,0-4.77-7.28.41.41,0,0,1,0-.69,10.66,10.66,0,0,1,3.5-1.15,3.57,3.57,0,0,1,3.31,1.49L76,11.06a3.65,3.65,0,0,1,.46,3.49,8.56,8.56,0,0,1-2.38,3.24A.64.64,0,0,1,73.06,17.48Z" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <circle cx="76.89" cy="11.4" r="1.1" transform="translate(32.65 75.31) rotate(-63.74)" style="fill: #3f4563"/>
+              <circle cx="75.19" cy="9.17" r="1.1" transform="translate(33.7 72.54) rotate(-63.74)" style="fill: #3f4563"/>
+            </g>
+            <g>
+              <path d="M24.35,89.37c4.77-.44,4.46-10.25,2.15-17.11C14.61,36.84,45,14.39,58.69,8.48a11.56,11.56,0,1,1,9.19,21.21C65.61,30.72,45.63,41,50,68.77c2.12,13.6.68,23.48-4.42,30.22A20.9,20.9,0,0,1,31,107.2,25.71,25.71,0,0,1,4.7,91.88l-.43-1.31,20.61-1.35" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M73.06,17.48a13.15,13.15,0,0,0-4.77-7.28.41.41,0,0,1,0-.69,10.66,10.66,0,0,1,3.5-1.15,3.57,3.57,0,0,1,3.31,1.49L76,11.06a3.65,3.65,0,0,1,.46,3.49,8.56,8.56,0,0,1-2.38,3.24A.64.64,0,0,1,73.06,17.48Z" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <circle cx="76.89" cy="11.4" r="1.1" transform="translate(32.65 75.31) rotate(-63.74)" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <circle cx="75.19" cy="9.17" r="1.1" transform="translate(33.7 72.54) rotate(-63.74)" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+            </g>
+          </g>
+          <g id="Dots">
+            <circle cx="12.92" cy="95.07" r="1.32" transform="translate(-78.06 64.59) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="16.23" cy="97.89" r="1.32" transform="translate(-78.74 69.13) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="20.39" cy="100.23" r="1.32" transform="translate(-78.52 74.17) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="24.23" cy="101.68" r="1.32" transform="translate(-77.68 78.42) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="27.98" cy="101.99" r="1.32" transform="translate(-75.86 81.96) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="32.19" cy="101.38" r="1.32" transform="translate(-74.18 100.93) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="35.93" cy="99.74" r="1.32" transform="translate(-70.03 103.35) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="38.77" cy="96.96" r="1.32" transform="translate(-65.41 104.13) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="41.39" cy="93.67" r="1.32" transform="translate(-60.46 104.34) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="43.57" cy="89.24" r="1.32" transform="translate(-54.73 103.35) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="44.52" cy="85.32" r="1.32" transform="translate(-50.35 101.53) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="44.68" cy="81.16" r="1.32" transform="translate(-46.27 98.8) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="45.07" cy="76.46" r="1.32" transform="translate(-41.53 95.91) rotate(-72.14)" style="fill: #3f4563"/>
+            <circle cx="44.35" cy="70.95" r="1.32" transform="translate(-38.83 80.03) rotate(-64.21)" style="fill: #3f4563"/>
+            <circle cx="43.91" cy="66.07" r="1.32" transform="translate(-34.55 77.76) rotate(-64.87)" style="fill: #3f4563"/>
+            <circle cx="45.45" cy="49.93" r="1.32" transform="translate(-20.96 37.77) rotate(-37.31)" style="fill: #3f4563"/>
+            <circle cx="46.82" cy="45.26" r="1.32" transform="translate(-18.06 39.66) rotate(-39.1)" style="fill: #3f4563"/>
+            <circle cx="56.76" cy="32.06" r="1.32" transform="translate(-3.38 6.91) rotate(-6.77)" style="fill: #3f4563"/>
+            <circle cx="60.81" cy="28.89" r="1.32" transform="translate(-1.91 4.41) rotate(-4.09)" style="fill: #3f4563"/>
+            <circle cx="64.26" cy="26.21" r="1.32" transform="translate(-3.51 11.26) rotate(-9.75)" style="fill: #3f4563"/>
+            <circle cx="69.32" cy="19.7" r="1.32" transform="translate(9.8 60.33) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="43.53" cy="60.94" r="1.32" transform="translate(-30.79 70.19) rotate(-61.55)" style="fill: #3f4563"/>
+            <circle cx="44.04" cy="55.54" r="1.32" transform="translate(-26.84 55.5) rotate(-51.55)" style="fill: #3f4563"/>
+            <circle cx="49.3" cy="40.31" r="1.32" transform="translate(-13.44 29.39) rotate(-29.4)" style="fill: #3f4563"/>
+            <circle cx="52.79" cy="35.97" r="1.32" transform="translate(-9.08 20.07) rotate(-19.85)" style="fill: #3f4563"/>
+            <circle cx="67.18" cy="23.28" r="1.32" transform="translate(-3.92 23.37) rotate(-19.19)" style="fill: #3f4563"/>
+            <circle cx="10.42" cy="91.32" r="1.32" transform="translate(-76.09 60.26) rotate(-63.74)" style="fill: #3f4563"/>
+            <circle cx="29.29" cy="63.54" r="1.32" transform="translate(-38.27 45.35) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="29.45" cy="57.93" r="1.32" transform="translate(-33.91 43.46) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="29.69" cy="52.16" r="1.32" transform="translate(-29.39 41.56) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="29.93" cy="46.39" r="1.32" transform="translate(-24.87 39.67) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="31.86" cy="41.17" r="1.32" transform="translate(-20.16 39.28) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="34.31" cy="36.21" r="1.32" transform="translate(-15.47 39.38) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="37.33" cy="30.99" r="1.32" transform="translate(-10.38 39.82) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="40.14" cy="27.42" r="1.32" transform="translate(-6.62 40.7) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="44.03" cy="23.57" r="1.32" transform="translate(-2.27 42.3) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="47.58" cy="20.41" r="1.32" transform="translate(1.43 43.89) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="51.88" cy="17.35" r="1.32" transform="translate(5.33 46.09) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="55.88" cy="14.92" r="1.32" transform="translate(8.64 48.29) rotate(-50.19)" style="fill: #3f4563"/>
+            <circle cx="59.92" cy="12.41" r="1.32" transform="translate(12.02 50.49) rotate(-50.19)" style="fill: #3f4563"/>
+          </g>
+          <g id="Big_Spikes" data-name="Big Spikes">
+            <path d="M7.41,97.84,0,100.46l5.81-5.35a5.34,5.34,0,0,1,1.59,2.73Z" style="fill: #3f4563"/>
+            <path d="M11.31,101.27l-6.15,4.89,3.75-7a5.34,5.34,0,0,1,2.4,2.06Z" style="fill: #3f4563"/>
+            <path d="M16.5,105.4l-5.11,6,2.36-7.54a5.34,5.34,0,0,1,2.74,1.57Z" style="fill: #3f4563"/>
+            <path d="M22.11,107.18l-3.6,7,.57-7.88a5.34,5.34,0,0,1,3,.9Z" style="fill: #3f4563"/>
+            <path d="M27.86,108.16l-2.22,7.54-.92-7.85a5.34,5.34,0,0,1,3.15.31Z" style="fill: #3f4563"/>
+            <path d="M32.72,107.72l-.26,7.85-2.86-7.36a5.34,5.34,0,0,1,3.12-.49Z" style="fill: #3f4563"/>
+            <path d="M38.19,105.81l1.63,7.69L35.28,107a5.34,5.34,0,0,1,2.92-1.22Z" style="fill: #3f4563"/>
+            <path d="M43.13,102.69l3.31,7.12-5.88-5.28a5.34,5.34,0,0,1,2.57-1.85Z" style="fill: #3f4563"/>
+            <path d="M46.82,98.36l5.2,5.89-7.14-3.39a5.34,5.34,0,0,1,1.94-2.5Z" style="fill: #3f4563"/>
+            <path d="M49.69,92.55,56.14,97,48.4,95.44a5.34,5.34,0,0,1,1.29-2.89Z" style="fill: #3f4563"/>
+            <path d="M50.49,85.88l7.39,2.66L50,89a5.34,5.34,0,0,1,.5-3.12Z" style="fill: #3f4563"/>
+            <path d="M51.47,78.5l7.76,1.24-7.66,1.92a5.34,5.34,0,0,1-.09-3.16Z" style="fill: #3f4563"/>
+            <path d="M51,71.39l7.83.6-7.48,2.54A5.34,5.34,0,0,1,51,71.39Z" style="fill: #3f4563"/>
+            <path d="M50.11,64.4l7.85.39-7.41,2.75a5.34,5.34,0,0,1-.44-3.13Z" style="fill: #3f4563"/>
+            <path d="M50.16,55.62l7.6,2-7.81,1.17a5.34,5.34,0,0,1,.21-3.16Z" style="fill: #3f4563"/>
+            <path d="M52,49.12,59,52.52l-7.89-.34A5.34,5.34,0,0,1,52,49.12Z" style="fill: #3f4563"/>
+            <path d="M55.41,41.72l6.09,5L53.91,44.5a5.34,5.34,0,0,1,1.5-2.78Z" style="fill: #3f4563"/>
+            <g id="_Group_" data-name="&lt;Group&gt;">
+              <path d="M61.86,34.45l3.76,6.9-6.2-4.9a5.34,5.34,0,0,1,2.45-2Z" style="fill: #3f4563"/>
+            </g>
+            <g id="_Group_2" data-name="&lt;Group&gt;">
+              <path d="M68,30.34l2.52,7.44L65.24,31.9A5.34,5.34,0,0,1,68,30.34Z" style="fill: #3f4563"/>
+            </g>
+            <g id="_Group_3" data-name="&lt;Group&gt;">
+              <path d="M72.17,27.5l3.26,7.15-5.84-5.32a5.34,5.34,0,0,1,2.58-1.83Z" style="fill: #3f4563"/>
+            </g>
+            <g id="_Group_4" data-name="&lt;Group&gt;">
+              <path d="M74.95,22.52l6.23,4.79-7.65-2a5.34,5.34,0,0,1,1.42-2.82Z" style="fill: #3f4563"/>
+            </g>
+            <g id="_Group_5" data-name="&lt;Group&gt;">
+              <path d="M59.42,7.8,58.5,0l3.93,6.85a5.34,5.34,0,0,1-3,.95Z" style="fill: #3f4563"/>
+            </g>
+            <path d="M54.53,9.71l-2-7.6,4.83,6.25a5.34,5.34,0,0,1-2.86,1.35Z" style="fill: #3f4563"/>
+            <g id="_Group_6" data-name="&lt;Group&gt;">
+              <path d="M49.33,12.91,46.67,5.52,52,11.3a5.34,5.34,0,0,1-2.72,1.61Z" style="fill: #3f4563"/>
+            </g>
+            <path d="M44.11,16.66,41,9.42l5.7,5.47a5.34,5.34,0,0,1-2.63,1.76Z" style="fill: #3f4563"/>
+            <path d="M39.45,20.79,35.3,14.12l6.47,4.53a5.34,5.34,0,0,1-2.33,2.14Z" style="fill: #3f4563"/>
+            <path d="M34.85,25.94l-5-6.09,7,3.67a5.34,5.34,0,0,1-2,2.42Z" style="fill: #3f4563"/>
+            <path d="M31.34,30.43l-5.52-5.59,7.32,3a5.34,5.34,0,0,1-1.79,2.6Z" style="fill: #3f4563"/>
+            <path d="M28.49,35.28l-6.18-4.85,7.63,2a5.34,5.34,0,0,1-1.45,2.81Z" style="fill: #3f4563"/>
+            <path d="M24.16,46.86,17,43.64l7.9.14a5.34,5.34,0,0,1-.73,3.08Z" style="fill: #3f4563"/>
+            <path d="M23.18,53.17l-7.5-2.33L23.54,50a5.34,5.34,0,0,1-.36,3.14Z" style="fill: #3f4563"/>
+            <path d="M23.2,60l-7.78-1.07L23,56.79A5.34,5.34,0,0,1,23.2,60Z" style="fill: #3f4563"/>
+            <path d="M24,65.76l-7.86-.13,7.31-3A5.34,5.34,0,0,1,24,65.76Z" style="fill: #3f4563"/>
+            <path d="M25.53,71.76l-7.82.74,6.94-3.78a5.34,5.34,0,0,1,.88,3Z" style="fill: #3f4563"/>
+            <path d="M27.14,77.61l-7.86.15,7.2-3.24a5.34,5.34,0,0,1,.65,3.09Z" style="fill: #3f4563"/>
+            <path d="M27.35,83.8l-7.66-1.73,7.77-1.43a5.34,5.34,0,0,1-.1,3.16Z" style="fill: #3f4563"/>
+            <path d="M25.54,88.86l-6.22-4.8L27,86a5.34,5.34,0,0,1-1.43,2.82Z" style="fill: #3f4563"/>
+            <path d="M26,41l-6.69-4.11L27.17,38A5.34,5.34,0,0,1,26,41Z" style="fill: #3f4563"/>
+          </g>
+          <g id="Small_Spikes" data-name="Small Spikes">
+            <path d="M11.84,98,7.63,99l2.42-3.45A6,6,0,0,1,11.84,98Z" style="fill: #3f4563"/>
+            <path d="M15.6,101.28l-3.77,2.13,1.39-4a6,6,0,0,1,2.39,1.85Z" style="fill: #3f4563"/>
+            <path d="M20.72,103.69l-3,3.08.24-4.21a6,6,0,0,1,2.8,1.12Z" style="fill: #3f4563"/>
+            <path d="M25.51,104.62,23.4,108.4l-.89-4.12a6,6,0,0,1,3,.34Z" style="fill: #3f4563"/>
+            <path d="M30,104.54l-1.08,4.19L27,105a6,6,0,0,1,3-.44Z" style="fill: #3f4563"/>
+            <path d="M34.37,103.42,34,107.73l-2.5-3.39a6,6,0,0,1,2.88-.92Z" style="fill: #3f4563"/>
+            <path d="M39.16,101.11l.63,4.29-3.21-2.73a6,6,0,0,1,2.59-1.56Z" style="fill: #3f4563"/>
+            <path d="M42.28,97.73l2.1,3.79-4-1.42a6,6,0,0,1,1.87-2.37Z" style="fill: #3f4563"/>
+            <path d="M45.06,93.82l2.7,3.39-4.15-.74a6,6,0,0,1,1.45-2.65Z" style="fill: #3f4563"/>
+            <path d="M47.23,88.65l3.32,2.78-4.21.11a6,6,0,0,1,.89-2.89Z" style="fill: #3f4563"/>
+            <path d="M47.57,83.72l4,1.76-4,1.26a6,6,0,0,1,.06-3Z" style="fill: #3f4563"/>
+            <path d="M47.57,79.33l4,1.54-3.95,1.48a6,6,0,0,1-.1-3Z" style="fill: #3f4563"/>
+            <path d="M47.34,74.54l4.23.92-3.68,2a6,6,0,0,1-.55-3Z" style="fill: #3f4563"/>
+            <path d="M46.87,69.37l4.06,1.5L47,72.39a6,6,0,0,1-.13-3Z" style="fill: #3f4563"/>
+            <path d="M46.41,64.46l4.08,1.45-3.91,1.57a6,6,0,0,1-.17-3Z" style="fill: #3f4563"/>
+            <path d="M48.41,49.66l2.95,3.17-4.19-.42a6,6,0,0,1,1.25-2.75Z" style="fill: #3f4563"/>
+            <path d="M49.77,44.89l3,3.08-4.2-.29a6,6,0,0,1,1.16-2.79Z" style="fill: #3f4563"/>
+            <path d="M46.11,59.48l4,1.68-4,1.34a6,6,0,0,1,0-3Z" style="fill: #3f4563"/>
+            <path d="M46.85,54.55l3.64,2.35-4.17.62a6,6,0,0,1,.53-3Z" style="fill: #3f4563"/>
+            <path d="M8.37,93.26,4,93.35,7.14,90.5a6,6,0,0,1,1.22,2.76Z" style="fill: #3f4563"/>
+            <path d="M29.43,87.13,25.9,84.6l4.19-.42a6,6,0,0,1-.67,2.95Z" style="fill: #3f4563"/>
+            <path d="M30.39,80.29,26.26,79l3.85-1.71a6,6,0,0,1,.28,3Z" style="fill: #3f4563"/>
+            <path d="M29.51,74l-4.3-.53,3.48-2.38A6,6,0,0,1,29.51,74Z" style="fill: #3f4563"/>
+            <path d="M27.92,67.8l-4.3-.56,3.5-2.35a6,6,0,0,1,.8,2.91Z" style="fill: #3f4563"/>
+            <path d="M26.7,62.5l-4.17-1.17,3.8-1.83a6,6,0,0,1,.38,3Z" style="fill: #3f4563"/>
+            <path d="M26.1,56.78l-4-1.71,4-1.31a6,6,0,0,1,0,3Z" style="fill: #3f4563"/>
+            <path d="M26.41,50.69l-3.31-2.8,4.21-.08a6,6,0,0,1-.91,2.88Z" style="fill: #3f4563"/>
+            <path d="M59.44,33.33l.93,4.23L57,35.06a6,6,0,0,1,2.47-1.74Z" style="fill: #3f4563"/>
+            <path d="M63.44,30.28l.73,4.27L60.89,31.9a6,6,0,0,1,2.55-1.62Z" style="fill: #3f4563"/>
+            <path d="M67,27.33l1.14,4.18L64.63,29.2A6,6,0,0,1,67,27.33Z" style="fill: #3f4563"/>
+            <path d="M72,19.14l3.58,2.44-4.18.52a6,6,0,0,1,.6-3Z" style="fill: #3f4563"/>
+            <path d="M52.27,40.45,54.75,44l-4.1-1a6,6,0,0,1,1.61-2.55Z" style="fill: #3f4563"/>
+            <path d="M55.7,36.6l1.86,3.91-3.87-1.66a6,6,0,0,1,2-2.25Z" style="fill: #3f4563"/>
+            <g id="_Group_7" data-name="&lt;Group&gt;">
+              <path d="M70.08,23.94l1.81,3.93L68,26.17a6,6,0,0,1,2-2.23Z" style="fill: #3f4563"/>
+            </g>
+            <path d="M27.76,44.94l-3.31-2.8,4.21-.08a6,6,0,0,1-.91,2.88Z" style="fill: #3f4563"/>
+            <path d="M29.33,39.4l-2.89-3.22,4.19.49a6,6,0,0,1-1.29,2.73Z" style="fill: #3f4563"/>
+            <path d="M31.94,34l-2.5-3.54,4.1,1A6,6,0,0,1,31.94,34Z" style="fill: #3f4563"/>
+            <path d="M35.16,29.88l-1.79-3.94,3.84,1.73a6,6,0,0,1-2.05,2.22Z" style="fill: #3f4563"/>
+            <path d="M39.54,25.18l-1.79-3.94L41.6,23a6,6,0,0,1-2.05,2.22Z" style="fill: #3f4563"/>
+            <path d="M44.18,21.09l-1.79-3.94,3.84,1.73a6,6,0,0,1-2.05,2.22Z" style="fill: #3f4563"/>
+            <path d="M48.11,16.69,46.69,12.6l3.67,2.08a6,6,0,0,1-2.25,2Z" style="fill: #3f4563"/>
+            <path d="M53,13.34l-.69-4.28,3.25,2.68A6,6,0,0,1,53,13.34Z" style="fill: #3f4563"/>
+            <g id="_Group_8" data-name="&lt;Group&gt;">
+              <path d="M57.83,10.66l-.31-4.32,3,3a6,6,0,0,1-2.69,1.37Z" style="fill: #3f4563"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

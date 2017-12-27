@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65.98" height="65.98" viewBox="0 0 65.98 65.98">
+  <title>icon-green-left-arrow-circle</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Reporting">
+        <g id="Left_Button" data-name="Left Button">
+          <circle cx="32.99" cy="32.99" r="32.49" style="fill: #fff;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
+          <g>
+            <line x1="25.2" y1="33.28" x2="42.74" y2="33.28" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-miterlimit: 10"/>
+            <polyline id="arrow" points="29.59 28.47 24.78 33.29 29.57 38.09" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-miterlimit: 10"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

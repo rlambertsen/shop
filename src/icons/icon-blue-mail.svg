@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.9" height="18.75" viewBox="0 0 25.9 18.75">
+  <title>icon-blue-mail</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Contact">
+        <g>
+          <rect x="0.55" y="0.5" width="24.85" height="17.75" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+          <polyline points="0.5 2.93 12.93 13.22 25.35 2.93" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="9.09" y1="10.36" x2="0.5" y2="17.47" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="25.35" y1="17.47" x2="16.58" y2="10.21" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

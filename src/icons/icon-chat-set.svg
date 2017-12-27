@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="151" height="159" viewBox="0 0 151 159">
+  <title>icon-chat-set</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="Contact">
+        <path d="M74.44,151.49s24.45-.89,32.37-28.59l4.66.66s-5.63,28.32-37,32.55" style="fill: #373e5a"/>
+        <rect x="48.79" y="149.65" width="27.31" height="9.35" rx="2.36" ry="2.36" style="fill: #373e5a"/>
+        <path d="M110.81,95.7,110.64,88a51.49,51.49,0,0,0-103,0l.16.83,5.94-1.39c1-24.94,20.94-44.82,45.47-44.87s44.43,19.92,45.47,44.87Z" style="fill: #edf0f3"/>
+        <path d="M13.76,87.41c1-24.94,20.94-44.82,45.47-44.87s44.43,19.92,45.47,44.87" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+        <path d="M110.81,95.7,110.64,88a51.49,51.49,0,1,0-103,0l.16,4.58" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+        <g>
+          <path d="M106.12,129s-11-1.33-11-2.95V90.66c0-1.63,11-2.95,11-2.95,2,0,3.64,1.32,3.66,2.94V126h0C109.76,127.66,108.13,129,106.12,129Z" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          <path d="M114.11,119.63a11.31,11.31,0,0,1-3.83,3.28V93.8a11.32,11.32,0,0,1,3.83,3.28,20,20,0,0,1,0,22.55Z" style="fill: #edf0f3;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          <path d="M95.14,90.92s-4.38,0-4.38,3.71v26.93s-.46,2.6,4.38,3.9Z" style="fill: #edf0f3;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+        </g>
+        <g>
+          <path d="M12,129s11-1.33,11-2.95V90.66c0-1.63-11-2.95-11-2.95-2,0-3.64,1.32-3.66,2.94V126h0C8.34,127.66,10,129,12,129Z" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          <path d="M4,119.63a11.31,11.31,0,0,0,3.83,3.28V93.8A11.32,11.32,0,0,0,4,97.08a20,20,0,0,0,0,22.55Z" style="fill: #edf0f3;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          <path d="M23,90.92s4.38,0,4.38,3.71v26.93s.46,2.6-4.38,3.9Z" style="fill: #edf0f3;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+        </g>
+        <g>
+          <path d="M115.41.5A35,35,0,0,0,84,51.06a21.64,21.64,0,0,0,4.66,7.32,2.86,2.86,0,0,1-.41,2.71l-4.93,8.78s-3.83,5.75,0,3.56l11.08-7.26a2.21,2.21,0,0,1,3,0s3.16,1.41,6.64,2.57c.58.2,1.16.38,1.75.55.86.26,1.71.48,2.52.65l.08,0c.37.08.72.14,1.06.19v0a35.07,35.07,0,1,0,6-69.63Z" style="fill: #fff"/>
+          <g>
+            <path d="M108.45,70c.34.07.67.13,1,.18v0l1,.16" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-miterlimit: 10"/>
+            <path d="M115.38,70.68h0A35.18,35.18,0,1,0,84,51.06a21.64,21.64,0,0,0,4.66,7.32,2.86,2.86,0,0,1-.41,2.71l-4.93,8.78s-3.83,5.75,0,3.56l11.08-7.26a2.21,2.21,0,0,1,3,0s3.16,1.41,6.64,2.57c.58.2,1.16.38,1.75.55l.26.08" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-miterlimit: 10;stroke-dasharray: 1.9950518608093262,4.9876298904418945"/>
+          </g>
+        </g>
+        <text transform="translate(101.18 43.73)" style="font-size: 26.269390106201172px;fill: #03a9f4;font-family: WorkSans-Medium, Work Sans;letter-spacing: -0.07200782183570631em">2<tspan x="13.53" y="0" style="letter-spacing: -0.04698910005179802em">4</tspan></text>
+        <g>
+          <path d="M96.2,51a24.8,24.8,0,1,1,6.14,5.56" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+          <polyline points="96.41 39.31 96.91 50.65 87.21 46.21" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round;stroke-width: 2px"/>
+        </g>
+        <g>
+          <line x1="68.79" y1="82.72" x2="68.79" y2="125.1" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="62.03" y1="92.16" x2="62.03" y2="115.66" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="76.54" y1="93.55" x2="76.54" y2="114.73" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="84.7" y1="101.15" x2="84.7" y2="107.83" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="56.05" y1="101.15" x2="56.05" y2="106.67" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="48.91" y1="95.16" x2="48.91" y2="113.12" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="40.61" y1="91.01" x2="40.61" y2="115.66" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+          <line x1="35.09" y1="101.15" x2="35.09" y2="106.67" style="fill: none;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

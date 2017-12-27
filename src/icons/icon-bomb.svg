@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34.7" height="41.55" viewBox="0 0 34.7 41.55">
+  <title>icon-bomb</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Home_-_1200" data-name="Home - 1200">
+      <g id="First_Module" data-name="First Module">
+        <g id="Threats">
+          <g id="icon">
+            <g id="missle_big" data-name="missle big">
+              <path d="M11.5,8.87a14.45,14.45,0,0,1,2.16-1s12,7.83,17.39,16.57A19.78,19.78,0,0,1,33.34,41v0a19.78,19.78,0,0,1-14.56-8.18C12.59,24.7,9.71,10.62,9.71,10.62A14.44,14.44,0,0,1,11.5,8.87Z" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <polyline points="12.75 21.23 5 19.8 0.5 12.33 6.65 10.65 10.68 13.44 13.47 21.36 12.75 21.23" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M23.62,15.59l1.92-3L20.67,6.13,14.21,7.75" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <polygon points="20.17 16.16 19.64 8.24 14.14 0.5 12.66 3.87 15.69 7.9 14.05 8.4 13.82 9.42 14.03 9.66 20.17 16.16" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M7,15.09S9.71,9.21,15.69,7.9l-3-4S6.57,5.4,4.44,11.28Z" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M24,37.85c-1-2,3.94-5.26,3.94-5.26,4.63-3.06,5.75-1.41,5.75-1.41l.3,1.63s-1.17-1.62-5.2,1c0,0-4.44,3-3.34,4.87Z" style="fill: none;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M7.62,14.71a13.5,13.5,0,0,1,7.91-6.38l.17-.43C9.71,9.21,7,15.08,7,15.08Z" style="fill: #fff;stroke: #3f4563;stroke-linecap: round;stroke-linejoin: round"/>
+            </g>
+            <path d="M28.2,30.15a.55.55,0,0,0,.39-.15.57.57,0,0,0,.17-.38.55.55,0,0,0-.15-.39.57.57,0,0,0-.77,0,.57.57,0,0,0-.17.38.56.56,0,0,0,.15.39A.55.55,0,0,0,28.2,30.15Z" style="fill: #3f4563"/>
+            <path d="M25.41,32.13a.55.55,0,0,0,.37-.68h0a.55.55,0,0,0-.68-.37h0a.55.55,0,0,0-.37.68h0a.55.55,0,0,0,.51.39h0Z" style="fill: #3f4563"/>
+            <path d="M22.93,34.7a.54.54,0,0,0,.14-.76h0a.54.54,0,0,0-.76-.14h0a.54.54,0,0,0-.14.76h0a.55.55,0,0,0,.44.24h0A.56.56,0,0,0,22.93,34.7Z" style="fill: #3f4563"/>
+            <path d="M31.25,29a.54.54,0,0,0,.56-.53.53.53,0,0,0-.15-.39.55.55,0,0,0-.94.36.55.55,0,0,0,.15.39A.53.53,0,0,0,31.25,29Z" style="fill: #3f4563"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
