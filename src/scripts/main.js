@@ -90,5 +90,22 @@ $(function() {
     baraja.update(showMe, 'next');
   });
   /*==== End ====*/
-
+  /*==== Firewal page custom slider + progress bar ====*/
+  $('#target-slide').on('slide.bs.carousel', function (e) {
+    //update progress
+    var totalSteps = 3;
+    var step = $(e.relatedTarget).data('step');
+    var percent = (parseInt(step) / totalSteps) * 100;
+    console.log(percent)
+    $('.progress-bar').css({width: percent + '%'});
+  });
+  $('.icon-green-circle-arrow-left').click(function(e){
+    $this = $(this);
+    $('#target-slide').carousel('prev');
+  });
+  $('.icon-green-circle-arrow-right').click(function(e){
+    $this = $(this);
+    $('#target-slide').carousel('next');
+  });
+  /*==== End ====*/
 });

@@ -1087,6 +1087,7 @@ $grey-accent: #969C9C;
 $success-green: #1FC469;
 $grey: #EDF0F3;
 $light-grey: rgba(237, 240, 243, 0.22);
+$grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
 /*======End Color vars========*/
 /*==== Base font sizing classes ====*/
@@ -1406,6 +1407,9 @@ a:not([href]):not([tabindex]) {
 .grey-background{
   background-color: $grey;
 }
+.grey-background-40{
+  background-color: $grey-40;
+}
 .light-grey-background{
   background-color: $light-grey;
 }
@@ -1561,6 +1565,39 @@ Above should be modifer classes only (fonts, colors, sizing etc)
 Plugin css
 ======
 */
+
+/*==== carousel fade ====*/
+// Carousel fade transition
+.carousel-fade .carousel-inner .carousel-item {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .carousel-item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/*==== End ====*/
+
 
 /*==== Baraja card slider ====*/
 ul.baraja-container {
@@ -2401,7 +2438,41 @@ ul.baraja-container li {
     padding: rem(40) rem(30);
   }
 }
-
+/*==== Target slider section ====*/
+.target{
+  .icon-owasp-text{
+    width: 250px;
+  }
+  .target-content{
+    .icon-green-circle-arrow-left{
+      position: absolute;
+      height: 67px;
+      width: 67px;
+      top: 50%;
+      left: -11%;
+      cursor: pointer;
+    }
+    .icon-green-circle-arrow-right{
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      top: 50%;
+      right: -11%;
+      cursor: pointer;
+    }
+  }
+  .progress{
+    height: rem(5);
+  }
+}
+/*==== End ====*/
+/*==== protection-guarantee ====*/
+.protection-guarantee{
+  ul.green-check-plain.HeaderB-Level5 li {
+    margin: 30px 0;
+  }
+}
+/*==== End ====*/ 
 /*==== Mobile sections (should be right above media queries to override any css above it) ====*/
 .mobile{
   .carousel-item{
@@ -2539,13 +2610,6 @@ ul.baraja-container li {
     top: 4px;
     left: -6px;
   }
-}
-/*==== End ====*/
-
-/*==== jQuery mobile overrides FYI its really buggy ====*/
-.ui-selectmenu-button-text,
-.ui-loader{
-  display: none;
 }
 /*==== End ====*/
 /*==== Site wide media quieries ====*/

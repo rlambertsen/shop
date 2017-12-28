@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65.98" height="65.98" viewBox="0 0 65.98 65.98">
+  <title>icon-green-circle-arrow-left</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Artwork">
+      <g id="Target">
+        <g id="arrow_back" data-name="arrow back">
+          <circle cx="32.99" cy="32.99" r="32.49" style="fill: none;stroke: #1fc469;stroke-miterlimit: 10"/>
+          <polyline id="arrow" points="41.52 32.61 25.89 32.61 26.26 32.24 29.2 29.3 29.2 28.25 24.46 32.98 24.46 32.99 24.46 32.99 29.2 37.73 29.2 36.67 26.26 33.74 25.89 33.36 28.11 33.36 41.52 33.36" style="fill: #1fc469"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
