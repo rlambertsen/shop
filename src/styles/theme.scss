@@ -1228,11 +1228,26 @@ p {margin-bottom: 1.3rem;}
   width: 270px;
 }
 /*==== min heights ====*/
+.mh-45{
+  min-height: 45px;
+}
+.mh-55{
+  min-height: 55px;
+}
 .mh-250{
   min-height: rem(250);
 }
+.mh-387{
+  min-height: 387px;
+}
 .mh-450{
   min-height: 450px;
+}
+.mh-519{
+  min-height: 519px;
+}
+.mh-590{
+  min-height: 590px;
 }
 .mh-700{
   min-height: 700px;
@@ -1309,6 +1324,11 @@ p {margin-bottom: 1.3rem;}
   }
   border-color: $blue;
 }
+.btn-outline-darkblue{
+  border-color: $darkish-blue;
+  background-color: transparent;
+  color: $darkish-blue;
+}
 /*==== End ====*/
 /*==== Button varients ====*/
 .btn-success-text-shadow{
@@ -1372,7 +1392,11 @@ p {margin-bottom: 1.3rem;}
   }
 }
 /*==== End ====*/
-
+.drop-shadow{
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+}
 /*==== BS A overrides ====*/
 .dropdown-toggle::after{
   display: none;
@@ -1504,6 +1528,11 @@ a{
   font-weight : bold;
   letter-spacing : 0.8px;
 }
+.HeaderB-Level6{
+  font-family : Montserrat;
+  font-weight : bold;
+  font-size : 17px;
+}
 .FeatureHead-Level2{
   font-family : Montserrat;
   font-weight : bold;
@@ -1525,6 +1554,12 @@ a{
 }
 .border-top{
   border-top: 1px solid;
+}
+.border-left{
+  border-left: 1px solid;
+}
+.border-right{
+  border-right: 1px solid;
 }
 .border-bottom{
   border-bottom: 1px solid;
@@ -1867,7 +1902,7 @@ ul.baraja-container li {
 .hero{
   background: url('Banner.png') no-repeat;
   width: 100%;
-  min-height: 590px;
+  //min-height: 590px;
   background-position: center top;
 }
 .hero__cta--1{
@@ -2279,8 +2314,8 @@ ul.baraja-container li {
   .progress{
     height: rem(10);
   }
-  border: 1px solid #edf0f3;
-  border-radius: rem(4);
+  //border: 1px solid #edf0f3;
+  //border-radius: rem(4);
   padding: rem(30) rem(60);
   display: flex;
   flex-direction: column;
@@ -2522,6 +2557,29 @@ ul.baraja-container li {
   }
 }
 /*==== End ====*/ 
+/*==== Pricing page ====*/
+.price-block{
+  .icon-chat-dots-blue-dark{
+    width: 24px;
+    vertical-align: inherit;
+    padding-right: 4px;
+  }
+  .icon-green-check {
+    width: 16px;
+    margin-right: 9px;
+  }
+  .price-box{
+    padding: rem(30) rem(40);
+  }
+}
+/*==== End ====*/
+.product-features{
+  .icon-shield-green{
+    width: 39px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
 /*==== Mobile sections (should be right above media queries to override any css above it) ====*/
 .mobile{
   .carousel-item{
@@ -2661,6 +2719,9 @@ ul.baraja-container li {
   }
 }
 /*==== End ====*/
+.background-none{
+  background: none;
+}
 /*==== Site wide media quieries ====*/
 @media screen and (max-width: 1600px){
   .malware-bug{

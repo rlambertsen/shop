@@ -8,10 +8,12 @@
   </div>
 </section>
 {% if template == 'index' %}
-  <section class="hero pt-3">
+  <section class="hero pt-3 mh-590">
+{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' %}
+  <section class="hero pt-3 mh-519 background-none">
 {% else %}
-  <section class="hero pt-3" style="background:none;min-height:518px;">
-{% endif %}
+  <section class="hero pt-3 background-none">
+{% endif %} 
 
   <nav class="navbar navbar-expand-lg container">
     <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
@@ -130,7 +132,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu m-0 fs15" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
@@ -145,7 +147,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown mr-5">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu m-0" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu m-0 fs15" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
@@ -249,6 +251,17 @@
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Improved Website Performance — Content Delivery network (CDN)</h1>
              <p class="FeatureText-Level3 mt-2">Accelerate Your Websites's Speed, Security & SEO Rankings wuth cWatch Web's CDN</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+  {% if template contains 'pricing' %}
+    <div class="hero_cta">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level5 fs20">Pricing</h1>
            </div>
          </div>
        </div>
