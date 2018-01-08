@@ -272,5 +272,15 @@
   },
   "date_formats":{
     "month_day_year": "%B %d, %Y"
+  },
+  "tooltip":{
+    "detect":{
+      "real_time_title": "title",
+      "real_time_body": "body"
+    },
+    "response":{
+      "dedicated_title": "title",
+      "dedicated_body": "body"
+    }
   }
 }

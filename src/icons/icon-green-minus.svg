@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.88" height="18.88" viewBox="0 0 18.88 18.88">
+  <title>icon-green-minus</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="_1200" data-name="1200">
+      <g id="Overview_Features_-_REVEAL" data-name="Overview Features - REVEAL">
+        <g>
+          <circle cx="9.44" cy="9.44" r="9.44" style="fill: #1fc469"/>
+          <g>
+            <circle cx="9.42" cy="9.52" r="8.96" style="fill: #fff"/>
+            <g style="opacity: 0.5">
+              <path d="M9.42,1.57a8,8,0,1,1-8,8,8,8,0,0,1,8-8m0-1a9,9,0,1,0,9,9,9,9,0,0,0-9-9Z" style="fill: #1fc469"/>
+            </g>
+          </g>
+          <line x1="9.16" y1="9.76" x2="9.09" y2="9.76" style="fill: #1fc469"/>
+          <polygon points="9.16 9.28 8.67 9.28 6.32 9.28 6.32 9.76 8.67 9.76 9.09 9.76 12.51 9.76 12.51 9.28 9.16 9.28" style="fill: #1fc469"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

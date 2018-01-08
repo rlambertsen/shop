@@ -23,6 +23,7 @@
 // @import url('modules/gift-card-template.scss');
 /*================ UTILS ================*/
 @import url('tools/mixins.scss');
+@import url('tools/flip.scss');
 .btn-group-justified {
   display: flex;
   width: 100%;
@@ -1089,6 +1090,7 @@ $grey: #EDF0F3;
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
+$accent-grey1: rgba(209, 213, 219, 0.15);
 /*======End Color vars========*/
 /*==== Base font sizing classes ====*/
 
@@ -1441,6 +1443,9 @@ a:not([href]):not([tabindex]) {
 .light-grey-background{
   background-color: $light-grey;
 }
+.accent-grey1-background{
+  background-color: $accent-grey1;
+}
 /*==== End ====*/
 /*==== Line Heights ====*/
 .lh1-2{
@@ -1507,6 +1512,10 @@ a{
   line-height : 34px;
   letter-spacing : 0.2px;
 }
+.FeatureText-Level1{
+  font-family : Lato;
+  font-size : 13px;
+}
 .FeatureText-Level2{
   font-family : 'Montserrat MediumItalic';
   font-style : italic;
@@ -1564,6 +1573,13 @@ a{
 .border-bottom{
   border-bottom: 1px solid;
 }
+// border dashed classes
+.border-dash{
+  border: 1px dashed;
+}
+.border-dash-bottom{
+  border-bottom: 1px dashed;
+}
 .border-white{
   border-color: $white;
 }
@@ -1578,6 +1594,18 @@ a{
 }
 .border-dark-blue{
   border-color: $darkish-blue;
+}
+.border-thicker-2{
+  border-width: 2px;
+}
+.border-thicker-3{
+  border-width: 3px;
+}
+.border-thicker-4{
+  border-width: 4px;
+}
+.border-thicker-5{
+  border-width: 5px;
 }
 /*=== End ===*/
 /*==== Visiblity classes ====*/
@@ -1599,6 +1627,11 @@ Above should be modifer classes only (fonts, colors, sizing etc)
   transform: rotate(178deg);
 }
 /*==== End ====*/
+.no-hover{
+  &:hover{
+    text-decoration: none;
+  }
+}
 /*
 ======
 Plugin css
@@ -1743,14 +1776,14 @@ ul.baraja-container li {
 .vert-tabs-green{
   .nav-link:hover{
     background-color: $white;
-    color: $success-green;
+    // color: $success-green;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   }
   .nav-link.active{
     background-color: $white;
-    color: $success-green;
+    color: #000;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
@@ -1771,6 +1804,20 @@ ul.baraja-container li {
   }
   .nav-link{
     color: #000;
+  }
+}
+.inner-page-tabs{
+  .nav-link{
+    .icon{
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    padding: rem(20);
+  }
+  .nav-link.active:before {
+    margin-top: -25px;
   }
 }
 /*==== End ====*/
@@ -2401,6 +2448,10 @@ ul.baraja-container li {
   position: relative;
   z-index: 10;
 }
+.mobile.war-room{
+  background: url(icon-war-room.svg) 10px 0/100% 100% no-repeat;
+  min-height: 230px;
+}
 .war-floor{
   height: 320px;
   transform: perspective(353px) rotateX(49deg);
@@ -2417,18 +2468,6 @@ ul.baraja-container li {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EDF0F3' ,GradientType=0)";
   background : linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(237, 240, 243, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EDF0F3',endColorstr='#FFFFFF' , GradientType=0);
-}
-/*==== End ====*/
-/*==== Cyber security ====*/
-.cyber-security{
-  .icon-green-check{
-    width: 25px;
-  }
-  .vert-tabs-green{
-    .nav-link{
-      padding: 33px 10px;
-    }
-  }
 }
 /*==== End ====*/
 /*==== Dangerous Web ====*/
@@ -2470,13 +2509,12 @@ ul.baraja-container li {
   background: url('fire-wall.svg') center center no-repeat;
   height: 490px;
 }
-/*==== End ====*/
-/*==== Firewall tabs ====*/
-.fire-wall-tabs{
-  .nav-link{
-    padding: rem(40) rem(30);
-  }
+.fire-wall.show-mobile-768 {
+  background: url(fire-wall.svg) center center no-repeat;
+  height: 180px;
+  background-size: contain;
 }
+/*==== End ====*/
 /*==== Target slider section ====*/
 .target{
   .icon-owasp-text{
@@ -2571,14 +2609,117 @@ ul.baraja-container li {
   .price-box{
     padding: rem(30) rem(40);
   }
+  .icon-green-plus{
+    width: 18px;
+    vertical-align: middle;
+    height: 22px;
+  }
+  .icon-question{
+    width: 18px;
+  }
+  .collapse{
+    .icon-green-check{
+      margin-right: 0;
+      margin-left: 21px;
+    }
+  }
 }
 /*==== End ====*/
+/*==== Product features ====*/
 .product-features{
-  .icon-shield-green{
+  .icon-shield-green,
+  .icon-green-guy,
+  .icon-green-fire-wall,
+  .icon-green-cloud{
     width: 39px;
     vertical-align: middle;
     margin-right: 10px;
   }
+  .icon-green-check{
+    width: 18px;
+    vertical-align: super;
+    margin-left: 18px;
+  }
+  .icon-question{
+    width: 18px;
+  }
+}
+/*==== End ====*/
+/*==== sticky price menu ====*/
+.sticky-prices{
+  background-color: #fff;
+}
+/*==== End ====*/
+/*==== Mobile circles ====*/
+.circles{
+  > li.list-inline-item{
+    margin-right: 11px;
+  }
+}
+.circle {
+  border-radius: 50%;
+  border: 1px solid $grey;
+  height: 25px;
+  width: 25px;
+  position: relative;
+}
+.inner-circle {
+  height: 10px;
+  width: 10px;
+  background-color: $grey-accent;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.line-through{
+  position: relative;
+  top: 14px;
+  border-radius: 4px;
+}
+.circle.active{
+  >.inner-circle{
+    z-index: -1;
+  }
+  background-color: $red;
+}
+/*==== End ====*/
+.flipster__item{
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+}
+.icon-brain-grey{
+  width: 500px;
+}
+.path {
+  // stroke-dasharray: 1000;
+  // stroke-dashoffset: 1000;
+  //transition: fill .4s ease;
+  fill: rgba(64, 64, 65, 0.3);
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  0%,
+  100%,
+  40% {
+    fill: $light-grey;
+  }
+
+  20% {
+    fill: $success-green;
+  }
+}
+.icon-grey-circle{
+  width: 95px;
+  float: left;
+}
+.clearfix{
+  clear: both;
 }
 /*==== Mobile sections (should be right above media queries to override any css above it) ====*/
 .mobile{
@@ -2621,7 +2762,7 @@ ul.baraja-container li {
     cursor: pointer;
   }
 }
-.protect-mobile{
+.inner-page-mobile-tabs{
   #mobile-protect-slider{
     .title-icon{
       .icon{
@@ -2722,6 +2863,9 @@ ul.baraja-container li {
 .background-none{
   background: none;
 }
+.show-mobile-768{
+  display: none;
+}
 /*==== Site wide media quieries ====*/
 @media screen and (max-width: 1600px){
   .malware-bug{
@@ -2760,6 +2904,17 @@ ul.baraja-container li {
       left: 70px;
     }
   }
+  .green-gradients{
+    &:before,
+    &:after{
+      content: none;
+    }
+    .container{
+      transform: skewY(0deg);
+      text-align: center;
+    }
+    transform: skewY(0deg);
+  }
 }
 @media screen and (max-width: 768px){
   .malware-banner-mobile{
@@ -2785,6 +2940,51 @@ ul.baraja-container li {
     .slide-content {
       min-height: 600px;
     }
+  }
+  .mobile.war-room{
+    display: block;
+  }
+  .w-75{
+    width: 100% !important;
+  }
+  .dangerous-web .icon-city-pie{
+    float: none;
+    width: 336px;
+    height: 350px;
+  }
+  .dangerous-web .icon-city-pie ~ p{
+    text-align: center;
+  }
+  .war-room,
+  .war-floor,
+  .tab-security-info,
+  .reporting,
+  .security-hide-mobile,
+  .protect,
+  .icon-bug-trail,
+  .footer,
+  .malware-banner,
+  .csoc-hero-text,
+  .hide-mobile-768{
+    display: none;
+  }
+  .security-show-mobile,
+  .reporting-mobile,
+  .protect-mobile,
+  .icon-bug-mobile,
+  .footer-mobile,
+  .malware-banner-mobile,
+  .mobile-csoc-hero-text,
+  .security-partners-mobile,
+  .inner-page-mobile-tabs,
+  .show-mobile-768{
+    display: block;
+  }
+  .HeaderA-Level2{
+    font-size: 1.6rem;
+  }
+  .fade-white{
+    background: none;
   }
 }
 @media screen and (max-width: 575px){

@@ -9,7 +9,7 @@
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' %}
+{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem'%}
   <section class="hero pt-3 mh-519 background-none">
 {% else %}
   <section class="hero pt-3 background-none">
@@ -251,6 +251,18 @@
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Improved Website Performance — Content Delivery network (CDN)</h1>
              <p class="FeatureText-Level3 mt-2">Accelerate Your Websites's Speed, Security & SEO Rankings wuth cWatch Web's CDN</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+  {% if template contains 'siem' %}
+    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">Proactive Defense & Response- <br>Security Information & Event Management (SIEM)</h1>
+             <p class="FeatureText-Level3 mt-2">Get Real-Time Threat Detection, Visibility, Forensics Investigations and Responses</p>
            </div>
          </div>
        </div>

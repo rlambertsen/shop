@@ -8,104 +8,52 @@ var resize = (function(){
       $(window).resize(this.resize);
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
+        $('.hero_cta').removeClass('mt-4');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
+        $('.hero').removeClass('mh-519');
       } else{
+        $('.hero_cta').addClass('mt-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
+        $('.hero').addClass('mh-519');
       }
       if (windowSize <= 769) {
-        $('.security-hide-mobile').addClass('hidden');
-        $('.security-show-mobile').removeClass('hidden');
-        $('.tab-security-info').addClass('hidden');
-        $('.reporting').addClass('hidden');
-        $('.reporting-mobile').removeClass('hidden');
-        $('.protect-mobile').removeClass('hidden');
-        $('.protect').addClass('hidden');
-        $('.partners').addClass('hidden');
-        $('.malware-banner').addClass('hidden');
-        $('.malware-banner-mobile').removeClass('hidden');
-        $('.security-partners-mobile').removeClass('hidden');
-        $('.icon-bug-mobile').removeClass('hidden');
-        $('.icon-bug-trail').addClass('hidden');
-        
-        $('.footer').addClass('hidden');
-        $('.footer-mobile').removeClass('hidden');
+        $('.page-hero h2').removeClass('fs47').addClass('fs35');
       } else {
-        $('.malware-banner-mobile').addClass('hidden');
-        $('.security-hide-mobile').removeClass('hidden');
-        $('.security-show-mobile').addClass('hidden');
-        $('.tab-security-info').removeClass('hidden');
-        $('.reporting').removeClass('hidden');
-        $('.reporting-mobile').addClass('hidden');
-        $('.protect-mobile').addClass('hidden');
-        $('.tab-security-info').removeClass('hidden');
-        $('.partners').removeClass('hidden');
-        $('.malware-banner').removeClass('hidden');
-        $('.security-partners-mobile').addClass('hidden');
-        $('.protect').removeClass('hidden');
-        $('.icon-bug-mobile').addClass('hidden');
-        $('.icon-bug-trail').removeClass('hidden');
-        $('.pricing').removeClass('hidden');
-        $('.pricing-mobile').addClass('hidden');
-        $('.footer').removeClass('hidden');
-        $('.footer-mobile').addClass('hidden');
+        $('.page-hero h2').removeClass('fs35').addClass('fs47');
+
       }
     },
     resize: function(){
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
+        $('.hero_cta').removeClass('mt-4');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
+        $('.hero').removeClass('mh-519');
       } else{
+        $('.hero_cta').addClass('mt-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
+        $('.hero').addClass('mh-519');
       }
-        if (windowSize <= 769) {
-        $('.footer').addClass('hidden');
-        $('.footer-mobile').removeClass('hidden');
-        $('.security-hide-mobile').addClass('hidden');
-        $('.security-show-mobile').removeClass('hidden');
-        $('.tab-security-info').addClass('hidden');
-        $('.reporting').addClass('hidden');
-        $('.reporting-mobile').removeClass('hidden');
-        $('.protect-mobile').removeClass('hidden');
-        $('.protect').addClass('hidden');
-        $('.partners').addClass('hidden');
-        $('.malware-banner').addClass('hidden');
-        $('.malware-banner-mobile').removeClass('hidden');
-        $('.security-partners-mobile').removeClass('hidden');
-        $('.icon-bug-mobile').removeClass('hidden');
-        $('.icon-bug-trail').addClass('hidden');
+      if (windowSize <= 769) {
+        $('.page-hero h2').removeClass('fs47').addClass('fs35');
       } else {
-        $('.security-hide-mobile').removeClass('hidden');
-        $('.security-show-mobile').addClass('hidden');
-        $('.tab-security-info').removeClass('hidden');
-        $('.reporting').removeClass('hidden');
-        $('.reporting-mobile').addClass('hidden');
-        $('.protect-mobile').addClass('hidden');
-        $('.tab-security-info').removeClass('hidden');
-        $('.partners').removeClass('hidden');
-        $('.malware-banner').removeClass('hidden');
-        $('.malware-banner-mobile').addClass('hidden');
-        $('.security-partners-mobile').addClass('hidden');
-        $('.protect').removeClass('hidden');
-        $('.icon-bug-mobile').addClass('hidden');
-        $('.icon-bug-trail').removeClass('hidden');
-        $('.footer').removeClass('hidden');
-        $('.footer-mobile').addClass('hidden');
+        $('.page-hero h2').removeClass('fs35').addClass('fs47');
       }
     }
   };

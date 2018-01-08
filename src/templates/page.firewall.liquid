@@ -2,84 +2,55 @@
 <section class="page-hero">
   <div class="container text-center">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-10 offset-sm-1">
         <h2 class="work fs47 fw200  mt-5">An Easy Way to Shield Your Website from Known & Unknown Threats</h2>
         <p class="FeatureText-Level2 green-text">Cloud-Based Fortification Against Today’s Virtual Invaders & Cyber Threats</p>
+        <div class="fire-wall show-mobile-768"></div>
         <p>It’s automatically deployed with cWatch Web and requires no maintenance or upkeep, it’s a fully-managed WAF by Comodo designed to clean your pipes. This robust intrusion prevention system analyzes, detects, blocks and filters bad traffic in real-time to eliminate vulnerabilities and protect your website from modern-day threats and attacks—even complex Distributed-Denial-of-Service (DDoS) attacks, SQL Injection and Cross-Site Scripting to name a few. </p>
       </div>
     </div>
   </div>
 </section>
 <!-- SVG BG -->
-<section class="fire-wall"></section>
+<section class="fire-wall hide-mobile-768"></section>
 <!-- End -->
-<section class="fire-wall-tabs">
-  <div class="container text-center">
+<section class="inner-page-tabs hide-mobile-768">
+  <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
         <p class="HeaderA-Level3">With Comodo’s managed Web Application Firewall (WAF), it will...</p>
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-4">
+      <div class="col-sm-4">
         <div class="nav flex-column nav-pills mont fs14 vert-tabs-green" id="firewall-tabs" role="tablist" aria-orientation="vertical">
           <a class="mb-2 nav-link active position-relative" id="v-pills-home-tab" data-toggle="pill" href="#Advanced" role="tab" aria-controls="Advanced" aria-selected="true">
-            <div class="row">
-              <div class="col-sm-2">
-                {% include 'icon-green-check' %} 
-              </div>
-              <div class="col-sm-10 text-left">
-                Block Malicious Traffic
-              </div>
-            </div>
+            {% include 'icon-green-check' %} 
+            Block Malicious Traffic
           </a>
           <a class="mb-2 nav-link position-relative" id="v-pills-profile-tab" data-toggle="pill" href="#Detection" role="tab" aria-controls="Detection" aria-selected="false">
-            <div class="row">
-              <div class="col-sm-2">
-                {% include 'icon-green-check' %} 
-              </div>
-              <div class="col-sm-10 text-left">
-                Provide DDoS Protection
-              </div>
-            </div>
+            {% include 'icon-green-check' %} 
+            Provide DDoS Protection
           </a>
           <a class="mb-2 nav-link position-relative" id="v-pills-messages-tab" data-toggle="pill" href="#Monitoring" role="tab" aria-controls="Monitoring" aria-selected="false">
-            <div class="row">
-              <div class="col-sm-2">
-                {% include 'icon-green-check' %} 
-              </div>
-              <div class="col-sm-10 text-left">
-                Automatically Update
-              </div>
-            </div>
+            {% include 'icon-green-check' %} 
+            Automatically Update
           </a>
           <a class="mb-2 nav-link position-relative" id="v-pills-settings-tab" data-toggle="pill" href="#Website" role="tab" aria-controls="Website" aria-selected="false">
-            <div class="row">
-              <div class="col-sm-2">
-                {% include 'icon-green-check' %} 
-              </div>
-              <div class="col-sm-10 text-left">
-                Protect Against OWASP Top 10 
-              </div>
-            </div>
+            {% include 'icon-green-check' %}
+            Protect Against OWASP Top 10
           </a>
           <a class="mb-2 nav-link position-relative" id="v-pills-settings-tab" data-toggle="pill" href="#manage" role="tab" aria-controls="manage" aria-selected="false">
-            <div class="row">
-              <div class="col-sm-2">
-                {% include 'icon-green-check' %} 
-              </div>
-              <div class="col-sm-10 text-left">
-                Prevent Bot & Brute Force Attacks 
-              </div>
-            </div>
+            {% include 'icon-green-check' %}
+            Prevent Bot & Brute Force Attacks
           </a>
         </div>
       </div>
-      <div class="col-8 text-left d-flex flex-column justify-content-center">
+      <div class="col-sm-8 text-left d-flex flex-column justify-content-center">
         <div class="tab-content" id="protect-tabContent">
           <div class="tab-pane fade show active" id="Advanced" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-sm-12">
                 <p class="HeaderB-Level4">Block Malicious Traffic</p>
                 <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
                 <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
@@ -88,7 +59,7 @@
           </div>
           <div class="tab-pane fade" id="Detection" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-sm-12">
                 <p class="HeaderB-Level4">Block Malicious Traffic</p>
                 <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
                 <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
@@ -97,7 +68,7 @@
           </div>
           <div class="tab-pane fade" id="Monitoring" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-sm-12">
                 <p class="HeaderB-Level4">Block Malicious Traffic</p>
                 <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
                 <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
@@ -106,7 +77,7 @@
           </div>
           <div class="tab-pane fade" id="Website" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-sm-12">
                 <p class="HeaderB-Level4">Block Malicious Traffic</p>
                 <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
                 <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
@@ -115,7 +86,7 @@
           </div>
           <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row">
-              <div class="col-lg-12">
+              <div class="col-sm-12">
                 <p class="HeaderB-Level4">Block Malicious Traffic</p>
                 <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
                 <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
@@ -127,11 +98,107 @@
     </div>
   </div>
 </section>
-<section class="grey-background-40 py-7 target">
+<!-- Mobile -->
+<section class="inner-page-mobile-tabs grey-background py-7">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <p class="HeaderA-Level2">Your Website is a Target, and No On is "Safe"</p>
+        <p class="HeaderA-Level2">With Comodo’s managed Web Application Firewall (WAF), it will...</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="mobile-protect-slider" class="carousel slide mobile" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#mobile-protect-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#mobile-protect-slider" data-slide-to="1"></li>
+            <li data-target="#mobile-protect-slider" data-slide-to="2"></li>
+            <li data-target="#mobile-protect-slider" data-slide-to="3"></li>
+            <li data-target="#mobile-protect-slider" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="slide-content text-center">
+                <p class="HeaderB-Level4">Block Malicious Traffic</p>
+                <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
+                <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="blue-text m-0">NEXT</p>
+                    <p class="blue-text fs17">Provide DDoS Protection</p>
+                    {% include 'icon-blue-swip-left' %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content text-center">
+                <p class="HeaderB-Level4">Provide DDoS Protection</p>
+                <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
+                <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="blue-text m-0">NEXT</p>
+                    <p class="blue-text fs17">Automatically Update</p>
+                    {% include 'icon-blue-hand-left-right' %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content text-center">
+                <p class="HeaderB-Level4">Automatically Update</p>
+                <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
+                <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="blue-text m-0">NEXT</p>
+                    <p class="blue-text fs17">Protect Against OWASP Top 10</p>
+                    {% include 'icon-blue-hand-left-right' %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content text-center">
+                <p class="HeaderB-Level4">Protect Against OWASP Top 10</p>
+                <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
+                <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="blue-text m-0">NEXT</p>
+                    <p class="blue-text fs17">Prevent Bot & Brute Force Attacks</p>
+                    {% include 'icon-blue-hand-left-right' %}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-content text-center">
+                <p class="HeaderB-Level4">Prevent Bot & Brute Force Attacks</p>
+                <p>Instantly protect against the Open Web Application Security Project (OWASP) Top 10, which are officially the most common security threats out there.</p>
+                <p>cWatch Web provides visibility and information to automatically protect you from these very common, yet extremely crippling threats so your thoughts stay focused on your business.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="blue-text m-0">Prev</p>
+                    <p class="blue-text fs17">Protect Against OWASP Top 10</p>
+                    {% include 'icon-blue-finger-right' %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End -->
+<section class="grey-background-40 py-7 target hide-mobile-768">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <p class="HeaderA-Level2">Your Website is a Target, and No One is "Safe"</p>
         <p class="w-75 m-auto">Think you’re too small for a hacker to bother with?  Think again.  Your website can – and probably will – become the object of a hacker at some point in the near future. Today, it doesn’t matter what size your business is or whether you conduct transactions online, if you can be found on a search engine then you’re in the crosshairs.</p>
         <p class="HeaderB-Level4 my-5">cWatch Web Protects You From Threst Like:</p>
       </div>
@@ -198,6 +265,76 @@
     </div>
   </div>
 </section>
+<section class="target-mobile show-mobile-768">
+  <div class="container">
+    <div class="row text-center pt-5">
+      <div class="col-sm-12">
+        <p class="HeaderA-Level2">Your Website Is A Target, And No One Is “Safe”</p>
+        <p class="fs24">Think you’re too small for a hacker to bother with?  Think again.  Your website can – and probably will – become the object of a hacker at some point in the near future. Today, it doesn’t matter what size your business is or whether you conduct transactions online, if you can be found on a search engine then you’re in the crosshairs.</p>
+        <p class="HeaderB-Level4">cWatch Web Protects You From Threats Like:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="border-top border-grey-light line-through border-thicker-3"></div>
+        <ul class="list-inline circles text-center">
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+          <li class="list-inline-item circle">
+            <div class="inner-circle"></div>
+          </li>
+        </ul>
+        <div >
+          <ul id="baraja-el" class="baraja-container">
+            <li class="flipster__item">
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+            <li class="flipster__item">
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+            <li class="flipster__item">
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+            <li class="flipster__item">
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+            <li class="flipster__item">
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+            <li>
+              <p class="HeaderB-Level2">SQL Injection</p>
+              {% include 'icon-grey-circle' %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="protection-guarantee py-7">
   <div class="container">
     <div class="row text-center">
@@ -207,7 +344,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-4 offset-sm-2">
+      <div class="col-sm-4 offset-sm-2">
         <ul class="green-check-plain HeaderB-Level5">
           <li>DDoS Attacks</li>
           <li>Bad Bots</li>
@@ -218,7 +355,7 @@
           <li>Hidden & Malicous Iframes</li>
         </ul>
       </div>
-      <div class="col-4">
+      <div class="col-sm-4">
         <ul class="green-check-plain HeaderB-Level5">
           <li>Pharam Hacks</li>
           <li>Defense Against Hackers</li>
@@ -229,19 +366,21 @@
         </ul>
       </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-sm-12 text-center">
-        <p class="HeaderB-Level4">Protecting Your Website Has Never Been So Easy or Afforable</p>
+    <div class="hide-mobile-768">
+      <div class="row mt-5">
+        <div class="col-sm-12 text-center">
+          <p class="HeaderB-Level4">Protecting Your Website Has Never Been So Easy or Afforable</p>
+        </div>
       </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-12">
-        <a href="tel:" class="btn btn-success btn-rd btn-longer my-2 text-uppercase fs15">see all service packages</a>
-        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
-      </div>
-      <div class="col-12">
-        <p class="FeatureText-Level3">Speak to a cWatch Team Member Today</p>
-        <a href="tel:" class="HeaderB-Level4 green-text">1 (888) 481-5388</a>
+      <div class="row text-center">
+        <div class="col-12">
+          <a href="tel:" class="btn btn-success btn-rd btn-longer my-2 text-uppercase fs15">see all service packages</a>
+          <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
+        </div>
+        <div class="col-12">
+          <p class="FeatureText-Level3">Speak to a cWatch Team Member Today</p>
+          <a href="tel:" class="HeaderB-Level4 green-text">1 (888) 481-5388</a>
+        </div>
       </div>
     </div>
   </div>

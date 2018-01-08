@@ -112,7 +112,12 @@
     </div>
     <div class="row">
       <div class="col-sm-3 px-0 d-flex flex-column justify-content-center align-items-left mh-45 py-2 border-left border-top border-grey-light">
-        <p class="fs15 fw600 m-0 pl-3">100% Clean & Repair</p>
+        <p class="fs15 fw600 m-0 pl-3">
+          <a data-toggle="collapse" href="#clean" role="button" aria-expanded="false" aria-controls="clean" class="no-hover">
+            <svg class="icon-green-plus"><use xlink:href="#plus"></use></svg>
+          </a>
+          100% Clean & Repair
+        </p>
       </div>
       <div class="col-sm-3 px-0 d-flex flex-column justify-content-center align-items-center mh-45 py-2 border-top border-left border-right border-grey-light">
         <p class="green-text m-0 work fw600 text-center">Instant</p>
@@ -122,6 +127,125 @@
       </div>
       <div class="col-sm-3 px-0 d-flex flex-column justify-content-center align-items-center mh-45 py-2 border-top border-left border-right border-grey-light">
         <p class="green-text m-0 work fw600 text-center">Instant</p>
+      </div>
+    </div>
+    <div class="collapse" id="clean">
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Hack Repair 
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Full Blacklist Removal 
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Spam & Website Filtering
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Continuous Malware & Hack Detection Scan
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2 green-text fs17 fw600 work">Instant</div>
+        <div class="col-sm-2 my-2 offset-sm-1 green-text fs17 fw600 work">Instant</div>
+        <div class="col-sm-2 my-2 offset-sm-1 green-text fs17 fw600 work">Instant</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Daily Vulnerability (OWASP) Detection Scan
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2 green-text fs17 fw600 work">Instant</div>
+        <div class="col-sm-2 my-2 offset-sm-1 green-text fs17 fw600 work">Instant</div>
+        <div class="col-sm-2 my-2 offset-sm-1 green-text fs17 fw600 work">Instant</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Trojan Detection and Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Vulnerability Repair
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Continous Blacklisting and Brand Reputation Monitor
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Recover from traffic hijacking
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Recover from SEO poisoning
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Automatic Discovery of Advanced Threats
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background border-dash-bottom border-grey-light">
+        <div class="col-sm-4 fs14 my-2">
+          Automated Malware Removal
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      </div>
+      <div class="row accent-grey1-background">
+        <div class="col-sm-4 fs14 my-2">
+          Command and Control Server Communication Detection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </div>
+        <div class="col-sm-2 my-2">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+        <div class="col-sm-2 my-2 offset-sm-1">{% include 'icon-green-check' %}</div>
       </div>
     </div>
     <div class="row">
@@ -216,9 +340,9 @@
     </div>
   </div>
 </section>
-<section class="product-features">
-  <div class="container drop-shadow">
-    <div class="row">
+<section class="product-features mb-5">
+  <div class="container drop-shadow px-4 py-2">
+    <div class="row form-group" id="price-menu">
       <div class="col-sm-3">
       </div>
       <div class="col-sm-3">
@@ -247,9 +371,554 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col-sm-12">
         <p class="HeaderB-Level6">{% include 'icon-shield-green' %}<span class="green-text">DETECT -</span> Security Incident & Event Management (SIEM)</p>
+      </div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Real Time Threat and Breach Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.detect.real_time_title' | t }}" data-content="{{ 'tooltip.detect.real_time_body' | t }}">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Advanced Persistent Threat Identification
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Incident Management and Remediation
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Anomaly Detection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="HeaderB-Level6">{% include 'icon-green-guy' %}<span class="green-text">RESPONSE -</span> 24/7 Cyber Security Operation Center (CSOC)</p>
+      </div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Dedicated CSOC Analyst
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="{{ 'tooltip.response.dedicated_title' | t }}" data-content="{{ 'tooltip.response.dedicated_body' | t }}">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2"><!-- {% include 'icon-green-check' %} --></div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Expert Tuning and configuration management
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2"><!-- {% include 'icon-green-check' %} --></div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Reverse Malware and Suspect Engineering
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2"><!-- {% include 'icon-green-check' %} --></div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Threat Investigation and Analysis
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2"><!-- {% include 'icon-green-check' %} --></div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Correlations over multiple incidents
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Integration with Threat Intelligence
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Alerting & Incident Escalations
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="HeaderB-Level6">{% include 'icon-green-fire-wall' %}<span class="green-text">PROTECT -</span>  Web Application Firewall (WAF)</p>
+      </div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Managed Updates
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Incident Response Time
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2 fs13">5 hrs</div>
+      <div class="col-sm-2 fs13 offset-sm-1">4 hrs</div>
+      <div class="col-sm-2 fs13 offset-sm-1">2 hrs</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Fine-Grained Control
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2"><!-- {% include 'icon-green-check' %} --></div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Bot Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Scraping Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Enterprise Control
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          SQL Injection Prevention
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          XSS Injection - Cross Site Scripting Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          XMLRPC protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Bruteforce Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Block Access to Backdoor Files Used by Hackers
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Illegal Resource Access Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Blacklisting of Clients, Countries and Ips
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Information Reveal Prevention
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Information Reveal Prevention
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          WAF Rule Update with Customer Request
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="HeaderB-Level6">{% include 'icon-green-cloud' %}<span class="green-text">ENHANCE -</span>   Content Delivery Network (CDN)</p>
+      </div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Layer 7 DDoS Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Layer 3, 4, 5 & 6 DDoS Protection
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Instant Purge
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Advanced Website Acceleration
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Asset Preloading
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Cache/Header Settings
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Anycast DNS
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0" id="bottom">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Uptime SLA
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2 fs13">1</div>
+      <div class="col-sm-2 fs13 offset-sm-1">1</div>
+      <div class="col-sm-2 fs13 offset-sm-1">1</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Speed
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2 fs13">10/40/100 Gbps</div>
+      <div class="col-sm-2 fs13 offset-sm-1">10/40/100 Gbps</div>
+      <div class="col-sm-2 fs13 offset-sm-1">10/40/100 Gbps</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Scale
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2 fs13">96 Tbps</div>
+      <div class="col-sm-2 fs13 offset-sm-1">96 Tbps</div>
+      <div class="col-sm-2 fs13 offset-sm-1">96 Tbps</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Load Balancing
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          HTTPS – SSL Support with your own certificates  
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+    <div class="row border-bottom border-grey-light form-group mx-0">
+      <div class="col-sm-4">
+        <p class="FeatureText-Level1 m-0">
+          Performance Optimization
+          <a tabindex="0" class="tool-tip" data-toggle="popover" data-trigger="focus" data-container="body" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">{% include 'icon-question' %}</a>
+        </p>
+      </div>
+      <div class="col-sm-2">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+      <div class="col-sm-2 offset-sm-1">{% include 'icon-green-check' %}</div>
+    </div>
+  </div>
+</section>
+<section class="buy-now-btns">
+  <div class="container">
+    <div class="row form-group">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center p-3">
+          <p class="mont green-text font-weight-bold m-0">Pro</p>
+          <p class="work fs47 price green-text fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>9.<span class="cents fs20 fw300">90</span></p>
+          <p class="work fs13 green-text m-0">Month-to-month</p>
+          <a href="#botom" class="btn btn-green-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center p-3">
+          <p class="mont green-text font-weight-bold m-0">Premium</p>
+          <p class="work fs47 price green-text fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>24.<span class="cents fs20 fw300">90</span></p>
+          <p class="work fs13 green-text m-0">Month-to-month</p>
+          <a href="#botom" class="btn btn-green-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center p-3">
+          <p class="mont font-weight-bold m-0">Enterprise</p>
+          <p class="work fs47 price fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>1,558.<span class="cents fs20 fw300">80</span></p>
+          <p class="work fs13 darkish-blue-text m-0">$129.90/Mo. Paid Annually</p>
+          <a href="#botom" class="btn btn-blue-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+
+<!-- svg plu minus code -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol width="18.88" height="18.88" viewBox="0 0 18.88 18.88" id="plus">
+    <circle cx="9.44" cy="9.44" r="9.44" style="fill: #1fc469"/>
+    <path d="M9.7,6V9.18h3v.51h-3v3.15H9.16V9.68h-3V9.18h3V6Z" style="fill: #fff"/>
+  </symbol>
+  <symbol width="18.88" height="18.88" viewBox="0 0 18.88 18.88" id="minus">
+    <g>
+      <circle cx="9.44" cy="9.44" r="9.44" style="fill: #1fc469"/>
+      <g>
+        <circle cx="9.42" cy="9.52" r="8.96" style="fill: #fff"/>
+        <g style="opacity: 0.5">
+          <path d="M9.42,1.57a8,8,0,1,1-8,8,8,8,0,0,1,8-8m0-1a9,9,0,1,0,9,9,9,9,0,0,0-9-9Z" style="fill: #1fc469"/>
+        </g>
+      </g>
+      <line x1="9.16" y1="9.76" x2="9.09" y2="9.76" style="fill: #1fc469"/>
+      <polygon points="9.16 9.28 8.67 9.28 6.32 9.28 6.32 9.76 8.67 9.76 9.09 9.76 12.51 9.76 12.51 9.28 9.16 9.28" style="fill: #1fc469"/>
+    </g>
+  </symbol>
+</svg>
+<!-- End -->
+<!-- Sticky prices -->
+<section class="sticky-prices fixed-top drop-shadow hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 d-flex flex-column justify-content-center align-items-center">
+        <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center">
+          <p class="mont green-text font-weight-bold m-0">Pro</p>
+          <p class="work fs47 price green-text fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>9.<span class="cents fs20 fw300">90</span></p>
+          <p class="work fs13 green-text m-0">Month-to-month</p>
+          <a href="#botom" class="btn btn-green-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center">
+          <p class="mont green-text font-weight-bold m-0">Premium</p>
+          <p class="work fs47 price green-text fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>24.<span class="cents fs20 fw300">90</span></p>
+          <p class="work fs13 green-text m-0">Month-to-month</p>
+          <a href="#botom" class="btn btn-green-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="text-center">
+          <p class="mont font-weight-bold m-0">Enterprise</p>
+          <p class="work fs47 price fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>1,558.<span class="cents fs20 fw300">80</span></p>
+          <p class="work fs13 darkish-blue-text m-0">$129.90/Mo. Paid Annually</p>
+          <a href="#botom" class="btn btn-blue-gradient btn-rd my-3 mont fs13 btn-longer text-uppercase fw500">buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End -->
