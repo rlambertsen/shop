@@ -99,11 +99,11 @@
   </div>
 </section>
 <!-- Mobile -->
-<section class="inner-page-mobile-tabs grey-background py-7">
+<section class="inner-page-mobile-tabs show-mobile-768 grey-background py-7">
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <p class="HeaderA-Level2">With Comodo’s managed Web Application Firewall (WAF), it will...</p>
+        <p class="HeaderA-Level2">With Comodo's managed Web Application Firewall (WAF), it will...</p>
       </div>
     </div>
     <div class="row">
@@ -277,60 +277,98 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="border-top border-grey-light line-through border-thicker-3"></div>
-        <ul class="list-inline circles text-center">
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-          <li class="list-inline-item circle">
-            <div class="inner-circle"></div>
-          </li>
-        </ul>
-        <div >
-          <ul id="baraja-el" class="baraja-container">
-            <li class="flipster__item">
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-            <li class="flipster__item">
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-            <li class="flipster__item">
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-            <li class="flipster__item">
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-            <li class="flipster__item">
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-            <li>
-              <p class="HeaderB-Level2">SQL Injection</p>
-              {% include 'icon-grey-circle' %}
-            </li>
-          </ul>
+        <div class="row circles text-center">
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle ">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle active">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
+          <div class="col flex-row d-flex justify-content-center">
+            <div class="circle">
+              <div class="inner-circle"></div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="rotate-back">
+          <div class="flipster__container flipster mt-5">
+            <ul class=" list-unstyled"> 
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+              <li class="flipster__item drop-shadow">
+                <p class="HeaderB-Level2">SQL Injection</p>
+                {% include 'icon-grey-circle' %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid position-relative">
+    <div class="row red-bg red-transform white-text">
+      <div class="col-sm-12 fliper-content py-5 hidden">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
+      </div>
+      <div class="col-sm-12 fliper-content py-5 hidden">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
+      </div>
+      <div class="col-sm-12 fliper-content py-5 hidden">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
+      </div>
+      <div class="col-sm-12 fliper-content  py-5">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
+      </div>
+      <div class="col-sm-12 fliper-content py-5 hidden">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
+      </div>
+      <div class="col-sm-12 fliper-content py-5 hidden">
+        <p class="fs29 px-4">Used by hackers to attack and corrupt data-driven websites or applications.</p>
+        <p class="px-4">{% include 'icon-owasp-text' %}</p>
       </div>
     </div>
   </div>

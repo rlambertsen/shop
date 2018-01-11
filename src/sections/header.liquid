@@ -9,9 +9,9 @@
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem'%}
+{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'about' %}
   <section class="hero pt-3 mh-519 background-none">
-{% else %}
+{% elsif temnplate == 'malware' or template == 'pricing'  %}
   <section class="hero pt-3 background-none">
 {% endif %} 
 
@@ -268,12 +268,35 @@
        </div>
     </div>
   {% endif %}
+  {% if template contains 'about' %}
+    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">About Us — Discover the cWatch Difference</h1>
+             <p class="FeatureText-Level3 mt-2">The Only Security-as-a-Service Solution Driven by Human Insight and Real Experience</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
   {% if template contains 'pricing' %}
     <div class="hero_cta">
        <div class="container">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level5 fs20">Pricing</h1>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
+  {% if template contains 'malware' %}
+    <div class="hero_cta">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level5 fs20">Free Malware Removal</h1>
            </div>
          </div>
        </div>

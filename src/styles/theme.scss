@@ -1446,6 +1446,9 @@ a:not([href]):not([tabindex]) {
 .accent-grey1-background{
   background-color: $accent-grey1;
 }
+.red-bg{
+  background-color: $red;
+}
 /*==== End ====*/
 /*==== Line Heights ====*/
 .lh1-2{
@@ -1487,6 +1490,10 @@ a{
 }
 /*=== End Icons ====*/
 /*=== Text classes ====*/
+.HeaderA-Level1{
+  font-family : Work Sans;
+  font-size : 63px;
+}
 .HeaderA-Level2{
   font-family : 'Work Sans';
   font-size : rem(47);
@@ -1525,6 +1532,11 @@ a{
   font-style : italic;
   font-size : rem(15);
   letter-spacing : 1.5px;
+}
+.HeaderB-Level3{
+  font-family : 'Work Sans';
+  font-size : rem(45);
+  font-weight: 300;
 }
 .HeaderB-Level4{
   font-family : 'Montserrat';
@@ -1607,6 +1619,19 @@ a{
 .border-thicker-5{
   border-width: 5px;
 }
+//border radius classes
+.br{
+  border-radius: 1px;
+}
+.br-2{
+  border-radius: 2px;
+}
+.br-3{
+  border-radius: 3px;
+}
+.br-4{
+  border-radius: 4px;
+}
 /*=== End ===*/
 /*==== Visiblity classes ====*/
 .hidden{
@@ -1620,7 +1645,13 @@ Start custom element styles below
 Above should be modifer classes only (fonts, colors, sizing etc)
 ======
 */
-
+a{
+  > .icon-blue-chat-dots {
+    width: 23px;
+    position: relative;
+    top: 3px;
+  }
+}
 
 /*==== Animation classes ====*/
 .rotate-180{
@@ -1890,6 +1921,73 @@ ul.baraja-container li {
 }
 .green-check-plain{
   list-style-image: url("icon-green-check.svg");
+}
+/*==== End ====*/
+/*==== Checkbox custom ====*/
+/* Customize the label (the container) */
+.cd-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  top: 0;
+  left: -42px;
+}
+
+/* On mouse-over, add a grey background color */
+.cb-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cb-container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cb-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 /*==== End ====*/
 /*==== Socal media icons ====*/
@@ -2288,6 +2386,7 @@ ul.baraja-container li {
     left: 0;
     right: 0;
     margin: auto;
+    display: none;
   }
   background: url(number-bg.svg), #23e390;
   transform: skewY(2deg);
@@ -2651,17 +2750,13 @@ ul.baraja-container li {
 }
 /*==== End ====*/
 /*==== Mobile circles ====*/
-.circles{
-  > li.list-inline-item{
-    margin-right: 11px;
-  }
-}
 .circle {
   border-radius: 50%;
   border: 1px solid $grey;
   height: 25px;
   width: 25px;
   position: relative;
+  cursor: pointer;
 }
 .inner-circle {
   height: 10px;
@@ -2681,19 +2776,16 @@ ul.baraja-container li {
 }
 .circle.active{
   >.inner-circle{
-    z-index: -1;
+   display: none;
   }
   background-color: $red;
 }
 /*==== End ====*/
 .flipster__item{
-  background-color: #fff;
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
-  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+  background: #fff;
 }
 .icon-brain-grey{
-  width: 500px;
+  max-width: 500px;
 }
 .path {
   // stroke-dasharray: 1000;
@@ -2714,14 +2806,48 @@ ul.baraja-container li {
     fill: $success-green;
   }
 }
-.icon-grey-circle{
-  width: 95px;
-  float: left;
+.siem{
+  .icon-grey-circle{
+    width: 95px;
+    float: left;
+  }
+}
+.flip-through{
+  .icon{
+    width: 95px;
+  }
 }
 .clearfix{
   clear: both;
 }
-/*==== Mobile sections (should be right above media queries to override any css above it) ====*/
+.red-transform{
+  &:before {
+    content: "";
+    position: absolute;
+    top: -721px;
+    border-left: 402px solid transparent;
+    border-bottom: 1080px solid #c41230;
+    transform: rotate(88deg);
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -680px;
+    border-left: 446px solid transparent;
+    border-bottom: 991px solid red;
+    transform: rotate(87deg);
+    z-index: -2;
+    left: 50px;
+  }
+}
+.benefits-box{
+  .icon{
+    width: 50px;
+    height: 50px;
+  }
+}
+/*= === Mobile sections (should be right above media queries to override any css above it) ====*/
 .mobile{
   .carousel-item{
     padding: rem(30) rem(30);
@@ -2860,6 +2986,55 @@ ul.baraja-container li {
   }
 }
 /*==== End ====*/
+.malware-removal{
+  .icon-bug-trail{
+    width: 450px;
+    position: absolute;
+    right: 13%;
+    z-index: 1;
+    top: 16%;
+  }
+  .icon-sm-worm{
+    bottom: 23%;
+    right: 19.8%;
+    width: 60px;
+    position: absolute;
+  }
+  .icon-fly-bugs{
+    width: 380px;
+    position: absolute;
+    z-index: 1;
+    left: -93px;
+    top: 31%;
+  }
+  .icon-clear-crap{
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    width: 150px;
+  }
+  .icon-worm{
+    bottom: 19%;
+    right: 22%;
+    width: 60px;
+    position: absolute;
+    transform: scale(-1, 1);
+  }
+  .malware-remove-box{
+    .icon-green-check{
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    background: #fff;
+  }
+}
+.comodo-bld {
+  background: url(icon-comodo-bld.svg) no-repeat;
+  height: 481px;
+  background-position: top;
+}
 .background-none{
   background: none;
 }
@@ -2867,6 +3042,43 @@ ul.baraja-container li {
   display: none;
 }
 /*==== Site wide media quieries ====*/
+@media screen and (min-width: 2500px){
+  .malware-removal{
+    .icon-bug-trail {
+      width: 450px;
+      position: absolute;
+      right: 22%;
+      z-index: 1;
+      top: 16%;
+    }
+    .icon-sm-worm {
+      bottom: 23%;
+      right: 27.2%;
+      width: 60px;
+      position: absolute;
+    }
+    .icon-worm {
+      bottom: 19%;
+      right: 29%;
+      width: 60px;
+      position: absolute;
+      transform: scale(-1, 1);
+    }
+    .icon-clear-crap {
+      position: absolute;
+      bottom: 15%;
+      left: 27%;
+      width: 150px;
+    }
+    .icon-fly-bugs {
+      width: 430px;
+      position: absolute;
+      z-index: 1;
+      left: -23px;
+      top: 31%;
+    }
+  }
+}
 @media screen and (max-width: 1600px){
   .malware-bug{
     .icon-worm {
@@ -2917,6 +3129,14 @@ ul.baraja-container li {
   }
 }
 @media screen and (max-width: 768px){
+  .dropdown-item{
+    white-space: normal;
+  }
+  .world-wide {
+    background: url(world-wide.svg) center center no-repeat;
+    height: 150px;
+    background-size: contain;
+  }
   .malware-banner-mobile{
     background: url("icon-malware-loop.svg") center center / 100% 50% no-repeat, $red;
   }
@@ -2944,9 +3164,7 @@ ul.baraja-container li {
   .mobile.war-room{
     display: block;
   }
-  .w-75{
-    width: 100% !important;
-  }
+  
   .dangerous-web .icon-city-pie{
     float: none;
     width: 336px;
@@ -2978,7 +3196,7 @@ ul.baraja-container li {
   .security-partners-mobile,
   .inner-page-mobile-tabs,
   .show-mobile-768{
-    display: block;
+    display: block !important;
   }
   .HeaderA-Level2{
     font-size: 1.6rem;
@@ -3018,6 +3236,23 @@ ul.baraja-container li {
   .price-box{
     .icon{
       width: 50px;
+    }
+  }
+  .red-transform{
+    &:before {
+      top: -625px;
+      border-left: 402px solid transparent;
+      border-bottom: 1020px solid #c41230;
+      transform: rotate(101deg);
+      z-index: -1;
+    }
+    &:after {
+      top: -350px;
+      border-left: 446px solid transparent;
+      border-bottom: 490px solid red;
+      transform: rotate(85deg);
+      z-index: -2;
+      left: 13px;
     }
   }
 }
