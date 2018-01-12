@@ -1638,6 +1638,11 @@ a{
   display: none;
 }
 /*==== End ====*/
+a.darkish-blue-text:visited,
+a.darkish-blue-text:focus,
+a.darkish-blue-text:active{
+  color: $darkish-blue;
+}
 
 /*
 ======
@@ -2013,7 +2018,7 @@ ul.baraja-container li {
 /*== Header logo ==*/
 .site-logo{
   img{
-    width: 300px;
+    width: 262px;
   }
 }
 /*== Header logo ==*/
@@ -3040,6 +3045,10 @@ ul.baraja-container li {
 }
 .show-mobile-768{
   display: none;
+}
+//pixel perfect responsive killer styles
+.nav-item.dropdown{
+  margin-right: 34px;
 }
 /*==== Site wide media quieries ====*/
 @media screen and (min-width: 2500px){

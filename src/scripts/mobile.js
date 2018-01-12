@@ -42,11 +42,11 @@ var mobile = (function(){
       //footer links
       $('.footer-link-change').click(function(){
         $this = $(this);
-        if ($this.children('span.plus').hasClass('minus')){
-          $this.children('span.plus').removeClass('minus');
+        if ($this.hasClass('minus')){
+          $this.removeClass('minus');
         } else {
           $this.parents('#footer-accordian').find('span.plus.minus').removeClass('minus');
-          $this.children('span.plus').addClass('minus');
+          $this.addClass('minus');
         }
       });
     }

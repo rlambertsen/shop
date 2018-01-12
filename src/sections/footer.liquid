@@ -8,46 +8,34 @@
       </div>
     </div>
     <div class="row">
-      <div class="col offset-sm-1">
-        <p class="fs13 font-weight-bold">BENEFITS</p>
-        <ul class="list-unstyled fs13">
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Lorem Ipsum</li>
-          <li>Consectetur</li>
-          <li>Adipsing Elit</li>
-        </ul>
-      </div>
       <div class="col">
-        <p class="fs13 font-weight-bold">PRICING</p>
-        <ul class="list-unstyled fs13">
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Lorem Ipsum</li>
-          <li>Consectetur</li>
-          <li>Adipsing Elit</li>
-        </ul>
+        
+          
+        
       </div>
-      <div class="col">
-        <p class="fs13 font-weight-bold">ABOUT US</p>
-        <ul class="list-unstyled fs13">
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Lorem Ipsum</li>
-          <li>Consectetur</li>
-          <li>Adipsing Elit</li>
-        </ul>
-      </div>
-      <div class="col">
-        <p class="fs13 font-weight-bold">PARTNER</p>
-        <ul class="list-unstyled fs13"> 
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Lorem Ipsum</li>
-          <li>Consectetur</li>
-          <li>Adipsing Elit</li>
-        </ul>
-      </div>
+    </div>
+    <div class="row">
+      {% for link in linklists.main-menu.links %}
+        {% if forloop.first == true %}
+          <div class="col offset-sm-1">
+            <p><a href="{{ link.url }}" class="fs13 font-weight-bold black-text text-uppercase">{{ link.title }}</a></p>
+            <ul class="list-unstyled fs13">
+            {% for sub_link in link.links %}
+              <li><a class="grey-text" href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+            {% endfor %}
+            </ul>
+          </div>
+        {% else %}
+          <div class="col">
+            <p><a href="{{ link.url }}" class="fs13 font-weight-bold black-text text-uppercase">{{ link.title }}</a></p>
+            <ul class="list-unstyled fs13">
+            {% for sub_link in link.links %}
+              <li><a class="grey-text" href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+            {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <div class="row">
       <div class="col-6 offset-sm-3 my-5">
@@ -94,89 +82,33 @@
     </div>
     <div class="row m-0">
       <div class="col p-0">
+        
         <div id="footer-accordian"  role="tablist" data-children=".footer-accordian--child">
-          <div class="footer-accordian--child">
-            <div class="border-top border-grey-light p-3">
-              <a class="footer-link-change darkish-blue-text" data-toggle="collapse" href="#benefits-mobile" aria-expanded="false" aria-controls="benefits-mobile">
-                BENEFITS <span class="plus float-right"></span>
-              </a>
-            </div>
-            <div class="collapse p-3 " id="benefits-mobile" data-parent="#footer-accordian">
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
+          {% for link in linklists.main-menu.links %}
+            {% if link.links != blank %}
+              <div class="footer-accordian--child">
+                <div class="border-top border-grey-light p-3">
+                  <a class="darkish-blue-text text-uppercase" href="{{ link.url }}">
+                    {{ link.title }} <span class="plus float-right footer-link-change" data-toggle="collapse" href="#{{ link.title }}" aria-expanded="false" aria-controls="benefits-mobile"></span>
+                  </a>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
+                <div class="collapse p-3 " id="{{ link.title }}" data-parent="#footer-accordian">
+                  <div class="row">
+                    {% for sub_link in link.links %}
+                      <div class="col">
+                        <a href="{{sub_link.url}}">{{sub_link.title}}</a>
+                      </div>
+                    {% endfor %}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="footer-accordian--child">
-            <div class=" border-top border-grey-light p-3">
-              <a class="footer-link-change darkish-blue-text" data-toggle="collapse" href="#pricing-mobile" aria-expanded="false" aria-controls="pricing-mobile">
-                PRICING <span class="plus float-right"></span>
-              </a>
-            </div>
-            <div class="collapse p-3" id="pricing-mobile" data-parent="#footer-accordian">
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
+            {% else %}
+              <div class=" border-top border-grey-light p-3">
+                <a href="{{ link.url }}" class=" darkish-blue-text text-uppercase">{{ link.title }}</a>
               </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-accordian--child">
-            <div class="border-top border-grey-light p-3">
-              <a class="footer-link-change darkish-blue-text" data-toggle="collapse" href="#about-mobile" aria-expanded="false" aria-controls="about-mobile">
-                ABOUT US  <span class="plus float-right"></span>
-              </a>
-            </div>
-            <div class="collapse p-3" id="about-mobile" data-parent="#footer-accordian">
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <a href="tel:">Lorum Ipsum</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" border-top border-grey-light p-3">
-          <a href="tel:" class=" darkish-blue-text">PARTNER</a>
-        </div>
-        <div class="border-top border-grey-light p-3">
-          <a href="tel:" class=" darkish-blue-text">COMPARE</a>
-        </div>
-        <div class=" border-top border-grey-light p-3">
-          <a href="tel:" class=" darkish-blue-text">CONTACT</a>
-        </div>
+            {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>

@@ -16,7 +16,7 @@
 {% endif %} 
 
   <nav class="navbar navbar-expand-lg container">
-    <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
+    <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}" style="position:relative;left: 48px;">
       {% if section.settings.logo != blank %}
         {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
         <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
@@ -30,7 +30,7 @@
         <path stroke="#969C9C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h35M4 15h35M4 23h45"></path></svg>
     </button>
     <!-- start search, account and cart links -->
-    <div class="collapse navbar-collapse justify-content-end  mainNav search-desktop" >
+    <div class="collapse navbar-collapse justify-content-end  mainNav search-desktop" style="position: relative;top: -15px;left: -23px;">
       {% if shop.customer_accounts_enabled %}
        <ul class="navbar-nav work ">
           <li class="nav-item">
@@ -77,7 +77,7 @@
       {% endif %}
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg container mobile-navbar">
+  <nav class="navbar navbar-expand-lg container mobile-navbar" style="top: -26px;position: relative;">
     <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile" >
       {% if shop.customer_accounts_enabled %}
        <ul class="navbar-nav work ">
@@ -132,29 +132,29 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu m-0 fs15" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs15" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
                     </div>
                 </li>
               {% else %}
-                <li class="nav-item">
+                <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text">{{ link.title }}</a>
                 </li>
               {% endif %}
             {% else %}
               {% if link.links != blank %}
-                <li class="nav-item dropdown mr-5">
+                <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu m-0 fs15" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs15" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
                     </div>
                 </li>
               {% else %}
-                <li class="nav-item mr-5">
+                <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text">{{ link.title }}</a>
                 </li>
               {% endif %}
@@ -187,7 +187,7 @@
   {% if template == 'index' %}
     <div class="hero__cta">
       <div class="container">
-        <div class="row flex-column align-items-center mt-5">
+        <div class="row flex-column align-items-center " style="margin-top: 1.8rem;">
           <div class="hero__cta--1 row position-relative word-lines" style=" ">
             <span class="col-1 border-bottom border-grey position-relative"></span>
             <span class="col-auto mont fs15 lsp1 text-uppercase lsp2">cwatch web</span>
