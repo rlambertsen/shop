@@ -36,9 +36,92 @@ $.fn.isOnScreen = function(){
   // smartscroll
   jQuery.fn[sr] = function (fn, threshhold) { return fn ? this.bind('scroll', debounce(fn, threshhold)) : this.trigger(sr); };
 })(jQuery, 'smartscroll');
+function countingUp(){
+  $('.Countries').animateNumber({
+      number: 190,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.Endpoints').animateNumber({
+      number: 100,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.unique').animateNumber({
+      number: 800,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.threats').animateNumber({
+      number: 500,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.analyzed').animateNumber({
+      number: 13,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.performance').animateNumber({
+      number: 13,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number + '%');
+      }
+    },
+    5000
+  );
+  $('.blocked').animateNumber({
+      number: 15,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.Support').animateNumber({
+      number: 99.9,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number + '%');
+      }
+    },
+    5000
+  );
+  return false
+}
 /*==== End ====*/
 /*==== Document Ready only below ====*/
-$(function() {
+$(function() {  
   resize.init();
   mobile.init();
   //navigation hovers
@@ -227,8 +310,8 @@ $(function() {
     $this = $(this);
     console.log(e);
     
-    //var current = e.target.data('step');
-    var next = $(e.relatedTarget).data('step');
+  //var current = e.target.data('step');
+  var next = $(e.relatedTarget).data('step');
     $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('grey-text');
     $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('grey-text');
   });
@@ -240,4 +323,48 @@ $(function() {
     $this = $(this);
     $('#how-it-works').carousel('next');
   });
+  //counting numbers
+  var $window = $(window);
+  var counted = false;
+  $(window).smartscroll(function(e){
+    if ($('.counting-numbers').isOnScreen() && counted === false){
+      countingUp();
+      counted = true;
+    } else {
+      counted = false;
+    }
+  });
+
+  $('.btn').click(function(){
+    $this = $(this);
+    if ($this.attr('data-id')){
+      var id = $this.data('id');
+      var data ={
+        quantity: 1,
+        id: id
+      }
+      $.ajax({
+        url: '/cart/add.js',
+        type: 'POST',
+        // async: false,
+        // cache: false,
+        data: data,
+        success: function(msg){
+          console.log(msg)
+          $.getJSON('/cart.js', function(cart) {
+            console.log(cart.item_count)
+            $('.badge').text('('+cart.item_count+')');
+          });
+        }
+      });
+
+    } else {
+      console.log('nope')
+    }
+    // $.getJSON('/cart.js', function(cart) {
+    //   console.log(cart.item_count)
+    //   $('.badge').text('('+cart.item_count+')');
+    // });
+  })
+
 });

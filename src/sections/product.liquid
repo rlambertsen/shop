@@ -1,6 +1,7 @@
 <div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true" itemscope itemtype="http://schema.org/Product">
 
   {%- assign current_variant = product.selected_or_first_available_variant -%}
+  {{product.selected_or_first_available_variant.price}}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 
   <meta itemprop="name" content="{{ product.title }}{% unless product.has_only_default_variant %} - {{ current_variant.title }}{% endunless %}">
@@ -90,14 +91,16 @@
         type="submit"
         name="add"
         data-add-to-cart
+        class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500"
         {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-          <span data-add-to-cart-text>
+        Buy Now
+          <!--<span data-add-to-cart-text>
             {% if current_variant.available %}
               {{ 'products.product.add_to_cart' | t }}
             {% else %}
               {{ 'products.product.sold_out' | t }}
             {% endif %}
-          </span>
+          </span> -->
       </button>
     </form>
 

@@ -2356,7 +2356,7 @@ ul.baraja-container li {
     width: 130px;
     position: absolute;
     z-index: 1;
-    left: 37rem;
+    left: rem(420);
     bottom: -106px;
   }
   .icon-bug-trail{
@@ -2364,7 +2364,7 @@ ul.baraja-container li {
     position: absolute;
     z-index: 1;
     transform: skewY(-2deg);
-    right: 520px;
+    right: 238px;
     top: -70px;
   }
   &:before{
