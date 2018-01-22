@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="81.87" viewBox="0 0 90 81.87">
+  <title>icon-yield-sign</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="_1200" data-name="1200">
+      <g id="What_Is_SIEM" data-name="What Is SIEM">
+        <g>
+          <g>
+            <g>
+              <path d="M45,77.46H18.92a2.89,2.89,0,0,1-2.5-4.34l13-22.58L42.5,28a2.89,2.89,0,0,1,5,0l13,22.58,13,22.58a2.89,2.89,0,0,1-2.5,4.34Z" style="fill: #fff;fill-rule: evenodd"/>
+              <path d="M45,77.46H18.92a2.89,2.89,0,0,1-2.5-4.34l13-22.58L42.5,28a2.89,2.89,0,0,1,5,0l13,22.58,13,22.58a2.89,2.89,0,0,1-2.5,4.34Z" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+            </g>
+            <text transform="translate(39.7 69.99)" style="font-size: 35.0590705871582px;fill: #373e5a;font-family: WorkSans-SemiBold, Work Sans;font-weight: 700">!</text>
+          </g>
+          <polygon points="51.54 7.37 45.72 7.37 47.7 0.5 40.61 0.5 38.46 11.24 42.82 11.24 41.62 20.33 51.54 7.37" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          <g>
+            <polygon points="89.5 28.4 84.98 26.49 88.77 21.81 83.27 19.49 78.08 27.12 81.46 28.55 77.56 35.21 89.5 28.4" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+            <polygon points="1.53 31.78 5.39 28.75 0.5 25.23 5.2 21.54 12.21 27.54 9.32 29.81 14.85 35.21 1.53 31.78" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          </g>
+          <g>
+            <polygon points="16.21 16.43 21.35 14.33 17.13 8.98 23.38 6.43 29.14 15.13 25.3 16.7 29.62 24.28 16.21 16.43" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+            <polygon points="73.78 16.43 68.65 14.33 72.87 8.98 66.62 6.43 60.86 15.13 64.7 16.7 60.38 24.28 73.78 16.43" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,16 +1,16 @@
 <section class="malware-banner">
   <div class="container">
     <div class=" d-flex align-items-center justify-content-around  position-relative ">
-      <div class="text-shadow work position-relative ">Got Malware?</div>
-      <div class="border-bottom border-white lato fs15 white-text">Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}</div>
-      <div class="text-shadow work position-relative ">Or Call (888) 222-2222</div>
+      <div class="text-shadow work position-relative gt1">Got Malware?</div>
+      <div class="border-bottom border-white lato fs15 white-text gt2">Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}</div>
+      <div class="text-shadow work position-relative gt3">Or Call (888) 222-2222</div>
     </div>
   </div>
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
 {% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'about' %}
-  <section class="hero pt-3 mh-519 background-none">
+  <section class="hero pt-3 background-none">
 {% elsif temnplate == 'malware' or template == 'pricing'  %}
   <section class="hero pt-3 background-none">
 {% endif %} 
@@ -42,43 +42,47 @@
             <!-- </form> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link fs15">1-888-555-5555</a>
+            <a class="nav-link fs15 grey-text" href="tel:">1-888-555-5555</a>
           </li>
           {% if customer %}
             <li class="nav-item">
               {% if customer.first_name != blank %}
-                <a class="nav-link fs12" href="/account">{{ 'customer.account.title' | t }}</a>
+                <a class="nav-link fs12 grey-text" href="/account">{{ 'customer.account.title' | t }}</a>
               {% endif %}
             </li>
-            <li class="nav-item">
+            <li class="nav-item grey-text">
               {{ 'layout.customer.log_out' | t | customer_logout_link }}
             </li>
           {% else %}
-            <li class="nav-item">
+            <li class="nav-item grey-text">
               {{ 'layout.customer.log_in' | t | customer_login_link }}
             </li>
             <li class="nav-item nav-link fs12">/</li>
-            <li class="nav-item">
+            <li class="nav-item grey-text">
               {{ 'layout.customer.create_account' | t | customer_register_link }}
             </li>
           {% endif %}
-          <li class="nav-item">
-            <a  class="nav-link" href="/cart">
+          <li class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle" href="/checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="d-flex flex-row fs12">
-                <div class="">Cart</div>
+                <div class="grey-text">Checkout</div>
                 <div class="position-relative">
                   {% include 'icon-cart' %}
                   <span class="badge badge-primary position-absolute">({{ cart.item_count }}<!-- {{ 'layout.cart.items_count' | t: count: cart.item_count }} -->)</span>
                 </div>
               </div>
             </a>
+            <div class="dropdown-menu">
+              <p class="m-0 px-3 fs15 text-center dropdown-item">Your Cart is Empty!</p>
+              <ul class="list-unstyled fs15 cart-contents hidden"></ul>
+            </div>
           </li>
         </ul>
       {% endif %}
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg container mobile-navbar" style="top: -26px;position: relative;">
-    <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile" >
+  <nav class="navbar navbar-expand-lg container mobile-navbar position-relative" style="top: -24px;">
+    <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile hidden" >
       {% if shop.customer_accounts_enabled %}
        <ul class="navbar-nav work ">
           <li class="nav-item">
@@ -110,16 +114,20 @@
               {{ 'layout.customer.create_account' | t | customer_register_link }}
             </li>
           {% endif %}
-          <li class="nav-item">
-            <a  class="nav-link" href="/cart">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="d-flex flex-row fs12">
-                <div class="">Cart</div>
+                <div class="grey-text">Checkout</div>
                 <div class="position-relative">
                   {% include 'icon-cart' %}
                   <span class="badge badge-primary position-absolute">({{ cart.item_count }}<!-- {{ 'layout.cart.items_count' | t: count: cart.item_count }} -->)</span>
                 </div>
               </div>
             </a>
+            <div class="dropdown-menu mt-0">
+              <p class="m-0 px-3 fs15 text-center dropdown-item">Your Cart is Empty!</p>
+              <ul class="list-unstyled fs15 cart-contents hidden"></ul>
+            </div>
           </li>
         </ul>
       {% endif %}
@@ -132,7 +140,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs15" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs15 mt-0" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
@@ -147,7 +155,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs15" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs15 mt-0" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
@@ -183,7 +191,7 @@
     </div>
   </section>
   <!-- End -->
-  <!-- start banner -->
+  <!-- start banner --> 
   {% if template == 'index' %}
     <div class="hero__cta">
       <div class="container">
@@ -202,15 +210,16 @@
             <span class="work dollar-sign fs16 position-relative">/ mo.</span>
           </div>
           <div class="hero__cta--4 position-relative mt-2">
-            <a href="#" class="btn btn-success btn-cta-rd text-uppercase mont fs17 p-0"><p class="btn-text btn-success-text-shadow m-0 chrome-fw600">protect your site today</p></a>
+            <a href="#" class="btn btn-success btn-cta-rd text-uppercase mont fs17 p-0">
+              <p class="btn-text btn-success-text-shadow m-0 chrome-fw600">protect your site today</p></a>
           </div>
         </div>
       </div>
     </div>
   {% endif %}
   {% if template contains 'benefits' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">The Benefits of cWatch Web to Your Business</h1>
@@ -219,10 +228,10 @@
          </div>
        </div>
     </div>
-  {% endif %}
+  {% endif %} 
   {% if template contains 'csoc' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)</h1>
@@ -233,8 +242,8 @@
     </div>
   {% endif %}
   {% if template contains 'firewall' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Advanced Threat Protection — Web Application Firewall (WAF)</h1>
@@ -245,8 +254,8 @@
     </div>
   {% endif %}
   {% if template contains 'cdn' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Improved Website Performance — Content Delivery network (CDN)</h1>
@@ -257,8 +266,8 @@
     </div>
   {% endif %}
   {% if template contains 'siem' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-2">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">Proactive Defense & Response- <br>Security Information & Event Management (SIEM)</h1>
@@ -269,8 +278,8 @@
     </div>
   {% endif %}
   {% if template contains 'about' %}
-    <div class="hero_cta green-gradients mh-250 mt-4 d-flex flex-column justify-content-center">
-       <div class="container">
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
          <div class="row">
            <div class="col">
              <h1 class="HeaderB-Level4 m-0">About Us — Discover the cWatch Difference</h1>

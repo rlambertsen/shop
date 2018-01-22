@@ -1,0 +1,245 @@
+@media screen and (min-width: 2500px){
+  .malware-removal{
+    .icon-bug-trail {
+      width: 450px;
+      position: absolute;
+      right: 22%;
+      z-index: 1;
+      top: 16%;
+    }
+    .icon-sm-worm {
+      bottom: 23%;
+      right: 27.2%;
+      width: 60px;
+      position: absolute;
+    }
+    .icon-worm {
+      bottom: 19%;
+      right: 29%;
+      width: 60px;
+      position: absolute;
+      transform: scale(-1, 1);
+    }
+    .icon-clear-crap {
+      position: absolute;
+      bottom: 15%;
+      left: 27%;
+      width: 150px;
+    }
+    .icon-fly-bugs {
+      width: 430px;
+      position: absolute;
+      z-index: 1;
+      left: -23px;
+      top: 31%;
+    }
+  }
+}
+@media screen and (max-width: 1600px){
+  .malware-bug{
+    .icon-worm {
+      width: 130px;
+      position: absolute;
+      z-index: 1;
+      left: 7rem;
+      bottom: -109px;
+    }
+    .icon-bug-trail {
+      right: 30px;
+    }
+  }
+}
+@media screen and (max-width: 1199px){}
+@media screen and (max-width: 991px){
+  .w-75{
+    width: 100% !important;
+  } 
+  .mobile-navbar{
+    background: #fff;
+    padding: 0;
+    margin: 0;
+  }
+  .hero_cta.green-gradients .col {
+    left: 0;
+    top: 0;
+  }
+  .icon-bombs:after{
+    content: "";
+    background: none;
+  }
+  .mainNav{
+    padding: 15px;
+  }
+  .hero__cta--1,
+  .hero__cta--2,
+  .hero__cta--3,
+  .hero__cta--4{
+    left: 0;
+    width: inherit;
+  }
+  .hero__cta--3{
+    span:nth-child(1) {
+    top: 45px;
+    left: -17px;
+    }
+  }
+  .green-gradients{
+    &:before,
+    &:after{
+      content: none;
+    }
+    .container{
+      transform: skewY(0deg);
+      text-align: center;
+    }
+    transform: skewY(0deg);
+  }
+  .malware-bug{
+    .icon-worm{
+      bottom: -25px;
+      width: 80px;
+    }
+  }
+  .hacked {
+    background-position: 44% 84%;
+    background-size: 385px;
+  }
+  .war-room,
+  .war-floor,
+  .tab-security-info,
+  .reporting,
+  .security-hide-mobile,
+  .protect,
+  .icon-bug-trail,
+  .footer,
+  .malware-banner,
+  .csoc-hero-text,
+  .hide-mobile-768{
+    display: none;
+  }
+  .security-show-mobile,
+  .reporting-mobile,
+  .protect-mobile,
+  .icon-bug-mobile,
+  .footer-mobile,
+  .malware-banner-mobile,
+  .mobile-csoc-hero-text,
+  .security-partners-mobile,
+  .inner-page-mobile-tabs,
+  .show-mobile-768{
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px){
+  .dropdown-item{
+    white-space: normal;
+  }
+  .world-wide {
+    background: url(world-wide.svg) center center no-repeat;
+    height: 150px;
+    background-size: contain;
+  }
+  .malware-banner-mobile{
+    background: url("icon-malware-loop.svg") center center no-repeat, url("icon-malware-loop.svg") top no-repeat, url("icon-malware-loop.svg") bottom no-repeat, $red;
+  }
+  .site-logo{
+    img {
+      width: 200px;
+    }
+  }
+  .red-icon-circle{
+    position: relative;
+    z-index: 0;
+  }
+  .btn{
+    white-space: inherit;
+  }
+  .hacked {
+    background-position: 40% 80%;
+    background-size: 430px;
+  }
+  .mobile-protect{ 
+    .slide-content {
+      min-height: 600px;
+    }
+  }
+  .mobile.war-room{
+    display: block;
+  }
+  
+  .dangerous-web .icon-city-pie{
+    float: none;
+    width: 336px;
+    height: 350px;
+  }
+  .dangerous-web .icon-city-pie ~ p{
+    text-align: center;
+  }
+  
+  .HeaderA-Level2{
+    font-size: 1.6rem;
+  }
+  .fade-white{
+    background: none;
+  }
+}
+@media screen and (max-width: 575px){
+  .hacked {
+    background-position: 90% 80%;
+    background-size: 430px;
+  }
+  .word-lines {
+    .col-1:nth-child(3) {
+      top: -11px;
+      right: 0;
+    }
+  }
+  #mobile-security-tabs{
+    .HeaderA-Level2{
+      font-size: rem(33);
+    }
+  }
+  .mobile-protect{ 
+    .slide-content {
+      min-height: 925px;
+    }
+  }
+  .malware-bug{
+    .icon-worm {
+      bottom: -17px;
+      left: 1rem;
+      width: 50px;
+    }
+  }
+  .hero__cta--4 a .btn-text{
+    padding: 12px 47px;
+  }
+  .counting-numbers{
+    .fs63{
+      font-size: rem(43);
+    }
+  }
+  .price-box{
+    .icon{
+      width: 50px;
+    }
+  }
+  .red-transform{
+    &:before {
+      top: -625px;
+      border-left: 402px solid transparent;
+      border-bottom: 1020px solid #c41230;
+      transform: rotate(101deg);
+      z-index: -1;
+    }
+    &:after {
+      top: -350px;
+      border-left: 446px solid transparent;
+      border-bottom: 490px solid red;
+      transform: rotate(85deg);
+      z-index: -2;
+      left: 13px;
+    }
+  }
+}
+/*==== End ====*/

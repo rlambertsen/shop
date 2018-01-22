@@ -1,14 +1,11 @@
-<!-- {% for collection in collections %}
-  {%- assign singleProduct = collection.products -%}
-{% endfor %} -->
 <!-- Desktop -->
-<section class="tab-security-info mt-5">
+<section class="tab-security-info" style="margin-bottom: 139px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="tab-content mb-3">
           <div class="first fade show" data-tab="one">
-            <div class="title HeaderA-Level2 text-center mb-5">
+            <div class="title HeaderA-Level2 text-center mb-4">
               Benefit From Enterprise-Grade Web Security for Any Business, Any Budget
             </div>
             <div class="row">
@@ -28,13 +25,13 @@
                 <div class="green-icon-circle mb-3">
                   {% include 'icon-chart' %}
                 </div>
-                <p class="mont fs15">Boost SEO Rankings </p>
+                <p class="mont fs15">Boost <br> SEO Rankings </p>
               </div>
               <div class="col text-center">
                 <div class="green-icon-circle mb-3">
                   {% include 'icon-money' %}
                 </div>
-                <p class="mont fs15">Reduce IT Risk & Cost</p>
+                <p class="mont fs15">Reduce IT <br> Risk & Cost</p>
               </div>
               <div class="col text-center">
                 <div class="green-icon-circle mb-3">
@@ -116,9 +113,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 </section>
-<section class="partners hide-mobile-768 grey-background p-7 my-5">
+<section class="partners hide-mobile-768 grey-background p-6 my-5">
   <div class="container">
     <div class="row position-relative word-lines justify-content-center w-50 m-auto">
       <span class="col-1 border-bottom border-grey position-relative"></span>
@@ -271,19 +268,19 @@
   </div>
 </section>
 <!-- End -->
-<section class="hacked my-5">
+<section class="hacked mb-5" style="padding-top: 2.1rem;">
   <div class="container">
     <div class="row">
       <div class="col text-center">
         <p class="HeaderA-Level2">Have You Been Hacked?</p>
         <p class="green-text mont font-italic fs20">Malware removal and remediation when you need it most</p>
-        <p class="fs20 mt-1 lh2">
+        <p class="fs20 mt-1 w-75 mx-auto">
           Most website owners are ill-equipped to handle the damage incurred by cyber criminals.  Each day your website is compromized, it puts your business at risk - data exposure, damage to your reputation, drop in search ranking or loss of sales. If you’re experiencing any of the below symptoms, you need our FREE Malware Removal & Repair Service before it’s too late! 
         </p>
       </div>
     </div>
-    <div class="row mt-3 mb-8">
-      <div class="col-md-6">
+    <div class="row mt-3 mb-5-1">
+      <div class="col-lg-5 offset-lg-1">
         <div class="row position-relative justify-content-center word-lines">
           <span class="col-1 border-bottom border-grey position-relative"></span>
           <span class="col-auto mont fs15 fw500 text-uppercase lsp2 grey-text">symptoms</span>
@@ -306,7 +303,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <div class="row position-relative justify-content-center word-lines">
           <span class="col-1 border-bottom border-grey position-relative"></span>
           <span class="col-auto mont fs15 fw500 text-uppercase lsp2 grey-text"><span class="green-text">free</span> services include</span>
@@ -331,7 +328,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="py-3">
+              <li class="py-3 ">
                 Filter out advanced attacks and spam
                 <ul class="list-unstyled fs17 fw300">
                   <li>
@@ -342,13 +339,25 @@
             </ul>
           </div>
         </div>
+        <p class="FeatureText-Level3 mont green-text position-relative text-center hide-mobile-768" style="top: 13px;left: -45px;">Eliminate the headaches <br>caused by malware and spam for free!</p>
+        <span class="hide-mobile-768">
+          {% include 'icon-long-green-line' %}
+        </span>
+        <div class="row show-mobile-768">
+          <div class="col">
+            <p class="FeatureText-Level3 mont green-text position-relative text-center position-relative" style="top: -26px;">Eliminate the headaches <br>caused by malware and spam for free!</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-9 text-center offset-2">
-        <p class="work fw600 fs35">FREE Malware Removal & Repair</p>
-        <p class="mont font-italic fs15">Let Comodo security experts safely remove your malware and repair the damage so you can get back up and running today.</p>
-        <a href="#" class="btn btn-success btn-rd btn-longer my-2">Get Instant Malware Removal Now {% include 'icon-arrow-right-white' %}</a>
+      <div class="col-10 text-center offset-1">
+        <p class="work fw600 fs35 mb-1">FREE Malware Removal & Repair</p>
+        <p class="mont font-italic fs15 w-75 mx-auto">Let Comodo security experts safely remove your malware and repair the damage so you can get back up and running today.</p>
+        <a href="#" class="btn btn-success btn-rd btn-longer my-2 hide-mobile-768">Get Instant Malware Removal Now {% include 'icon-arrow-right-white' %}</a>
+        <div class="show-mobile-768">
+          <a href="/pages/malware-removal" class="btn btn-success btn-rd btn-longer my-2">Get It Now</a>
+        </div>
         <p class="fs26 mont fw600">100% FREE (Yes, really!)</p>
         <p class="mont font-italic fs15">No obligations. No credit card required.</p>
       </div>
@@ -356,16 +365,16 @@
   </div>
 </section>
 <!-- Desktop -->
-<section class="protect grey-background py-7">
+<section class="protect grey-background py-6">
   <div class="container">
-    <div class="row">
+    <div class="row mb-3">
       <div class="col text-center">
         <p class="HeaderA-Level2">How We Protect Your Website</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-4">
-        <div class="nav flex-column nav-pills mont fs14 vert-tabs-green" id="protect-tabs" role="tablist" aria-orientation="vertical">
+      <div class="col-sm-4 position-relative" style="left:43px;">
+        <div class="nav flex-column nav-pills mont fs14 vert-tabs-green mt-4" id="protect-tabs" role="tablist" aria-orientation="vertical">
           <a class="mb-2 nav-link active d-flex flex-row justify-content-around align-items-center position-relative" id="v-pills-home-tab" data-toggle="pill" href="#Advanced" role="tab" aria-controls="Advanced" aria-selected="true">
             {% include 'icon-green-fire-wall' %} Advanced Threat Protection
           </a>
@@ -383,89 +392,96 @@
           </a>
         </div>
       </div>
-      <div class="col-8">
+      <div class="col-sm-7 offset-sm-1">
         <div class="tab-content" id="protect-tabContent">
           <div class="tab-pane fade show active" id="Advanced" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <div class="row mb-2">
-              <div class="col-3 text-center">
+              <div class="col-sm-2 pl-0 text-center">
                 {% include 'icon-green-fire-wall' %}
               </div>
               <div class="col-9 d-flex flex-column justify-content-center ">
-                <p class="mont fs26 green-text">Advanced Threat Protection</p>
+                <p class="mont fs26 green-text m-0 lsp2">Advanced Threat Protection</p> 
               </div>
             </div>
             <div class="row mb-2">
               <div class="col">
                 <p class="fs20">Our powerful Web Application Firewall (WAF) delivers around-the-clock defense against a wide range of cyber threats and vulnerabilities.</p>
-                <ul class="gradient-dots fs20">
+                <ul class="gradient-dots fs20 list-unstyled" style="margin-top:4rem;">
                   <li class="grey-25">Malware and hacking protection</li>
                   <li class="grey-50">OWASP Top 10 protection</li>
                   <li class="grey-75">DDoS attack protection</li>
                   <li class="grey-100">Zero day attack protection</li>
+                  <li><a href="tel:" class="fs15 blue-arrow-right text-decoration-none border-bottom border-blue">More About WAF Threat Protection&nbsp;{% include 'icon-blue-arrow-right' %}</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Detection" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <div class="row mb-2">
-              <div class="col-3 text-center">
-                {% include 'icon-green-fire-wall' %}
+              <div class="col-sm-2 pl-0 text-center">
+                {% include 'icon-shield' %}
               </div>
               <div class="col-9 d-flex flex-column justify-content-center ">
-                <p class="mont fs26 green-text">Advanced Threat Protection</p>
+                <p class="mont fs26 green-text m-0 lsp2">Early Dectection & Visibility</p>
               </div>
             </div>
             <div class="row mb-2">
               <div class="col">
                 <p class="fs20">Our powerful Web Application Firewall (WAF) delivers around-the-clock defense against a wide range of cyber threats and vulnerabilities.</p>
-                <ul class="gradient-dots fs20">
+                <ul class="gradient-dots fs20 list-unstyled" style="margin-top:4rem;">
                   <li class="grey-25">Malware and hacking protection</li>
                   <li class="grey-50">OWASP Top 10 protection</li>
                   <li class="grey-75">DDoS attack protection</li>
                   <li class="grey-100">Zero day attack protection</li>
+                  <li><a href="tel:" class="fs15 blue-arrow-right text-decoration-none border-bottom border-blue">More About WAF Threat Protection&nbsp;{% include 'icon-blue-arrow-right' %}</a></li>
                 </ul>
+              
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Monitoring" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <div class="row mb-2">
-              <div class="col-3 text-center">
-                {% include 'icon-green-fire-wall' %}
+              <div class="col-sm-2 pl-0 text-center">
+                {% include 'icon-person-protect' %}
               </div>
               <div class="col-9 d-flex flex-column justify-content-center ">
-                <p class="mont fs26 green-text">Advanced Threat Protection</p>
+                <p class="mont fs26 green-text m-0 lsp2">Expert Monitoring & Response</p>
               </div>
             </div>
             <div class="row mb-2">
               <div class="col">
                 <p class="fs20">Our powerful Web Application Firewall (WAF) delivers around-the-clock defense against a wide range of cyber threats and vulnerabilities.</p>
-                <ul class="gradient-dots fs20">
+                <ul class="gradient-dots fs20 list-unstyled" style="margin-top:4rem;">
                   <li class="grey-25">Malware and hacking protection</li>
                   <li class="grey-50">OWASP Top 10 protection</li>
                   <li class="grey-75">DDoS attack protection</li>
                   <li class="grey-100">Zero day attack protection</li>
+                  <li><a href="tel:" class="fs15 blue-arrow-right text-decoration-none border-bottom border-blue">More About WAF Threat Protection&nbsp;{% include 'icon-blue-arrow-right' %}</a></li>
                 </ul>
+                
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Website" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row mb-2">
-              <div class="col-3 text-center">
-                {% include 'icon-green-fire-wall' %}
+              <div class="col-sm-2 pl-0 text-center">
+                {% include 'icon-cloud-data' %}
               </div>
               <div class="col-9 d-flex flex-column justify-content-center ">
-                <p class="mont fs26 green-text">Advanced Threat Protection</p>
+                <p class="mont fs26 green-text m-0 lsp2">Improved Website Performance</p>
               </div>
             </div>
             <div class="row mb-2">
               <div class="col">
                 <p class="fs20">Our powerful Web Application Firewall (WAF) delivers around-the-clock defense against a wide range of cyber threats and vulnerabilities.</p>
-                <ul class="gradient-dots fs20">
+                <ul class="gradient-dots fs20 list-unstyled" style="margin-top:4rem;">
                   <li class="grey-25">Malware and hacking protection</li>
                   <li class="grey-50">OWASP Top 10 protection</li>
                   <li class="grey-75">DDoS attack protection</li>
                   <li class="grey-100">Zero day attack protection</li>
+                  <li><a href="tel:" class="fs15 blue-arrow-right text-decoration-none border-bottom border-blue">More About WAF Threat Protection&nbsp;{% include 'icon-blue-arrow-right' %}</a></li>
                 </ul>
+                
               </div>
             </div>
           </div>
@@ -624,32 +640,32 @@
 <section class="reporting my-5 hide-mobile-768">
   <div class="container">
     <div class="row my-5">
-      <div class="col-5">
-        <p class="HeaderB-Level4">Real-Time Reporting & Threat Analysis in Your Grasp</p>
+      <div class="col-sm-5">
+        <p class="HeaderB-Level4">Real-Time Reporting & <br>Threat Analysis in Your Grasp</p>
         <div class="nav flex-column nav-pills mont vert-tabs-green" id="slider-tabs" role="tablist" aria-orientation="vertical">
           <a data-index="0" class="mb-2 nav-link active position-relative" id="v-pills-home-tab" data-toggle="pill" href="#Web" role="tab" aria-controls="Web" aria-selected="true">
-            Web-Based Dashboard <br>
+            <span class="hover-me">Web-Based Dashboard</span> <br>
             <span class="ParagraphText-small">There’s no hardware to install. cWatch Web is completely cloud-based. And it’s fully-managed.  Follow in real-time with the same analytics-driven SIEM the experts use. </span>
           </a>
           <a data-index="1" class="mb-2 nav-link position-relative" id="v-pills-profile-tab" data-toggle="pill" href="#Web" role="tab" aria-controls="Web" aria-selected="false">
-           Visibility & Insight <br>
+           <span class="hover-me">Visibility & Insight </span><br>
            <span class="ParagraphText-small">Dashboard alerts are prioritized based on severity. You also get a daily summary report in your inbox  highlighting key points and when a new event is detected. Good or bad.</span>
           </a>
           <a data-index="2" class="mb-2 nav-link position-relative" id="v-pills-settings-tab" data-toggle="pill" href="#Web" role="tab" aria-controls="Web" aria-selected="false">
-           Threat Management <br>
+           <span class="hover-me">Threat Management</span> <br>
            <span class="ParagraphText-small">Witness cWatch Web analyze, detect and identify changes in behavior. It senses and tracks incidents and threats to provide actionable data and context for easy investigation.</span>
           </a>
         </div>
       </div>
-      <div class="col-7">
+      <div class="col-sm-7">
         <div class="tab-content" id="protect-tabContent">
           <div class="tab-pane show active pane-web" id="Web" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <div class="row">
               <div class="col">
                 <ul id="baraja-el" class="baraja-container">
-                  <li data-index="0">{{ 'dash.png' | asset_url | img_tag: 'dash' }}</li>
-                  <li data-index="1">{{ 'Banner.png' | asset_url | img_tag: 'dash' }}</li>
-                  <li data-index="2">{{ 'dash.png' | asset_url | img_tag: 'dash' }}</li>
+                  <li data-index="0" class="img-flipper">{{ 'dash.png' | asset_url | img_tag: 'dash' }}</li>
+                  <li data-index="1" class="img-flipper">{{ 'Banner.png' | asset_url | img_tag: 'dash' }}</li>
+                  <li data-index="2" class="img-flipper">{{ 'dash.png' | asset_url | img_tag: 'dash' }}</li>
                 </ul>
                 <nav class="actions light position-absolute">
                   <span id="nav-prev">{% include 'icon-green-left-arrow-circle' %}</span>
@@ -786,42 +802,42 @@
   </div>
 </section>
 <!-- End -->
-<section class="security">
+<section class="security mb-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <p class="HeaderA-Level2">Website Security is an Ever-Growing Challenge</p>
-        <p class="green-text mont font-italic fs20">60% of SMB hit by a cyber attack are out of business in 6 months.</p>
-        <p class="FirstFeatureParagraph">Hackers grow more sophisticated by the day, and businesses like yours are the target. Even a single data breach, website hack or ransomware attack can cause massive damage to your business, destroy customer trust and lead to huge financial losses. </p>
+        <p class="HeaderA-Level2 mt-4">Website Security is an Ever-Growing Challenge</p>
+        <p class="green-text mont font-italic fs20 pt-3 mb-2">60% of SMB hit by a cyber attack are out of business in 6 months.</p>
+        <p class="FirstFeatureParagraph w-75 mx-auto">Hackers grow more sophisticated by the day, and businesses like yours are the target. Even a single data breach, website hack or ransomware attack can cause massive damage to your business, destroy customer trust and lead to huge financial losses. </p>
       </div>
       <div class="col my-4 text-center">
-        <p class="mont fw600">Can you afford the risk of going unprotected?</p>
+        <p class="mont fw600 pt-2 fs26" style="letter-spacing: 1.3px;">Can you afford the risk of going unprotected?</p>
       </div>
     </div>
     <!-- Desktop -->
-    <div class="security-hide-mobile">
+    <div class="security-hide-mobile mt-5">
       <div class="row">
-        <div class="col">
+        <div class="col mt-5">
           <p class="work fw300 fs26 green-text m-0">64% Have Malware</p>
           <p class="ParagraphText-small">According to studies carried out in 2017, 64% of companies have experienced a Malware Attack - that they know of.</p>
           <p class="mont fs10 fw600 m-0">CWARE, MAR 2017</p>
         </div>
-        <div class="col-6">
+        <div class="col-7">
           {% include 'icon-fixed-laptop' %}
         </div>
-        <div class="col">
+        <div class="col mt-5">
           <p class="work fw300 fs26 green-text m-0">DDoS Attacks up 140%</p>
           <p class="ParagraphText-small">Recent data shows that DDoS Attacks are up 140%, and general web app attacks up 72%.</p>
           <p class="mont fs10 fw600 m-0">GSN MAGAZINE, FEB 2017</p>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col">
+      <div class="row mt-5">
+        <div class="col-sm-4 offset-sm-1">
           <p class="work fw300 fs26 green-text m-0">Hackers Attack Every 39 Seconds</p>
           <p class="ParagraphText-small">By average in 2016 alone, hackers attacked a website every 39 seconds   Lorem ipsum dolor sit amet consectetur.</p>
           <p class="mont fs10 fw600 m-0">SECURITY MAGAZINE, FEB 2016</p>
         </div>
-        <div class="col-3 offset-sm-4">
+        <div class="col-sm-5 offset-sm-2">
           <p class="work fw300 fs26 green-text m-0">$150M by 2020</p>
           <p class="ParagraphText-small">Security analysts predict the cost of a website breach will top $150M by the year 2020.</p>
           <p class="mont fs10 fw600 m-0">FORBES, JAN 2016</p>
@@ -829,10 +845,10 @@
       </div>
       <div class="row">
         <div class="col my-4 text-center">
-          <p class="mont fw600">Instantly Protect Your Business from Online Dangers</p>
-          <a href="" class="btn btn-success btn-rd btn-longer my-2 text-uppercase mont fs15">see all service packages {% include 'icon-arrow-right-white' %} </a>
+          <p class="mont fs26 fw600">Instantly Protect Your Business from Online Dangers</p>
+          <a href="" class="btn btn-success btn-rd btn-longer my-2 text-uppercase mont fs15 lsp2">see all service packages {% include 'icon-arrow-right-white' %} </a>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="" class="btn btn-outline-success btn-rd btn-longer my-2 mont fs15">Learn More</a>
+          <a href="" class="btn btn-outline-success btn-rd my-2 mont fs15">Learn More</a>
         </div>
       </div>
     </div>
@@ -892,7 +908,7 @@
     <!-- End -->
   </div>
 </section>
-<section class="counting-numbers blue-gradients white-text position-relative py-10">
+<section class="counting-numbers blue-gradients white-text position-relative py-8">
   <div class="container ">
     <div class="row my-3">
       <div class="col-lg-3 col-sm-6 col-6">
@@ -932,14 +948,14 @@
     </div>
   </div>
 </section>
-<section class="malware-bug green-gradients  py-10">
+<section class="malware-bug green-gradients">
   {% include 'icon-bug-trail' %}
   {% include 'icon-bug-mobile' %}
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <p class="work fs47 fw300"> <span class="font-weight-bold">FREE</span> Malware Removal & Repair</p>
-        <p class="mont font-italic fs15">Let Comodo security experts safely remove your malware and repair the damage  so you can get back up and running today.</p>
+        <p class="work fs47 fw300 move-1"> <span class="font-weight-bold">FREE</span> Malware Removal & Repair</p>
+        <p class="mont font-italic fs15 w-50 mx-auto">Let Comodo security experts safely remove your malware and repair the damage  so you can get back up and running today.</p>
         <a href="" class="btn btn-primary btn-rd btn-longer my-2 text-uppercase mont fs15">Get FREE Instant Malware Removal Now {% include 'icon-arrow-right-white' %}</a>
         <p class="mont fs35 fw500">100% FREE (Yes, really!)</p>
         <p class="mont font-italic fs15">No obligations. No credit card required.</p>
@@ -948,7 +964,7 @@
   </div>
   {% include 'icon-worm' %}
 </section>
-<section class="live-chat my-5">
+<section class="live-chat">
   <div class="container py-3">
     <div class="row">
       <div class="col-12 text-center">
@@ -958,35 +974,38 @@
         <a href="#" class="work fs35 fw500 ">1-888-481-5388</a>
       </div>
       <div class="col-12 chat-links text-center mt-2">
-        <a href="#" class="btn btn-outline-primary btn-rd btn-longer my-2 mont fs15 text-uppercase fw500 black-text"> {% include 'icon-blue-chat-dots' %} click to chat</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="#" class="btn btn-outline-primary btn-rd btn-longer my-2 mont fs15 text-uppercase fw500 black-text"> {% include 'icon-blue-mail' %} email support</a>
+        <a href="#" class="btn btn-outline-primary btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 w-256" style="margin-right: 16px;"> {% include 'icon-blue-chat-dots' %} click to chat</a>
+        
+        <a href="#" class="btn btn-outline-primary btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 w-256"> {% include 'icon-blue-mail' %} email support</a>
       </div>
     </div>
-    <div class="row mt-5 text-center">
+    <div class="row text-center" style="margin-top: 92px;">
       <div class="col-12 mb-4">
         <p class="HeaderA-Level2">Website Protection You Can Trust—And Afford</p>
-        <p class="FirstFeatureParagraph">cWatch Web is a Security-as-a-Service (SaaS) solution that simplifies website and application security by delivering enterprise-grade managed threat detection, prevention, protection and remediation at a price any size business can afford.</p>
+        <p class="FirstFeatureParagraph w-75 mx-auto">cWatch Web is a Security-as-a-Service (SaaS) solution that simplifies website and application security by delivering enterprise-grade managed threat detection, prevention, protection and remediation at a price any size business can afford.</p>
         <p class="HeaderB-Level4 mt-4">The best protection available.  For companies like yours.</p>
       </div>
     </div>
   </div>
 </section>
 <!-- Desktop -->
-<section class="pricing mb-5">
+<section class="pricing mb-6">
   <div class="container">
     <div class="row">
       <div class="col-sm-4 pr-0">
-        <div class="price-box border-left border-top border-grey-light text-center mh-1100">
-          <p class="mont green-text font-weight-bold mb-3">Pro</p>
+        <div class="price-box border-left border-top border-grey-light text-center mh-800">
+          <p class="mont green-text font-weight-bold mb-0">Pro</p>
           <p class="work fs63 price green-text fw500"> <span class="dollar-sign fs26 fw300">$</span>9.<span class="cents fs20 fw300">90</span></p>
-          <select name="" id="" class="green-outline form-control">
-            <option value="">Month-to-Month</option>
-            <option value="">12 Months ($200 off)</option>
-          </select>
-          <button class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9453149683754">protect site now</button>
           <div>
-            <ul class="green-check-plain list-unstyled text-left">
+            <p class="work fs15 green-text m-0 opaque">sfdsf</p>
+            <select name="" id="" class="green-outline form-control">
+              <option value="">Month-to-Month</option>
+              <option value="">12 Months ($200 off)</option>
+            </select>
+          </div>
+          <button class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9453149683754" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Adding to cart" data-current="protect site now">protect site now</button>
+          <div>
+            <ul class="green-check-plain list-unstyled text-left pl-4 fs17">
               <li>Professional Websites</li>
               <li>Small Business Websites</li>
             </ul>
@@ -1020,7 +1039,7 @@
         </div>
       </div>
       <div class="col-sm-4 px-0">
-        <div class="price-box border-left border-top border-right border-grey-light text-center position-relative mh-1100">
+        <div class="price-box border-left border-top border-right border-grey-light text-center position-relative mh-800">
           <div class="ribbon"><span>Best Seller</span></div>
           <p class="mont green-text font-weight-bold">Premium</p>
           <p class="work fs63 price green-text fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>24.<span class="cents fs20 fw300">90</span></p>
@@ -1031,8 +1050,8 @@
               <option value="">12 Months ($200 off)</option>
             </select>
           </div>
-          <button class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9638768345130">protect site now</button>
-          <ul class="green-check-plain list-unstyled text-left">
+          <button class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9638768345130" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Adding to cart" data-current="protect site now">protect site now</button>
+          <ul class="green-check-plain list-unstyled text-left pl-4 fs17">
             <li>Professional Websites</li>
             <li>Small to Medium Business</li>
             <li>Light Ecommerce Websites</li>
@@ -1066,7 +1085,7 @@
         </div>
       </div>
       <div class="col-sm-4 pl-0">
-        <div class="price-box border-top border-right border-grey-light text-center mh-1100">
+        <div class="price-box border-top border-right border-grey-light text-center mh-800">
           <p class="mont font-weight-bold">Enterprise</p>
           <p class="work fs63 price fw500 mb-1"> <span class="dollar-sign fs26 fw300">$</span>1,558.<span class="cents fs20 fw300">80</span></p>
           <div>
@@ -1077,8 +1096,8 @@
             </select>
           </div>
           <!--   <a href="#botom" class="btn btn-blue-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">protect site now</a> -->
-          <button class="btn btn-blue-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9651122733098">protect site now</button>
-          <ul class="green-check-plain list-unstyled text-left">
+          <button class="btn btn-blue-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500" data-id="9651122733098" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Adding to cart" data-current="protect site now">protect site now</button>
+          <ul class="green-check-plain list-unstyled text-left pl-4 fs17">
             <li>Corporate Websites</li>
             <li>Ecommerce Websites</li>
             <li>High-Value Brands</li>
@@ -1119,7 +1138,7 @@
           <a class="mont fw300 fs15 border-bottom border-blue">View Detailed Features and Pricing {% include 'icon-blue-arrow-right' %}</a>
         </div>
       </div>
-      <div class="col-12 text-center my-5">
+      <div class="col-12 text-center mt-5 mb-3">
         <p class="mont font-italic">Leave website security to the pros. Focus on your business.</p>
         <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">get started now {% include 'icon-arrow-right-white' %}</a>
         <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>

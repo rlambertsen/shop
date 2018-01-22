@@ -1,0 +1,97 @@
+/*==== Sizing  (padding, margin etc) ====*/
+//padding
+.p-6{
+  padding: rem(120);
+}
+.p-7{
+  padding: rem(140);
+}
+.pt-7{
+  padding-top: rem(100);
+}
+.pb-7{
+  padding-bottom: rem(100);
+}
+.py-6{
+  padding: rem(120) 0;
+}
+.py-7{
+  padding: rem(140) 0;
+}
+.py-8{
+  padding: rem(170) 0;
+}
+.py-10{
+  padding: rem(210) 0;
+}
+.py-10-1{
+  padding: rem(202) 0;
+}
+//margin
+.mt-2rem{
+  margin-top: 2rem;
+}
+.mt-6{
+  margin-top: rem(120);
+}
+.mt-8{
+  margin-top: rem(160);
+}
+.mb-2rem{
+  margin-bottom: rem(40);
+}
+.mb-5-1{
+  margin-bottom: rem(100) !important;
+}
+.mb-6{
+  margin-bottom: rem(120);
+}
+.mb-7{
+  margin-bottom: rem(140);
+}
+.mb-8{
+  margin-bottom: rem(160);
+}
+/*==== End ====*/
+.w-256{
+  width: 256px;
+}
+.w-270{
+  width: 270px;
+}
+
+/*==== min heights ====*/
+.mh-45{
+  min-height: 45px;
+}
+.mh-55{
+  min-height: 55px;
+}
+.mh-250{
+  min-height: rem(250);
+}
+.mh-387{
+  min-height: 387px;
+}
+.mh-426{
+  min-height: 426px;
+}
+.mh-450{
+  min-height: 450px;
+}
+.mh-519{
+  min-height: 519px;
+}
+.mh-590{
+  min-height: 590px;
+}
+.mh-700{
+  min-height: 700px;
+}
+.mh-800{
+  min-height: 800px;
+}
+.mh-1100{
+  min-height: 1100px;
+}
+/*==== End ====*/

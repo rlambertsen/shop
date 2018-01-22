@@ -1,0 +1,64 @@
+/*=== Border classes ====*/
+.border{
+  border: 1px solid;
+}
+.border-top{
+  border-top: 1px solid;
+}
+.border-left{
+  border-left: 1px solid;
+}
+.border-right{
+  border-right: 1px solid;
+}
+.border-bottom{
+  border-bottom: 1px solid;
+}
+// border dashed classes
+.border-dash{
+  border: 1px dashed;
+}
+.border-dash-bottom{
+  border-bottom: 1px dashed;
+}
+.border-white{
+  border-color: $white;
+}
+.border-grey{
+  border-color: $grey-accent;
+}
+.border-grey-light{
+  border-color: $grey;
+}
+.border-blue{
+  border-color: $blue;
+}
+.border-dark-blue{
+  border-color: $darkish-blue;
+}
+.border-thicker-2{
+  border-width: 2px;
+}
+.border-thicker-3{
+  border-width: 3px;
+}
+.border-thicker-4{
+  border-width: 4px;
+}
+.border-thicker-5{
+  border-width: 5px;
+}
+//border radius classes
+.br{
+  border-radius: 1px;
+}
+.br-2{
+  border-radius: 2px;
+}
+.br-3{
+  border-radius: 3px;
+}
+.br-4{
+  border-radius: 4px;
+}
+/*=== End ===*/

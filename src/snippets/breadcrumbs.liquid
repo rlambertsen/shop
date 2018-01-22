@@ -4,9 +4,9 @@
       <div class="col">
         {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
           <nav role="navigation" aria-label="breadcrumbs">
-            <a href="/" title="Home">{% include 'icon-blue-home' %}</a>
+            <a href="/" title="Home" style="margin-right:10px;">{% include 'icon-blue-home' %}</a>
             {% if template contains 'page' %}
-              <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+              <span aria-hidden="true" style="margin-right:9px;">{% include 'icon-grey-caret-right' %}</span>
               <span class="fs12 work">{{ page.title }}</span>
             {% elsif template contains 'product' %}
               {% if collection.url %}

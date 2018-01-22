@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="63.1" viewBox="0 0 90 63.1">
+  <title>icon-bubble-exclamation</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="_1200" data-name="1200">
+      <g id="Brain">
+        <g>
+          <g>
+            <path d="M89.5,39.35A13.91,13.91,0,1,0,72.3,52.79l3.31,6.13,3.13-6.1A13.86,13.86,0,0,0,89.5,39.35Z" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round;fill-rule: evenodd"/>
+            <text transform="translate(71.56 47.4) scale(1.01 1)" style="font-size: 20.59248924255371px;fill: #373e5a;stroke: #373e5a;stroke-miterlimit: 10;font-family: TimesNewRomanPS-BoldMT, Times New Roman;font-weight: 700">!</text>
+          </g>
+          <g>
+            <path d="M28.33,41.13a13.91,13.91,0,1,0-17.2,13.5l3.31,6.16,3.13-6.13A13.9,13.9,0,0,0,28.33,41.13Z" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round;fill-rule: evenodd"/>
+            <text transform="translate(10.39 49.21)" style="font-size: 20.59248924255371px;fill: #373e5a;stroke: #373e5a;stroke-miterlimit: 10;font-family: TimesNewRomanPS-BoldMT, Times New Roman;font-weight: 700">!</text>
+          </g>
+          <g>
+            <path d="M70.61,26.22a25.78,25.78,0,1,0-31.88,25l6.14,11.4,5.81-11.34A25.74,25.74,0,0,0,70.61,26.22Z" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round;fill-rule: evenodd"/>
+            <text transform="translate(37.37 41.18)" style="font-size: 44.639129638671875px;fill: #373e5a;font-family: TimesNewRomanPS-BoldMT, Times New Roman;font-weight: 700">!</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

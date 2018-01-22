@@ -1,17 +1,10 @@
 <footer class="footer grey-background pb-7">
   <div class="container">
     <div class="row">
-      <div class="col text-center mt-8 mb-5">
+      <div class="col text-center mt-6 mb-4">
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
           <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
         </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        
-          
-        
       </div>
     </div>
     <div class="row">
@@ -38,8 +31,8 @@
       {% endfor %}
     </div>
     <div class="row">
-      <div class="col-6 offset-sm-3 my-5">
-        <div class="row position-relative m-auto w-50 word-lines darkish-blue-text">
+      <div class="col-sm-3 offset-sm-4 position-relative my-5 social-text">
+        <div class="row position-relative word-lines darkish-blue-text">
           <span class="col border-bottom border-dark-blue position-relative"></span>
           <span class="col-md-auto mont fs15 fw500 lsp2">Follow Us</span>
           <span class="col border-bottom border-dark-blue position-relative"></span>
@@ -47,7 +40,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6 offset-sm-3 social-bar text-center d-flex flex-row justify-content-around align-items-center">
+      <div class="col-4 offset-sm-4 social-bar text-center d-flex flex-row justify-content-around align-items-center">
         <a href="tel:">{% include 'icon-fb' %}</a>
         <a href="tel:">{% include 'icon-tw' %}</a>
         <a href="tel:">{% include 'icon-link' %}</a>
@@ -66,8 +59,10 @@
   <div class="container py-5 px-0">
     <div class="row m-0">
       <div class="col-12 p-0 text-center">
-        <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer mt-3 mb-1 w-270 mont fs15 text-uppercase fw500">get started now {% include 'icon-arrow-right-white' %}</a>
-        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer mt-1 mb-3 w-270 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
+        <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer mt-3 mb-3 w-270 mont fs15 text-uppercase fw500">get started now <span class="hide-mobile-768">
+          {% include 'icon-arrow-right-white' %}
+        </span></a>
+        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer mt-3 mb-3 w-270 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
       </div>
       <div class="col-12 text-center">
         <a href="tel:" class="work fw500 fs26 green-text">1-888-481-5388</a>
@@ -83,8 +78,8 @@
     <div class="row m-0">
       <div class="col p-0">
         
-        <div id="footer-accordian"  role="tablist" data-children=".footer-accordian--child">
           {% for link in linklists.main-menu.links %}
+          <div id="footer-accordian"  role="tablist" data-children=".footer-accordian--child">
             {% if link.links != blank %}
               <div class="footer-accordian--child">
                 <div class="border-top border-grey-light p-3">
@@ -95,19 +90,19 @@
                 <div class="collapse p-3 " id="{{ link.title }}" data-parent="#footer-accordian">
                   <div class="row">
                     {% for sub_link in link.links %}
-                      <div class="col">
+                      <div class="col-12">
                         <a href="{{sub_link.url}}">{{sub_link.title}}</a>
                       </div>
                     {% endfor %}
                   </div>
                 </div>
               </div>
-            </div>
             {% else %}
               <div class=" border-top border-grey-light p-3">
                 <a href="{{ link.url }}" class=" darkish-blue-text text-uppercase">{{ link.title }}</a>
               </div>
             {% endif %}
+          </div>
         {% endfor %}
       </div>
     </div>
