@@ -9,14 +9,12 @@
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% elsif template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'about' %}
-  <section class="hero pt-3 background-none">
-{% elsif temnplate == 'malware' or template == 'pricing'  %}
+{% elsif template == 'benefits' or template == 'csoc' or template == 'firewall' or template == 'cdn' or template == 'siem' or template == 'about' or temnplate == 'malware' or template == 'pricing' %}
   <section class="hero pt-3 background-none">
 {% endif %} 
 
   <nav class="navbar navbar-expand-lg container">
-    <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}" style="position:relative;left: 48px;">
+    <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
       {% if section.settings.logo != blank %}
         {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
         <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
@@ -81,7 +79,7 @@
       {% endif %}
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg container mobile-navbar position-relative" style="top: -24px;">
+  <nav class="navbar navbar-expand-lg container mobile-navbar position-relative">
     <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile hidden" >
       {% if shop.customer_accounts_enabled %}
        <ul class="navbar-nav work ">
@@ -173,16 +171,16 @@
   </nav>
   <!-- end nav -->
   <!-- Mobile malware banner -->
-  <section class="malware-banner-mobile hidden py-4">
+  <section class="malware-banner-mobile hidden py-2">
     <div class="container white-text">
       <div class="row text-center">
         <div class="col-12 HeaderB-Level3">
           <p class="mb-2">Got Malware?</p>
         </div>
         <div class="col-12">
-          <div class="border-bottom border-white lato fs15 white-text w-75 m-auto">
-            Get <strong>FREE</strong> Malware Removeal Now
-          </div>
+          <span class="border-bottom border-white lato fs15 white-text w-75 m-auto">
+            Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}
+          </span>
         </div>
         <div class="col-12 work position-relative ">
           <p class="my-2"><a href="tel:" class="white-text">(888) 222-2222</a></p>
@@ -301,11 +299,11 @@
     </div>
   {% endif %}
   {% if template contains 'malware' %}
-    <div class="hero_cta">
+    <div class="hero_cta hero_cta--variant">
        <div class="container">
          <div class="row">
            <div class="col">
-             <h1 class="HeaderB-Level5 fs20">Free Malware Removal</h1>
+             <h1 class="HeaderB-Level4">Free Malware Removal</h1>
            </div>
          </div>
        </div>

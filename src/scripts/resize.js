@@ -8,21 +8,44 @@ var resize = (function(){
       $(window).resize(this.resize);
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
-        $('.hero_cta').removeClass('mt-4');
+        $('.hero_cta').removeClass('mt-4 mb-4');
+        $('.csoc').removeClass('light-grey-background');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
-        
+        $('.hero').removeClass('mh-519');
+        //homepage slider only control icons when in mobile
+        $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
+          $this = $(this);
+          console.log(e.from);
+          if (e.from === 0){
+            $('.icon-bug-2, .icon-bug-3, .icon-worm, .icon-bug-mobile').hide();
+          }
+          if (e.from === 1){
+            $('.icon-number-screen, .icon-credit-cards-falling, .icon-alarm-clock').hide();
+          }
+        });
+        $('#security-mobile-slider').on('slid.bs.carousel', function (e) {
+          $this = $(this);
+          console.log(e.to);
+          if (e.to === 0){
+            $('.icon-bug-2, .icon-bug-3, .icon-worm, .icon-bug-mobile').fadeIn();
+          }
+          if (e.to === 1){
+            $('.icon-number-screen, .icon-credit-cards-falling, .icon-alarm-clock').fadeIn();
+          }
+        });
       } else{
-        $('.hero_cta').addClass('mt-4');
+        $('.csoc').addClass('light-grey-background');
+        $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
-        
+        $('.hero').addClass('mh-519');
       }
       if (windowSize <= 769) {
         $('.page-hero h2').removeClass('fs47').addClass('fs35');
@@ -34,26 +57,50 @@ var resize = (function(){
     resize: function(){
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
-        $('.hero_cta').removeClass('mt-4');
+        $('.hero_cta').removeClass('mt-4 mb-4');
+        $('.csoc').removeClass('light-grey-background');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
-        
+        $('.hero').removeClass('mh-519');
+        //homepage slider only control icons when in mobile
+        $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
+          $this = $(this);
+          console.log(e.from);
+          if (e.from === 0){
+            $('.icon-bug-2, .icon-bug-3, .icon-worm, .icon-bug-mobile').hide();
+          }
+          if (e.from === 1){
+            $('.icon-number-screen, .icon-credit-cards-falling, .icon-alarm-clock').hide();
+          }
+        });
+        $('#security-mobile-slider').on('slid.bs.carousel', function (e) {
+          $this = $(this);
+          console.log(e.to);
+          if (e.to === 0){
+            $('.icon-bug-2, .icon-bug-3, .icon-worm, .icon-bug-mobile').fadeIn();
+          }
+          if (e.to === 1){
+            $('.icon-number-screen, .icon-credit-cards-falling, .icon-alarm-clock').fadeIn();
+          }
+        });
       } else{
-        $('.hero_cta').addClass('mt-4');
+        $('.csoc').addClass('light-grey-background');
+        $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
-        
+        $('.hero').addClass('mh-519');
       }
       if (windowSize <= 769) {
         $('.page-hero h2').removeClass('fs47').addClass('fs35');
       } else {
         $('.page-hero h2').removeClass('fs35').addClass('fs47');
+
       }
     }
   };

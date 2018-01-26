@@ -308,10 +308,7 @@ $(function() {
   /*==== End ====*/
   $('#how-it-works').on('slide.bs.carousel', function (e) {
     $this = $(this);
-    console.log(e);
-    
-  //var current = e.target.data('step');
-  var next = $(e.relatedTarget).data('step');
+    var next = $(e.relatedTarget).data('step');
     $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('grey-text');
     $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('grey-text');
   });
@@ -334,9 +331,10 @@ $(function() {
       }
     });
   }
+  /*==== Add to cart button/s ====*/
   $('.btn').click(function(){
     $this = $(this);
-    if ($this.attr('data-id')){
+    if ($this.attr('data-id')){ //check for correct data attr
       var loadingText = $this.data('loading-text');
       $this.html(loadingText);
       var id = $this.data('id');
@@ -352,18 +350,23 @@ $(function() {
         data: data,
         success: function(msg){
           $.getJSON('/cart.js', function(cart) {
-            console.log(cart);
             var cartUL = $('.cart-contents');
+            cartUL.empty();
             if (cart.items.length > 0){
-              $(cart.items).each(function(i,v){
-                console.log(v);
-                cartUL.append(
-                  $('<li>').append(
-                    $('<p>').attr('class', 'fs15').append(v.product_title)
-                  )
-                );
-              });
-            }
+                $(cart.items).each(function(i,v){
+                  cartUL.append(
+                    '<li class="dropdown-item">\
+                      <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
+                      <p class="fs11 mb-0">Quantiy:'+v.quantity+'</p>\
+                    </li>'
+                  );
+                });
+                cartUL.removeClass('hidden').siblings('p').addClass('hidden');
+              }
+              cartUL.append(
+                '<li class="dropdown-item border-top border-grey-light">\
+                  <p class="fs15 mb-0">Total: '+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</p>\
+                </li>');
               
             $('.badge').text('('+cart.item_count+')');
             $this.html('Item added!');
@@ -374,31 +377,96 @@ $(function() {
           });
         }
       });
-    } else {
+    } else { // no attribute do nothing with button (it will be a link then)
       console.log('nope');
     }
-    // $.getJSON('/cart.js', function(cart) {
-    //   console.log(cart.item_count)
-    //   $('.badge').text('('+cart.item_count+')');
-    // });
   });
+  /*==== End ====*/
+  /*==== Page load get cart contents and display them if any ====*/
   $.getJSON('/cart.js', function(cart) {
-    console.log(cart);
     var cartUL = $('.cart-contents');
-    cartUL.parents('.dropdown-menu').prepend(
-      $('<soan>').attr('class', 'fs15').append(slate.Currency.formatMoney(cart.total_price, theme.moneyFormat))
-    );
-    if (cart.items.length > 0){
-      $(cart.items).each(function(i,v){
+    cartUL.empty();
+    if (cart.items.length > 0){ // check for items in cart
+      $(cart.items).each(function(i,v){ //loop over and get info, then display
         cartUL.append(
-          $('<li>').attr('class', 'dropdown-item').append(
-            $('<p>').attr('class', 'fs15 pull-left').append(v.product_title),
-            $('<span>').append('Quantiy: '+v.quantity)
-          )
+          '<li class="dropdown-item">\
+            <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
+            <p class="fs11 mb-0">Quantiy:'+v.quantity+'</p>\
+          </li>'
         );
       });
       cartUL.removeClass('hidden').siblings('p').addClass('hidden');
     }
+    // get total amount and display
+    cartUL.append(
+      '<li class="dropdown-item border-top border-grey-light">\
+        <p class="fs15 mb-0">Total: '+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</p>\
+      </li>');
+  });
+  /*==== End====*/
+
+
+
+  /*==== Home page laptop computer section show/hide on hover ====*/
+  $('.hover').mouseenter(function(){
+    if ($(this).hasClass('hacked-hover')){
+      $(this).fadeIn('slow');
+      $('.icon-thief').show();
+      $(this).siblings().addClass('invisible');
+    } else{
+      $(this).fadeIn('slow');
+      $(this).siblings().addClass('invisible');
+    }
+  }).mouseleave(function(){
+    $(this).hide();
+    $('.icon-thief').hide();
+    $(this).siblings().removeClass('invisible');
+  });
+  $('.no-hov').mouseenter(function(){
+    $(this).fadeOut().addClass('invisible');
+    $(this).siblings().show();
+  }).mouseleave(function(){
+    $(this).removeClass('invisible').fadeIn();
+    $(this).siblings().hide();
+  });
+  /*==== End ====*/
+
+
+  $('.icon-top-right-shield_animated').mouseenter(function(){
+    $(this).show();
+  }).mouseleave(function(){
+    $(this).hide();
+  });
+  $('svg path.top-right-shield').mouseenter(function(){
+    $('.icon-top-right-shield_animated').show();
+    $(this).hide();
+  }).mouseleave(function(){
+    $('.icon-top-right-shield_animated').hide();
+    $(this).show();
   });
 
+
+
+  $('.icon-owasp-text').mouseenter(function(){
+    $(this).siblings('.toolTip').show();
+  }).mouseleave(function(){
+    $(this).siblings('.toolTip').hide();
+  });
+
+
+  $('.cdn-btn-group .btn').click(function(){
+    if ($(this).text() === 'Without CDN'){
+      $('.without-cdn').removeClass('hidden');
+      $('.with-cdn').addClass('hidden');
+    } else {
+      $('.without-cdn').addClass('hidden');
+      $('.with-cdn').removeClass('hidden');
+    }
+    if ($(this).siblings().hasClass('active')){
+      $(this).siblings('.btn.active').removeClass('active');
+      $(this).addClass('active');
+    } else {
+      $(this).addClass('active');
+    }
+  });
 });

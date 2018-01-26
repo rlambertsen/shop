@@ -5,24 +5,32 @@
       <div class="col-sm-10 offset-sm-1">
         <h2 class="work fs47 fw200  mt-5">Instantly Enhance Your <br> Website's Performance & Security</h2>
         <p class="FeatureText-Level2 green-text mt-2">A Global Content Delivery network Built for Optimal Security, Speed and Scale</p>
-        <div class="world-wide position-relative show-mobile-768">
-          <div class="popup hidden">
-            <div class="row">
-              <div class="col-sm-7">
-                <p class="mont font-weight-bold">PoP <br> Point of Presence</p>
-              </div>
-              <div class="col-sm-5 text-center">
-                {% include 'icon-sm-shield' %}
-                {% include 'icon-sm-firewall' %}
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <p class="fs15">Each POP safeguard’s your site with the real-time visibility of  SIEM and the advanced firewall defense of WAF.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="world-wide position-relative show-mobile-768">
+  <div class="popup hidden">
+    <div class="row">
+      <div class="col-sm-7">
+        <p class="mont font-weight-bold">PoP <br> Point of Presence</p>
+      </div>
+      <div class="col-sm-5 text-center">
+        {% include 'icon-sm-shield' %}
+        {% include 'icon-sm-firewall' %}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="fs15">Each POP safeguard’s your site with the real-time visibility of  SIEM and the advanced firewall defense of WAF.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<section>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1">
         <p class="mx-auto">It’s the most critical feature of the cWatch Web security stack. Since website performance and reliability can directly affect your organization’s branding, customer experience, competitve edge and profitability, the days of serving a site from one measly server are dead.</p>
         <p class="mx-auto">Sites hosted from a single location lack capabilities, hackers see them as prime targets for DDoS attacks, bot attacks, content scraping, ransomware and more. Additionally, poor connectivity, bandwidth and reliability now adversely impact how search engines view and rank your website. Nowadays, every website needs a CDN—cWatch Web has your back.</p>
       </div>
@@ -262,29 +270,43 @@
       </div>
     </div>
     <div class="row my-5">
-      <div class="col-sm-6 text-center">
+      <div class="col-lg-6 text-center">
         <div class="hide-mobile-768">
           {% include 'icon-cdn-showoff' %}
         </div>
         <div class="show-mobile-768">
-          <div class="btn-group" role="group" >
-            <button type="button" class="btn btn-secondary btn-rd mont bold fs 18">Without CDN</button>
-            <button type="button" class="btn btn-outline-secondary blue-text btn-rd mont bold fs 18">With CDN</button>
+          <div class="btn-group cdn-btn-group" role="group" >
+            <button type="button" class="btn btn-outline-secondary btn-rd mont bold fs18 font-weight-bold active">Without CDN</button>
+            <button type="button" class="btn btn-outline-secondary blue-text btn-rd mont font-weight-bold fs18">With CDN</button>
+          </div>
+          <div class="without-cdn mt-3">
+            {% include 'icon-without-cdn1' %}
+          </div>
+          <div class="with-cdn mt-3 hidden">
+            {% include 'icon-with-cdn' %}
           </div>
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-lg-6">
         <p class="HeaderB-Level4">How your new CDN will work...</p>
         <p class="FirstFeatureParagraph">When a visitor attempts to access your site, the request is sent to a cached version of your site located on the geographically closest Point of Presence (PoP) on Comodo’s global network of 29 strategically placed PoPs or edge servers, drastically reducing latency, improving site speed and becoming your first layer of defense.</p>
         <p class="FirstFeatureParagraph">These edge servers boast almost unlimited bandwidth, making it easier to manage traffic spikes, minimize unplanned downtime and mitigate any DDoS attack thrown your way. Also, this boost in page load speeds has a tremendously positive impact on your SEO ratings.</p>
       </div>
-      <div class="col-sm-12 text-center mt-3">
+      <div class="col-sm-12 text-center mt-3 hide-mobile-768">
+        {% include 'icon-download' %}
         <a href="tel:" class="">
-          {% include 'icon-download' %}
-          <br>
           <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
           <p class="fs15">Download Now</p>
         </a>
+      </div>
+      <div class="col-sm-12 text-center mt-3 show-mobile-768">
+        <div class="drop-shadow p-3 br-4 w-75 mx-auto">
+          {% include 'icon-download' %}
+          <a href="tel:" class="">
+            <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
+            <p class="fs15">Download Now</p>
+          </a>
+        </div>
       </div>
     </div>
   </div>

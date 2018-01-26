@@ -50,11 +50,72 @@
   }
 }
 @media screen and (max-width: 1199px){}
-@media screen and (max-width: 991px){
+@media screen and (max-width: 990px){
+  .hero_cta--variant{
+    .col{
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    background: $green;
+  }
+  
+  #security-mobile-slider{
+    .icon-bug-3 {
+      top: -370px;
+      left: 400px;
+    }
+    .icon-worm {
+      top: 215px;
+    }
+  }
+  .hacked{
+    .hack-img:before {
+    top: -237px;
+    left: 0;
+    }
+  }
+  .site-logo{
+    left: 0;
+  }
+  #about-us .counting-numbers{
+    top: 0;
+  }
   .w-75{
     width: 100% !important;
-  } 
+    text-align: center;
+  }
+  .world-wide {
+    background: url(icon-world-wide-mobile1.svg) center center no-repeat;
+    height: 620px;
+    background-size: contain;
+  }
+  .fade-white{
+    top: 0;
+    background: none;
+  }
+  .dangerous-web{
+    .icon-city-pie {
+      float: none;
+      position: static;
+    }
+    .icon-city-pie ~ p {
+      margin-top: 0;
+      position: static;
+    }
+  }
+    
+  .icon-yield-sign {
+    margin-top: 0;
+  }
+  .breadcrumbs {
+    left: 0;
+    top: 0;
+  }
   .mobile-navbar{
+    top: 0;
     background: #fff;
     padding: 0;
     margin: 0;
@@ -114,13 +175,15 @@
   .footer,
   .malware-banner,
   .csoc-hero-text,
-  .hide-mobile-768{
+  .hide-mobile-768,
+  .icon-clear-crap,
+  .icon-worm,
+  .icon-sm-worm{
     display: none;
   }
   .security-show-mobile,
   .reporting-mobile,
   .protect-mobile,
-  .icon-bug-mobile,
   .footer-mobile,
   .malware-banner-mobile,
   .mobile-csoc-hero-text,
@@ -129,18 +192,47 @@
   .show-mobile-768{
     display: block !important;
   }
+  .malware-bug{
+    .icon-bug-mobile{
+      display: block;
+    }
+  }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
+  #security-mobile-slider{
+    .icon-bug-3 {
+      top: -288px;
+      left: 310px;
+    }
+    .icon-worm {
+      top: 240px;
+    }
+    .icon-number-screen{
+      top: -293px;
+      left: 84px;
+      width: 337px;
+    }
+    .icon-alarm-clock{
+      top: -107px;
+      right: 80px;
+      width: 120px;
+    }
+    .icon-credit-cards-falling{
+      top: -187px;
+      left: 104px;
+      width: 110px;
+    }
+  }
+  .comodo-cta .large-c {
+    left: 0;
+    top: 0;
+  }
   .dropdown-item{
     white-space: normal;
   }
-  .world-wide {
-    background: url(world-wide.svg) center center no-repeat;
-    height: 150px;
-    background-size: contain;
-  }
+  
   .malware-banner-mobile{
-    background: url("icon-malware-loop.svg") center center no-repeat, url("icon-malware-loop.svg") top no-repeat, url("icon-malware-loop.svg") bottom no-repeat, $red;
+    background-size: cover;
   }
   .site-logo{
     img {
@@ -154,9 +246,10 @@
   .btn{
     white-space: inherit;
   }
-  .hacked {
-    background-position: 40% 80%;
-    background-size: 430px;
+  .hacked{
+    .hack-img:before {
+    left: -80px;
+    }
   }
   .mobile-protect{ 
     .slide-content {
@@ -182,10 +275,18 @@
   .fade-white{
     background: none;
   }
+
 }
 @media screen and (max-width: 575px){
+
+  .comodo-bld {
+    background-position: -797px 0;
+  }
+  .world-wide {
+    height: 230px;
+  }
   .hacked {
-    background-position: 90% 80%;
+    background-position: -87px 113rem;
     background-size: 430px;
   }
   .word-lines {
@@ -239,6 +340,71 @@
       transform: rotate(85deg);
       z-index: -2;
       left: 13px;
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  #security-mobile-slider{
+    .icon-worm {
+      top: 266px;
+    }
+    .icon-bug-3 {
+      top: -238px;
+      left: 200px;
+    }
+    .icon-number-screen{
+      top: -240px;
+      left: 74px;
+      width: 267px;
+    }
+    .icon-alarm-clock{
+      top: -96px;
+      right: 50px;
+      width: 100px;
+    }
+     .icon-credit-cards-falling{
+      top: -147px;
+      left: 94px;
+      width: 80px;
+    }
+  }
+  .hacked{
+    .hack-img:before {
+      top: -237px;
+      left: -160px;
+    }
+  }
+}
+@media screen and (max-width: 378px){
+  #security-mobile-slider{
+    .icon-worm {
+      top: 292px;
+    }
+    .icon-bug-3 {
+      top: -238px;
+      left: 200px;
+    }
+    .icon-bug-mobile {
+      left: 110px;
+    }
+    .icon-number-screen{
+      top: -200px;
+      left: 64px;
+      width: 217px;
+    }
+    .icon-credit-cards-falling {
+      top: -136px;
+      left: 60px;
+      width: 80px;
+    }
+    .icon-alarm-clock {
+    right: 49px;
+    }
+  }
+  .hacked{
+    .hack-img:before {
+      top: -237px;
+      left: -160px;
     }
   }
 }

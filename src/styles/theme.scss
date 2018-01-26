@@ -1,4 +1,18 @@
 @charset "UTF-8";
+/*===== Colors vars======*/
+$red: #C41230;
+$white: #fff;
+$darkish-blue: #373E5A;
+$grey-accent: #969C9C;
+$success-green: #1FC469;
+$medium-blue: #3f4563;
+$grey: #EDF0F3;
+$light-grey: rgba(237, 240, 243, 0.22);
+$grey-40: rgba(237, 240, 243, 0.40);
+$blue: #03A9F4;
+$accent-grey1: rgba(209, 213, 219, 0.15);
+$green: #23e390;
+/*======End Color vars========*/
 /*========*/
 /*========*/
 /*========*/
@@ -41,22 +55,6 @@
 }
 /*==== End ====*/
 
-
-
-
-/*===== Colors vars======*/
-$red: #C41230;
-$white: #fff;
-$darkish-blue: #373E5A;
-$grey-accent: #969C9C;
-$success-green: #1FC469;
-$medium-blue: #3f4563;
-$grey: #EDF0F3;
-$light-grey: rgba(237, 240, 243, 0.22);
-$grey-40: rgba(237, 240, 243, 0.40);
-$blue: #03A9F4;
-$accent-grey1: rgba(209, 213, 219, 0.15);
-/*======End Color vars========*/
 /*==== Base font sizing classes ====*/
 
 html {font-size: 20px;}
@@ -80,7 +78,12 @@ a:not([href]):not([tabindex]) {
   text-decoration: none;
 }
 /*==== End ====*/
-
+.z1{
+  z-index: 1;
+}
+.trans-ease-inOut{
+  transition: all 0.3s ease-in;
+}
 @import url('tools/context-colors.scss');
 
 /*==== Line Heights ====*/
@@ -114,6 +117,11 @@ a.text-decoration-none:visited{
 /*=== Icons ====*/
 .icon-cart{
   width: 25px;
+}
+.icon-fishing{
+  position: absolute;
+  width: 180px;
+  left: 410px;
 }
 .icon-search{
   path{
@@ -150,6 +158,9 @@ a.btn{
   max-width: 100%;
   height: auto;
 }
+.icon-wasp-mad{
+  width: 130px;
+}
 .chat-links{
   .icon-blue-chat-dots{
     left: -11px;
@@ -177,6 +188,113 @@ a.btn{
   width: 721px;
   max-width: 100%;
   height: auto;
+}
+.icon-thief{
+  display: none;
+  position: absolute;
+  width: 350px;
+  top: -151px;
+  left: 103px;
+  z-index: -1;
+}
+.top-right-shield{
+  z-index: 1;
+  position: relative;
+  fill: #fff;
+}
+.icon-top-right-shield_animated{
+  position: absolute;
+  width: 300px;
+  left: 576px;
+  top: 50px;
+  display: none;
+}
+.hover{
+  .icon{
+    position: absolute;
+  }
+  .icon-bug-2{
+    width: 155px;
+    top: -104px;
+    right: -120px;
+  }
+  .icon-bug-3{
+    width: 354px;
+    top: 2px;
+    right: -660px;
+  }
+  .icon-worm{
+    width: 99px;
+    right: -28px;
+    bottom: -31px;
+  }
+  .icon-bug-mobile{
+    width: 100px;
+    top: 210px;
+    left: 660px;
+  }
+  .icon-rockets-incoming{
+    top: -260px;
+    left: -320px;
+    width: 480px;
+  }
+  .icon-money-cloud{
+    top: -390px;
+    left: -423px;
+    width: 590px;
+  }
+  .icon-number-screen{
+    top: -312px;
+    width: 330px;
+    left: 412px;
+  }
+  .icon-alarm-clock{
+    top: -134px;
+    width: 150px;
+    right: -300px;
+  }
+  .icon-credit-cards-falling{
+    top: -224px;
+    width: 112px;
+    right: -47px;
+  }
+  -webkit-animation: fadeIn .3s normal forwards; /* Safari 4.0 - 8.0 */
+  animation: fadeIn .3s normal forwards;
+  cursor: pointer;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.50;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.50;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 /*=== End Icons ====*/
 
@@ -220,7 +338,20 @@ a{
 Plugin css
 ======
 */
-
+/*==== green checks before elements ====*/
+.green-check-before{
+  &:before{
+    content: "";
+    background: url('icon-green-check.svg') no-repeat;
+    height: 20px;
+    width: 30px;
+    left: -51px;
+    position: absolute;
+    top: 5px;
+  }
+  position: relative;
+}
+/*====  ====*/
 /*==== carousel fade ====*/
 // Carousel fade transition
 .carousel-fade .carousel-inner .carousel-item {
@@ -339,13 +470,6 @@ ul.baraja-container li {
 }
 .hero_cta.green-gradients:before{
   top: -84px;
-}
-.hero_cta.green-gradients{
-  .col{ 
-    position: relative;
-    left: 56px;
-    top: 8px;
-  }
 }
 /*==== End ====*/
 .phoneNumber{
@@ -575,12 +699,15 @@ ul.baraja-container li {
 /*==== End ====*/
 
 
-/*== Header logo ==*/
+/*== 
+  Header elements 
+ ==*/
 .site-logo{
-  img{
-    width: 262px;
-  }
+  width: 262px;
+  position: relative;
+  left: 48px;
 }
+
 /*== Header logo ==*/
 /*===Malware banner===*/
 .malware-banner,
@@ -764,7 +891,9 @@ ul.baraja-container li {
   }
 }
 /*==== End ====*/
-
+.mobile-navbar{
+  top: -24px;
+}
 /*==== Main header links to pages ====*/
 .main-links{}
 /*==== End ====*/
@@ -791,7 +920,7 @@ ul.baraja-container li {
   height: 90px;
   width: 90px;
   margin: auto;
-  background: linear-gradient(135deg, transparent 51%, $red 46%, $red 52%, transparent 54%);
+  background: linear-gradient(135deg, transparent 53%, $red 46%, $red 52%, transparent 54%);
 }
 /*==== ENd ====*/
 
@@ -817,9 +946,25 @@ ul.baraja-container li {
     width: 194px;
     left: 140px;
   }
-  background: url("free-laptop.svg") no-repeat;
-  background-position: 47.5% 80%;
-  background-size: 606px;
+  a.btn .icon-arrow-right-white {
+    width: 21px;
+    position: relative;
+    left: 21px;
+    top: -3px;
+  }
+  .hack-img:before {
+    content: "";
+    background: url(free-laptop.svg) no-repeat;
+    position: absolute;
+    height: 360px;
+    width: 660px;
+    top: -253px;
+    left: 220px;
+    z-index: -1;
+  }
+  // background: url("free-laptop.svg") no-repeat;
+  // background-position: 47.5% 80%;
+  // background-size: 606px;
 }
 /*==== End ====*/
 /*==== Protect section tabs ====*/
@@ -977,7 +1122,7 @@ ul.baraja-container li {
     position: absolute;
     z-index: 1;
     left: rem(420);
-    bottom: -106px;
+    bottom: -118px;
   }
   .icon-bug-trail{
     width: 465px;
@@ -1710,10 +1855,88 @@ ul.baraja-container li {
 #customer_register_link{
   color: $grey-accent;
 }
+
+/*==== Security home page slider mobile ====*/
+#security-mobile-slider{
+  .carousel-inner{
+    overflow: inherit;
+  }
+  .icon-bug-2{
+    position: absolute;
+    top: -230px;
+    left: -70px;
+    width: 130px;
+  }
+  .icon-bug-3{
+    top: -280px;
+    left: 320px;
+    width: 290px;
+    position: absolute;
+  }
+  .icon-worm{
+    top: 240px;
+    right: -1px;
+    width: 101px;
+    position: absolute;
+  }
+  .icon-bug-mobile{
+    top: -100px;
+    left: 220px;
+    width: 110px;
+    position: absolute;
+  }
+  .icon-number-screen{
+    position: absolute;
+    top: -387px;
+    left: 124px;
+    width: 437px;
+  }
+  .icon-alarm-clock{
+    position: absolute;
+    top: -127px;
+    right: 130px;
+    width: 150px;
+  }
+  .icon-credit-cards-falling{
+    position: absolute;
+    top: -247px;
+    left: 144px;
+    width: 150px;
+  }
+}
+/*==== End ====*/
 .siem-svg{
   background: url('icon-siem.svg') no-repeat;
   height: 645px;
   background-position: center;
+}
+.siem-svg.show-mobile-768{
+  background: url('icon-siem-mobile.svg') no-repeat;
+  height: 337px;
+  background-size: cover;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.toolTip{
+  &:after{
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; 
+    border-color: rgba(255,255,255,0);
+    border-top-color: #FFF;
+    border-width: 21px;
+    margin-left: -230px;
+    transform: rotate(-90deg);
+    top: 212px;
+  }
+  position: absolute;
+  top: -250px;
+  width: 460px;
+  left: 50px;
 }
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss');

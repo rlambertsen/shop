@@ -135,3 +135,15 @@
   }
 }
 /*==== End ====*/
+
+.btn-outline-secondary.blue-text:not([disabled]):not(.disabled).active, .btn-outline-secondary.blue-text:not([disabled]):not(.disabled):active{
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+  box-shadow: 0 0 0 0.2rem #03a9f46e;
+}
+.btn-outline-secondary.blue-text:hover {
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+}
