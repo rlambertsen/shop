@@ -1423,7 +1423,7 @@ ul.baraja-container li {
       height: 67px;
       width: 67px;
       top: 50%;
-      left: -11%;
+      left:0;
       cursor: pointer;
     }
     .icon-green-circle-arrow-right{
@@ -1431,7 +1431,7 @@ ul.baraja-container li {
       width: 67px;
       height: 67px;
       top: 50%;
-      right: -11%;
+      right: 0;
       cursor: pointer;
     }
   }
@@ -1770,25 +1770,79 @@ ul.baraja-container li {
 }
 /*==== End ====*/
 .malware-removal{
-  .icon-bug-trail{
-    width: 450px;
+  .icon-fly-bugs{
+    display: none;
+  }
+  .icon-blue-caret-down{
+    width: 12px;
+    vertical-align: middle;
+  }
+}
+.malware-removal > .container{
+  > .row{
+    &:before,&:after{
+      content: "";
+      position: absolute;
+    }
+    &:before{
+      background: url('icon-fishing.svg') no-repeat;
+      width: 480px;
+      height: 300px;
+      z-index: 1;
+      top: -54px;
+      left: 160px;
+    }
+    &:after{
+      background: url('icon-clear-crap.svg') no-repeat;
+      width: 480px;
+      height: 300px;
+      z-index: 1;
+      bottom: -81px;
+    }
+    > .col-lg-12{
+      &:before,&:after{
+        content: "";
+        position: absolute;
+      }
+      &:before{
+        background: url('icon-sm-worm.svg') no-repeat;
+        width: 70px;
+        height: 60px;
+        bottom: -1px;
+        right: -14px;
+      }
+      &:after{
+        background: url('icon-worm.svg') no-repeat;
+        width: 80px;
+        height: 120px;
+        bottom: -31px;
+        right: 41px;
+      }
+    }
+  }
+    
+  &:before,&:after{
+    content: "";
     position: absolute;
-    right: 13%;
-    z-index: 1;
-    top: 16%;
+  }
+  &:before{
+    background: url('icon-fly-bugs.svg') no-repeat;
+    width: 480px;
+    height: 300px;
+    left: -730px;
+  }
+  &:after{
+    background: url('icon-bug-trail.svg') no-repeat;
+    width: 463px;
+    height: 500px;
+    right: -70px;
+    top: 0px;
   }
   .icon-sm-worm{
     bottom: 23%;
     right: 19.8%;
     width: 60px;
     position: absolute;
-  }
-  .icon-fly-bugs{
-    width: 380px;
-    position: absolute;
-    z-index: 1;
-    left: -93px;
-    top: 31%;
   }
   .icon-clear-crap{
     position: absolute;
@@ -1810,6 +1864,9 @@ ul.baraja-container li {
       vertical-align: middle;
       margin-right: 10px;
     }
+    .icon-green-line{
+      max-width: 210px;
+    }
     background: #fff;
   }
 }
@@ -1821,6 +1878,7 @@ ul.baraja-container li {
 .background-none{
   background: none;
 }
+.show-mobile-992,
 .show-mobile-768{
   display: none;
 }
@@ -1866,6 +1924,19 @@ ul.baraja-container li {
     top: -230px;
     left: -70px;
     width: 130px;
+  }
+  .icon-money-cloud{
+    position: absolute;
+    top: -450px;
+    width: 600px;
+    left: 50px;
+    max-width: 100%;
+    height: auto;
+  }
+  .icon-rockets-incoming{
+    position: absolute;
+    top: -520px;
+    width: 490px;
   }
   .icon-bug-3{
     top: -280px;
@@ -1937,6 +2008,50 @@ ul.baraja-container li {
   top: -250px;
   width: 460px;
   left: 50px;
+}
+/*==== Free malware form ====*/
+.free-malware-form{
+  .form-control:focus label{
+    color: $blue;
+  }
+}
+/*==== End ====*/
+
+//how-works free malware page
+.how-works{
+  .green-circle,
+  .grey-circle{
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  .green-circle{
+    border-radius: 50%;
+    background: $success-green;
+    height: 70px;
+    width: 70px;
+    color: #fff;
+  }
+  .grey-circle{
+    border-radius: 50%;
+    background: $grey;
+    height: 70px;
+    width: 70px;
+    color: $success-green;
+  }
+  .green-circle:after{
+    top: 97%;
+    left: 55%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255,255,255,0);
+    border-top-color: $success-green;
+    border-width: 10px;
+    margin-left: -18px;
+  }
 }
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss');

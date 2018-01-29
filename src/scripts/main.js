@@ -306,11 +306,26 @@ $(function() {
     });
   }
   /*==== End ====*/
+
+  /*==== malware form page slider ====*/
   $('#how-it-works').on('slide.bs.carousel', function (e) {
     $this = $(this);
     var next = $(e.relatedTarget).data('step');
-    $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('grey-text');
-    $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('grey-text');
+    var windowSize = window.innerWidth;
+    if (windowSize <= 992){
+      $('.how-it-works-numbers').find('.green-circle').removeClass('green-circle').addClass('grey-circle');
+      $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-circle').removeClass('grey-circle');
+    } else {
+      $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('grey-text');
+      $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('grey-text');
+    }
+  });
+  $('.show-mobile-992 div').click(function(e){
+    if ($(this).attr('data-step')){
+      var number = $(this).data('step') - 1;
+      $('#how-it-works').carousel(number);  
+    }
+    
   });
   $('.icon-green-circle-arrow-left').click(function(e){
     $this = $(this);
@@ -320,7 +335,11 @@ $(function() {
     $this = $(this);
     $('#how-it-works').carousel('next');
   });
-  //counting numbers
+
+  /*====  End ====*/
+
+
+  /*==== counting numbers run ====*/
   var $window = $(window);
   var counted = false;
   if (window.location.pathname === '/'){
@@ -431,7 +450,7 @@ $(function() {
   });
   /*==== End ====*/
 
-
+  /*==== benefits main shield hovers ====*/
   $('.icon-top-right-shield_animated').mouseenter(function(){
     $(this).show();
   }).mouseleave(function(){
@@ -444,16 +463,16 @@ $(function() {
     $('.icon-top-right-shield_animated').hide();
     $(this).show();
   });
+  /*==== End ====*/
 
-
-
+  /*==== OWASP tooltip ====*/
   $('.icon-owasp-text').mouseenter(function(){
     $(this).siblings('.toolTip').show();
   }).mouseleave(function(){
     $(this).siblings('.toolTip').hide();
   });
-
-
+  /*==== End ====*/
+  /*==== CDN mobile tabs ====*/
   $('.cdn-btn-group .btn').click(function(){
     if ($(this).text() === 'Without CDN'){
       $('.without-cdn').removeClass('hidden');
@@ -469,4 +488,26 @@ $(function() {
       $(this).addClass('active');
     }
   });
+  /*==== End ====*/
+
+  /*==== More mobile button ====*/
+  $('.more').on('click touchend', function(e){
+    if ($(this).text() == 'More'){
+      $(this).text('Less');
+    } else {
+      $(this).text('More');
+    }
+    $('.click-to-show').slideToggle();
+  });
+
+  /*==== Free walware form turn labels blue when input is active ====*/
+  $('.free-malware-form').click(function(){
+    var active = $(document.activeElement);
+    $this = $(this);
+    if (active.is('input')){
+      $this.find('.blue-text').removeClass('blue-text');
+      active.prev('label').addClass('blue-text');
+    }
+  });
+  /*==== End ====*/
 });

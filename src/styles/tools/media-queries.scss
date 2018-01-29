@@ -51,6 +51,16 @@
 }
 @media screen and (max-width: 1199px){}
 @media screen and (max-width: 990px){
+  .icon-fly-bugs{
+    display: block !important;
+  }
+  .icon-green-circle-arrow-right,
+  .icon-green-circle-arrow-left{
+    display: none;
+  }
+  .malware-remove-box{
+    padding: 22px 90px !important;
+  }
   .hero_cta--variant{
     .col{
       min-height: 130px;
@@ -106,7 +116,21 @@
       position: static;
     }
   }
-    
+  .malware-removal > .container{
+    >.row{
+      .col-lg-12{
+        &:before, &:after{
+          content: none;
+        }
+      }
+      &:before, &:after{
+        content: none;
+      }
+    }
+    &:before, &:after{
+      content: none;
+    }
+  }
   .icon-yield-sign {
     margin-top: 0;
   }
@@ -151,7 +175,6 @@
     }
     .container{
       transform: skewY(0deg);
-      text-align: center;
     }
     transform: skewY(0deg);
   }
@@ -175,11 +198,11 @@
   .footer,
   .malware-banner,
   .csoc-hero-text,
-  .hide-mobile-768,
+  .hide-mobile-992,
   .icon-clear-crap,
   .icon-worm,
   .icon-sm-worm{
-    display: none;
+    display: none !important;
   }
   .security-show-mobile,
   .reporting-mobile,
@@ -189,7 +212,7 @@
   .mobile-csoc-hero-text,
   .security-partners-mobile,
   .inner-page-mobile-tabs,
-  .show-mobile-768{
+  .show-mobile-992{ 
     display: block !important;
   }
   .malware-bug{
@@ -199,6 +222,17 @@
   }
 }
 @media screen and (max-width: 767px){
+  .hide-mobile-768{
+    display: none !important;
+  }
+  .show-mobile-768{
+    display: block;
+  }
+  
+  .malware-remove-box {
+    padding: 22px 60px !important;
+  }
+  
   #security-mobile-slider{
     .icon-bug-3 {
       top: -288px;
@@ -206,6 +240,15 @@
     }
     .icon-worm {
       top: 240px;
+    }
+    .icon-rockets-incoming {
+      top: -420px;
+      width: 360px;
+      right: -130px;
+    }
+    .icon-money-cloud{
+      top: -370px;
+      left: 0px;
     }
     .icon-number-screen{
       top: -293px;
@@ -344,10 +387,23 @@
   }
 }
 @media screen and (max-width: 450px){
+  .how-works .green-circle:after{
+    left: 65%;
+  }
   #security-mobile-slider{
     .icon-worm {
       top: 266px;
     }
+    .icon-money-cloud{
+      top: -280px;
+      width: 400px;
+      left: 10px;
+    }
+    .icon-rockets-incoming {
+      top: -330px;
+      width: 310px;
+      right: -80px;
+    }    
     .icon-bug-3 {
       top: -238px;
       left: 200px;
@@ -383,6 +439,16 @@
     .icon-bug-3 {
       top: -238px;
       left: 200px;
+    }
+    #security-mobile-slider .icon-rockets-incoming {
+      top: -300px;
+      width: 250px;
+      right: -140px;
+    }
+    .icon-money-cloud{
+      top: -230px;
+      width: 300px;
+      left: 10px;
     }
     .icon-bug-mobile {
       left: 110px;
