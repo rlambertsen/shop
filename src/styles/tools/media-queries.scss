@@ -51,6 +51,14 @@
 }
 @media screen and (max-width: 1199px){}
 @media screen and (max-width: 990px){
+  .text-center-992{
+    text-align: center;
+  }
+  .green-check-before:before{
+    height: 40px;
+    width: 40px;
+    left: -37px;
+  }
   .icon-fly-bugs{
     display: block !important;
   }
@@ -220,15 +228,26 @@
       display: block;
     }
   }
+  .siem-svg {
+    height: 375px;
+  }
 }
 @media screen and (max-width: 767px){
+  .blue-icons{
+    .icon{
+      height: 130px;
+    }
+  }
   .hide-mobile-768{
     display: none !important;
   }
   .show-mobile-768{
     display: block;
   }
-  
+  .siem-svg {
+    height: 285px;
+    background-size: cover;
+  }
   .malware-remove-box {
     padding: 22px 60px !important;
   }
@@ -321,7 +340,9 @@
 
 }
 @media screen and (max-width: 575px){
-
+  .blue-icons{
+    text-align: center;
+  }
   .comodo-bld {
     background-position: -797px 0;
   }
@@ -388,7 +409,7 @@
 }
 @media screen and (max-width: 450px){
   .how-works .green-circle:after{
-    left: 65%;
+    left: 58%;
   }
   #security-mobile-slider{
     .icon-worm {
@@ -466,6 +487,9 @@
     .icon-alarm-clock {
     right: 49px;
     }
+  }
+  .how-works .green-circle:after {
+    left: 64%;
   }
   .hacked{
     .hack-img:before {

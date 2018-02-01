@@ -12,6 +12,7 @@ $grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
+$input-grey: rgba(207, 214, 218, 0.4);
 /*======End Color vars========*/
 /*========*/
 /*========*/
@@ -61,6 +62,7 @@ html {font-size: 20px;}
 body{
   @extend .lato;
   color: $darkish-blue;
+  overflow-x: hidden;
 }
 @import url('tools/sizing.scss');
 @import url('tools/btn.scss');
@@ -83,6 +85,9 @@ a:not([href]):not([tabindex]) {
 }
 .trans-ease-inOut{
   transition: all 0.3s ease-in;
+}
+.trans-ease{
+  transition: all .3s ease;
 }
 @import url('tools/context-colors.scss');
 
@@ -115,6 +120,22 @@ a.text-decoration-none:visited{
 }
 /*==== End ====*/
 /*=== Icons ====*/
+.icon-partner-graph{
+  max-width: 100%;
+  height: auto;
+}
+.icon-chat-set{
+  width: 150px;
+}
+.icon-grey-chevron{
+  height: 55px;
+  vertical-align: middle;
+}
+.icon-blue-check{
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
 .icon-cart{
   width: 25px;
 }
@@ -351,7 +372,21 @@ Plugin css
   }
   position: relative;
 }
-/*====  ====*/
+/*==== End ====*/
+/*==== blue checks before elements ====*/
+.blue-check-before{
+  &:before{
+    content: "";
+    background: url('icon-blue-check.svg') no-repeat;
+    height: 20px;
+    width: 30px;
+    left: -51px;
+    position: absolute;
+    top: 5px;
+  }
+  position: relative;
+}
+/*==== End ====*/
 /*==== carousel fade ====*/
 // Carousel fade transition
 .carousel-fade .carousel-inner .carousel-item {
@@ -609,6 +644,10 @@ ul.baraja-container li {
   list-style-image: url("icon-green-check.svg");
 }
 /*==== End ====*/
+.form-control{
+  background-color: $input-grey;
+  border-color: $input-grey;
+}
 /*==== Checkbox custom ====*/
 /* Customize the label (the container) */
 .cd-container {
@@ -693,7 +732,6 @@ ul.baraja-container li {
     height: rem(8);
   }
   position: relative;
-  left: 60px;
   top: 11px;
 }
 /*==== End ====*/
@@ -1217,6 +1255,13 @@ ul.baraja-container li {
     appearance: none;
     background: url(green-chevron-down.svg) 94%/7% no-repeat #fff;
   }
+  select.blue-outline {
+    border: 1px solid $blue;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(light-blue-chevron-down.svg) 94%/7% no-repeat #fff;
+  }
   select.darkish-blue-outline {
     border: 1px solid $darkish-blue;
     -webkit-appearance: none;
@@ -1521,6 +1566,16 @@ ul.baraja-container li {
     }
   }
 }
+.price-block-mobile{
+  #mobile-price-slider{
+    .carousel-inner{
+      overflow: inherit;
+    }
+    .icon-chevron-right-white{
+      width: 8px;
+    }
+  }
+}
 /*==== End ====*/
 .icon-bombs:after{
   content: "";
@@ -1548,6 +1603,18 @@ ul.baraja-container li {
   }
   .icon-question{
     width: 18px;
+  }
+}
+.product-features-mobile{
+  .icon-shield-green,
+  .icon-repsonse-team-green,
+  .icon-green-fire-wall,
+  .icon-green-cloud{
+    width: 150px;
+  }
+  .icon-green-check{
+    width: 40px;
+    height: 54px;
   }
 }
 /*==== End ====*/
@@ -1632,7 +1699,11 @@ ul.baraja-container li {
     height: 50px;
   }
 }
-
+.icon-content-box{
+  .icon{
+    width: 320px;
+  }
+}
 /*= === Mobile sections (should be right above media queries to override any css above it) ====*/
 .mobile{
   .carousel-item{
@@ -1666,8 +1737,10 @@ ul.baraja-container li {
     vertical-align: middle;
   }
   .icon-blue-swip-left,
-  .icon-blue-finger-right{
+  .icon-blue-finger-right,
+  .icon-blue-hand-left-right{ 
     width: 65px;
+    height: 58px;
   }
 
   .more{
@@ -1759,6 +1832,10 @@ ul.baraja-container li {
   .carousel-item{
     padding: 0;
   }
+  .price-box ul .icon-green-check{
+    width: 17px;
+    margin-right: 10px;
+  }
 }
 .footer-mobile{
   .icon-green-chat-dits {
@@ -1767,6 +1844,23 @@ ul.baraja-container li {
     top: 4px;
     left: -6px;
   }
+}
+.details-layover{
+  .icon-green-check{
+    width: 25px;
+  }
+  position: fixed;
+  background-color: #fff;
+  z-index: 1021;
+  top: 0;
+  max-width: 90%;
+  right: -740px;
+  overflow-y: scroll;
+  height: 100%;
+  cursor: pointer;
+}
+.details-show{
+  right: 0;
 }
 /*==== End ====*/
 .malware-removal{
@@ -2053,5 +2147,6 @@ ul.baraja-container li {
     margin-left: -18px;
   }
 }
+
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss');

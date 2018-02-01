@@ -21,7 +21,6 @@ var resize = (function(){
         $('#security-mobile-slider').carousel();
         $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
           $this = $(this);
-          console.log(e.from);
           if (e.from === 0){
             $('#security-mobile-slider .icon-bug-2, #security-mobile-slider .icon-bug-3, #security-mobile-slider .icon-worm, #security-mobile-slider .icon-bug-mobile').hide();
           }
@@ -37,7 +36,6 @@ var resize = (function(){
         });
         $('#security-mobile-slider').on('slid.bs.carousel', function (e) {
           $this = $(this);
-          console.log(e.to);
           if (e.to === 0){
             $('#security-mobile-slider .icon-bug-2, #security-mobile-slider .icon-bug-3, #security-mobile-slider .icon-worm, #security-mobile-slider .icon-bug-mobile').fadeIn();
           }
@@ -53,7 +51,7 @@ var resize = (function(){
         });
       } else{
         $('#security-mobile-slider').carousel('dispose');
-        $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
+        $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');
         $('.csoc').addClass('light-grey-background');
         $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
@@ -86,7 +84,6 @@ var resize = (function(){
         $('#security-mobile-slider').carousel();
         $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
           $this = $(this);
-          console.log(e.from);
           if (e.from === 0){
             $('#security-mobile-slider .icon-bug-2, #security-mobile-slider .icon-bug-3, #security-mobile-slider .icon-worm, #security-mobile-slider .icon-bug-mobile').hide();
           }
@@ -102,7 +99,6 @@ var resize = (function(){
         });
         $('#security-mobile-slider').on('slid.bs.carousel', function (e) {
           $this = $(this);
-          console.log(e.to);
           if (e.to === 0){
             $('#security-mobile-slider .icon-bug-2, #security-mobile-slider .icon-bug-3, #security-mobile-slider .icon-worm, #security-mobile-slider .icon-bug-mobile').fadeIn();
           }

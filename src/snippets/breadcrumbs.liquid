@@ -1,51 +1,72 @@
-<section class="breadcrumbs">
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+<section class="breadcrumbs hide-mobile-768">
   <div class="container">
     <div class="row">
       <div class="col">
-        {% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
-          <nav role="navigation" aria-label="breadcrumbs">
-            <a href="/" title="Home" style="margin-right:10px;">{% include 'icon-blue-home' %}</a>
-            {% if template contains 'page' %}
-              <span aria-hidden="true" style="margin-right:9px;">{% include 'icon-grey-caret-right' %}</span>
-              <span class="fs12 work">{{ page.title }}</span>
-            {% elsif template contains 'product' %}
-              {% if collection.url %}
-                <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-                {{ collection.title | link_to: collection.url }}
-              {% endif %}
+        <nav role="navigation" aria-label="breadcrumbs">
+          <a href="/" title="Home" style="margin-right:10px;">{% include 'icon-blue-home' %}</a>
+          {% if template contains 'page' %}
+            <span aria-hidden="true" style="margin-right:9px;">{% include 'icon-grey-caret-right' %}</span>
+            <span class="fs12 work">{{ page.title }}</span>
+          {% elsif template contains 'product' %}
+            {% if collection.url %}
               <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-              <span>{{ product.title }}</span>
-            {% elsif template contains 'collection' and collection.handle %}
+              {{ collection.title | link_to: collection.url }}
+            {% endif %}
+            <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+            <span>{{ product.title }}</span>
+          {% elsif template contains 'collection' and collection.handle %}
+            <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+            {% if current_tags %}
+              {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+              {{ collection.title | link_to: url }}
               <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-              {% if current_tags %}
-                {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
-                {{ collection.title | link_to: url }}
-                <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-                <span>{{ current_tags | join: " + " }}</span>
-              {% else %}
-                <span>{{ collection.title }}</span>
-              {% endif %}
-            {% elsif template == 'blog' %}
-              <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-              {% if current_tags %}
-                {{ blog.title | link_to: blog.url }}
-                <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-                <span>{{ current_tags | join: " + " }}</span>
-              {% else %}
-              <span>{{ blog.title }}</span>
-              {% endif %}
-            {% elsif template == 'article' %}
-              <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+              <span>{{ current_tags | join: " + " }}</span>
+            {% else %}
+              <span>{{ collection.title }}</span>
+            {% endif %}
+          {% elsif template == 'blog' %}
+            <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+            {% if current_tags %}
               {{ blog.title | link_to: blog.url }}
               <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-              <span>{{ article.title }}</span>
+              <span>{{ current_tags | join: " + " }}</span>
             {% else %}
-             <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
-             <span class="fs12">{{ page_title }}</span>
+            <span>{{ blog.title }}</span>
             {% endif %}
-          </nav>
-        {% endunless %}
+          {% elsif template == 'article' %}
+            <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+            {{ blog.title | link_to: blog.url }}
+            <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+            <span>{{ article.title }}</span>
+          {% else %}
+           <span aria-hidden="true">{% include 'icon-grey-caret-right' %}</span>
+           <span class="fs12">{{ page_title }}</span>
+          {% endif %}
+        </nav>
       </div>
     </div>
   </div>
 </section>
+
+<section class="breadcrumbs grey-background show-mobile-768">
+  <div class="">
+    <div class="row">
+      <div class="col">
+        <ul class="arrows list-inline fs12 work mb-0" role="navigation" aria-label="breadcrumbs">
+          <li class="list-inline-item">
+            <a href="/" title="Home">
+              {% include 'icon-grey-chevron' %}
+            </a>
+          </li>
+          {% if template contains 'page' %}
+            <li class="list-inline-item">
+              <span class="grey-text">{{ page.title }}</span>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endunless %}

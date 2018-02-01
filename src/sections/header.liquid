@@ -9,7 +9,7 @@
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% elsif template == 'benefits' or template == 'csoc' or template == 'firewall' or template == 'cdn' or template == 'siem' or template == 'about' or temnplate == 'malware' or template == 'pricing' %}
+{% elsif template == 'benefits' or template == 'csoc' or template == 'firewall' or template == 'cdn' or template == 'siem' or template == 'about' or temnplate == 'malware' or template == 'pricing' or template == 'partner' %}
   <section class="hero pt-3 background-none">
 {% endif %} 
 
@@ -275,6 +275,18 @@
        </div>
     </div>
   {% endif %}
+  {% if template contains 'partner' %}
+    <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
+       <div class="container my-4">
+         <div class="row">
+           <div class="col">
+             <h1 class="HeaderB-Level4 m-0">cWatch Web Reseller Partner Program</h1>
+             <p class="FeatureText-Level3 mt-2">Grow Your Business with an In-Demand Website Security Solution</p>
+           </div>
+         </div>
+       </div>
+    </div>
+  {% endif %}
   {% if template contains 'about' %}
     <div class="hero_cta green-gradients mt-4 d-flex flex-column justify-content-center mb-4">
        <div class="container my-4">
@@ -288,7 +300,7 @@
     </div>
   {% endif %}
   {% if template contains 'pricing' %}
-    <div class="hero_cta">
+    <div class="hero_cta hero_cta--variant">
        <div class="container">
          <div class="row">
            <div class="col">

@@ -58,18 +58,7 @@
 
 
 <section class="footer-mobile show-mobile-768">
-  <div class="container py-5 px-0">
-<!--     <div class="row m-0">
-      <div class="col-12 p-0 text-center">
-        <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer mt-3 mb-3 w-270 mont fs15 text-uppercase fw500">get started now <span class="hide-mobile-768">
-          {% include 'icon-arrow-right-white' %}
-        </span></a>
-        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer mt-3 mb-3 w-270 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
-      </div>
-      <div class="col-12 text-center">
-        <a href="tel:" class="work fw500 fs26 green-text">1-888-481-5388</a>
-      </div>
-    </div> -->
+  <div class="container-fluid py-5 px-0">
     <div class="row m-0">
       <div class="col p-0 text-center my-5">
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
@@ -79,7 +68,6 @@
     </div>
     <div class="row m-0">
       <div class="col p-0">
-        
           {% for link in linklists.main-menu.links %}
           <div id="footer-accordian"  role="tablist" data-children=".footer-accordian--child">
             {% if link.links != blank %}
@@ -106,6 +94,20 @@
             {% endif %}
           </div>
         {% endfor %}
+      </div>
+    </div>
+    <div class="row mx-0 position-relative word-lines darkish-blue-text justify-content-center mb-5">
+      <span class="col-1 border-bottom border-dark-blue position-relative"></span>
+      <span class="col-auto mont fs15 fw500 lsp2">Follow Us</span>
+      <span class="col-1 border-bottom border-dark-blue position-relative"></span>
+    </div>
+    <div class="row m-0">
+      <div class="col social-bar text-center d-flex flex-row justify-content-around align-items-center">
+        <a href="tel:">{% include 'icon-fb' %}</a>
+        <a href="tel:">{% include 'icon-tw' %}</a>
+        <a href="tel:">{% include 'icon-link' %}</a>
+        <a href="tel:">{% include 'icon-gplus' %}</a>
+        <a href="tel:">{% include 'icon-yt' %}</a>
       </div>
     </div>
   </div>

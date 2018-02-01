@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85.19" height="76" viewBox="0 0 85.19 76">
+  <title>icon-grey-chevron</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="cWatch_Malware_Removal" data-name="cWatch Malware Removal">
+      <g id="_575" data-name="575">
+        <g id="Breadcrumb">
+          <path d="M84,36.64,55.82,1.59a4.73,4.73,0,0,0-.54-.37A3.79,3.79,0,0,0,53.07.5H4.5a4,4,0,0,0-4,4v67a4,4,0,0,0,4,4h48A4.4,4.4,0,0,0,55,75a3.72,3.72,0,0,0,1.18-1L84,39.45A1.8,1.8,0,0,0,84,36.64Z" style="fill: #fff;stroke: #969c9c;stroke-miterlimit: 10;opacity: 0.35000000000000003"/>
+          <g id="Home_Icon" data-name="Home Icon">
+            <path d="M22.94,34.71,35,25.29a1,1,0,0,1,1.19,0l11.58,9.41a1,1,0,0,1,.35.74V50a1,1,0,0,1-1,1H23.53a1,1,0,0,1-1-1V35.46A1,1,0,0,1,22.94,34.71Z" style="fill: #03a9f4"/>
+            <polyline points="38.24 51.09 38.24 43.56 32.76 43.56 32.76 51.09" style="fill: #fff"/>
+            <path d="M48.23,35.59,45.4,33.09a.79.79,0,0,1-.27-.59V26.44a.79.79,0,0,0-.79-.79H42.8a.79.79,0,0,0-.79.79v2.08a.79.79,0,0,1-1.27.63l-4.84-3.63a.79.79,0,0,0-1,0l-12.2,9.53" style="fill: #03a9f4"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
