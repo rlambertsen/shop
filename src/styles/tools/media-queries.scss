@@ -337,9 +337,14 @@
   .fade-white{
     background: none;
   }
-
 }
 @media screen and (max-width: 575px){
+  .hide-mobile-575{
+    display: none;
+  }
+  .show-mobile-575{
+    display: block;
+  }
   .blue-icons{
     text-align: center;
   }

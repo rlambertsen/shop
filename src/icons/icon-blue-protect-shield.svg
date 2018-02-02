@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="49.32" height="40.52" viewBox="0 0 49.32 40.52">
+  <title>icon-blue-protect-shield</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="_1200" data-name="1200">
+      <g id="Table">
+        <g id="Protection">
+          <g id="siem-sm">
+            <g id="camera">
+              <rect x="24.59" y="17.84" width="18.78" height="8.86" transform="translate(3.53 -4.63) rotate(8.21)" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <polygon points="45.02 26.98 42.83 26.71 43.58 21.53 45.77 21.79 45.02 26.98" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M30.25,17.25l-6.83-1h-.05s0,3,.77,3.57l.66.1c.12,0,.22.13.29.31l.44,1.28" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <line x1="33.92" y1="22.73" x2="27.5" y2="21.8" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 1.8857603073120117,2.8286404609680176"/>
+              <path d="M30.77,17.33l18,2.49s.14,3.11-1.58,3.34L45.9,23a1,1,0,0,0-.69.17l-1.41,1-9.88-1.43" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <rect x="23.36" y="19.93" width="0.48" height="3.98" transform="translate(3.37 -3.15) rotate(8.21)" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+            </g>
+            <g id="camera-2" data-name="camera">
+              <rect x="6.13" y="17.84" width="18.78" height="8.86" transform="translate(34.06 42.1) rotate(171.79)" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <polygon points="4.48 26.98 6.67 26.71 5.92 21.53 3.73 21.79 4.48 26.98" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M19.25,17.25l6.83-1h.05s0,3-.77,3.57l-.66.1c-.12,0-.22.13-.29.31L24,21.52" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <line x1="15.58" y1="22.73" x2="22" y2="21.8" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 1.8857603073120117,2.8286404609680176"/>
+              <path d="M18.73,17.33.5,19.76s0,3.17,1.77,3.4L3.6,23a1,1,0,0,1,.69.17l1.41,1,9.88-1.43" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              <rect x="25.66" y="19.93" width="0.48" height="3.98" transform="translate(54.66 39.93) rotate(171.79)" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+            </g>
+            <path d="M24.75,40a1,1,0,0,1-.36-.07C13.57,35.71,8.75,29,8.75,18.15V6.24a1,1,0,0,1,.91-1A31.34,31.34,0,0,0,24.23.65a1,1,0,0,1,1,0A31.32,31.32,0,0,0,39.84,5.28h0a1,1,0,0,1,.91,1V18.15c0,10.84-4.82,17.57-15.64,21.8A1,1,0,0,1,24.75,40Z" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+            <line x1="24.75" y1="1.26" x2="24.75" y2="11.26" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 2,3"/>
+            <line x1="24.75" y1="39.26" x2="24.75" y2="29.26" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 2,3"/>
+            <circle cx="24.75" cy="20.76" r="1.5" style="fill: #fff;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+            <g>
+              <g>
+                <path d="M18.82,26.29a7.2,7.2,0,0,1-.16-10.57" style="fill: #fff"/>
+                <path d="M15.35,28a10.43,10.43,0,0,1-.16-13.9" style="fill: #fff"/>
+                <path d="M22.3,24.62a4.16,4.16,0,0,1-.23-7.27" style="fill: #fff"/>
+              </g>
+              <g>
+                <path d="M18.82,26.29a7.2,7.2,0,0,1-.16-10.57" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M15.35,28a10.43,10.43,0,0,1-.16-13.9" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M22.3,24.62a4.16,4.16,0,0,1-.23-7.27" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+              </g>
+              <g>
+                <path d="M18.82,26.29a7.2,7.2,0,0,1-.16-10.57" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M15.35,28a10.43,10.43,0,0,1-.16-13.9" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M22.3,24.62a4.16,4.16,0,0,1-.23-7.27" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              </g>
+            </g>
+            <g>
+              <g>
+                <path d="M30.68,26.29a7.2,7.2,0,0,0,.16-10.57" style="fill: #fff"/>
+                <path d="M34.15,28a10.43,10.43,0,0,0,.16-13.9" style="fill: #fff"/>
+                <path d="M27.2,24.62a4.16,4.16,0,0,0,.23-7.27" style="fill: #fff"/>
+              </g>
+              <g>
+                <path d="M30.68,26.29a7.2,7.2,0,0,0,.16-10.57" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M34.15,28a10.43,10.43,0,0,0,.16-13.9" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M27.2,24.62a4.16,4.16,0,0,0,.23-7.27" style="fill: #fff;stroke: #969c9c;stroke-linecap: round;stroke-linejoin: round"/>
+              </g>
+              <g>
+                <path d="M30.68,26.29a7.2,7.2,0,0,0,.16-10.57" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M34.15,28a10.43,10.43,0,0,0,.16-13.9" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+                <path d="M27.2,24.62a4.16,4.16,0,0,0,.23-7.27" style="fill: none;stroke: #03a9f4;stroke-linecap: round;stroke-linejoin: round"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

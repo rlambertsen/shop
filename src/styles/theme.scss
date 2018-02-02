@@ -13,6 +13,7 @@ $blue: #03A9F4;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
 $input-grey: rgba(207, 214, 218, 0.4);
+$red: #C41230;
 /*======End Color vars========*/
 /*========*/
 /*========*/
@@ -70,6 +71,9 @@ body{
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
   -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
   box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+}
+.drop-shadow-sides{
+  box-shadow:10px 0px 10px -7px rgba(0,0,0,0.23), -10px 0px 10px -7px rgba(0,0,0,0.23);
 }
 /*==== BS A overrides ====*/
 .dropdown-toggle::after{
@@ -1973,7 +1977,8 @@ ul.baraja-container li {
   background: none;
 }
 .show-mobile-992,
-.show-mobile-768{
+.show-mobile-768,
+.show-mobile-575{
   display: none;
 }
 .footer{
@@ -2147,6 +2152,75 @@ ul.baraja-container li {
     margin-left: -18px;
   }
 }
-
+.compare{
+  .circle{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border:none;
+  }
+  .green-circle{
+    background: $success-green;
+  }
+  .grey-circle{
+    background: $grey;
+  }
+  .blue-circle{
+    background: $blue;
+  }
+  .row-move-up{
+    top: -12px;
+    position: relative;
+  }
+  .icon-green-bug-single,
+  .icon-blue-protect-shield,
+  .icon-blue-fire-wall,
+  .icon-blue-person,
+  .icon-blue-cloud{
+    width: 40px;
+    vertical-align: middle;
+    height: 40px;
+  }
+}
+.compare-mobile{
+  .circle{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border:none;
+  }
+  .green-circle{
+    background: $success-green;
+  }
+  .grey-circle{
+    background: $grey;
+  }
+  .blue-circle{
+    background: $blue;
+  }
+  .icon-green-bug-single{
+    width: 100px;
+  }
+  .row-height-center{
+    .col-4{
+      min-height: 65px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .row-title{
+    position: absolute;
+    width: 190px;
+    left: -31px;
+    right: 0;
+    font-size: 15px;
+    @extend .mont;
+  }
+}
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss');

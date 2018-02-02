@@ -282,6 +282,8 @@ $(function() {
     }
   }
   /*==== End ====*/
+  /*==== Compare sticky header ====*/
+  /*==== End ====*/
   /*==== Mobile only WAF target section ====*/
   if (window.location.pathname === '/pages/web-application-firewall'){
     var options = {

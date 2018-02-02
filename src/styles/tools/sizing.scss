@@ -59,13 +59,26 @@
 .w-270{
   width: 270px;
 }
-
+.super-align{
+  vertical-align: super;
+}
 /*==== min heights ====*/
+.p-mh-40{
+  p{
+    min-height: 40px;
+  }
+}
+.mh-40{
+  min-height: 40px;
+}
 .mh-45{
   min-height: 45px;
 }
 .mh-55{
   min-height: 55px;
+}
+.mh-65{
+  min-height: 65px;
 }
 .mh-250{
   min-height: rem(250);
