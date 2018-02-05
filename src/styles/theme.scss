@@ -104,6 +104,9 @@ a:not([href]):not([tabindex]) {
 }
 /*==== End ====*/
 /*==== End ====*/
+.pointer{
+  cursor: pointer;
+}
 /*==== Anchor element classes ====*/
 a{
   &:hover{
@@ -649,8 +652,8 @@ ul.baraja-container li {
 }
 /*==== End ====*/
 .form-control{
-  background-color: $input-grey;
-  border-color: $input-grey;
+  background-color: #edf0f36e;
+  border-color: rgba(207,214,218,0.5);
 }
 /*==== Checkbox custom ====*/
 /* Customize the label (the container) */
@@ -1170,7 +1173,7 @@ ul.baraja-container li {
     width: 465px;
     position: absolute;
     z-index: 1;
-    right: 662px;
+    right: 332px;
     top: -67px;
     transform: skewY(-2deg);
   }
@@ -2115,7 +2118,26 @@ ul.baraja-container li {
   }
 }
 /*==== End ====*/
-
+//contact us forms
+.form-type{
+  .icon{
+    width: 50px;
+    height: 41px;
+  }
+  .icon-no-check,
+  .icon-blue-check-bg{
+    float: right;
+  }
+  .sales-form,
+  .tech-form{
+    .icon{
+      width: 20px;
+      height: inherit;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  }
+}
 //how-works free malware page
 .how-works{
   .green-circle,
@@ -2200,7 +2222,11 @@ ul.baraja-container li {
   .blue-circle{
     background: $blue;
   }
-  .icon-green-bug-single{
+  .icon-green-bug-single,
+  .icon-blue-protect-shield,
+  .icon-blue-fire-wall,
+  .icon-blue-cloud,
+  .icon-blue-person{
     width: 100px;
   }
   .row-height-center{
@@ -2215,10 +2241,13 @@ ul.baraja-container li {
   
   .row-title{
     position: absolute;
-    width: 190px;
-    left: -31px;
+    width: 330px;
+    left: 0;
     right: 0;
     font-size: 15px;
+    margin: auto;
+    z-index: 1;
+    top: 20px;
     @extend .mont;
   }
 }

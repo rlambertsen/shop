@@ -249,40 +249,19 @@ $(function() {
   if (window.location.pathname === '/pages/pricing'){
     var topToMenu = $('#price-menu').offset();
     var bottom = $('#bottom').offset();
-    var mobileTop = $('#mobile-top').offset();
-    var mobileBottom = $('#mobile-bottom').offset();
-    console.log(topToMenu);
-    console.log(bottom);
-    if (topToMenu.top !== 0 && bottom.top !== 0){
+    if ($(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
+      $('.sticky-prices').fadeIn();
+    } else {
+      $('.sticky-prices').hide();
+    }
+    $(document).scroll(function(e){
       if ($(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
         $('.sticky-prices').fadeIn();
       } else {
         $('.sticky-prices').hide();
       }
-      $(document).scroll(function(e){
-        if ($(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
-          $('.sticky-prices').fadeIn();
-        } else {
-          $('.sticky-prices').hide();
-        }
-      });
-    } else {      
-      if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-        $('.sticky-prices').fadeIn();
-      } else {
-        $('.sticky-prices').hide();
-      }
-      $(document).scroll(function(e){
-        if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-          $('.sticky-prices').fadeIn();
-        } else {
-          $('.sticky-prices').hide();
-        }
-      });
-    }
+    });
   }
-  /*==== End ====*/
-  /*==== Compare sticky header ====*/
   /*==== End ====*/
   /*==== Mobile only WAF target section ====*/
   if (window.location.pathname === '/pages/web-application-firewall'){
@@ -531,44 +510,36 @@ $(function() {
       active.prev('label').addClass('blue-text');
     }
   });
-  $('.detail').click(function(e){
-    $('body').css({
-      'overflow': 'hidden'
-    });
-    $('#mobile-price-slider').carousel('dispose');
+  /*==== End ====*/
+
+  /*==== svg change colors ====*/
+  $('#protect-tabs a').click(function(){
     $this = $(this);
-    if ($this.data('detail') === 'Pro'){
-      $('.package').text('Pro');
-      $('.details-layover').show(function(){
-        $('.details-layover').addClass('details-show');
-      });
-      $('.details-layover button[data-detail="Pro"]').show();
-      $('.details-layover button[data-detail="Premium"]').hide();
-      $('.details-layover button[data-detail="Enterprise"]').hide();
-    } else if ($this.data('detail') === 'Premium'){
-      $('.package').text('Premium');
-      $('.details-layover').show(function(){
-        $('.details-layover').addClass('details-show');
-      });
-      $('.details-layover button[data-detail="Pro"]').hide();
-      $('.details-layover button[data-detail="Premium"]').show();
-      $('.details-layover button[data-detail="Enterprise"]').hide();
-    } else if ($this.data('detail') === 'Enterprise'){
-      $('.package').text('Enterprise');
-      $('.details-layover').show(function(){
-        $('.details-layover').addClass('details-show');
-      });
-      $('.details-layover button[data-detail="Pro"]').hide();
-      $('.details-layover button[data-detail="Premium"]').hide();
-      $('.details-layover button[data-detail="Enterprise"]').show();
-    }
-  });
-  $('.details-layover').click(function(e){
-    $(this).removeClass('details-show').fadeOut();
-    $('#mobile-price-slider').carousel();
-    $('body').css({
-      'overflow': ''
-    });
+    $this.siblings().find('svg path.svg-green').addClass('svg-grey').removeClass('svg-green');
+    $this.find('svg path').addClass('svg-green').removeClass('svg-grey');
   });
   /*==== End ====*/
+
+  /*==== contact us blue box ====*/ 
+  $('.form-type-select').click(function(){
+    $this = $(this);
+    if ($this.hasClass('blue-background')){
+      //nothing
+    } else{
+      $this.parents('.row').find('.blue-background').removeClass('blue-background white-text')
+      $this.parents('.row').find('.show-white').hide();
+      $this.parents('.row').find('.show-grey').show();
+      $this.addClass('blue-background white-text');
+      $this.find('.show-white').show();
+      $this.find('.show-grey').hide();
+    }
+    if ($this.data('type') === 'sales'){
+      $('.tech-form').hide();
+      $('.sales-form').fadeIn();
+    } else if ($this.data('type') === 'tech'){
+      $('.sales-form').hide();
+      $('.tech-form').fadeIn();
+    }
+  });
+  /*====  ====*/ 
 });

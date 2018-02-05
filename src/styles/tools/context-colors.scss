@@ -43,4 +43,16 @@
 .white-background{
   background-color: #fff;
 }
+.blue-background{
+  background-color: $blue;
+}
 /*==== End ====*/
+
+/*==== SVG colors ====*/
+.svg-grey{
+  fill: $grey-accent;
+}
+.svg-green{
+  fill: $success-green;
+}
+/*========*/
