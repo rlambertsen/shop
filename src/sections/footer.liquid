@@ -1,7 +1,7 @@
 <footer class="footer grey-background pb-7">
   <div class="container">
     <div class="row">
-      <div class="col text-center mt-6 mb-4">
+      <div class="col text-center mt-8 mb-4 pt-5">
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
           <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
         </a>
@@ -31,7 +31,7 @@
       {% endfor %}
     </div>
     <div class="row">
-      <div class="col-sm-3 offset-sm-4 position-relative my-5 social-text">
+      <div class="col-sm-3 offset-sm-4 position-relative social-text">
         <div class="row position-relative word-lines darkish-blue-text">
           <span class="col border-bottom border-dark-blue position-relative"></span>
           <span class="col-md-auto mont fs15 fw500 lsp2">Follow Us</span>
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row mt-5">
       <div class="col-4 offset-sm-4 social-bar text-center d-flex flex-row justify-content-around align-items-center">
         <a href="tel:">{% include 'icon-fb' %}</a>
         <a href="tel:">{% include 'icon-tw' %}</a>

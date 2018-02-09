@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-5 offset-sm-1 border-right border-grey-light">
+      <div class="col-sm-5 offset-sm-1 border-right border-grey-light hide-mobile-768">
         <h3 class="mont font-weight-bold fs20">Sales Support</h3>
         <p class="fs17">Our dedicated Support team is available 24/7 to assist you with:</p>
         <ul class="fs17 pl-3">
@@ -25,7 +25,43 @@
         <p>{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
         <p>{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
       </div>
-      <div class="col-sm-5 pl-5">
+      <div class="col-sm-5 pl-5 hide-mobile-768">
+        <h3 class="mont font-weight-bold fs20">Technical Support</h3>
+        <p class="fs17">Our dedicated Support team is available 24/7 to assist you with:</p>
+        <ul class="fs17 pl-3">
+          <li>
+            <p class="mb-2">Product Set Up</p>
+          </li>
+          <li>
+            <p class="mb-2">Configuration</p>
+          </li>
+          <li>
+            <p class="mb-2">Technical Assistances</p>
+          </li>
+        </ul>
+        <p>{% include 'icon-chat-set-sm' %} <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+        <p>{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
+        <p>{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+      </div>
+      <div class="col-md-6 border-bottom border-grey-light show-mobile-768 mb-3">
+        <h3 class="mont font-weight-bold fs20">Sales Support</h3>
+        <p class="fs17">Our dedicated Support team is available 24/7 to assist you with:</p>
+        <ul class="fs17 pl-3">
+          <li>
+            <p class="mb-2">Product Features & Benefits</p>
+          </li>
+          <li>
+            <p class="mb-2">Which pricing package is right for you</p>
+          </li>
+          <li>
+            <p class="mb-2">Billing or Reseller Opportunities</p>
+          </li>
+        </ul>
+        <p>{% include 'icon-chat-set-sm' %} <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+        <p>{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
+        <p>{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+      </div>
+      <div class="col-md-6 show-mobile-768">
         <h3 class="mont font-weight-bold fs20">Technical Support</h3>
         <p class="fs17">Our dedicated Support team is available 24/7 to assist you with:</p>
         <ul class="fs17 pl-3">
@@ -56,24 +92,91 @@
     </div>
   </div>
 </section>
-<section id="" class="faq my-5 py-5">
+<section id="faqs" class="faq my-5 py-5">
   <div class="container">
     <div class="row text-center">
       <div class="col">
         <h2 class="work fs47">Frequently Asked Questions</h2>
         <p class="w-75 mx-auto">Below are some of your most frequently asked questions</p>
         <select name="faq" id="" class="form-control w-50 mx-auto" v-model="faq" @change(faqSelect())>
-          <option value="howdy">Show me FAQs for....</option>
+          <option selected disabled value="">Show me FAQs for....</option>
+          <option value="how">How do I..?</option>
+          <option value="why">Why do I..?</option>
+          <option value="when">When do I..?</option>
         </select>
       </div>
     </div>
-    <div class="row" id="faq-accordion" role="tablist" data-children=".accordian-child">
-      <div class="col-lg-12 accordian-child border-top border-bottom border-grey-light">
-        <a href="#how" class="HeaderB-Levl5 fs20" data-toggle="collapse">How do I...?</a>
-        <div class="collapse text-center " id="how" data-parent="#faq-accordion">
-          <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
-        </div>
+    <div class="row mt-5">
+      <div class="col">
+        <template v-if="faq === ''">
+          <p class="HeaderB-Level4">Select a common subject above.</p>
+        </template>
+        <template v-else>
+          <p class="HeaderB-Level4">Category A</p>
+        </template>
       </div>
+    </div>
+    <div class="row" id="faq-accordion" role="tablist" data-children=".accordian-child">
+      <template v-if="faq === 'how'">
+        <div class="col-lg-12 accordian-child border-top border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#how" class="HeaderB-Level5 fs20" data-toggle="collapse">How do I...?</a> </p>
+          <div class="collapse text-center " id="how" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-top border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#why" class="HeaderB-Level5 fs20" data-toggle="collapse">How do I...?</a> </p>
+          <div class="collapse text-center " id="why" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#who" class="HeaderB-Level5 fs20" data-toggle="collapse">How do I...?</a> </p>
+          <div class="collapse text-center " id="who" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+      </template>
+      <template v-if="faq === 'why'">
+        <div class="col-lg-12 accordian-child border-top border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#how" class="HeaderB-Level5 fs20" data-toggle="collapse">Why do I...?</a> </p>
+          <div class="collapse text-center " id="how" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-top border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#why" class="HeaderB-Level5 fs20" data-toggle="collapse">Why do I...?</a> </p>
+          <div class="collapse text-center " id="why" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#who" class="HeaderB-Level5 fs20" data-toggle="collapse">Why do I...?</a> </p>
+          <div class="collapse text-center " id="who" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+      </template>
+      <template v-if="faq === 'when'">
+        <div class="col-lg-12 accordian-child border-top border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#how" class="HeaderB-Level5 fs20" data-toggle="collapse">When do I...?</a> </p>
+          <div class="collapse text-center " id="how" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-top border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#why" class="HeaderB-Level5 fs20" data-toggle="collapse">When do I...?</a> </p>
+          <div class="collapse text-center " id="why" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+        <div class="col-lg-12 accordian-child border-bottom border-grey-light mh-65 d-flex justify-content-center flex-column">
+          <p class="m-0"><a href="#who" class="HeaderB-Level5 fs20" data-toggle="collapse">When do I...?</a> </p>
+          <div class="collapse text-center " id="who" data-parent="#faq-accordion">
+            <p class="fs17">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum. Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus tristique pretium. Donec feugiat sollicitudin nibh ut condimentum.  Donec vel gravida orci, sed interdum libero. Ut id ante velit. Vestibulum nec ipsum mollis, sagittis turpis a, dapibus lectus. Quisque ligula ante, suscipit quis libero vitae, fringilla sagittis est. Morbi iaculis rhoncus velit tristique pretium. </p>
+          </div>
+        </div>
+      </template>
     </div>
   </div>
 </section>

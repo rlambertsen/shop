@@ -202,7 +202,7 @@ $(function() {
       tabs.find('a.active').removeClass('active');
       tabs.find('[data-index="'+showMe+'"]').addClass('active');
     }
-  });
+  }); 
     
   $('#slider-tabs a[data-toggle="pill"]').on('show.bs.tab', function (e) {
     $this = $(this);
@@ -577,12 +577,7 @@ $(function() {
           $('.checkbox-error').show();
         }
         if (form.checkValidity() === true && $('[name="terms"]').is(':checked')){
-          event.preventDefault();
-          event.stopPropagation();
           $('.checkbox-error').hide();
-          $.post('/contact#contact_form', form.data).then(function(response){
-            console.log(response)
-          })
         }
         form.classList.add('was-validated');
       }, false);
