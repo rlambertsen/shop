@@ -1,0 +1,28 @@
+<section class="page-hero">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1">
+        <h2 class="work fs47 fw200  mt-5"> {{ section.settings.title }} <!-- Web Security Powered By Comodo --></h2>
+        <p class="FeatureText-Level2 green-text mt-2">{{ section.settings.blurb }}<!-- Benefit from Innovative Technology and 20+ Years of Cyber Security Expertise --></p>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "id": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "id":"blurb",
+        "type": "textarea",
+        "label": "Hero description"
+      }
+    ]
+  }
+{% endschema %}

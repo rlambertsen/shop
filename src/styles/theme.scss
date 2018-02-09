@@ -117,7 +117,8 @@ a{
 }
 a.darkish-blue-text:visited,
 a.darkish-blue-text:focus,
-a.darkish-blue-text:active{
+a.darkish-blue-text:active,
+a.darkish-blue-text:hover{
   color: $darkish-blue;
 }
 a.text-decoration-none:hover,
@@ -655,6 +656,9 @@ ul.baraja-container li {
   background-color: #edf0f36e;
   border-color: rgba(207,214,218,0.5);
 }
+label{
+  color: $grey-accent;
+}
 /*==== Checkbox custom ====*/
 /* Customize the label (the container) */
 .cd-container {
@@ -1016,8 +1020,8 @@ ul.baraja-container li {
 .protect{
   .nav-link{
     .icon{
-      width: 35px;
-      height: 35px;
+      width: 50px;
+      height: 50px;
     }
     padding: 1.5rem 0.1rem;
   }
@@ -2120,7 +2124,13 @@ ul.baraja-container li {
 /*==== End ====*/
 //contact us forms
 .form-type{
-  .icon{
+  .icon-grey-headset,
+  .icon-no-check,
+  .icon-white-headset,
+  .icon-blue-check-bg,
+  .icon-grey-gears,
+  .icon-white-gears,
+  .icon-chat-set-sm{
     width: 50px;
     height: 41px;
   }
@@ -2130,11 +2140,33 @@ ul.baraja-container li {
   }
   .sales-form,
   .tech-form{
-    .icon{
+    .icon-chat-set-sm,
+    .icon-blue-chat-dots,
+    .icon-blue-mail{
       width: 20px;
       height: inherit;
       vertical-align: middle;
       margin-right: 10px;
+    }
+  }
+}
+.form-type-mobile{
+  .header{
+    .icon-grey-headset,
+    .icon-grey-gears,
+    .icon-chat-set-sm{
+      width: 50px;
+      height: 41px;
+    }
+  }
+  .content{
+    .icon-chat-set-sm,
+    .icon-blue-chat-dots,
+    .icon-blue-mail{
+      width: 60px;
+    }
+    .icon-tool-box{
+      width: 140px;
     }
   }
 }
@@ -2249,6 +2281,16 @@ ul.baraja-container li {
     z-index: 1;
     top: 20px;
     @extend .mont;
+  }
+}
+#support{
+  .icon-chat-set-sm,
+  .icon-blue-chat-dots,
+  .icon-blue-mail{
+    width: 20px;
+    margin-right: 10px;
+    height: 20px;
+    vertical-align: text-top;
   }
 }
 /*==== Site wide media quieries ====*/

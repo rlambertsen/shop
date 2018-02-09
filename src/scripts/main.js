@@ -508,6 +508,9 @@ $(function() {
     if (active.is('input')){
       $this.find('.blue-text').removeClass('blue-text');
       active.prev('label').addClass('blue-text');
+    } else if (active.is('textarea')){
+      $this.find('.blue-text').removeClass('blue-text');
+      active.prev('label').addClass('blue-text');
     }
   });
   /*==== End ====*/
@@ -541,5 +544,49 @@ $(function() {
       $('.tech-form').fadeIn();
     }
   });
-  /*====  ====*/ 
+  $('.form-type-select-mobile').click(function(){
+    $this = $(this);
+    $this.siblings().find('.HeaderB-Level5').removeClass('blue-text');
+    $this.find('.HeaderB-Level5').addClass('blue-text');
+    if ($this.data('type') === 'sales'){
+      $('.tech').removeClass('border-bottom border-blue');
+      $('.sales').addClass('border-bottom border-blue');
+      $('.tech-form').hide();
+      $('.sales-form').fadeIn();
+    }
+    if ($this.data('type') === 'tech'){
+      $('.sales').removeClass('border-bottom border-blue');
+      $('.tech').addClass('border-bottom border-blue');
+      $('.sales-form').hide();
+      $('.tech-form').fadeIn();
+    }
+  });
+  /*==== End ====*/ 
+  $('[type="submit"]').click(function(event){
+    
+  })
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false && $('[name="terms"]').not(':checked')) {
+          event.preventDefault();
+          event.stopPropagation();
+          $('.checkbox-error').show();
+        }
+        if (form.checkValidity() === true && $('[name="terms"]').is(':checked')){
+          event.preventDefault();
+          event.stopPropagation();
+          $('.checkbox-error').hide();
+          $.post('/contact#contact_form', form.data).then(function(response){
+            console.log(response)
+          })
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+  
 });

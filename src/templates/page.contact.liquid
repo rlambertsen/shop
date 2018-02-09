@@ -3,16 +3,17 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-sm-10 offset-sm-1">
-        <h2 class="work fs47 fw200  mt-5">Contact Us</h2>
+        <h2 class="work fs47 fw200 mt-5 hide-mobile-768">Contact Us</h2>
+        <h2 class="work fs47 fw200 mb-5 show-mobile-768">Contact Us</h2>
       </div>
     </div>
   </div>
 </section>
-<section class="form-type">
-  <div class="container">
+<section class="">
+  <div class="container hide-mobile-768 form-type">
     <div class="row mb-5">
-      <div class="col-lg-4 offset-2">
-        <div class="border-top border-bottom border-left border-right border-grey-light br-4 p-3 pointer form-type-select blue-background white-text" data-type="sales">
+      <div class="col-lg-4 offset-lg-2">
+        <div class="border-top border-bottom border-left border-right border-grey-light br-4 p-3 pointer form-type-select blue-background white-text form-group" data-type="sales">
           <div class="show-grey hidden mb-4">
             {% include 'icon-grey-headset' %}
             {% include 'icon-no-check' %}
@@ -40,8 +41,8 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-6">
+    <div class="row mb-6">
+      <div class="col-md-6">
         <div class="sales-form">
           <p class="HeaderA-Level3">Sales Support</p>
           <p class="HeaderB-Level4">Meeting all your website security needs today and into the future.</p>
@@ -50,11 +51,28 @@
           <p>{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
           <p>{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
         </div>
+        <div class="tech-form hidden">
+          <p class="HeaderA-Level3">Technical Support</p>
+          <p class="HeaderB-Level4">Leave web security to the pros. Focus on your business.</p>
+          <p class="fs17">Our dedicated Support team is available 24/7 to resolve any issues you may have with setup, management, dashboard tuning or to answer any general technical questions you may have. We strive to make your experience with cWatch Web a pleasant one.</p>
+          <p>{% include 'icon-chat-set-sm' %} <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+          <p>{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
+          <p>{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+          <hr>
+          <div class="row">
+            <div class="col-sm-4 text-center">
+              {% include 'icon-tool-box' %}
+            </div>
+            <div class="col-sm-8">
+              <p class="fs17 font-italic">For online technical support, Frequently Asked Questions and printable resources, visit our <a href="/pages/support" class="blue-text">Support page</a>.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-md-6">
         <div class="sales-form">
-          <p class="fs17 grey-text">Please use the form below to submit a message to our Sales Support team</p>
-          {% form 'contact', class: 'free-malware-form' %}
+          <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Sales Support team</p>
+          {% form 'contact', class: 'free-malware-form needs-validation'%}
 
             {% if form.posted_successfully? %}
               <p class="form-success">
@@ -63,16 +81,22 @@
             {% endif %}
             {{ form.errors | default_errors }}
             <div class="form-group">
-              <label for="ContactFormName" class="sr-only">{{ 'contact.form.name' | t }}</label>
+              <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
               name="contact[name]"
               id="ContactFormName"
               placeholder="{{ 'contact.form.name' | t }}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
-              class="form-control">
+              class="form-control" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Name is required
+              </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormEmail" class="sr-only">{{ 'contact.form.email' | t }}</label>
+              <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
                 name="contact[email]"
                 id="ContactFormEmail"
@@ -81,33 +105,55 @@
                 spellcheck="false"
                 autocomplete="off"
                 autocapitalize="off"
-                class="form-control">
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Email is required
+                </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormPhone" class="sr-only">{{ 'contact.form.phone' | t }}</label>
+              <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
                 name="contact[phone]"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
                 pattern="[0-9\-]*"
-                class="form-control">
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Phone is required
+                </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormMessage" class="sr-only">{{ 'contact.form.message' | t }}</label>
-              <textarea rows="10"
+              <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
+              <textarea rows="5"
                 name="contact[body]"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
-                class="form-control">
-              </textarea>
+                class="form-control" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Message is required
+              </div>
             </div>
             <div class="form-group text-center">
-              <label class="cb-container fs14 italic fw400 position-relative">
-                I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
-                <input type="checkbox" name="terms">
-                <span class="checkmark"></span>
-              </label>
+              <div class="form-check">
+                <label class="cb-container fs14 italic fw400 position-relative form-check-label" for="invalidCheck">
+                  I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
+                  <input type="checkbox" name="terms" class="form-check-input" id="invalidCheck" required>
+                  <span class="checkmark"></span>
+                </label>
+                <div class="hidden checkbox-error red-text">
+                  Please agree to our terms
+                </div>
+              </div>
             </div>
             <div class="form-group text-center">
               <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
@@ -115,8 +161,8 @@
           {% endform %}
         </div>
         <div class="tech-form hidden">
-          <p class="fs17 grey-text">Please use the form below to submit a message to our Technical Support team</p>
-          {% form 'contact', class: 'free-malware-form' %}
+          <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Technical Support team</p>
+          {% form 'contact', class: 'free-malware-form needs-validation'%}
 
             {% if form.posted_successfully? %}
               <p class="form-success">
@@ -125,16 +171,22 @@
             {% endif %}
             {{ form.errors | default_errors }}
             <div class="form-group">
-              <label for="ContactFormName" class="sr-only">{{ 'contact.form.name' | t }}</label>
+              <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
               name="contact[name]"
               id="ContactFormName"
               placeholder="{{ 'contact.form.name' | t }}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
-              class="form-control">
+              class="form-control" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Name is required
+              </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormEmail" class="sr-only">{{ 'contact.form.email' | t }}</label>
+              <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
                 name="contact[email]"
                 id="ContactFormEmail"
@@ -143,38 +195,289 @@
                 spellcheck="false"
                 autocomplete="off"
                 autocapitalize="off"
-                class="form-control">
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Email is required
+                </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormPhone" class="sr-only">{{ 'contact.form.phone' | t }}</label>
+              <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
                 name="contact[phone]"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
                 pattern="[0-9\-]*"
-                class="form-control">
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Phone is required
+                </div>
             </div>
             <div class="form-group">
-              <label for="ContactFormMessage" class="sr-only">{{ 'contact.form.message' | t }}</label>
-              <textarea rows="10"
+              <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
+              <textarea rows="5"
                 name="contact[body]"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
-                class="form-control">
-              </textarea>
+                class="form-control" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Message is required
+              </div>
             </div>
             <div class="form-group text-center">
-              <label class="cb-container fs14 italic fw400 position-relative">
-                I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
-                <input type="checkbox" name="terms">
-                <span class="checkmark"></span>
-              </label>
+              <div class="form-check">
+                <label class="cb-container fs14 italic fw400 position-relative">
+                  I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
+                  <input type="checkbox" name="terms" required>
+                  <span class="checkmark"></span>
+                </label>
+                <div class="hidden checkbox-error red-text">
+                  Please agree to our terms
+                </div>
+              </div>
             </div>
             <div class="form-group text-center">
               <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
             </div>
           {% endform %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid show-mobile-768 text-center form-type-mobile">
+    <div class="row header">
+      <div class="col-6 pointer form-type-select-mobile" data-type="sales">
+        {% include 'icon-chat-set-sm' %}
+        <p class="HeaderB-Level5 blue-text fs17">Sales Support</p>
+      </div>
+      <div class="col-6 pointer form-type-select-mobile" data-type="tech">
+        {% include 'icon-grey-gears' %}
+        <p class="HeaderB-Level5 fs17">Technical Support</p>
+      </div>
+      <div class="col-12">
+        <p class="sales-form">Click here for general sales, pricing or product specifications. Our representatives are standing by.</p>
+        <p class="tech-form hidden">Click here if you need technical assistance. Please have your account or order number ready to help us assist you.</p>
+      </div>
+    </div>
+    <div class="row border-bottom border-grey-light">
+      <div class="col-6 sales border-bottom border-blue"></div>
+      <div class="col-6 tech"></div>
+    </div>
+    <div class="row content">
+      <div class="col">
+        <div class="sales-form mt-5">
+          <p class="HeaderA-Level3">Sales Support</p>
+          <p class="HeaderB-Level4">Meeting all your website security needs today and into the future.</p>
+          <p class="fs17">Have questions about our product features and benefits, reseller opportunities, billing, finance or general sales questions?  Need help determining which pricing package is right for you?  Contact us today... our 24/7 Customer Experience Specialists are standing by ready to assist you.</p>
+          <p class="mt-5">{% include 'icon-chat-set-sm' %} <br> <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+          <p>{% include 'icon-blue-chat-dots' %} <br> <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
+          <p>{% include 'icon-blue-mail' %} <br><a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+          <div class="border-dash-bottom border-black my-3"></div>
+          <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Sales Support team</p>
+          {% form 'contact', class: 'free-malware-form text-left needs-validation', novalidate: 'novalidate' %}
+
+            {% if form.posted_successfully? %}
+              <p class="form-success">
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% endif %}
+            {{ form.errors | default_errors }}
+            <div class="form-group">
+              <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
+              <input type="text"
+              name="contact[name]"
+              id="ContactFormName"
+              placeholder="{{ 'contact.form.name' | t }}"
+              value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              class="form-control" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Name is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
+              <input type="email"
+                name="contact[email]"
+                id="ContactFormEmail"
+                placeholder="{{ 'contact.form.email' | t }}"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Email is required
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
+              <input type="tel"
+                name="contact[phone]"
+                id="ContactFormPhone"
+                placeholder="{{ 'contact.form.phone' | t }}"
+                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                pattern="[0-9\-]*"
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Phone is required
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
+              <textarea rows="5"
+                name="contact[body]"
+                id="ContactFormMessage"
+                placeholder="{{ 'contact.form.message' | t }}"
+                class="form-control" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Message is required
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <div class="form-check">
+                <label class="cb-container fs14 italic fw400 position-relative form-check-label" for="invalidCheck">
+                  I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
+                  <input type="checkbox" name="terms" class="form-check-input" id="invalidCheck" required>
+                  <span class="checkmark"></span>
+                </label>
+                <div class="hidden checkbox-error red-text">
+                  Please agree to our terms
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
+            </div>
+          {% endform %}
+        </div>
+        <div class="tech-form hidden mt-5">
+          <p class="HeaderA-Level3">Technical Support</p>
+          <p class="HeaderB-Level4">Leave web security to the pros. Focus on your business.</p>
+          <p class="fs17">Our dedicated Support team is available 24/7 to resolve any issues you may have with setup, management, dashboard tuning or to answer any general technical questions you may have. We strive to make your experience with cWatch Web a pleasant one.</p>
+          <p>{% include 'icon-chat-set-sm' %} <br> <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+          <p>{% include 'icon-blue-chat-dots' %} <br> <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
+          <p>{% include 'icon-blue-mail' %} <br><a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+          <div class="row">
+            <div class="col-sm-4 text-center">
+              {% include 'icon-tool-box' %}
+            </div>
+            <div class="col-sm-8">
+              <p class="fs17 font-italic">For online technical support, Frequently Asked Questions and printable resources, visit our <a href="/pages/support" class="blue-text">Support page</a>.</p>
+            </div>
+            
+          </div>
+          <div class="col">
+            <div class="border-dash-bottom border-black my-3"></div>
+            <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Technical Support team</p>
+          {% form 'contact', class: 'free-malware-form text-left needs-validation', novalidate: 'novalidate' %}
+
+            {% if form.posted_successfully? %}
+              <p class="form-success">
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% endif %}
+            {{ form.errors | default_errors }}
+            <div class="form-group">
+              <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
+              <input type="text"
+              name="contact[name]"
+              id="ContactFormName"
+              placeholder="{{ 'contact.form.name' | t }}"
+              value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              class="form-control" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Name is required
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
+              <input type="email"
+                name="contact[email]"
+                id="ContactFormEmail"
+                placeholder="{{ 'contact.form.email' | t }}"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Email is required
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
+              <input type="tel"
+                name="contact[phone]"
+                id="ContactFormPhone"
+                placeholder="{{ 'contact.form.phone' | t }}"
+                value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                pattern="[0-9\-]*"
+                class="form-control" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Phone is required
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
+              <textarea rows="5"
+                name="contact[body]"
+                id="ContactFormMessage"
+                placeholder="{{ 'contact.form.message' | t }}"
+                class="form-control" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Message is required
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <div class="form-check">
+                <label class="cb-container fs14 italic fw400 position-relative form-check-label" for="invalidCheck">
+                  I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
+                  <input type="checkbox" name="terms" class="form-check-input" id="invalidCheck" required>
+                  <span class="checkmark"></span>
+                </label>
+                <div class="hidden checkbox-error red-text">
+                  Please agree to our terms
+                </div>
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
+            </div>
+          {% endform %}
+          </div>
         </div>
       </div>
     </div>

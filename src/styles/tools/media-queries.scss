@@ -54,6 +54,10 @@
   .text-center-992{
     text-align: center;
   }
+  .form-control{
+    background-color: #fff;
+    border-color: $darkish-blue;
+  }
   .green-check-before:before{
     height: 40px;
     width: 40px;
