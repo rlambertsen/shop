@@ -80,7 +80,7 @@
 /*==== End ====*/
 /*==== Button varients ====*/
 .btn-success-text-shadow{
-  @include long-shadow($type: text, $color: #339a58, $length: 30, $fadeout: false, $skew: true, $direction: right);
+  @include long-shadow($type: text, $color: #339a58, $length: 40, $fadeout: false, $skew: true, $direction: right);
 }
 .btn-cta-rd{
   border-radius: rem(27);

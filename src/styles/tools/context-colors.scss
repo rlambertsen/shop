@@ -55,4 +55,10 @@
 .svg-green{
   fill: $success-green;
 }
+.blue-stroke{fill:none;stroke:#373e5a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}
+.blue-stroke-white{fill:#fff;stroke:#373e5a;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}
+.blue{fill:#373e5a;}
+.grey-stroke{fill:none;stroke:#969c9c;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;} 
+.fly-line1{fill:none;stroke:#969c9c;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;stroke-dasharray:5.88 3.92 10.78 5.88;}
+.fly-line2{fill:none;stroke:#969c9c;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;stroke-dasharray:3.92 10.78 5.88 3.92 10.78 5.88;}
 /*========*/
