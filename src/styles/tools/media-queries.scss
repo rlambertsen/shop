@@ -34,6 +34,15 @@
       top: 31%;
     }
   }
+  .malware-bug {
+    .icon-worm {
+      width: 130px;
+      position: absolute;
+      z-index: 1;
+      left: 21rem;
+      bottom: -118px;
+    }
+  }
 }
 @media screen and (max-width: 1600px){
   .malware-bug{

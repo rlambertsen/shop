@@ -171,6 +171,11 @@ a.text-decoration-none:visited{
   top: 0;
   right: -10px;
 }
+.icon-white-x{
+  width: 19px;
+  position: absolute;
+  right: 11px;
+}
 .green-icon-circle .icon,
 .red-icon-circle .icon {
   width: 50px;
@@ -257,6 +262,10 @@ a.btn{
     width: 354px;
     top: 2px;
     right: -660px;
+  }
+  .icon-buck{
+    width: 80px;
+    left: 211px;
   }
   .icon-worm{
     width: 99px;
@@ -856,6 +865,7 @@ label{
       height: 58px;
     }
     color: #fff;
+    overflow: hidden;
   }
   left: 235px;
   top: -45px;

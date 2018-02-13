@@ -247,18 +247,19 @@ $(function() {
   /*==== End ====*/
   /*==== Pricing page sticky prices mnenu ====*/
   if (window.location.pathname === '/pages/pricing'){
-    var topToMenu = $('#price-menu').offset();
-    var bottom = $('#bottom').offset();
-    if ($(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
-      $('.sticky-prices').fadeIn();
+    var windowSize = window.innerWidth;
+    var topToMenu = $('#price-menu').offset(),
+    bottom = $('#bottom').offset();
+    if (windowSize >= 993 && $(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
+      $('.sticky-prices').addClass('fixed-top').fadeIn();
     } else {
-      $('.sticky-prices').hide();
+      $('.sticky-prices').removeClass('fixed-top').hide();
     }
     $(document).scroll(function(e){
-      if ($(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
-        $('.sticky-prices').fadeIn();
+      if (windowSize >= 993 && $(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
+        $('.sticky-prices').addClass('fixed-top').fadeIn();
       } else {
-        $('.sticky-prices').hide();
+        $('.sticky-prices').removeClass('fixed-top').hide();
       }
     });
   }
@@ -562,9 +563,14 @@ $(function() {
     }
   });
   /*==== End ====*/ 
-  $('[type="submit"]').click(function(event){
-    
+  
+  /*==== mobile malware banner click ====*/
+  $('.icon-white-x').on('click touchend',function(){
+    $('.malware-banner-mobile').remove();
   })
+
+
+  /*==== Form validation ====*/
   window.addEventListener('load', function() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
