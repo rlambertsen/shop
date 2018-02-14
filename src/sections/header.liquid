@@ -9,8 +9,9 @@
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% elsif template == 'benefits' or template == 'csoc' or template == 'firewall' or template == 'cdn' or template == 'siem' or template == 'about' or temnplate == 'malware' or template == 'pricing' or template == 'partner' %}
-  <section class="hero pt-3 background-none">
+{% endif %} 
+{% if template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'about' or temnplate contains 'malware' or template contains 'pricing' or template contains 'partner' %}
+  <section class="hero pt-3 background-none"> 
 {% endif %} 
 
   <nav class="navbar navbar-expand-lg container">
@@ -235,7 +236,7 @@
        <div class="container my-4">
          <div class="row">
            <div class="col">
-             <h1 class="HeaderB-Level4 m-0">Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)</h1>
+             <h1 class="HeaderB-Level4 m-0 lsp0">Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)</h1>
              <p class="FeatureText-Level3 mt-2">Affordably Outsource or Expand Your IT Security Team with cWatch Web’s CSOC</p>
            </div>
          </div>

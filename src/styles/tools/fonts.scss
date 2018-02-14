@@ -1059,14 +1059,7 @@ p {margin-bottom: 1.3rem;}
 
 .small, .font_small {font-size: 0.75rem;}
 /*==== End ====*/
-/*==== Letter spacing (converted to rem from pixels) ====*/
-.lsp2{
-  letter-spacing: rem(2);
-}
-.letter-spacing2{
-  letter-spacing: 2px;
-}
-/*==== End ====*/
+
 /*==== Font weight ====*/
 .fw100{
   font-weight: 100;
@@ -1242,3 +1235,14 @@ p {margin-bottom: 1.3rem;}
   text-decoration: underline;
 }
 /*=== End Text Classes ====*/
+/*==== Letter spacing (converted to rem from pixels) ====*/
+.lsp0{
+  letter-spacing: 0;
+}
+.lsp2{
+  letter-spacing: rem(2);
+}
+.letter-spacing2{
+  letter-spacing: 2px;
+}
+/*==== End ====*/

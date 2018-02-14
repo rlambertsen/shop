@@ -525,6 +525,7 @@ ul.baraja-container li {
   transform: skewY(2deg);
   background-repeat: no-repeat;
   position: relative;
+  // background: url('gradient-green.svg');
 }
 .hero_cta.green-gradients:before{
   top: -84px;
@@ -774,7 +775,6 @@ label{
 .search-desktop{
   position: relative;
   top: -15px;
-  left: 18px;
 }
 /*== Header logo ==*/
 /*===Malware banner===*/
@@ -962,7 +962,7 @@ label{
 }
 /*==== End ====*/
 .mobile-navbar{
-  top: -24px;
+  top: -19px;
 }
 /*==== Main header links to pages ====*/
 .main-links{}
@@ -1617,10 +1617,10 @@ label{
   content: "";
   background: url('icon-bombs_1.svg') no-repeat;
   position: absolute;
-  width: 500px;
+  width: 457px;
   height: 210px;
-  right: -314px;
-  top: -129px;
+  right: -316px;
+  top: -106px;
 }
 /*==== Product features ====*/
 .product-features{
@@ -2032,7 +2032,10 @@ label{
 }
 //pixel perfect responsive killer styles
 .nav-item.dropdown{
-  margin-right: 34px;
+  margin-right: 27px;
+}
+.nav-item.dropdown:last-child{
+  margin: 0;
 }
 
 //special move classes that are required to break fluidness but make it pixel perfect
@@ -2040,6 +2043,8 @@ label{
   margin-top: 67px;
   margin-bottom: 8px;
 }
+//end killer stuff
+
 #customer_login_link,
 #customer_register_link{
   color: $grey-accent;
@@ -2318,5 +2323,6 @@ label{
     vertical-align: text-top;
   }
 }
+
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss');

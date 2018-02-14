@@ -248,6 +248,9 @@
   .siem-svg {
     height: 375px;
   }
+  .biz-size .icon-large-biz {
+    position: initial;
+  }
 }
 @media screen and (max-width: 767px){
   .blue-icons{
@@ -426,6 +429,9 @@
   }
 }
 @media screen and (max-width: 450px){
+  .icon-arrow-right-white{
+    display: none;
+  }
   .how-works .green-circle:after{
     left: 58%;
   }

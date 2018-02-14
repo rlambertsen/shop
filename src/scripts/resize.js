@@ -7,20 +7,22 @@ var resize = (function(){
       $(window).resize(this.resize);
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
-        var mobileTop = $('#mobile-top').offset()
-        var mobileBottom = $('#mobile-bottom').offset();
-        if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-          $('.sticky-prices').addClass('fixed-top').fadeIn();
-        } else {
-          $('.sticky-prices').removeClass('fixed-top').hide();
-        }
-        $(document).scroll(function(e){
+        if (window.location.pathname === '/pages/pricing'){
+          var mobileTop = $('#mobile-top').offset()
+          var mobileBottom = $('#mobile-bottom').offset();
           if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-            $('.sticky-prices').addClass('fixed-top').show();
+            $('.sticky-prices').addClass('fixed-top').fadeIn();
           } else {
             $('.sticky-prices').removeClass('fixed-top').hide();
           }
-        });
+          $(document).scroll(function(e){
+            if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
+              $('.sticky-prices').addClass('fixed-top').show();
+            } else {
+              $('.sticky-prices').removeClass('fixed-top').hide();
+            }
+          });
+        }
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
         $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
@@ -29,7 +31,7 @@ var resize = (function(){
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
-        $('.hero').removeClass('mh-519');
+        
         //homepage slider only control icons when in mobile
         $('#security-mobile-slider').carousel();
         $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
@@ -72,7 +74,7 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
-        $('.hero').addClass('mh-519');
+        
       }
       if (windowSize <= 769) {
         $('.page-hero h2').removeClass('fs47').addClass('fs35');
@@ -84,20 +86,22 @@ var resize = (function(){
     resize: function(){
       var windowSize = window.innerWidth;
       if (windowSize <= 992){
-        var mobileTop = $('#mobile-top').offset()
-        var mobileBottom = $('#mobile-bottom').offset();
-        if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-          $('.sticky-prices').addClass('fixed-top').fadeIn();
-        } else {
-          $('.sticky-prices').removeClass('fixed-top').hide();
-        }
-        $(document).scroll(function(e){
+        if (window.location.pathname === '/pages/pricing'){
+          var mobileTop = $('#mobile-top').offset()
+          var mobileBottom = $('#mobile-bottom').offset();
           if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
-            $('.sticky-prices').addClass('fixed-top').show();
+            $('.sticky-prices').addClass('fixed-top').fadeIn();
           } else {
             $('.sticky-prices').removeClass('fixed-top').hide();
           }
-        });
+          $(document).scroll(function(e){
+            if ($(window).scrollTop() >= mobileTop.top && $(window).scrollTop() <= mobileBottom.top){
+              $('.sticky-prices').addClass('fixed-top').show();
+            } else {
+              $('.sticky-prices').removeClass('fixed-top').hide();
+            }
+          });
+        }
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
         $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
@@ -106,7 +110,7 @@ var resize = (function(){
         $('.search-desktop').removeClass('mainNav').addClass('hidden');
         $('.navbar-expand-lg').removeClass('container');
         $('.search-mobile').removeClass('hidden').addClass('navbar-collapse collapse');
-        $('.hero').removeClass('mh-519');
+        
         //homepage slider only control icons when in mobile
         $('#security-mobile-slider').carousel();
         $('#security-mobile-slider').on('slide.bs.carousel', function (e) {
@@ -149,7 +153,7 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
-        $('.hero').addClass('mh-519');
+        
       }
       if (windowSize <= 769) {
         $('.page-hero h2').removeClass('fs47').addClass('fs35');
