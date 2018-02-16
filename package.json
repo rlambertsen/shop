@@ -2,7 +2,7 @@
   "name": "cwatch",
   "version": "0.0.1",
   "devDependencies": {
-    "@shopify/slate-tools": "0.13.0"
+    "@shopify/slate-tools": "^0.13.0"
   },
   "dependencies": {
     "selectize": "^0.12.4"

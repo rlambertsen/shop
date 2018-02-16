@@ -122,6 +122,7 @@ function countingUp(){
 /*==== End ====*/
 /*==== Document Ready only below ====*/
 $(function() {
+  $('#preview-bar-iframe').remove();
   resize.init();
   mobile.init();
   //navigation hovers
@@ -452,16 +453,64 @@ $(function() {
   /*==== End ====*/
 
   /*==== benefits main shield hovers ====*/
-  $('.icon-top-right-shield_animated').mouseenter(function(){
+  //enhance
+  $('.icon-enhance_animated').mouseenter(function(){
     $(this).show();
+    $('.enhance-hover').hide();
   }).mouseleave(function(){
+    $('.enhance-hover').show();
     $(this).hide();
   });
-  $('svg path.top-right-shield').mouseenter(function(){
-    $('.icon-top-right-shield_animated').show();
+  $('.enhance-hover').mouseenter(function(){
+    $('.icon-enhance_animated').show();
     $(this).hide();
   }).mouseleave(function(){
-    $('.icon-top-right-shield_animated').hide();
+    $('.icon-enhance_animated').hide();
+    $(this).show();
+  });
+  //respond
+  $('.icon-respond_animated').mouseenter(function(){
+    $(this).show();
+    $('.respond-hover').hide()
+  }).mouseleave(function(){
+    $('.respond-hover').show()
+    $(this).hide();
+  });
+  $('.respond-hover').mouseenter(function(){
+    $('.icon-respond_animated').show();
+    $(this).hide()
+  }).mouseleave(function(){
+    $('.icon-respond_animated').hide();
+    $(this).show()
+  });
+  //detect
+  $('.icon-detect_animated').mouseenter(function(){
+    $(this).show();
+    $('.detect-hover').hide();
+  }).mouseleave(function(){
+    $('.detect-hover').show();
+    $(this).hide();
+  });
+  $('.detect-hover').mouseenter(function(){
+    $('.icon-detect_animated').show();
+    $(this).hide();
+  }).mouseleave(function(){
+    $('.icon-detect_animated').hide();
+    $(this).show();
+  });
+  //protect
+  $('.icon-protect_animated').mouseenter(function(){
+    $(this).show();
+    $('.protect-hover').hide();
+  }).mouseleave(function(){
+    $('.protect-hover').show();
+    $(this).hide();
+  });
+  $('.protect-hover').mouseenter(function(){
+    $('.icon-protect_animated').show();
+    $(this).hide();
+  }).mouseleave(function(){
+    $('.icon-protect_animated').hide();
     $(this).show();
   });
   /*==== End ====*/
@@ -589,5 +638,11 @@ $(function() {
       }, false);
     });
   }, false);
-  
+  //find all svg data-linsk to activate on benefits page only for now
+  if (window.location.pathname === '/pages/benefits'){
+    $('[data-link]').each(function(i,v){
+      $(this).attr('href', $(this).data('link'))
+    })
+  }
+    
 });

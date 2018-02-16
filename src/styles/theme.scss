@@ -15,6 +15,14 @@ $green: #23e390;
 $input-grey: rgba(207, 214, 218, 0.4);
 $red: #C41230;
 /*======End Color vars========*/
+/*==== Base font sizing classes ====*/
+
+html {font-size: 20px;}
+body{
+  @extend .lato;
+  color: $darkish-blue;
+  overflow-x: hidden;
+}
 /*========*/
 /*========*/
 /*========*/
@@ -41,6 +49,9 @@ $red: #C41230;
 @import url('tools/mixins.scss');
 @import url('tools/flip.scss');
 @import url('tools/fonts.scss');
+g {
+  pointer-events: bounding-box;
+}
 .btn-group-justified {
   display: flex;
   width: 100%;
@@ -60,14 +71,7 @@ $red: #C41230;
   padding-left: 50px;
   padding-right: 50px;
 }
-/*==== Base font sizing classes ====*/
 
-html {font-size: 20px;}
-body{
-  @extend .lato;
-  color: $darkish-blue;
-  overflow-x: hidden;
-}
 @import url('tools/sizing.scss');
 @import url('tools/btn.scss');
 .drop-shadow{
@@ -138,6 +142,7 @@ a.text-decoration-none:visited{
   max-width: 100%;
   height: auto;
 }
+
 .icon-chat-set{
   width: 150px;
 }
@@ -242,13 +247,6 @@ a.btn{
   position: relative;
   fill: #fff;
 }
-.icon-top-right-shield_animated{
-  position: absolute;
-  width: 300px;
-  left: 576px;
-  top: 50px;
-  display: none;
-}
 .hover{
   .icon{
     position: absolute;
@@ -339,6 +337,34 @@ a.btn{
   100%{
     opacity: 1;
   }
+}
+.icon-enhance_animated{
+  display: none;
+  position: absolute;
+  width: 438px;
+  left: 100px;
+  top: -21px;
+}
+.icon-respond_animated{
+  display: none;
+  position: absolute;
+  width: 486px;
+  top: 340px;
+  left: 50px;
+}
+.icon-protect_animated{
+  display: none;
+  position: absolute;
+  width: 437px;
+  top: -20px;
+  right: 101px;
+}
+.icon-detect_animated{
+  display: none;
+  position: absolute;
+  width: 478px;
+  top: 343px;
+  right: 58px;
 }
 /*=== End Icons ====*/
 
@@ -860,7 +886,7 @@ label{
   a{
     .btn-text{
       overflow: hidden;
-      padding: 12px 60px;
+      padding: 17px 60px;
       position: relative;
       height: 58px;
     }
@@ -1008,7 +1034,7 @@ label{
   }
 }
 /*==== End ====*/
-
+ 
 /*==== Hacked section ====*/
 .hacked{
   .icon-long-green-line{
@@ -1024,12 +1050,12 @@ label{
   }
   .hack-img:before {
     content: "";
-    background: url(free-laptop.svg) no-repeat;
+    background: url({{'free-laptop.svg' | asset_url}}) no-repeat;
     position: absolute;
     height: 360px;
     width: 660px;
     top: -254px;
-    left: 177px;
+    left: 275px;
     z-index: -1;
   }
   // background: url("free-laptop.svg") no-repeat;
@@ -1232,7 +1258,7 @@ label{
     margin: auto;
     display: none;
   }
-  background: url(number-bg.svg), #23e390;
+  background: url({{'number-bg.svg' | asset_url}}), #23e390;
   transform: skewY(2deg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1289,21 +1315,21 @@ label{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(green-chevron-down.svg) 94%/7% no-repeat #fff;
+    background: url({{'green-chevron-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
   select.blue-outline {
     border: 1px solid $blue;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(light-blue-chevron-down.svg) 94%/7% no-repeat #fff;
+    background: url({{'light-blue-chevron-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
   select.darkish-blue-outline {
     border: 1px solid $darkish-blue;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url(blue-chevron-down.svg) 94%/7% no-repeat #fff;
+    background: url({{'blue-chevron-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
   .progress{
     height: rem(10);
@@ -1407,13 +1433,13 @@ label{
 /*==== End ====*/
 /*==== War room BG ====*/
 .war-room{
-  background: url(icon-war-room.svg) 83px 7px no-repeat;
+  background: url({{'icon-war-room.svg' | asset_url}}) 83px 7px no-repeat;
   min-height: 642px;
   position: relative;
   z-index: 10;
 }
 .mobile.war-room{
-  background: url(icon-war-room.svg) 10px 0/100% 100% no-repeat;
+  background: url({{'icon-war-room.svg' | asset_url}}) 10px 0/100% 100% no-repeat;
   min-height: 230px;
 }
 .war-floor{
@@ -1462,7 +1488,7 @@ label{
   &:before{
     content: "";
     position: absolute;
-    background: url('icon-big-c.svg') no-repeat; 
+    background: url({{'icon-big-c.svg' | asset_url}}) no-repeat; 
   }
   .large-c{
     left: 81px;
@@ -1484,11 +1510,11 @@ label{
 }
 /*==== Firewall large svg ====*/
 .fire-wall{
-  background: url('fire-wall.svg') center center no-repeat;
+  background: url({{'fire-wall.svg' | asset_url}}) center center no-repeat;
   height: 490px;
 }
 .fire-wall.show-mobile-768 {
-  background: url(fire-wall.svg) center center no-repeat;
+  background: url({{'fire-wall.svg' | asset_url}}) center center no-repeat;
   height: 180px;
   background-size: contain;
 }
@@ -1557,7 +1583,7 @@ label{
     left: auto;
     top: 41%;
   }
-  background: url('world-wide.svg') center center no-repeat;
+  background: url({{'world-wide.svg' | asset_url}}) center center no-repeat;
   height: 620px;
 }
 /*==== End ====*/
@@ -1615,7 +1641,7 @@ label{
 /*==== End ====*/
 .icon-bombs:after{
   content: "";
-  background: url('icon-bombs_1.svg') no-repeat;
+  background: url({{'icon-bombs_1.svg' | asset_url}}) no-repeat;
   position: absolute;
   width: 457px;
   height: 210px;
@@ -1847,7 +1873,7 @@ label{
   .green-bg-check{
     li:before{
       content: "";
-      background: url(icon-green-check.svg) no-repeat;
+      background: url({{'icon-green-check.svg' | asset_url}}) no-repeat;
       height: 21px;
       width: 16px;
       position: absolute;
@@ -1915,7 +1941,7 @@ label{
       position: absolute;
     }
     &:before{
-      background: url('icon-fishing.svg') no-repeat;
+      background: url({{'icon-fishing.svg' | asset_url}}) no-repeat;
       width: 480px;
       height: 300px;
       z-index: 1;
@@ -1923,7 +1949,7 @@ label{
       left: 160px;
     }
     &:after{
-      background: url('icon-clear-crap.svg') no-repeat;
+      background: url({{'icon-clear-crap.svg' | asset_url}}) no-repeat;
       width: 480px;
       height: 300px;
       z-index: 1;
@@ -1935,14 +1961,14 @@ label{
         position: absolute;
       }
       &:before{
-        background: url('icon-sm-worm.svg') no-repeat;
+        background: url({{'icon-sm-worm.svg' | asset_url}}) no-repeat;
         width: 70px;
         height: 60px;
         bottom: -1px;
         right: -14px;
       }
       &:after{
-        background: url('icon-worm.svg') no-repeat;
+        background: url({{'icon-worm.svg' | asset_url}}) no-repeat;
         width: 80px;
         height: 120px;
         bottom: -31px;
@@ -1956,13 +1982,13 @@ label{
     position: absolute;
   }
   &:before{
-    background: url('icon-fly-bugs.svg') no-repeat;
+    background: url({{'icon-fly-bugs.svg' | asset_url}}) no-repeat;
     width: 480px;
     height: 300px;
     left: -730px;
   }
   &:after{
-    background: url('icon-bug-trail.svg') no-repeat;
+    background: url({{'icon-bug-trail.svg' | asset_url}}) no-repeat;
     width: 463px;
     height: 500px;
     right: -70px;
@@ -2001,7 +2027,7 @@ label{
   }
 }
 .comodo-bld {
-  background: url(icon-comodo-bld.svg) no-repeat;
+  background: url({{'icon-comodo-bld.svg' | asset_url}}) no-repeat;
   height: 481px;
   background-position: top;
 }
@@ -2113,12 +2139,12 @@ label{
 }
 /*==== End ====*/
 .siem-svg{
-  background: url('icon-siem.svg') no-repeat;
+  background: url({{'icon-siem.svg' | asset_url}}) no-repeat;
   height: 645px;
   background-position: center;
 }
 .siem-svg.show-mobile-768{
-  background: url('icon-siem-mobile.svg') no-repeat;
+  background: url({{'icon-siem-mobile.svg' | asset_url}}) no-repeat;
   height: 337px;
   background-size: cover;
   margin-left: -15px;
@@ -2325,4 +2351,8 @@ label{
 }
 
 /*==== Site wide media quieries ====*/
-@import url('tools/media-queries.scss');
+@import url('tools/media-queries.scss'); 
+@import url('tools/icon_enhance_animated.scss');
+@import url('tools/icon_protect_animated.scss');
+@import url('tools/icon_respond_animated.scss');
+@import url('tools/icon_detect_animated.scss');  
