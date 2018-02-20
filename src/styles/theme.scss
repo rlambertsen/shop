@@ -693,6 +693,20 @@ ul.baraja-container li {
 .green-check-plain{
   list-style-image: url("icon-green-check.svg");
 }
+.green-bg-check{
+  li:before{
+    content: "";
+    background: url({{'icon-green-check.svg' | asset_url}}) no-repeat;
+    height: 21px;
+    width: 16px;
+    position: absolute;
+    left: -20px;
+    transform: scaleX(-1);
+    margin-top: -4px;
+  }
+  position: relative;
+  margin-left: 23px
+}
 /*==== End ====*/
 .form-control{
   background-color: #edf0f36e;
@@ -1382,7 +1396,7 @@ label{
     height: 284px;
     position: relative;
     top: 8px;
-    left: -56px;
+    left: -19px;
   }
   button.btn{
     padding: 7.5px 26px;
@@ -1530,7 +1544,7 @@ label{
       height: 67px;
       width: 67px;
       top: 50%;
-      left:0;
+      left: -70px;
       cursor: pointer;
     }
     .icon-green-circle-arrow-right{
@@ -1538,7 +1552,7 @@ label{
       width: 67px;
       height: 67px;
       top: 50%;
-      right: 0;
+      right: -70px;
       cursor: pointer;
     }
   }
@@ -2239,6 +2253,9 @@ label{
     height: 70px;
     width: 70px;
     color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
   .grey-circle{
     border-radius: 50%;
@@ -2246,6 +2263,9 @@ label{
     height: 70px;
     width: 70px;
     color: $success-green;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
   .green-circle:after{
     top: 97%;

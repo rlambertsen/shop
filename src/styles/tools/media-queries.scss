@@ -64,6 +64,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .flipster__item{
+    .HeaderB-Level2{
+      font-size: 15px;
+    }
+  }
   .text-center-992{
     text-align: center;
   }
@@ -247,9 +252,6 @@
   }
   .siem-svg {
     height: 375px;
-  }
-  .biz-size .icon-large-biz {
-    position: initial;
   }
 }
 @media screen and (max-width: 767px){
@@ -518,7 +520,7 @@
   .hacked{
     .hack-img:before {
       top: -237px;
-      left: -160px;
+      left: -90px;
     }
   }
 }

@@ -1,6 +1,7 @@
 var resize = (function(){
   return {
     init: function(){
+      //add thse classes to match styles these are shopify added
       $('#customer_login_link').addClass('nav-link fs12');
       $('#customer_register_link').addClass('nav-link fs12');
       $('#customer_logout_link').addClass('nav-link fs12');
@@ -23,6 +24,7 @@ var resize = (function(){
             }
           });
         }
+        $('.chat-links a').removeClass('pull-right pull-left').addClass('btn-block');
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
         $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
@@ -65,6 +67,8 @@ var resize = (function(){
           }
         });
       } else{
+        $('.chat-links a').first().addClass('pull-right');
+        $('.chat-links a').last().addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');
         $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');
@@ -74,7 +78,69 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
-        
+        /*==== benefits main shield hovers ====*/
+        //enhance
+        $('.icon-enhance_animated').mouseenter(function(){
+          $(this).show();
+          $('.enhance-hover').hide();
+        }).mouseleave(function(){
+          $('.enhance-hover').show();
+          $(this).hide();
+        });
+        $('.enhance-hover').mouseenter(function(){
+          $('.icon-enhance_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-enhance_animated').hide();
+          $(this).show();
+        });
+        //respond
+        $('.icon-respond_animated').mouseenter(function(){
+          $(this).show();
+          $('.respond-hover').hide()
+        }).mouseleave(function(){
+          $('.respond-hover').show()
+          $(this).hide();
+        });
+        $('.respond-hover').mouseenter(function(){
+          $('.icon-respond_animated').show();
+          $(this).hide()
+        }).mouseleave(function(){
+          $('.icon-respond_animated').hide();
+          $(this).show()
+        });
+        //detect
+        $('.icon-detect_animated').mouseenter(function(){
+          $(this).show();
+          $('.detect-hover').hide();
+        }).mouseleave(function(){
+          $('.detect-hover').show();
+          $(this).hide();
+        });
+        $('.detect-hover').mouseenter(function(){
+          $('.icon-detect_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-detect_animated').hide();
+          $(this).show();
+        });
+        //protect
+        $('.icon-protect_animated').mouseenter(function(){
+          $(this).show();
+          $('.protect-hover').hide();
+        }).mouseleave(function(){
+          $('.protect-hover').show();
+          $(this).hide();
+        });
+        $('.protect-hover').mouseenter(function(){
+          $('.icon-protect_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-protect_animated').hide();
+          $(this).show();
+        });
+        /*==== End ====*/
+              
       }
       if (windowSize <= 769) {
         $('.page-hero h2').removeClass('fs47').addClass('fs35');
@@ -102,6 +168,7 @@ var resize = (function(){
             }
           });
         }
+        $('.chat-links a').removeClass('pull-right pull-left').addClass('btn-block');
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
         $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
@@ -144,8 +211,10 @@ var resize = (function(){
           }
         });
       } else{
+        $('.chat-links a').first().addClass('pull-right');
+        $('.chat-links a').last().addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');
-        $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');
+        $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');
         $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
@@ -153,6 +222,68 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
+        /*==== benefits main shield hovers ====*/
+        //enhance
+        $('.icon-enhance_animated').mouseenter(function(){
+          $(this).show();
+          $('.enhance-hover').hide();
+        }).mouseleave(function(){
+          $('.enhance-hover').show();
+          $(this).hide();
+        });
+        $('.enhance-hover').mouseenter(function(){
+          $('.icon-enhance_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-enhance_animated').hide();
+          $(this).show();
+        });
+        //respond
+        $('.icon-respond_animated').mouseenter(function(){
+          $(this).show();
+          $('.respond-hover').hide()
+        }).mouseleave(function(){
+          $('.respond-hover').show()
+          $(this).hide();
+        });
+        $('.respond-hover').mouseenter(function(){
+          $('.icon-respond_animated').show();
+          $(this).hide()
+        }).mouseleave(function(){
+          $('.icon-respond_animated').hide();
+          $(this).show()
+        });
+        //detect
+        $('.icon-detect_animated').mouseenter(function(){
+          $(this).show();
+          $('.detect-hover').hide();
+        }).mouseleave(function(){
+          $('.detect-hover').show();
+          $(this).hide();
+        });
+        $('.detect-hover').mouseenter(function(){
+          $('.icon-detect_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-detect_animated').hide();
+          $(this).show();
+        });
+        //protect
+        $('.icon-protect_animated').mouseenter(function(){
+          $(this).show();
+          $('.protect-hover').hide();
+        }).mouseleave(function(){
+          $('.protect-hover').show();
+          $(this).hide();
+        });
+        $('.protect-hover').mouseenter(function(){
+          $('.icon-protect_animated').show();
+          $(this).hide();
+        }).mouseleave(function(){
+          $('.icon-protect_animated').hide();
+          $(this).show();
+        });
+        /*==== End ====*/
         
       }
       if (windowSize <= 769) {

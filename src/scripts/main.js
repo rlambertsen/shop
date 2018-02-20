@@ -125,6 +125,12 @@ $(function() {
   $('#preview-bar-iframe').remove();
   resize.init();
   mobile.init();
+  if (window.location.pathname === '/pages/benefits'){
+    benefits.init();
+    $('[data-link]').each(function(i,v){
+      $(this).attr('href', $(this).data('link'))
+    })
+  }
   //navigation hovers
   $('.nav-item.dropdown').mouseenter(function(){ //activate drop menu on hover
     $(this).addClass('show');
@@ -263,8 +269,38 @@ $(function() {
         $('.sticky-prices').removeClass('fixed-top').hide();
       }
     });
+    // mobile details
+    $('.detail').click(function(){
+      $this = $(this);
+      var title = $this.data('detail');
+      $('.package').text(title);
+      $('.details-layover').addClass('details-show')
+    });
+    $('.details-layover').click(function(){
+      $(this).removeClass('details-show');
+    });
   }
   /*==== End ====*/
+  /*==== Compare mobile fixed menu ====*/
+  if (window.location.pathname === '/pages/compare'){
+    var windowSize = window.innerWidth;
+    var topToMenu = $('#top-part').offset(),
+    bottom = $('#bottom').offset();
+    if (windowSize <= 575 && $(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
+      $('.sticky-header').addClass('fixed-top white-background py-2 drop-shadow trans-ease')
+    } else {
+      $('.sticky-header').removeClass('fixed-top white-background py-2 drop-shadow trans-ease')
+    }
+    $(document).scroll(function(e){
+      console.log(windowSize <= 575 && $(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top)
+      if (windowSize <= 575 && $(window).scrollTop() >= topToMenu.top && $(window).scrollTop() <= bottom.top){
+        $('.sticky-header').addClass('fixed-top white-background py-2 drop-shadow trans-ease')
+      } else {
+        $('.sticky-header').removeClass('fixed-top white-background py-2 drop-shadow trans-ease')
+      }
+    });
+  }
+  /*====  ====*/
   /*==== Mobile only WAF target section ====*/
   if (window.location.pathname === '/pages/web-application-firewall'){
     var options = {
@@ -452,68 +488,7 @@ $(function() {
   });
   /*==== End ====*/
 
-  /*==== benefits main shield hovers ====*/
-  //enhance
-  $('.icon-enhance_animated').mouseenter(function(){
-    $(this).show();
-    $('.enhance-hover').hide();
-  }).mouseleave(function(){
-    $('.enhance-hover').show();
-    $(this).hide();
-  });
-  $('.enhance-hover').mouseenter(function(){
-    $('.icon-enhance_animated').show();
-    $(this).hide();
-  }).mouseleave(function(){
-    $('.icon-enhance_animated').hide();
-    $(this).show();
-  });
-  //respond
-  $('.icon-respond_animated').mouseenter(function(){
-    $(this).show();
-    $('.respond-hover').hide()
-  }).mouseleave(function(){
-    $('.respond-hover').show()
-    $(this).hide();
-  });
-  $('.respond-hover').mouseenter(function(){
-    $('.icon-respond_animated').show();
-    $(this).hide()
-  }).mouseleave(function(){
-    $('.icon-respond_animated').hide();
-    $(this).show()
-  });
-  //detect
-  $('.icon-detect_animated').mouseenter(function(){
-    $(this).show();
-    $('.detect-hover').hide();
-  }).mouseleave(function(){
-    $('.detect-hover').show();
-    $(this).hide();
-  });
-  $('.detect-hover').mouseenter(function(){
-    $('.icon-detect_animated').show();
-    $(this).hide();
-  }).mouseleave(function(){
-    $('.icon-detect_animated').hide();
-    $(this).show();
-  });
-  //protect
-  $('.icon-protect_animated').mouseenter(function(){
-    $(this).show();
-    $('.protect-hover').hide();
-  }).mouseleave(function(){
-    $('.protect-hover').show();
-    $(this).hide();
-  });
-  $('.protect-hover').mouseenter(function(){
-    $('.icon-protect_animated').show();
-    $(this).hide();
-  }).mouseleave(function(){
-    $('.icon-protect_animated').hide();
-    $(this).show();
-  });
-  /*==== End ====*/
+  
 
   /*==== OWASP tooltip ====*/
   $('.icon-owasp-text').mouseenter(function(){
@@ -639,10 +614,5 @@ $(function() {
     });
   }, false);
   //find all svg data-linsk to activate on benefits page only for now
-  if (window.location.pathname === '/pages/benefits'){
-    $('[data-link]').each(function(i,v){
-      $(this).attr('href', $(this).data('link'))
-    })
-  }
     
 });

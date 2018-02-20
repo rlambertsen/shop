@@ -81,6 +81,9 @@
   {% if template contains 'support' %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
   {% endif %}
+  {% if template contains 'benefits' %}
+  {{ 'benefits.js' | asset_url | script_tag }}
+  {% endif %}
   {{ 'baraja.js' | asset_url | script_tag }}
   {{ 'jquery.animateNumber.js' | asset_url | script_tag }}
   {{ 'flip.js' | asset_url | script_tag }}
