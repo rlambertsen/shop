@@ -60,6 +60,9 @@
 }
 @media screen and (max-width: 1199px){}
 @media screen and (max-width: 990px){
+  div[class^='w-']{
+    width: 100% !important;
+  }
   .container{
     padding-left: 15px;
     padding-right: 15px;

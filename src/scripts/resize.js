@@ -26,7 +26,6 @@ var resize = (function(){
         }
         $('.chat-links a').removeClass('pull-right pull-left').addClass('btn-block');
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
-        $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
@@ -72,7 +71,6 @@ var resize = (function(){
         $('#security-mobile-slider').carousel('dispose');
         $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');
-        $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');
@@ -170,7 +168,6 @@ var resize = (function(){
         }
         $('.chat-links a').removeClass('pull-right pull-left').addClass('btn-block');
         $('.malware-removal.green-gradients').removeClass('py-10').addClass('py-3');
-        $('.hero_cta').removeClass('mt-4 mb-4');
         $('.csoc').removeClass('light-grey-background');
         $('.pricing').addClass('hidden');
         $('.pricing-mobile').removeClass('hidden');
@@ -216,7 +213,6 @@ var resize = (function(){
         $('#security-mobile-slider').carousel('dispose');
         $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');
-        $('.hero_cta').addClass('mt-4 mb-4');
         $('.search-desktop').addClass('mainNav').removeClass('hidden');
         $('.pricing').removeClass('hidden');
         $('.pricing-mobile').addClass('hidden');

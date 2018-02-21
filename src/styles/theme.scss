@@ -94,6 +94,9 @@ a:not([href]):not([tabindex]) {
 .z1{
   z-index: 1;
 }
+.badge-primary{
+  background-color: $blue;
+}
 .trans-ease-inOut{
   transition: all 0.3s ease-in;
 }
@@ -519,12 +522,11 @@ ul.baraja-container li {
     background : linear-gradient(90deg, rgba(35, 227, 144, 1) 0%, rgba(35, 227, 144, 0.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23E390',endColorstr='#23E390' , GradientType=1);
     position: absolute;
-    height: 153px;
+    height: 57px;
     width: 100%;
-    top: -66px;
-    -webkit-clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
-    transform: skewY(-3deg);
+    top: -23px;
+    transform: skewY(-1deg);
+    z-index: -1;
   }
   &:after{
     background : -moz-linear-gradient(0% 50% 0deg,rgba(35, 227, 144, 1) 0%,rgba(35, 227, 144, 0.2) 100%);
@@ -537,24 +539,22 @@ ul.baraja-container li {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23E390',endColorstr='#23E390' , GradientType=1);
     content: "";
     position: absolute;
-    height: 93px;
+    height: 53px;
     width: 100%;
-    bottom: -47px;
-    -webkit-clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
-    transform: skewY(-2deg);
+    bottom: -30px;
+    transform: skewY(-1deg);
+    z-index: -1;
   }
   .container{
-    transform: skewY(-2deg);
+    transform: skewY(-1deg);
+    padding-top: 45px;
+    padding-bottom: 41px;
   }
   background: #23e390;
-  transform: skewY(2deg);
+  transform: skewY(1deg);
   background-repeat: no-repeat;
   position: relative;
-  // background: url('gradient-green.svg');
-}
-.hero_cta.green-gradients:before{
-  top: -84px;
+  margin-top: 9px;
 }
 /*==== End ====*/
 .phoneNumber{
@@ -616,7 +616,7 @@ ul.baraja-container li {
       vertical-align: middle;
       margin-right: 10px;
     }
-    padding: rem(20);
+    padding: rem(20) 0 rem(20) rem(20);
   }
   .nav-link.active:before {
     margin-top: -25px;
@@ -705,7 +705,7 @@ ul.baraja-container li {
     margin-top: -4px;
   }
   position: relative;
-  margin-left: 23px
+  margin-left: 19px;
 }
 /*==== End ====*/
 .form-control{
@@ -793,13 +793,14 @@ label{
 /*==== Breadcumbs ====*/
 .breadcrumbs{
   .icon-blue-home{
-    height: rem(11);
+    height: rem(13);
   }
   .icon-grey-caret-right{
     height: rem(8);
   }
   position: relative;
-  top: 11px;
+  top: 36px;
+  left: 24px;
 }
 /*==== End ====*/
 
@@ -1040,7 +1041,7 @@ label{
 /*==== End ====*/
 /*==== Page Hero section ====*/
 .page-hero{
-  padding-top: rem(86);
+  padding-top: rem(117);
 }
 #security-information-amp-event-management-siem{
   .page-hero{
@@ -1447,8 +1448,8 @@ label{
 /*==== End ====*/
 /*==== War room BG ====*/
 .war-room{
-  background: url({{'icon-war-room.svg' | asset_url}}) 83px 7px no-repeat;
-  min-height: 642px;
+  background: url({{'icon-war-room.svg' | asset_url}}) 50px -39px no-repeat;
+  min-height: 595px;
   position: relative;
   z-index: 10;
 }
