@@ -36,12 +36,30 @@
   }
   .malware-bug {
     .icon-worm {
-      width: 130px;
+      width: 96px;
       position: absolute;
       z-index: 1;
       left: 21rem;
-      bottom: -118px;
+      bottom: -92px;
     }
+  }
+}
+@media screen and (max-width: 1920px){
+  .malware-bug .icon-worm {
+    width: 96px;
+    position: absolute;
+    z-index: 1;
+    left: 26.5rem;
+    bottom: -84px;
+  }
+  .malware-bug .icon-bug-trail {
+    width: 465px;
+    position: absolute;
+    z-index: 1;
+    left: auto;
+    right: 343px;
+    top: -72px;
+    transform: skewY(-2deg);
   }
 }
 @media screen and (max-width: 1600px){

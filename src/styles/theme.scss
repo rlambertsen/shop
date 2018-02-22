@@ -153,10 +153,13 @@ a.text-decoration-none:visited{
   height: 55px;
   vertical-align: middle;
 }
-.icon-blue-check{
-  width: 25px;
-  vertical-align: middle;
-  margin-right: 15px;
+.blue-checks{
+  .icon-solid-check{
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 15px;
+    fill: $blue;
+  }
 }
 .icon-cart{
   width: 25px;
@@ -194,6 +197,7 @@ a.btn{
     width: 21px;
     position: relative;
     left: 21px;
+    top: -3px;
   }
 }
 .icon-download {
@@ -210,19 +214,20 @@ a.btn{
   width: 130px;
 }
 .chat-links{
-  .icon-blue-chat-dots{
-    left: -11px;
-    width: 27px;
-    top: 0px;
-    vertical-align: bottom;
-  }
-  .icon-blue-mail{
-    left: -15px;
+  .icon-chat-dots{
     width: 23px;
-    top: 3px;
+    position: relative;
+    top: -1px;
+    left: -11px;
+  }
+  .icon-mail{
+    left: -11px;
+    width: 23px;
+    top: -2px;
   }
   .icon{
     position: relative;
+    vertical-align: middle;
   }
 }
 .icon-bubble-exclamation,
@@ -342,6 +347,7 @@ a.btn{
   }
 }
 .icon-enhance_animated{
+  cursor: pointer;
   display: none;
   position: absolute;
   width: 438px;
@@ -349,6 +355,7 @@ a.btn{
   top: -21px;
 }
 .icon-respond_animated{
+  cursor: pointer;
   display: none;
   position: absolute;
   width: 486px;
@@ -356,13 +363,31 @@ a.btn{
   left: 50px;
 }
 .icon-protect_animated{
+  cursor: pointer;
   display: none;
   position: absolute;
-  width: 437px;
+  width: 374px;
   top: -20px;
-  right: 101px;
+  right: 162px;
+}
+.icon-protect-shadow{
+  cursor: pointer;
+  display: none;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 183px;
+}
+.icon-enhance-shadow{
+  cursor: pointer;
+  display: none;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 130px;  
 }
 .icon-detect_animated{
+  cursor: pointer;
   display: none;
   position: absolute;
   width: 478px;
@@ -387,13 +412,6 @@ Above should be modifer classes only (fonts, colors, sizing etc)
 */
 .opaque{
   opacity: 0;
-}
-a{
-  > .icon-blue-chat-dots {
-    width: 23px;
-    position: relative;
-    top: 3px;
-  }
 }
 
 /*==== Animation classes ====*/
@@ -685,13 +703,23 @@ ul.baraja-container li {
 }
 /*==== Red & Green check Ul ====*/
 .red-check{
-  list-style-image: url("icon-check-red.svg");
+  list-style-image: none;
+  li:before{
+    content: '';
+    display: inline-block;
+    background-image:  url({{ 'icon-warning.svg' | asset_url }});
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 8px;
+    margin-top: 1px;
+  }
 }
 .green-check{
-  list-style-image: url("icon-check-green.svg");
+  list-style-image: url({{ 'icon-check-green.svg' | asset_url }});
 }
 .green-check-plain{
-  list-style-image: url("icon-green-check.svg");
+  list-style-image: url({{ 'icon-green-check.svg' |asset_url }});
 }
 .green-bg-check{
   li:before{
@@ -792,8 +820,12 @@ label{
 
 /*==== Breadcumbs ====*/
 .breadcrumbs{
-  .icon-blue-home{
-    height: rem(13);
+  .icon-home{
+    height: rem(18);
+    fill: $blue;
+    position: relative;
+    top: 4px;
+    left: -2px;
   }
   .icon-grey-caret-right{
     height: rem(8);
@@ -1594,7 +1626,7 @@ label{
     width: 430px;
     padding: rem(16);
     border-radius: rem(4) rem(4) rem(4) rem(0);
-    right: 29%;
+    right: 34.5%;
     left: auto;
     top: 41%;
   }
@@ -2081,8 +2113,8 @@ label{
 
 //special move classes that are required to break fluidness but make it pixel perfect
 .move-1{
-  margin-top: 67px;
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 7px;
 }
 //end killer stuff
 

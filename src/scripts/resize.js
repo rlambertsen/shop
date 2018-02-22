@@ -66,6 +66,7 @@ var resize = (function(){
           }
         });
       } else{
+        $('.chat-links a').removeClass('btn-block');
         $('.chat-links a').first().addClass('pull-right');
         $('.chat-links a').last().addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');
@@ -80,16 +81,20 @@ var resize = (function(){
         //enhance
         $('.icon-enhance_animated').mouseenter(function(){
           $(this).show();
+          $('.icon-enhance-shadow').show();
           $('.enhance-hover').hide();
         }).mouseleave(function(){
           $('.enhance-hover').show();
+          $('.icon-enhance-shadow').hide();
           $(this).hide();
         });
         $('.enhance-hover').mouseenter(function(){
           $('.icon-enhance_animated').show();
+          $('.icon-enhance-shadow').show();
           $(this).hide();
         }).mouseleave(function(){
           $('.icon-enhance_animated').hide();
+          $('.icon-enhance-shadow').hide();
           $(this).show();
         });
         //respond
@@ -125,16 +130,20 @@ var resize = (function(){
         //protect
         $('.icon-protect_animated').mouseenter(function(){
           $(this).show();
+          $('.icon-protect-shadow').show();
           $('.protect-hover').hide();
         }).mouseleave(function(){
           $('.protect-hover').show();
+          $('.icon-protect-shadow').hide();
           $(this).hide();
         });
         $('.protect-hover').mouseenter(function(){
           $('.icon-protect_animated').show();
+          $('.icon-protect-shadow').show();
           $(this).hide();
         }).mouseleave(function(){
           $('.icon-protect_animated').hide();
+          $('.icon-protect-shadow').hide();
           $(this).show();
         });
         /*==== End ====*/
@@ -208,6 +217,7 @@ var resize = (function(){
           }
         });
       } else{
+        $('.chat-links a').removeClass('btn-block');
         $('.chat-links a').first().addClass('pull-right');
         $('.chat-links a').last().addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');

@@ -959,7 +959,7 @@
 </section>
 <section class="counting-numbers blue-gradients white-text position-relative py-8">
   <div class="container ">
-    <div class="row my-3">
+    <div class="row my-3 text-center">
       <div class="col-lg-3 col-sm-6 col-6">
         <p class="work fs63 fw300 m-0"><span class="Countries">0</span><span class="fs47">+</span> </p>
         <p class="font-italic">Countries being monitored</p>
@@ -977,7 +977,7 @@
         <p class="font-italic">New malware threats detected per week</p>
       </div>
     </div>
-    <div class="row my-3">
+    <div class="row my-3 text-center">
       <div class="col-lg-3 col-sm-6 col-6">
         <p class="work fs63 fw300 m-0"><span class="analyzed">0</span>K<span class="fs47">+</span> </p>
         <p class="font-italic">Files analyzed manually by the CSOC per week</p>
@@ -1007,8 +1007,8 @@
         <p class="mont font-italic fs15 w-50 mx-auto">Let Comodo security experts safely remove your malware and repair the damage  so you can get back up and running today.</p>
         <a href="/pages/malware-removal" class="btn btn-primary btn-rd btn-longer my-2 text-uppercase mont fs15 hide-mobile-992">Get FREE Instant Malware Removal Now {% include 'icon-arrow-right-white' %}</a>
         <a href="/pages/malware-removal" class="btn btn-primary btn-rd btn-longer my-2 text-uppercase mont fs15 show-mobile-992">FREE Malware Removal</a>
-        <p class="mont fs35 fw500">100% FREE (Yes, really!)</p>
-        <p class="mont font-italic fs15">No obligations. No credit card required.</p>
+        <p class="mont fs35 fw500 mb-1">100% FREE (Yes, really!)</p>
+        <p class="mont font-italic fs15 mb-2">No obligations. No credit card required.</p>
       </div>
     </div>
   </div>
@@ -1026,10 +1026,10 @@
       <div class="col-12 chat-links text-center mt-2">
         <div class="row">
           <div class="col-sm-6">
-            <a href="#" class="btn btn-outline-primary btn-longer btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 pull-right"> {% include 'icon-blue-chat-dots' %} click to chat</a>
+            <a href="#" class="btn btn-outline-primary btn-longer btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 pull-right"> {% include 'icon-chat-dots' %} click to chat</a>
           </div>
           <div class="col-sm-6">
-            <a href="#" class="btn btn-outline-primary btn-longer btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 pull-left"> {% include 'icon-blue-mail' %} email support</a>
+            <a href="#" class="btn btn-outline-primary btn-longer btn-rd my-3 mont fs15 text-uppercase fw500 black-text letter-spacing2 pull-left"> {% include 'icon-mail' %} email support</a>
           </div>
         </div>
       </div>
@@ -1465,10 +1465,19 @@
     <div class="row mt-5 pt-2">
       <div class="col-12 text-center">
         <p class="FeatureText-Level2 mb-3">Leave website security to the pros. Focus on your business.</p>
-        <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer mt-3 mb-3 mr-2 mont fs15 text-uppercase fw500">get started now <span class="hide-mobile-992">
-          {% include 'icon-arrow-right-white' %}
-        </span></a>
-        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer mt-3 mb-3 mont fs15 text-uppercase fw500">{% include 'icon-green-chat-dits' %} click to chat</a>
+        <div class="row chat-links">
+          <div class="col-sm-6">
+            <a href="tel:" class="btn btn-green-gradient btn-rd btn-longer my-3 mont fs15 text-uppercase fw500 pull-right">
+              get started now 
+              <span class="hide-mobile-992">
+                {% include 'icon-arrow-right-white' %}
+              </span>
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">{% include 'icon-chat-dots' %} click to chat</a>
+          </div>
+        </div>
       </div>
       <div class="col-12 text-center mt-2">
         <a href="tel:" class="work fw500 fs26 green-text">1-888-481-5388</a>

@@ -72,18 +72,11 @@
       <div class="col-md-6">
         <div class="sales-form">
           <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Sales Support team</p>
-          {% form 'contact', class: 'free-malware-form needs-validation'%}
-
-            {% if form.posted_successfully? %}
-              <p class="form-success">
-                {{ 'contact.form.post_success' | t }}
-              </p>
-            {% endif %}
-            {{ form.errors | default_errors }}
+          <form action="#" class="free-malware-form needs-validation" novalidate>
             <div class="form-group">
               <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
-              name="contact[name]"
+              name="sales[name]"
               id="ContactFormName"
               placeholder="{{ 'contact.form.name' | t }}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -98,7 +91,7 @@
             <div class="form-group">
               <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
-                name="contact[email]"
+                name="sales[email]"
                 id="ContactFormEmail"
                 placeholder="{{ 'contact.form.email' | t }}"
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
@@ -116,7 +109,7 @@
             <div class="form-group">
               <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
-                name="contact[phone]"
+                name="sales[phone]"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
@@ -132,7 +125,7 @@
             <div class="form-group">
               <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
               <textarea rows="5"
-                name="contact[body]"
+                name="sales[body]"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
                 class="form-control" required></textarea>
@@ -147,7 +140,7 @@
               <div class="form-check">
                 <label class="cb-container fs14 italic fw400 position-relative form-check-label" for="invalidCheck">
                   I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
-                  <input type="checkbox" name="terms" class="form-check-input" id="invalidCheck" required>
+                  <input type="checkbox" name="sales-terms" class="form-check-input" id="invalidCheck" required>
                   <span class="checkmark"></span>
                 </label>
                 <div class="hidden checkbox-error red-text">
@@ -158,22 +151,15 @@
             <div class="form-group text-center">
               <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
             </div>
-          {% endform %}
+          </form>
         </div>
         <div class="tech-form hidden">
           <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Technical Support team</p>
-          {% form 'contact', class: 'free-malware-form needs-validation'%}
-
-            {% if form.posted_successfully? %}
-              <p class="form-success">
-                {{ 'contact.form.post_success' | t }}
-              </p>
-            {% endif %}
-            {{ form.errors | default_errors }}
+          <form action="#" class="free-malware-form needs-validation tech" novalidate>
             <div class="form-group">
               <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
-              name="contact[name]"
+              name="tech[name]"
               id="ContactFormName"
               placeholder="{{ 'contact.form.name' | t }}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -188,7 +174,7 @@
             <div class="form-group">
               <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
-                name="contact[email]"
+                name="tech[email]"
                 id="ContactFormEmail"
                 placeholder="{{ 'contact.form.email' | t }}"
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
@@ -206,7 +192,7 @@
             <div class="form-group">
               <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
-                name="contact[phone]"
+                name="tech[phone]"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
@@ -222,7 +208,7 @@
             <div class="form-group">
               <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
               <textarea rows="5"
-                name="contact[body]"
+                name="tech[body]"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
                 class="form-control" required></textarea>
@@ -237,7 +223,7 @@
               <div class="form-check">
                 <label class="cb-container fs14 italic fw400 position-relative">
                   I agree to the <a class="blue-text" href="tel:">Terms of Service</a>
-                  <input type="checkbox" name="terms" required>
+                  <input type="checkbox" name="tech-terms" required>
                   <span class="checkmark"></span>
                 </label>
                 <div class="hidden checkbox-error red-text">
@@ -248,7 +234,7 @@
             <div class="form-group text-center">
               <button type="submit" class="btn btn-blue-light btn-rd btn-longer mont fw600 fs14">SUBMIT YOUR MESSAGE</button>
             </div>
-          {% endform %}
+          </form>
         </div>
       </div>
     </div>

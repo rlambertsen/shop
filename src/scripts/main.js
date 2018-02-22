@@ -601,12 +601,12 @@ $(function() {
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false && $('[name="terms"]').not(':checked')) {
+        if (form.checkValidity() === false && $('[type="checkbox"]').not(':checked')) {
           event.preventDefault();
           event.stopPropagation();
           $('.checkbox-error').show();
         }
-        if (form.checkValidity() === true && $('[name="terms"]').is(':checked')){
+        if (form.checkValidity() === true && $('[type="checkbox"]').is(':checked')){
           $('.checkbox-error').hide();
         }
         form.classList.add('was-validated');
