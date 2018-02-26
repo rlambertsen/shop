@@ -162,7 +162,8 @@ a.text-decoration-none:visited{
   }
 }
 .icon-cart{
-  width: 25px;
+  width: 19px;
+  fill: grey;
 }
 .icon-fishing{
   position: absolute;
@@ -711,8 +712,8 @@ ul.baraja-container li {
     height: 25px;
     width: 25px;
     position: absolute;
-    left: 8px;
-    margin-top: 1px;
+    left: 19px;
+    margin-top: 3px;
   }
 }
 .green-check{
@@ -872,13 +873,16 @@ label{
     height: 42px;
     top: 3px;
   }
-  background: url("icon-malware-loop.svg") 31% 0 no-repeat,url("icon-malware-loop.svg") 72% 0 no-repeat, $red;
+  .icon-white-x{
+    top: 11px;
+    cursor: pointer;
+  }
+  background: url(icon-malware-loop.svg) 0% 0 no-repeat, url(icon-malware-loop.svg) 14% 0 no-repeat, url(icon-malware-loop.svg) 25% 0 no-repeat ,url(icon-malware-loop.svg) 74% 0 no-repeat, url(icon-malware-loop.svg) 88% 0 no-repeat, url(icon-malware-loop.svg) 100% 0 no-repeat, $red;
   z-index: 1;
 }
 .malware-banner{
   .gt1{
     left: 116px;
-    letter-spacing: 1px;
     top: -1px;
     height: 42px;
   }
@@ -1074,6 +1078,12 @@ label{
 /*==== Page Hero section ====*/
 .page-hero{
   padding-top: rem(117);
+}
+.page-hero__content{
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 #security-information-amp-event-management-siem{
   .page-hero{
@@ -1569,25 +1579,33 @@ label{
 /*==== Target slider section ====*/
 .target{
   .icon-owasp-text{
-    width: 250px;
+    width: 308px;
+    position: relative;
+    top: -13px;
+    left: -24px;
   }
   .target-content{
     .icon-green-circle-arrow-left{
       position: absolute;
       height: 67px;
       width: 67px;
-      top: 50%;
-      left: -70px;
+      top: 26%;
+      left: -62px;
       cursor: pointer;
     }
     .icon-green-circle-arrow-right{
       position: absolute;
       width: 67px;
       height: 67px;
-      top: 50%;
-      right: -70px;
+      top: 27%;
+      right: -60px;
       cursor: pointer;
     }
+  }
+  .owasp-img{
+    width: 342px; 
+    height: 342px;
+    border-radius: 50%;
   }
   .progress{
     height: rem(5);
@@ -1616,22 +1634,23 @@ label{
       border-color: rgba(136,183,213,0);
       border-top-color: #68cbf8;
       border-width: 14px;
-      margin-left: -215px;
+      margin-left: -229px;
       transform: rotate(273deg);
-      top: 174px;
+      top: 202px;
     }
 
     position: absolute;
     background: #68cbf8;
-    width: 430px;
-    padding: rem(16);
-    border-radius: rem(4) rem(4) rem(4) rem(0);
-    right: 34.5%;
+    width: 458px;
+    padding: 1rem;
+    border-radius: 0.2rem 0.2rem 0.2rem 0rem;
+    right: 507px;
     left: auto;
-    top: 41%;
+    top: 39%;
+    height: 215px;
   }
   background: url({{'world-wide.svg' | asset_url}}) center center no-repeat;
-  height: 620px;
+  height: 649px;
 }
 /*==== End ====*/
 .cdn-tabs{
@@ -1642,7 +1661,7 @@ label{
 /*==== protection-guarantee ====*/
 .protection-guarantee{
   ul.green-check-plain.HeaderB-Level5 li {
-    margin: 30px 0;
+    margin: 36px 0 36px 0;
   }
 }
 /*==== End ====*/ 
@@ -1806,6 +1825,19 @@ label{
   .icon{
     width: 50px;
     height: 50px;
+    fill: $blue;
+  }
+}
+.show-grey{
+  .icon{
+    width: 40px;
+    fill: $grey;
+  }
+}
+.show-white{
+  .icon{
+    width: 40px;
+    fill: #fff;
   }
 }
 .icon-content-box{
@@ -2214,7 +2246,7 @@ label{
     top: 212px;
   }
   position: absolute;
-  top: -250px;
+  top: -263px;
   width: 460px;
   left: 50px;
 }
@@ -2402,7 +2434,11 @@ label{
     vertical-align: text-top;
   }
 }
-
+.site-cdn{
+  .icon-download{
+    width: 89px;
+  }
+}
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss'); 
 @import url('tools/icon_enhance_animated.scss');

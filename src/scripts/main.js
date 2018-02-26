@@ -120,6 +120,57 @@ function countingUp(){
   return false;
 }
 /*==== End ====*/
+/*==== Page load get cart contents and display them if any ====*/
+function getcart(){
+  $.getJSON('/cart.js', function(cart) {
+    var cartUL = $('.cart-contents');
+    cartUL.empty(); 
+    if (cart.item_count > 0){ // check for items in cart
+      $(cart.items).each(function(i,v){ //loop over and get info, then display
+        cartUL.append(
+          '<li class="dropdown-item">\
+            <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
+            <p class="fs11 mb-0">Quantiy:'+v.quantity+' <span data-item-id="'+ v.id +'" class="blue-text pointer pull-right remove-from-cart">Remove</span></p>\
+          </li>'
+        );
+      });
+      cartUL.removeClass('hidden').siblings('p').addClass('hidden');
+    } else {
+      cartUL.addClass('hidden').siblings('p').removeClass('hidden');
+    }
+    // get total amount and display  
+    cartUL.append(
+      '<li class="dropdown-item border-top border-grey-light">\
+        <p class="fs15 mb-0">Total: '+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</p>\
+      </li>');
+  });
+}
+function cartUpdate(lineId, cartUL){
+  $.post('/cart/update.js', 'updates['+lineId+']=0').then(function(cart){
+    cart = JSON.parse(cart);
+    cartUL.empty();
+    if (cart.item_count > 0){ // check for items in cart
+      $(cart.items).each(function(i,v){ //loop over and get info, then display
+        cartUL.append(
+          '<li class="dropdown-item">\
+            <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
+            <p class="fs11 mb-0">Quantiy:'+v.quantity+' <span data-item-id="'+ v.id +'" class="blue-text pointer pull-right remove-from-cart">Remove</span></p>\
+          </li>'
+        );
+      });
+      cartUL.append(
+      '<li class="dropdown-item border-top border-grey-light">\
+        <p class="fs15 mb-0">Total: <span class="pull-right">'+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</span></p>\
+      </li>');
+      cartUL.siblings('p').addClass('hidden');
+      $('.badge').text(cart.item_count);
+    } else {
+      cartUL.addClass('hidden').siblings('p').removeClass('hidden');
+      $('.badge').text(cart.item_count);
+    }
+  });
+}
+/*==== End ====*/
 /*==== Document Ready only below ====*/
 $(function() {
   $('#preview-bar-iframe').remove();
@@ -414,18 +465,24 @@ $(function() {
                   cartUL.append(
                     '<li class="dropdown-item">\
                       <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
-                      <p class="fs11 mb-0">Quantiy:'+v.quantity+'</p>\
+                      <p class="fs11 mb-0">Quantiy:'+v.quantity+'<span style="z-index:999999;" data-item-id="'+ v.id +'" class="position-relative pointer blue-text pull-right remove-from-cart">Remove</span></p>\
                     </li>'
                   );
                 });
                 cartUL.removeClass('hidden').siblings('p').addClass('hidden');
+                $('.remove-from-cart').click(function(e){
+                  e.preventDefault();
+                  e.stopPropagation();
+                  var lineId = $(this).data('item-id');
+                  cartUpdate(lineId, cartUL);
+                });
               }
               cartUL.append(
                 '<li class="dropdown-item border-top border-grey-light">\
-                  <p class="fs15 mb-0">Total: '+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</p>\
+                  <p class="fs15 mb-0">Total: <span class="pull-right">'+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</span></p>\
                 </li>');
               
-            $('.badge').text('('+cart.item_count+')');
+            $('.badge').text(cart.item_count);
             $this.html('Item added!');
             setTimeout(function(){
               var currentText = $this.data('current');
@@ -434,34 +491,19 @@ $(function() {
           });
         }
       });
-    } else { // no attribute do nothing with button (it will be a link then)
-      console.log('nope');
     }
   });
   /*==== End ====*/
-  /*==== Page load get cart contents and display them if any ====*/
-  $.getJSON('/cart.js', function(cart) {
-    var cartUL = $('.cart-contents');
-    cartUL.empty();
-    if (cart.items.length > 0){ // check for items in cart
-      $(cart.items).each(function(i,v){ //loop over and get info, then display
-        cartUL.append(
-          '<li class="dropdown-item">\
-            <p class="fs15 mb-0">'+v.product_title+'<span class="fs11 pull-right">'+slate.Currency.formatMoney(v.price, theme.moneyFormat)+'</span></p>\
-            <p class="fs11 mb-0">Quantiy:'+v.quantity+'</p>\
-          </li>'
-        );
-      });
-      cartUL.removeClass('hidden').siblings('p').addClass('hidden');
-    }
-    // get total amount and display
-    cartUL.append(
-      '<li class="dropdown-item border-top border-grey-light">\
-        <p class="fs15 mb-0">Total: '+slate.Currency.formatMoney(cart.total_price, theme.moneyFormat)+'</p>\
-      </li>');
-  });
-  /*==== End====*/
 
+  /*==== remove cart items ====*/
+  $('.remove-from-cart').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var cartUL = $('.cart-contents');
+    var lineId = $(this).data('item-id');
+    cartUpdate(lineId, cartUL);
+  });
+  /*=== End ====*/
 
 
   /*==== Home page laptop computer section show/hide on hover ====*/
@@ -590,7 +632,7 @@ $(function() {
   
   /*==== mobile malware banner click ====*/
   $('.icon-white-x').on('click touchend',function(){
-    $('.malware-banner-mobile').remove();
+    $('.malware-banner, .malware-banner-mobile').remove();
   })
 
 
@@ -613,6 +655,11 @@ $(function() {
       }, false);
     });
   }, false);
-  //find all svg data-linsk to activate on benefits page only for now
+  
+  //login page reset password actions 
+  $('.recover').click(function(e){
+    e.preventDefault();
+    $(this).parents('.page-hero').hide().siblings().show();
+  })
     
 });

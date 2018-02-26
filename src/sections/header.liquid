@@ -4,13 +4,13 @@
       <div class="text-shadow work position-relative gt1">Got Malware?</div>
       <div class="border-bottom border-white lato fs15 white-text gt2">Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}</div>
       <div class="text-shadow work position-relative gt3">Or Call (888) 222-2222</div>
+      {% include 'icon-white-x' %}
     </div>
   </div>
 </section>
 {% if template == 'index' %}
   <section class="hero pt-3 mh-590">
-{% endif %} 
-{% if template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'about' or temnplate contains 'malware' or template contains 'pricing' or template contains 'partner' %}
+{% else %} 
   <section class="hero pt-3 background-none"> 
 {% endif %} 
 
@@ -26,7 +26,8 @@
     <button class="navbar-toggler collapsed p-0" type="button" data-toggle="collapse" data-target=".mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="50" height="30" focusable="false">
         <title>Menu</title>
-        <path stroke="#969C9C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h35M4 15h35M4 23h45"></path></svg>
+        <path stroke="#969C9C" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h35M4 15h35M4 23h45"></path>
+      </svg>
     </button>
     <!-- start search, account and cart links -->
     <div class="collapse navbar-collapse justify-content-end  mainNav search-desktop">
@@ -56,10 +57,79 @@
             <li class="nav-item grey-text">
               {{ 'layout.customer.log_in' | t | customer_login_link }}
             </li>
-            <li class="nav-item nav-link fs12">/</li>
+            <!-- <li class="nav-item nav-link fs12">/</li>
             <li class="nav-item grey-text">
               {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li> -->
+          {% endif %}
+          <li class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="d-flex flex-row fs12">
+                <div class="grey-text">Checkout</div>
+                <div class="position-relative">
+                  {% include 'icon-cart' %}
+                  <span class="badge badge-primary position-absolute">{{ cart.item_count }}</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu">
+              {% if cart.item_count <= 0 %}
+                <p class="m-0 px-3 fs15 text-center dropdown-item ">Your Cart is Empty!</p>
+                <ul class="list-unstyled fs15 cart-contents"></ul>
+              {% else %}
+                <p class="m-0 px-3 fs15 text-center dropdown-item hidden">Your Cart is Empty!</p>
+                <ul class="list-unstyled fs15 cart-contents">
+                  {% for item in cart.items %}
+                    <li class="dropdown-item">
+                      <p class="fs15 mb-0">
+                        {{item.title}}
+                        <span class="fs11 pull-right">{{item.price | money}}</span></p>
+                      <p class="fs11 mb-0">Quantiy: {{item.quantity}} <span style="z-index:999999;" data-item-id="{{item.variant_id}}" class="position-relative pull-right remove-from-cart position-relative blue-text pointer">Remove</span></p>
+                    </li>
+                  {% endfor %}
+                  <li class="dropdown-item border-top border-grey-light">
+                    <p class="fs15 mb-0">Total: <span class="pull-right">{{cart.total_price | money}}</span></p>
+                  </li>
+                </ul>
+              {% endif %}
+            </div>
+          </li> 
+        </ul>
+      {% endif %}
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg container mobile-navbar position-relative">
+    <div class="collapse navbar-collapse justify-content-end  mainNav search-mobile">
+      {% if shop.customer_accounts_enabled %}
+       <ul class="navbar-nav work ">
+          <li class="nav-item">
+            <!--<form action="/search" method="get" role="search">-->
+              <a class="nav-link" href="/search">
+                {% include 'icon-search' %}
+                <span class="icon-fallback-text sr-only">{{ 'general.search.submit' | t }}</span>
+              </a>
+            <!-- </form> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs15 grey-text" href="tel:">1-888-555-5555</a>
+          </li>
+          {% if customer %}
+            <li class="nav-item">
+              {% if customer.first_name != blank %}
+                <a class="nav-link fs12 grey-text" href="/account">{{ 'customer.account.title' | t }}</a>
+              {% endif %}
             </li>
+            <li class="nav-item grey-text">
+              {{ 'layout.customer.log_out' | t | customer_logout_link }}
+            </li>
+          {% else %}
+            <li class="nav-item grey-text">
+              {{ 'layout.customer.log_in' | t | customer_login_link }}
+            </li>
+            <!-- <li class="nav-item nav-link fs12">/</li>
+            <li class="nav-item grey-text">
+              {{ 'layout.customer.create_account' | t | customer_register_link }}
+            </li> -->
           {% endif %}
           <li class="nav-item dropdown">
             <a  class="nav-link dropdown-toggle" href="/checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,15 +142,30 @@
               </div>
             </a>
             <div class="dropdown-menu">
-              <p class="m-0 px-3 fs15 text-center dropdown-item">Your Cart is Empty!</p>
-              <ul class="list-unstyled fs15 cart-contents hidden"></ul>
+              {% if cart.item_count <= 0 %}
+                <p class="m-0 px-3 fs15 text-center dropdown-item remove-from-cart">Your Cart is Empty!</p>
+                <ul class="list-unstyled fs15 cart-contents"></ul>
+              {% else %}
+                <p class="m-0 px-3 fs15 text-center dropdown-item remove-from-cart hidden">Your Cart is Empty!</p>
+                <ul class="list-unstyled fs15 cart-contents">
+                  {% for item in cart.items %}
+                    <li class="dropdown-item">
+                      <p class="fs15 mb-0">
+                        {{item.title}}
+                        <span class="fs11 pull-right">{{item.price | money}}</span></p>
+                      <p class="fs11 mb-0">Quantiy: {{item.quantity}} <span style="z-index:999999;" data-item-id="{{item.variant_id}}" class="position-relative pull-right remove-from-cart position-relative blue-text pointer">Remove</span></p>
+                    </li>
+                  {% endfor %}
+                  <li class="dropdown-item border-top border-grey-light">
+                    <p class="fs15 mb-0">Total: <span class="pull-right">{{cart.total_price | money}}</span></p>
+                  </li>
+                </ul>
+              {% endif %}
             </div>
           </li>
         </ul>
       {% endif %}
     </div>
-  </nav>
-  <nav class="navbar navbar-expand-lg container mobile-navbar position-relative">
     <div class="collapse navbar-collapse justify-content-end mainNav" >
       <ul class="navbar-nav mont fs16 main-links chrome-fw500">
           {% assign menu = linklists.main-menu %}
@@ -280,7 +365,7 @@
        <div class="container">
          <div class="row">
            <div class="col">
-             <h1 class="HeaderB-Level4">Compare</h1>
+             <h1 class="HeaderB-Level4">Compare cWatch Web</h1>
            </div>
          </div>
        </div>
