@@ -17,7 +17,7 @@
   Usage:
     // Input:
     .element {
-      @include prefix(transform, scale(1), ms webkit spec);
+      @include prefix(property, value, webkit moz ms o spec);
     }
 
     // Output:
@@ -118,7 +118,7 @@
   margin: 0;
 }
 
-
+/*==== Creates a text shadow that is 3d in design ====*/
 @mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
   $shadow: '';
   @if $skew == false or $type == text{

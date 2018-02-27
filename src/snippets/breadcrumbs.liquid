@@ -50,23 +50,17 @@
 </section>
 
 <section class="breadcrumbs grey-background show-mobile-768">
-  <div class="">
-    <div class="row">
-      <div class="col">
-        <ul class="arrows list-inline fs12 work mb-0" role="navigation" aria-label="breadcrumbs">
-          <li class="list-inline-item">
-            <a href="/" title="Home">
-              {% include 'icon-grey-chevron' %}
-            </a>
-          </li>
-          {% if template contains 'page' %}
-            <li class="list-inline-item">
-              <span class="grey-text">{{ page.title }}</span>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    </div>
-  </div>
+  <ul class="arrows list-inline fs12 work mb-0" role="navigation" aria-label="breadcrumbs">
+    <li class="list-inline-item">
+      <a href="/" title="Home">
+        {% include 'icon-grey-chevron' %}
+      </a>
+    </li>
+    {% if template contains 'page' %}
+      <li class="list-inline-item">
+        <span class="grey-text">{{ page.title }}</span>
+      </li>
+    {% endif %}
+  </ul>
 </section>
 {% endunless %}

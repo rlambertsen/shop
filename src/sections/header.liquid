@@ -174,7 +174,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs15 mt-0" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs14 work mt-0 br-0" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}
@@ -189,7 +189,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs15 mt-0" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu fs14 br-0 mt-0" aria-labelledby="navbarDropdown">
                       {% for sub_link in link.links %}
                         <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                       {% endfor %}

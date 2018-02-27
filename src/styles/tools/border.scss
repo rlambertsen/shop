@@ -55,6 +55,9 @@
   border-width: 5px;
 }
 //border radius classes
+.br-0{
+  border-radius: 0;
+}
 .br{
   border-radius: 1px;
 }
@@ -68,3 +71,12 @@
   border-radius: 4px;
 }
 /*=== End ===*/
+//shadows
+.drop-shadow{
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+}
+.drop-shadow-sides{
+  box-shadow:10px 0px 10px -7px rgba(0,0,0,0.23), -10px 0px 10px -7px rgba(0,0,0,0.23);
+}
