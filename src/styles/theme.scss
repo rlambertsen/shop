@@ -565,7 +565,7 @@ ul.baraja-container li {
   .d-flex{
     height: 50px;
     div:nth-child(1){
-      width: 166px;
+      width: 185px;
       font-size: rem(20);
     }
     div:nth-child(2){
@@ -590,20 +590,29 @@ ul.baraja-container li {
 }
 .malware-banner{
   .gt1{
-    left: 116px;
+    left: -33px;
     top: -1px;
     height: 42px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @extend .mont;
   }
   .gt2{
     top: -6px;
     left: 12px;
     position: relative;
     letter-spacing: 1px;
+    font-weight: 200;
+    @extend .mont;
   }
   .gt3{
-    left: -72px;
     top: 0px;
     height: 39px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    @extend .mont;
   }
   height: 45px;
 }
@@ -789,7 +798,8 @@ ul.baraja-container li {
     width: 194px;
     left: 140px;
   }
-  a.btn .icon-arrow-right-white {
+  a.btn .icon-arrow-right-white,
+  a.btn .icon-arrow-right,{
     width: 21px;
     position: relative;
     left: 21px;
@@ -1240,7 +1250,7 @@ ul.baraja-container li {
   &:before{
     content: "";
     position: absolute;
-    background: url({{'icon-big-c.svg' | asset_url}}) no-repeat; 
+    background: url({{'icon-comodo-c.svg' | asset_url}}) no-repeat; 
   }
   .large-c{
     left: 81px;
@@ -2136,6 +2146,33 @@ ul.baraja-container li {
     width: 89px;
   }
 }
+
+/*==== Drop down styles====*/
+.nav-item{
+  .dropdown-menu{
+    border: none;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
+    -moz-box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
+    box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
+  }
+  .dropdown-menu:before {
+    bottom: 100%;
+    left: 27%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .dropdown-menu:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 7px;
+    margin-left: -36px;
+  }
+}
+/*==== End ====*/
 @import url('tools/icon_enhance_animated.scss');
 @import url('tools/icon_protect_animated.scss');
 @import url('tools/icon_respond_animated.scss');

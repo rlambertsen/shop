@@ -82,7 +82,8 @@ g {
   }
   width: 20px;
 }
-.icon-arrow-right-white{
+.icon-arrow-right-white,
+.icon-arrow-right,{
   width: 15px;
 }
 .icon-cart + span{
@@ -280,10 +281,10 @@ a.btn{
 .icon-protect-shadow{
   cursor: pointer;
   display: none;
-  width: 300px;
+  width: 330px;
   position: absolute;
   bottom: 0;
-  right: 183px;
+  right: 90px;
 }
 .icon-enhance-shadow{
   cursor: pointer;
@@ -326,7 +327,9 @@ a.btn{
 }
 .icon-war-room{
   position: relative;
-  left: 70px;
+  left: 52px;
+  width: 95%;
+  top: -35px;
 }
 /*=== End Malware banner bugs ===*/
 /*=== End Icons ====*/

@@ -1,9 +1,13 @@
 <section class="malware-banner">
   <div class="container">
     <div class=" d-flex align-items-center justify-content-around  position-relative ">
-      <div class="text-shadow work position-relative gt1">Got Malware?</div>
-      <div class="border-bottom border-white lato fs15 white-text gt2">Get <strong>FREE</strong> Malware Removeal Now {% include 'icon-arrow-right-white' %}</div>
-      <div class="text-shadow work position-relative gt3">Or Call (888) 222-2222</div>
+      <div class="text-shadow position-relative gt1">Got Malware?</div>
+      <div class="lato fs15 white-text gt2">
+        <a href="/pages/malware-removal" class="white-text">
+          Get <strong>FREE</strong> Malware Removal Now {% include 'icon-arrow-right' %}
+        </a>
+      </div>
+      <div class="text-shadow work position-relative gt3">Or Call <a href="tel:18884815388" class="white-text">(888) 481-5388</a></div>
       {% include 'icon-white-x' %}
     </div>
   </div>
@@ -63,7 +67,7 @@
             </li> -->
           {% endif %}
           <li class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="/checkout"  class="nav-link dropdown-toggle checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="d-flex flex-row fs12">
                 <div class="grey-text">Checkout</div>
                 <div class="position-relative">
@@ -174,11 +178,11 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs14 work mt-0 br-0" aria-labelledby="navbarDropdown">
-                      {% for sub_link in link.links %}
-                        <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
-                      {% endfor %}
-                    </div>
+                  <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+                    {% for sub_link in link.links %}
+                      <a class="dropdown-item fs14 work fw300" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                    {% endfor %}
+                  </div>
                 </li>
               {% else %}
                 <li class="nav-item dropdown">
@@ -189,11 +193,11 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                    <div class="dropdown-menu fs14 br-0 mt-0" aria-labelledby="navbarDropdown">
-                      {% for sub_link in link.links %}
-                        <a class="dropdown-item" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
-                      {% endfor %}
-                    </div>
+                  <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+                    {% for sub_link in link.links %}
+                      <a class="dropdown-item fs14 work fw300" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                    {% endfor %}
+                  </div>
                 </li>
               {% else %}
                 <li class="nav-item dropdown">

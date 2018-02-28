@@ -21,6 +21,12 @@
   color: $red;
 }
 /*===== End ======*/
+/*===== Anchor text with colors ======*/
+a.white-text:hover{
+  color: $white;
+  text-decoration: underline;
+}
+/*===== End ======*/
 /*==== Background colors ====*/
 .grey-background{
   background-color: $grey;

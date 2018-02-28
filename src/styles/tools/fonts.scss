@@ -1234,7 +1234,7 @@ p {margin-bottom: 1.3rem;}
 .text-shadow {
   color: #fff;
   font-weight: bold;
-  @include long-shadow($type: text, $color: #A21727, $length: 35, $fadeout: false, $skew: true, $direction: right);
+  @include long-shadow($type: text, $color: #b42b30 , $length: 35, $fadeout: false, $skew: true, $direction: right);
 }
 .text-underline{
   text-decoration: underline;
