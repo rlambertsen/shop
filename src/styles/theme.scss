@@ -6,14 +6,13 @@ $darkish-blue: #373E5A;
 $grey-accent: #969C9C;
 $success-green: #1FC469;
 $medium-blue: #3f4563;
-$grey: #EDF0F3;
+$grey: rgba(237, 240, 243, 0.4);
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
 $input-grey: rgba(207, 214, 218, 0.4);
-$red: #C41230;
 /*======End Color vars========*/
 /*==== Base font sizing classes ====*/
 
@@ -66,12 +65,23 @@ body{
 .dropdown-toggle::after{
   display: none;
 }
-a:not([href]):not([tabindex]) {
-  color: $blue !important;
+a:not([href]):not([tabindex]),
+a:hover{
+  color: $blue;
   text-decoration: none;
 }
 .badge-primary{
   background-color: $blue;
+  display: inline-block;
+  padding: .45em .70em;
+  font-size: 90%;
+  font-weight: 200;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 1rem;
+
 }
 .pointer{
   cursor: pointer;
@@ -84,24 +94,31 @@ label{
   color: $grey-accent;
 }
 .dropdown-item{
-  padding: 10px 30px;
+  padding: 10px 10px;
 }
 /*==== End ====*/
 
 
 /*==== Anchor element classes ====*/
+a[href^=tel]:hover{
+  text-decoration: none;
+}
+a.a-border-hover:hover{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding-bottom: 2px;
+}
 a{
   &:hover{
     color: $blue;
+    text-decoration: none;
   }
+  padding-bottom: 3px;
   cursor: pointer;
   color: $blue;
 }
-a.darkish-blue-text:visited,
-a.darkish-blue-text:focus,
-a.darkish-blue-text:active,
-a.darkish-blue-text:hover{
-  color: $darkish-blue;
+a.border-hover--blue:hover{
+  border-bottom: 1px solid $blue;
 }
 a.text-decoration-none:hover,
 a.text-decoration-none:active,
@@ -134,6 +151,117 @@ Start custom element styles below
 Above should be modifer classes only (fonts, colors, sizing etc)
 ======
 */
+/*==== MAIN HEADER Drop down styles====*/
+.nav-item{
+  .dropdown-menu{
+    @include prefix(border, none, webkit moz ms o spec);
+    @include prefix(box-shadow, 0px 0px 26px 0px rgba(189,189,189,1), webkit moz ms o spec);
+    @include prefix(margin-top, 46px, webkit moz ms o spec);
+    @include prefix(opacity, 0, webkit moz ms o spec);
+    @include prefix(animation, dropdown 0.2s ease-out forwards, webkit moz ms o spec);
+  }
+  .dropdown-menu.show{
+    @include prefix(margin-top, 0, webkit moz ms o spec);
+    @include prefix(opacity, 1, webkit moz ms o spec);
+  }
+  .dropdown-menu:before {
+    @include prefix(bottom, 100%, webkit moz ms o spec);
+    @include prefix(left, 27%, webkit moz ms o spec);
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .dropdown-menu:before {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 7px;
+    margin-left: -36px;
+  }
+}
+@-webkit-keyframes dropdown {
+  0%{ 
+    opacity: 0;
+    margin-top: 46px;
+  }
+  33%{
+    margin-top: 36px;
+  }
+  50%{ 
+    opacity: 0.5;
+    margin-top: 26px;
+  }
+  75%{
+    margin-top: 16px;
+  }
+  100%{ 
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@-moz-keyframes dropdown {
+  0%{ 
+    opacity: 0;
+    margin-top: 46px;
+  }
+  33%{
+    margin-top: 36px;
+  }
+  50%{ 
+    opacity: 0.5;
+    margin-top: 26px;
+  }
+  75%{
+    margin-top: 16px;
+  }
+  100%{ 
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@-o-keyframes dropdown {
+  0%{ 
+    opacity: 0;
+    margin-top: 46px;
+  }
+  33%{
+    margin-top: 36px;
+  }
+  50%{ 
+    opacity: 0.5;
+    margin-top: 26px;
+  }
+  75%{
+    margin-top: 16px;
+  }
+  100%{ 
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes dropdown {
+  0%{ 
+    opacity: 0;
+    margin-top: 46px;
+  }
+  33%{
+    margin-top: 36px;
+  }
+  50%{ 
+    opacity: 0.5;
+    margin-top: 26px;
+  }
+  75%{
+    margin-top: 16px;
+  }
+  100%{ 
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+/*==== End ====*/
 .opaque{
   opacity: 0;
 }
@@ -319,16 +447,13 @@ ul.baraja-container li {
   .nav-link:hover{
     background-color: $white;
     color: $success-green;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    @include prefix(box-shadow, 0px 0px 14px rgba(55, 62, 90, 0.2), webkit moz ms o spec);
+    //box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
   }
   .nav-link.active{
     background-color: $white;
     color: $success-green;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+    @include prefix(box-shadow, 0px 0px 14px rgba(55, 62, 90, 0.2), webkit moz ms o spec);
   }
   .nav-link.active:before {
     right: -22px;
@@ -367,9 +492,13 @@ ul.baraja-container li {
 .word-lines{
   .col-1:nth-child(1){
     top: -9px;
+    width: 47px;
+    opacity: 0.5;
   }
   .col-1:nth-child(3){
     top: -11px;
+    width: 47px;
+    opacity: 0.5;
     //right: -210px;
   }
 }
@@ -396,7 +525,7 @@ ul.baraja-container li {
   -webkit-transform: rotate(-45deg);
   width: 100px;
   display: block;
-  background: linear-gradient(#C41230 0%, #C41230 100%);
+  background: linear-gradient($red 0%, $red 100%);
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
   top: 19px; left: -21px;
@@ -405,19 +534,19 @@ ul.baraja-container li {
   content: "";
   position: absolute; left: 0px; top: 100%;
   z-index: -1;
-  border-left: 3px solid #C41230;
+  border-left: 3px solid $red;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #C41230;
+  border-top: 3px solid $red;
 }
 .ribbon span::after {
   content: "";
   position: absolute; right: 0px; top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
-  border-right: 3px solid #C41230;
+  border-right: 3px solid $red;
   border-bottom: 3px solid transparent;
-  border-top: 3px solid #C41230;
+  border-top: 3px solid $red;
 }
 /*==== End ====*/
 
@@ -431,12 +560,22 @@ ul.baraja-container li {
     height: 25px;
     width: 25px;
     position: absolute;
-    left: 19px;
+    left: 4px;
     margin-top: 3px;
   }
 }
 .green-check{
-  list-style-image: url({{ 'icon-check-green.svg' | asset_url }});
+  list-style-image: none;
+  li:before{
+    content: '';
+    display: inline-block;
+    background: url({{ 'icon-check-green.svg' | asset_url }}) no-repeat;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    left: 4px;
+    margin-top: 3px;
+  }
 }
 .green-check-plain{
   list-style-image: url({{ 'icon-green-check.svg' |asset_url }});
@@ -560,19 +699,18 @@ ul.baraja-container li {
   top: -19px;
 }
 /*===Malware banner===*/
-.malware-banner,
 .malware-banner-mobile{
   .d-flex{
     height: 50px;
     div:nth-child(1){
-      width: 185px;
+      
       font-size: rem(20);
     }
     div:nth-child(2){
       font-size: rem(15);
     }
     div:nth-child(3){
-      width: 266px;
+      
       font-size: rem(20);
     }
   }
@@ -590,31 +728,43 @@ ul.baraja-container li {
 }
 .malware-banner{
   .gt1{
-    left: -33px;
-    top: -1px;
-    height: 42px;
+    width: 185px;
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 1px;
+    margin-left: 58px;
     @extend .mont;
   }
   .gt2{
-    top: -6px;
-    left: 12px;
     position: relative;
+    top: 5px;
     letter-spacing: 1px;
     font-weight: 200;
     @extend .mont;
   }
   .gt3{
-    top: 0px;
-    height: 39px;
+    width: 266px;
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 1px;
     @extend .mont;
   }
+  .text-shadow{
+    overflow: hidden;
+    height: 36px;
+    top: 9px;
+  }
+  .icon-white-x{
+    top: 7px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+  }
   height: 45px;
+  background: url(icon-malware-loop.svg) 0% 0 no-repeat, url(icon-malware-loop.svg) 14% 0 no-repeat, url(icon-malware-loop.svg) 25% 0 no-repeat ,url(icon-malware-loop.svg) 74% 0 no-repeat, url(icon-malware-loop.svg) 88% 0 no-repeat, url(icon-malware-loop.svg) 100% 0 no-repeat, $red;
+  z-index: 1;
 }
 /*=== End Malware banner===*/
 /*=== Hero section ===*/
@@ -637,7 +787,8 @@ ul.baraja-container li {
 .hero__cta--3{
   span:nth-child(1){
     top: 52px;
-    left: -28px;
+    left: -13px;
+    Letter-spacing: 0.1em;
   }
   span:nth-child(2),
   span:nth-child(4),{
@@ -811,8 +962,8 @@ ul.baraja-container li {
     position: absolute;
     height: 360px;
     width: 660px;
-    top: -254px;
-    left: 275px;
+    top: -241px;
+    left: 271px;
     z-index: -1;
   }
   // background: url("free-laptop.svg") no-repeat;
@@ -827,8 +978,9 @@ ul.baraja-container li {
     .icon{
       width: 50px;
       height: 50px;
+      margin-right: 30px;
     }
-    padding: 1.5rem 0.1rem;
+    padding: 1rem;
   }
   .tab-pane{
     .icon{
@@ -846,11 +998,11 @@ ul.baraja-container li {
 .reporting{
   .vert-tabs-green{
     .nav-link{
-      padding: rem(16) rem(40);
+      padding: 1.3rem 2rem;
       line-height: 1.5;
     }
     .nav-link:hover{
-      >.hover-me{
+      >.hover-me-green{
         color: $success-green;
       }
       span:last-child{
@@ -858,7 +1010,7 @@ ul.baraja-container li {
       }
     }
     .nav-link.active{
-      .hover-me{
+      .hover-me-green{
         color: $success-green;
       }
       span:last-child{
@@ -875,7 +1027,7 @@ ul.baraja-container li {
       cursor: pointer;
       margin-right: 16px;
     }
-    top: rem(660);
+    top: 35rem;
   }
   overflow: hidden;
 }
@@ -1250,21 +1402,21 @@ ul.baraja-container li {
   &:before{
     content: "";
     position: absolute;
-    background: url({{'icon-comodo-c.svg' | asset_url}}) no-repeat; 
+    background: url({{'icon-comodo-c.svg' | asset_url}}) no-repeat;
+    width: 100%;
+    height: 53%;
+    background-position: 423px 0px;
   }
-  .large-c{
-    left: 81px;
-    top: -18px;
-  }
-  background: #c4122f;
-  background: -moz-linear-gradient(-45deg, #c4122f 0%, #c9353d 100%);
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, #c4122f), color-stop(100%, #c9353d));
-  background: -webkit-linear-gradient(-45deg, #c4122f 0%, #c9353d 100%);
-  background: -o-linear-gradient(-45deg, #c4122f 0%, #c9353d 100%);
-  background: -ms-linear-gradient(-45deg, #c4122f 0%, #c9353d 100%);
-  background: linear-gradient(135deg, #c4122f 0%, #c9353d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4122f', endColorstr='#c9353d', GradientType=1 );
+  background: $red;
+  background: -moz-linear-gradient(-45deg, $red 0%, #c9353d 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, $red), color-stop(100%, #c9353d));
+  background: -webkit-linear-gradient(-45deg, $red 0%, #c9353d 100%);
+  background: -o-linear-gradient(-45deg, $red 0%, #c9353d 100%);
+  background: -ms-linear-gradient(-45deg, $red 0%, #c9353d 100%);
+  background: linear-gradient(135deg, $red 0%, #c9353d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red`', endColorstr='#c9353d', GradientType=1 );
   color: #fff;
+  height: 780px;
 }
 /*==== End ====*/
 .shopify-preview-bar{
@@ -1511,7 +1663,7 @@ ul.baraja-container li {
     position: absolute;
     top: -721px;
     border-left: 402px solid transparent;
-    border-bottom: 1080px solid #c41230;
+    border-bottom: 1080px solid $red;
     transform: rotate(88deg);
     z-index: -1;
   }
@@ -2147,32 +2299,7 @@ ul.baraja-container li {
   }
 }
 
-/*==== Drop down styles====*/
-.nav-item{
-  .dropdown-menu{
-    border: none;
-    -webkit-box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
-    -moz-box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
-    box-shadow: 0px 0px 26px 0px rgba(189,189,189,1);
-  }
-  .dropdown-menu:before {
-    bottom: 100%;
-    left: 27%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-  .dropdown-menu:before {
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: #fff;
-    border-width: 7px;
-    margin-left: -36px;
-  }
-}
-/*==== End ====*/
+
 @import url('tools/icon_enhance_animated.scss');
 @import url('tools/icon_protect_animated.scss');
 @import url('tools/icon_respond_animated.scss');

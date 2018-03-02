@@ -77,6 +77,10 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
+      }
+      if (windowSize <= 769) {
+        $('.page-hero h2').removeClass('fs47').addClass('fs35');
+      } else {
         /*==== benefits main shield hovers ====*/
         //enhance
         $('.icon-enhance_animated').mouseenter(function(){
@@ -147,11 +151,6 @@ var resize = (function(){
           $(this).show();
         });
         /*==== End ====*/
-              
-      }
-      if (windowSize <= 769) {
-        $('.page-hero h2').removeClass('fs47').addClass('fs35');
-      } else {
         $('.page-hero h2').removeClass('fs35').addClass('fs47');
 
       }
@@ -228,20 +227,28 @@ var resize = (function(){
         $('.pricing-mobile').addClass('hidden');
         $('.navbar-expand-lg').addClass('container');
         $('.search-mobile').addClass('hidden').removeClass('navbar-collapse collapse');
+      }
+      if (windowSize <= 769) {
+        $('.page-hero h2').removeClass('fs47').addClass('fs35');
+      } else {
         /*==== benefits main shield hovers ====*/
         //enhance
         $('.icon-enhance_animated').mouseenter(function(){
           $(this).show();
+          $('.icon-enhance-shadow').show();
           $('.enhance-hover').hide();
         }).mouseleave(function(){
           $('.enhance-hover').show();
+          $('.icon-enhance-shadow').hide();
           $(this).hide();
         });
         $('.enhance-hover').mouseenter(function(){
           $('.icon-enhance_animated').show();
+          $('.icon-enhance-shadow').show();
           $(this).hide();
         }).mouseleave(function(){
           $('.icon-enhance_animated').hide();
+          $('.icon-enhance-shadow').hide();
           $(this).show();
         });
         //respond
@@ -277,24 +284,23 @@ var resize = (function(){
         //protect
         $('.icon-protect_animated').mouseenter(function(){
           $(this).show();
+          $('.icon-protect-shadow').show();
           $('.protect-hover').hide();
         }).mouseleave(function(){
           $('.protect-hover').show();
+          $('.icon-protect-shadow').hide();
           $(this).hide();
         });
         $('.protect-hover').mouseenter(function(){
           $('.icon-protect_animated').show();
+          $('.icon-protect-shadow').show();
           $(this).hide();
         }).mouseleave(function(){
           $('.icon-protect_animated').hide();
+          $('.icon-protect-shadow').hide();
           $(this).show();
         });
         /*==== End ====*/
-        
-      }
-      if (windowSize <= 769) {
-        $('.page-hero h2').removeClass('fs47').addClass('fs35');
-      } else {
         $('.page-hero h2').removeClass('fs35').addClass('fs47');
 
       }

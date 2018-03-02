@@ -173,7 +173,6 @@ function cartUpdate(lineId, cartUL){
 /*==== End ====*/
 /*==== Document Ready only below ====*/
 $(function() {
-  console.log(performance.getEntriesByType('paint')[0].startTime)
   $('#preview-bar-iframe').remove();
   resize.init();
   mobile.init();

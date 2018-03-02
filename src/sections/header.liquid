@@ -3,11 +3,11 @@
     <div class=" d-flex align-items-center justify-content-around  position-relative ">
       <div class="text-shadow position-relative gt1">Got Malware?</div>
       <div class="lato fs15 white-text gt2">
-        <a href="/pages/malware-removal" class="white-text">
+        <a href="/pages/malware-removal" class="white-text a-border-hover">
           Get <strong>FREE</strong> Malware Removal Now {% include 'icon-arrow-right' %}
         </a>
       </div>
-      <div class="text-shadow work position-relative gt3">Or Call <a href="tel:18884815388" class="white-text">(888) 481-5388</a></div>
+      <div class="text-shadow work position-relative gt3">Or Call <a href="{{'phone.link' | t}}" class="white-text">{{'phone.number' | t}}</a></div>
       {% include 'icon-white-x' %}
     </div>
   </div>
@@ -46,7 +46,7 @@
             <!-- </form> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link fs15 grey-text" href="tel:">1-888-555-5555</a>
+            <a class="nav-link fs13 darkish-blue-text" href="{{'phone.link' | t}}">{{'phone.number' | t}}</a>
           </li>
           {% if customer %}
             <li class="nav-item">
@@ -69,7 +69,7 @@
           <li class="nav-item dropdown">
             <a href="/checkout"  class="nav-link dropdown-toggle checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="d-flex flex-row fs12">
-                <div class="grey-text">Checkout</div>
+                <div class="grey-text mr-2">Checkout</div>
                 <div class="position-relative">
                   {% include 'icon-cart' %}
                   <span class="badge badge-primary position-absolute">{{ cart.item_count }}</span>
@@ -115,7 +115,7 @@
             <!-- </form> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link fs15 grey-text" href="tel:">1-888-555-5555</a>
+             <a class="nav-link fs13 darkish-blue-text" href="{{'phone.link' | t}}">{{'phone.number' | t}}</a>
           </li>
           {% if customer %}
             <li class="nav-item">
@@ -138,7 +138,7 @@
           <li class="nav-item dropdown">
             <a  class="nav-link dropdown-toggle" href="/checkout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="d-flex flex-row fs12">
-                <div class="grey-text">Checkout</div>
+                <div class="grey-text mr-2">Checkout</div>
                 <div class="position-relative">
                   {% include 'icon-cart' %}
                   <span class="badge badge-primary position-absolute">{{ cart.item_count }}</span>
@@ -171,14 +171,14 @@
       {% endif %}
     </div>
     <div class="collapse navbar-collapse justify-content-end mainNav" >
-      <ul class="navbar-nav mont fs16 main-links chrome-fw500">
+      <ul class="navbar-nav mont fs16 main-links fw400">
           {% assign menu = linklists.main-menu %}
           {% for link in menu.links %}
             {% if forloop.last == true %}
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                  <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {% for sub_link in link.links %}
                       <a class="dropdown-item fs14 work fw300" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                     {% endfor %}
@@ -193,7 +193,7 @@
               {% if link.links != blank %}
                 <li class="nav-item dropdown">
                   <a href="{{ link.url }}" class="nav-link darkish-blue-text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                  <div class="dropdown-menu mt-0" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     {% for sub_link in link.links %}
                       <a class="dropdown-item fs14 work fw300" href="{{ sub_link.url }}">{{ sub_link.title }}</a>
                     {% endfor %}
@@ -226,7 +226,7 @@
           </span>
         </div>
         <div class="col-12 work position-relative ">
-          <p class="my-2"><a href="tel:" class="white-text">(888) 222-2222</a></p>
+          <p class="my-2"><a href="{{'phone.link' | t}}" class="white-text">{{'phone.number' | t}}</a></p>
         </div>
       </div>
     </div>
@@ -239,164 +239,27 @@
         <div class="row flex-column align-items-center " style="margin-top: 1.8rem;">
           <div class="hero__cta--1 row position-relative word-lines" style=" ">
             <span class="col-1 border-bottom border-grey position-relative"></span>
-            <span class="col-auto mont fs15 lsp1 text-uppercase lsp2">cwatch web</span>
+            <span class="col-auto mont fs15 fw500 text-uppercase lsp2">cwatch web</span>
             <span class="col-1 border-bottom border-grey position-relative"></span>
           </div>
-          <div class="hero__cta--2 work font-weight-light fs35">The Only Website Security-as-a-Service Driven by Human Expertise</div>
+          <div class="hero__cta--2 work fw200 fs35">The Only Website Security-as-a-Service Driven by Human Expertise</div>
           <div class="hero__cta--3 row text-center position-relative mt-3">
             <span class="mont font-italic fs12 position-relative">Plans Starting At</span>
-            <span class="work dollar-sign fs28 position-relative">$</span>
-            <span class="work dollar-sign fs70 font-weight-light">9.</span>
+            <span class="work dollar-sign fw200 fs28 position-relative">$</span>
+            <span class="work dollar-sign fw200 fs70 font-weight-light">9.</span>
             <span class="work dollar-sign fs19 position-relative">90</span>
             <span class="work dollar-sign fs16 position-relative">/ mo.</span>
           </div>
           <div class="hero__cta--4 position-relative mt-2">
             <a href="#" class="btn btn-success btn-cta-rd text-uppercase mont fs17 p-0">
-              <p class="btn-text btn-success-text-shadow m-0 chrome-fw600">protect your site today</p></a>
+              <p class="btn-text btn-success-text-shadow m-0 chrome-fw600 font-italic">protect your site today</p></a>
           </div>
         </div>
       </div>
     </div>
   {% endif %}
-  {% if template contains 'benefits' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center ">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">The Benefits of cWatch Web to Your Business</h1>
-             <p class="FeatureText-Level3 mt-2">We keep your website safe so you can stay focused on your business</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %} 
-  {% if template contains 'csoc' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0 lsp0">Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)</h1>
-             <p class="FeatureText-Level3 mt-2">Affordably Outsource or Expand Your IT Security Team with cWatch Web’s CSOC</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'firewall' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">Advanced Threat Protection — Web Application Firewall (WAF)</h1>
-             <p class="FeatureText-Level3 mt-2">Instantly Leverage Best-of-Breed Defense Against Cyber Threats with cWatch Web’s WAF </p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'cdn' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">Improved Website Performance — Content Delivery network (CDN)</h1>
-             <p class="FeatureText-Level3 mt-2">Accelerate Your Websites's Speed, Security & SEO Rankings wuth cWatch Web's CDN</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'siem' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">Proactive Defense & Response- <br>Security Information & Event Management (SIEM)</h1>
-             <p class="FeatureText-Level3 mt-2">Get Real-Time Threat Detection, Visibility, Forensics Investigations and Responses</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'partner' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">cWatch Web Reseller Partner Program</h1>
-             <p class="FeatureText-Level3 mt-2">Grow Your Business with an In-Demand Website Security Solution</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'about' %}
-    <div class="hero_cta green-gradients d-flex flex-column justify-content-center">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4 m-0">About Us — Discover the cWatch Difference</h1>
-             <p class="FeatureText-Level3 mt-2">The Only Security-as-a-Service Solution Driven by Human Insight and Real Experience</p>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'pricing' %}
-    <div class="hero_cta hero_cta--variant">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level5 fs20">Pricing</h1>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'malware' %}
-    <div class="hero_cta hero_cta--variant">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4">Free Malware Removal</h1>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'compare' %}
-    <div class="hero_cta hero_cta--variant">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4">Compare cWatch Web</h1>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'contact' %}
-    <div class="hero_cta hero_cta--variant">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4">Contact</h1>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
-  {% if template contains 'support' %}
-    <div class="hero_cta hero_cta--variant">
-       <div class="container">
-         <div class="row">
-           <div class="col">
-             <h1 class="HeaderB-Level4">Support</h1>
-           </div>
-         </div>
-       </div>
-    </div>
-  {% endif %}
+  <!-- Using {{template}} -->
+  {% include 'hero' %}
   {% include 'breadcrumbs' %}
 </section>
 {% schema %}

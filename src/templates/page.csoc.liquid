@@ -35,7 +35,7 @@
     <div class="row">
       <div class="col-sm-12">
         <p class="FeatureText-Level3 mb-0">Speak to a cWatch Team Member Today</p>
-        <a href="tel:" class="HeaderB-Level4 green-text">1 (888) 481-5388</a>
+        <a href="{{'phone.link' | t}}" class="HeaderB-Level4 green-text">{{'phone.number' | t}}</a>
       </div>
     </div>
   </div>
@@ -317,13 +317,14 @@
     </div>
   </div>
 </section>
-<section class="comodo-cta py-10-1">
+<section class="comodo-cta d-flex justify-content-center align-items-center">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 offset-sm-4 large-c">
         <div class="HeaderA-Level2">World-Class Website Security by the Best in the Business</div>
         <p class="mb-5">cWatch Web is the only website security solution backed by Comodo, the industry leader in cyber security defense and intelligence solutions. It blends security practices honed over 20 years of hands-on experience with the latest in cloud computing and machine learning technologies for better threat identification, monitoring and mitigation. Even better, cWatch Web is simple to setup, requires no maintenance on your part and instantly puts your mind at ease so you can focus on your core business.</p>
         <p class="FeatureText-Level2 border-bottom border-white">Put 20 Years of Expertise to Work For You With cWatch Web</p>
+        {% include 'icon-comodo' %}
       </div>
     </div>
   </div>

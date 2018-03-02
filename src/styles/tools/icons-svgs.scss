@@ -68,7 +68,8 @@ g {
   }
 }
 .icon-cart{
-  width: 19px;
+  width: 20px;
+  height: 20px;
   fill: grey;
 }
 .icon-fishing{
@@ -87,13 +88,8 @@ g {
   width: 15px;
 }
 .icon-cart + span{
-  top: 0;
-  right: -10px;
-}
-.icon-white-x{
-  width: 19px;
-  position: absolute;
-  right: 11px;
+  top: -5px;
+  right: -12px;
 }
 .green-icon-circle .icon,
 .red-icon-circle .icon {
@@ -330,6 +326,10 @@ a.btn{
   left: 52px;
   width: 95%;
   top: -35px;
+}
+.icon-comodo{
+  width: 170px;
+  float: right;
 }
 /*=== End Malware banner bugs ===*/
 /*=== End Icons ====*/

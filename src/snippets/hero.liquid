@@ -1,0 +1,62 @@
+{% if template contains 'benefits' or template contains 'csoc' or template contains 'firewall' or template contains 'cdn' or template contains 'siem' or template contains 'partner' or template contains 'about' %}
+<div class="hero_cta green-gradients d-flex flex-column justify-content-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {% if template contains 'benefits' %}
+          <h1 class="HeaderB-Level4 m-0">{{'benefits.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'benefits.subtitle' | t}}</p>
+        {% endif %} 
+        {% if template contains 'csoc' %}
+          <h1 class="HeaderB-Level4 m-0 lsp0">{{'csoc.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'csoc.subtitle' | t}}</p>
+        {% endif %}
+        {% if template contains 'firewall' %}
+          <h1 class="HeaderB-Level4 m-0">{{'firewall.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'firewall.subtitle' | t}}</p>
+        {% endif %}
+        {% if template contains 'cdn' %}
+          <h1 class="HeaderB-Level4 m-0">{{'cdn.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'cdn.subtitle' | t}}</p>
+        {% endif %}
+        {% if template contains 'siem' %}
+          <h1 class="HeaderB-Level4 m-0">{{'siem.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'siem.subtitle' | t }}</p>
+        {% endif %}
+        {% if template contains 'partner' %}
+          <h1 class="HeaderB-Level4 m-0">{{'partner.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'siem.subtitle' | t}}</p>
+        {% endif %}
+        {% if template contains 'about' %}
+          <h1 class="HeaderB-Level4 m-0">{{'about.title' | t}}</h1>
+          <p class="FeatureText-Level3 mt-2">{{'about.subtitle' | t}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% elsif template contains 'pricing' or template contains 'malware' or template contains 'compare' or template contains 'contact' or template contains 'support' %}
+<div class="hero_cta hero_cta--variant">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        {% if template contains 'pricing' %}
+          <h1 class="HeaderB-Level5 fs20">{{'pricing.title' | t}}</h1>
+        {% endif %}
+        {% if template contains 'malware' %}
+          <h1 class="HeaderB-Level4">{{'malware.title' | t}}</h1>
+        {% endif %}
+        {% if template contains 'compare' %}
+          <h1 class="HeaderB-Level4">{{'compare.title' | t}}</h1>
+        {% endif %}
+        {% if template contains 'contact' %}
+          <h1 class="HeaderB-Level4">{{'contact.title' | t}}</h1>
+        {% endif %}
+        {% if template contains 'support' %}
+          <h1 class="HeaderB-Level4">{{'support.title' | t}}</h1>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}     

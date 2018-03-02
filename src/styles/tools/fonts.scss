@@ -1060,6 +1060,91 @@ p {margin-bottom: 1.3rem;}
 .small, .font_small {font-size: 0.75rem;}
 /*==== End ====*/
 
+
+/*=== Text classes ====*/
+.HeaderA-Level1{
+  font-family : Work Sans;
+  font-size : 63px;
+}
+.HeaderA-Level2{
+  font-family : 'Work Sans';
+  font-size : rem(47);
+  font-weight: 200;
+}
+.HeaderA-Level3{
+  font-family : Work Sans;
+  font-size : rem(35);
+  font-weight: 300;
+}
+
+.HeaderA-Level4{
+  font-family : 'Work Sans';
+  font-size : rem(26);
+}
+.HeaderA-Level5{
+  font-family : Work Sans;
+  font-weight : bold;
+  font-size : 17px;
+}
+.ParagraphText-small{
+  font-family : Lato;
+  font-size : rem(17);
+  letter-spacing : 0.15px;
+}
+.FirstFeatureParagraph{
+  font-family : Lato;
+  line-height : 34px;
+  letter-spacing : 0.2px;
+}
+.FeatureText-Level1{
+  font-family : Lato;
+  font-size : 13px;
+}
+.FeatureText-Level2{
+  font-family : 'Montserrat';
+  font-style : italic;
+  font-size : rem(20);
+}
+.FeatureText-Level3{
+  font-family : 'Montserrat';
+  font-style : italic;
+  font-size : rem(15);
+  letter-spacing : 1.5px;
+}
+.HeaderB-Level2{
+  font-family : Montserrat;
+  font-weight : bold;
+  font-size : rem(47);
+  letter-spacing : 1.41px;
+}
+.HeaderB-Level3{
+  font-family : 'Work Sans';
+  font-size : rem(35);
+  font-weight: 300;
+}
+.HeaderB-Level4{
+  font-family : 'Montserrat';
+  font-weight : bold;
+  font-size : rem(26);
+  letter-spacing : 1px;
+}
+.HeaderB-Level5{
+  font-family : 'Montserrat';
+  font-weight : bold;
+  letter-spacing : 0.8px;
+}
+.HeaderB-Level6{
+  font-family : Montserrat;
+  font-weight : bold;
+  font-size : 17px;
+}
+.FeatureHead-Level2{
+  font-family : Montserrat;
+  font-weight : bold;
+  font-size : rem(15);
+  letter-spacing : 3.15px;
+}
+
 /*==== Font weight ====*/
 .fw100{
   font-weight: 100;
@@ -1148,93 +1233,12 @@ p {margin-bottom: 1.3rem;}
   font-size: rem(70);
 }
 /*==== End ====*/
-/*=== Text classes ====*/
-.HeaderA-Level1{
-  font-family : Work Sans;
-  font-size : 63px;
-}
-.HeaderA-Level2{
-  font-family : 'Work Sans';
-  font-size : rem(47);
-  font-weight: 200;
-}
-.HeaderA-Level3{
-  font-family : Work Sans;
-  font-size : rem(35);
-  font-weight: 300;
-}
 
-.HeaderA-Level4{
-  font-family : 'Work Sans';
-  font-size : rem(26);
-}
-.HeaderA-Level5{
-  font-family : Work Sans;
-  font-weight : bold;
-  font-size : 17px;
-}
-.ParagraphText-small{
-  font-family : Lato;
-  font-size : rem(17);
-  letter-spacing : 0.15px;
-}
-.FirstFeatureParagraph{
-  font-family : Lato;
-  line-height : 34px;
-  letter-spacing : 0.2px;
-}
-.FeatureText-Level1{
-  font-family : Lato;
-  font-size : 13px;
-}
-.FeatureText-Level2{
-  font-family : 'Montserrat';
-  font-style : italic;
-  font-size : rem(20);
-}
-.FeatureText-Level3{
-  font-family : 'Montserrat';
-  font-style : italic;
-  font-size : rem(15);
-  letter-spacing : 1.5px;
-}
-.HeaderB-Level2{
-  font-family : Montserrat;
-  font-weight : bold;
-  font-size : rem(47);
-  letter-spacing : 1.41px;
-}
-.HeaderB-Level3{
-  font-family : 'Work Sans';
-  font-size : rem(35);
-  font-weight: 300;
-}
-.HeaderB-Level4{
-  font-family : 'Montserrat';
-  font-weight : bold;
-  font-size : rem(26);
-  letter-spacing : 1px;
-}
-.HeaderB-Level5{
-  font-family : 'Montserrat';
-  font-weight : bold;
-  letter-spacing : 0.8px;
-}
-.HeaderB-Level6{
-  font-family : Montserrat;
-  font-weight : bold;
-  font-size : 17px;
-}
-.FeatureHead-Level2{
-  font-family : Montserrat;
-  font-weight : bold;
-  font-size : rem(15);
-  letter-spacing : 3.15px;
-}
+
 .text-shadow {
   color: #fff;
   font-weight: bold;
-  @include long-shadow($type: text, $color: #b42b30 , $length: 35, $fadeout: false, $skew: true, $direction: right);
+  @include long-shadow($type: text, $color: #ac2a2f , $length: 35, $fadeout: false, $skew: true, $direction: right);
 }
 .text-underline{
   text-decoration: underline;
@@ -1243,6 +1247,12 @@ p {margin-bottom: 1.3rem;}
 /*==== Letter spacing (converted to rem from pixels) ====*/
 .lsp0{
   letter-spacing: 0;
+}
+.lsp01{
+  letter-spacing: 0.1em;
+}
+.lsp1{
+  letter-spacing: 1px;
 }
 .lsp2{
   letter-spacing: rem(2);

@@ -273,6 +273,10 @@
   "date_formats":{
     "month_day_year": "%B %d, %Y"
   },
+  "phone":{
+    "number": "1 (888) 481-5388",
+    "link": "tel:18884815388"
+  },
   "tooltip":{
     "detect":{
       "real_time_title": "title",
@@ -282,5 +286,48 @@
       "dedicated_title": "title",
       "dedicated_body": "body"
     }
+  },
+  "benefits":{
+    "title": "The Benefits of cWatch Web to Your Business",
+    "subtitle": "We keep your website safe so you can stay focused on your business"
+  },
+  "csoc": {
+    "title": "Expert Monitoring & Assistance — Cyber Security Operations Center (CSOC)",
+    "subtitle": "Affordably Outsource or Expand Your IT Security Team with cWatch Web’s CSOC"
+  },
+  "firewall": {
+    "title": "Advanced Threat Protection — Web Application Firewall (WAF)",
+    "subtitle": "Instantly Leverage Best-of-Breed Defense Against Cyber Threats with cWatch Web’s WAF"
+  },
+  "cdn": {
+    "title": "Improved Website Performance — Content Delivery network (CDN)",
+    "subtitle": "Accelerate Your Websites's Speed, Security & SEO Rankings wuth cWatch Web's CDN"
+  },
+  "siem": {
+    "title": "Proactive Defense & Response- <br>Security Information & Event Management (SIEM)",
+    "subtitle": "Get Real-Time Threat Detection, Visibility, Forensics Investigations and Responses"
+  },
+  "partner": {
+    "title": "cWatch Web Reseller Partner Program",
+    "subtitle": "Grow Your Business with an In-Demand Website Security Solution"
+  },
+  "about": {
+    "title": "About Us — Discover the cWatch Difference",
+    "subtitle": "The Only Security-as-a-Service Solution Driven by Human Insight and Real Experienc"
+  },
+  "pricing": {
+    "title": "Pricing"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "compare": {
+    "title": "Compare cWatch Web"
+  },
+  "malware": {
+    "title": "Free Malware Removal"
+  },
+  "support": {
+    "title": "Support"
   }
 }
