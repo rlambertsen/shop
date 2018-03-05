@@ -46,7 +46,7 @@
           <p class="HeaderA-Level3">Sales Support</p>
           <p class="HeaderB-Level4 w-75">Meeting all your website security needs today and into the future.</p>
           <p class="fs17">Have questions about our product features and benefits, reseller opportunities, billing, finance or general sales questions?  Need help determining which pricing package is right for you?  Contact us today... our 24/7 Customer Experience Specialists are standing by ready to assist you.</p>
-          <p class="pl-3 mb-2">{% include 'icon-chat-set-sm' %} <a href="tel:18884815388" class="HeaderA-Level4 blue-text">1-888-481-5388</a></p>
+          <p class="pl-3 mb-2">{% include 'icon-chat-set-sm' %} <a href="{{'phone.link' | t}}" class="HeaderA-Level4 blue-text">{{'phone.number' | t}}</a></p>
           <p class="pl-3 mb-2">{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
           <p class="pl-3 mb-2">{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
         </div>
@@ -71,13 +71,14 @@
       <div class="col-md-6">
         <div class="sales-form mt-3">
           <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Sales Support team</p>
-          <form action="#" class="free-malware-form needs-validation" novalidate>
+          <form class="free-malware-form needs-validation" novalidate>
+            <input type="hidden" value="Sales" name="FormType">
             <div class="form-group">
               <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
-              name="sales[name]"
+              name="ContactName"
               id="ContactFormName"
-              placeholder="{{ 'contact.form.name' | t }}"
+              placeholder="{{'contact.form.name' | t}}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
               class="form-control" required>
               <div class="valid-feedback">
@@ -90,7 +91,7 @@
             <div class="form-group">
               <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
-                name="sales[email]"
+                name="EmailAddress"
                 id="ContactFormEmail"
                 placeholder="{{ 'contact.form.email' | t }}"
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
@@ -108,7 +109,7 @@
             <div class="form-group">
               <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
-                name="sales[phone]"
+                name="PhoneNumber"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
@@ -124,7 +125,7 @@
             <div class="form-group">
               <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
               <textarea rows="5"
-                name="sales[body]"
+                name="{{ 'contact.form.message' | t }}"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
                 class="form-control" required></textarea>
@@ -158,7 +159,7 @@
             <div class="form-group">
               <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
-              name="tech[name]"
+              name="ContactName"
               id="ContactFormName"
               placeholder="{{ 'contact.form.name' | t }}"
               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
@@ -173,7 +174,7 @@
             <div class="form-group">
               <label for="ContactFormEmail" class="show-mobile-768">{{ 'contact.form.email' | t }}</label>
               <input type="email"
-                name="tech[email]"
+                name="EmailAddress"
                 id="ContactFormEmail"
                 placeholder="{{ 'contact.form.email' | t }}"
                 value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
@@ -191,7 +192,7 @@
             <div class="form-group">
               <label for="ContactFormPhone" class="show-mobile-768">{{ 'contact.form.phone' | t }}</label>
               <input type="tel"
-                name="tech[phone]"
+                name="PhoneNumber"
                 id="ContactFormPhone"
                 placeholder="{{ 'contact.form.phone' | t }}"
                 value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
@@ -207,7 +208,7 @@
             <div class="form-group">
               <label for="ContactFormMessage" class="show-mobile-768">{{ 'contact.form.message' | t }}</label>
               <textarea rows="5"
-                name="tech[body]"
+                name="Message"
                 id="ContactFormMessage"
                 placeholder="{{ 'contact.form.message' | t }}"
                 class="form-control" required></textarea>

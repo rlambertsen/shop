@@ -20,7 +20,7 @@
           <p class="FeatureText-Level3 mt-2">{{'cdn.subtitle' | t}}</p>
         {% endif %}
         {% if template contains 'siem' %}
-          <h1 class="HeaderB-Level4 m-0">{{'siem.title' | t}}</h1>
+          <h1 class="HeaderB-Level4 m-0">{{'siem.title' | t | newline_to_br }}</h1>
           <p class="FeatureText-Level3 mt-2">{{'siem.subtitle' | t }}</p>
         {% endif %}
         {% if template contains 'partner' %}

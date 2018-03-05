@@ -6,7 +6,7 @@ $darkish-blue: #373E5A;
 $grey-accent: #969C9C;
 $success-green: #1FC469;
 $medium-blue: #3f4563;
-$grey: rgba(237, 240, 243, 0.4);
+$grey: #EDF0F3;
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
@@ -469,6 +469,7 @@ ul.baraja-container li {
     border-width: 12px;
     margin-top: -11px;
   }
+  
   .nav-link{
     color: #000;
   }
@@ -679,6 +680,7 @@ ul.baraja-container li {
   position: relative;
   top: 36px;
   left: 24px;
+  z-index: 10;
 }
 /*==== End ====*/
 
@@ -722,6 +724,8 @@ ul.baraja-container li {
   .icon-white-x{
     top: 11px;
     cursor: pointer;
+    width: 20px;
+    float: right;
   }
   background: url(icon-malware-loop.svg) 0% 0 no-repeat, url(icon-malware-loop.svg) 14% 0 no-repeat, url(icon-malware-loop.svg) 25% 0 no-repeat ,url(icon-malware-loop.svg) 74% 0 no-repeat, url(icon-malware-loop.svg) 88% 0 no-repeat, url(icon-malware-loop.svg) 100% 0 no-repeat, $red;
   z-index: 1;
@@ -982,6 +986,20 @@ ul.baraja-container li {
     }
     padding: 1rem;
   }
+  .nav-link.active:after {
+    /* This is the shadow triangle */
+    position: absolute;
+    top: 41px;
+    right: -18px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(0,0,0,0.03);
+    z-index: -1;
+    transform: rotate(90deg);
+  } 
   .tab-pane{
     .icon{
       width: 105px;
@@ -1001,6 +1019,20 @@ ul.baraja-container li {
       padding: 1.3rem 2rem;
       line-height: 1.5;
     }
+    .nav-link.active:after {
+      /* This is the shadow triangle */
+      position: absolute;
+      top: 91px;
+      right: -18px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 12px solid rgba(0,0,0,0.03);
+      z-index: -1;
+      transform: rotate(90deg);
+    } 
     .nav-link:hover{
       >.hover-me-green{
         color: $success-green;
@@ -1446,7 +1478,7 @@ ul.baraja-container li {
       position: absolute;
       height: 67px;
       width: 67px;
-      top: 26%;
+      top: 27%;
       left: -62px;
       cursor: pointer;
     }
@@ -1514,6 +1546,25 @@ ul.baraja-container li {
   .icon-cdn-showoff{
     width: 450px;
   }
+}
+#cdn-tabs,
+#csoc-tabs,
+#firewall-tabs,
+#driven-tabs{
+  .nav-link.active:after {
+    /* This is the shadow triangle */
+    position: absolute;
+    top: 27px;
+    right: -18px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(0,0,0,0.03);
+    z-index: -1;
+    transform: rotate(90deg);
+  } 
 }
 /*==== protection-guarantee ====*/
 .protection-guarantee{
@@ -2299,10 +2350,87 @@ ul.baraja-container li {
   }
 }
 
-
+.have-malware{
+  .slide-up,
+  .slide-down{
+    transition: all 1s ease 0s;
+  }
+  .slide-down{
+    margin-top: 0px;
+    margin-bottom: -240px;
+  }
+  .slide-down-show{
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .move-up{
+    margin-top: -200px;
+  }
+  top: -30px;
+  left: -117px;
+}
+.DDoS{
+  .slide-up,
+  .slide-down{
+    transition: all 1s ease 0s;
+  }
+  .slide-down{
+    margin-top: 0px;
+    margin-bottom: -240px;
+  }
+  .move-up{
+    margin-top: -200px;
+  }
+  .slide-down-show {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+  top: -30px;
+  right: -117px;
+  min-height:223px;
+}
+.hacked-solution{
+  .slide-up,
+  .slide-down{
+    transition: all 1s ease 0s;
+  }
+  .slide-down{
+    margin-top: 0px;
+    margin-bottom: -240px;
+  }
+  .move-up{
+    margin-top: -200px;
+  }
+  .slide-down-show {
+    margin-top: 33px;
+    margin-bottom: 0px;
+  }
+  top: -49px;
+}
+.high-cost{
+  .slide-up,
+  .slide-down{
+    transition: all 1s ease 0s;
+  }
+  .slide-down{
+    margin-top: 0px;
+    margin-bottom: -240px;
+  }
+  .move-up{
+    margin-top: -200px;
+  }
+  .slide-down-show {
+    margin-top: 69px;
+    margin-bottom: 0px;
+  }
+  top: -53px;
+  min-height: 190px;
+}
 @import url('tools/icon_enhance_animated.scss');
 @import url('tools/icon_protect_animated.scss');
 @import url('tools/icon_respond_animated.scss');
 @import url('tools/icon_detect_animated.scss');  
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss'); 
+
+

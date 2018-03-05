@@ -100,6 +100,7 @@
     }
   },
   "contact": {
+    "title": "Contact",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -304,7 +305,7 @@
     "subtitle": "Accelerate Your Websites's Speed, Security & SEO Rankings wuth cWatch Web's CDN"
   },
   "siem": {
-    "title": "Proactive Defense & Response- <br>Security Information & Event Management (SIEM)",
+    "title": "Proactive Defense & Response- \n Security Information & Event Management (SIEM)",
     "subtitle": "Get Real-Time Threat Detection, Visibility, Forensics Investigations and Responses"
   },
   "partner": {
@@ -317,9 +318,6 @@
   },
   "pricing": {
     "title": "Pricing"
-  },
-  "contact": {
-    "title": "Contact"
   },
   "compare": {
     "title": "Compare cWatch Web"

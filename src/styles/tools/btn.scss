@@ -128,7 +128,6 @@
 /*==== Button varients ====*/
 .btn-success-text-shadow{
   @include long-shadow($type: text, $color: #4d9d5e, $length: 40, $fadeout: false, $skew: true, $direction: right);
-  letter-spacing: 0.1rem;
 }
 .btn-cta-rd{
   border-radius: 2.35rem;

@@ -119,6 +119,89 @@ function countingUp(){
   );
   return false;
 }
+function countingUpAbout(){
+  $('.virus-count').animateNumber({
+      number: 25,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.internet-count').animateNumber({
+      number: 50,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.business-count').animateNumber({
+      number: 700,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.digital-count').animateNumber({
+      number: 2,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.partner-count').animateNumber({
+      number: 8,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.global-count').animateNumber({
+      number: 1000,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.private-count').animateNumber({
+      number: 8,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  $('.found-count').animateNumber({
+      number: 1998,
+      numberStep: function(now, tween) {
+        var floored_number = Math.floor(now),
+            target = $(tween.elem);
+        target.text(floored_number);
+      }
+    },
+    5000
+  );
+  return false;
+}
 /*==== End ====*/
 /*==== Page load get cart contents and display them if any ====*/
 function getcart(){
@@ -439,6 +522,14 @@ $(function() {
       }
     });
   }
+  if (window.location.pathname === '/pages/about-us'){
+    $(window).smartscroll(function(e){
+      if ($('.counting-numbers').isOnScreen() && counted === false){
+        countingUpAbout();
+        counted = true;
+      }
+    });
+  }
   /*==== Add to cart button/s ====*/
   $('.btn').click(function(){
     $this = $(this);
@@ -507,26 +598,20 @@ $(function() {
 
 
   /*==== Home page laptop computer section show/hide on hover ====*/
-  $('.hover').mouseenter(function(){
-    if ($(this).hasClass('hacked-hover')){
-      $(this).fadeIn('slow');
-      $('.icon-thief').show();
-      $(this).siblings().addClass('invisible');
-    } else{
-      $(this).fadeIn('slow');
-      $(this).siblings().addClass('invisible');
-    }
-  }).mouseleave(function(){
-    $(this).hide();
-    $('.icon-thief').hide();
-    $(this).siblings().removeClass('invisible');
-  });
   $('.no-hov').mouseenter(function(){
-    $(this).fadeOut().addClass('invisible');
-    $(this).siblings().show();
+    $(this).find('.slide-up').addClass('move-up');
+    if($(this).hasClass('hacked-solution')){
+      $('.icon-thief').fadeIn();
+    }
+    $(this).find('.buggy').fadeIn();
+    $(this).find('.slide-down').addClass('slide-down-show');
   }).mouseleave(function(){
-    $(this).removeClass('invisible').fadeIn();
-    $(this).siblings().hide();
+    $(this).find('.slide-down').removeClass('slide-down-show');
+    if($(this).hasClass('hacked-solution')){
+      $('.icon-thief').fadeOut();
+    }
+    $(this).find('.buggy').fadeOut();
+    $(this).find('.slide-up').removeClass('move-up')
   });
   /*==== End ====*/
 
@@ -649,7 +734,13 @@ $(function() {
           $('.checkbox-error').show();
         }
         if (form.checkValidity() === true && $('[type="checkbox"]').is(':checked')){
+          event.preventDefault();
+          event.stopPropagation();
           $('.checkbox-error').hide();
+          var formData = $(form).serialize();
+          $.post('https://sandboxapi.cwatchstore.com/api/contactform/post', formData).then(function(response){
+            console.log(response)
+          })
         }
         form.classList.add('was-validated');
       }, false);

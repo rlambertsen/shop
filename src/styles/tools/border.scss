@@ -73,9 +73,7 @@
 /*=== End ===*/
 //shadows
 .drop-shadow{
-  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
-  -moz-box-shadow: 0 6px 12px rgba(0,0,0,0.23),0 10px 40px rgba(0,0,0,0.19);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.23), 0 10px 40px rgba(0,0,0,0.19);
+  @include prefix(box-shadow, 0px 0px 14px rgba(55,62,90,0.2), webkit moz ms o spec);
 }
 .drop-shadow-sides{
   box-shadow:10px 0px 10px -7px rgba(0,0,0,0.23), -10px 0px 10px -7px rgba(0,0,0,0.23);
