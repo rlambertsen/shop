@@ -68,7 +68,9 @@ var resize = (function(){
       } else{
         $('.chat-links a').removeClass('btn-block');
         $('.chat-links a').first().addClass('pull-right');
-        $('.chat-links a').last().addClass('pull-left');
+        $('.chat-links a:nth-child(2)').addClass('pull-left');
+        $('.chat-links').find('.right').addClass('pull-right');
+        $('.chat-links').find('.left').addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');
         $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');
@@ -218,7 +220,8 @@ var resize = (function(){
       } else{
         $('.chat-links a').removeClass('btn-block');
         $('.chat-links a').first().addClass('pull-right');
-        $('.chat-links a').last().addClass('pull-left');
+        $('.chat-links').find('.right').addClass('pull-right');
+        $('.chat-links').find('.left').addClass('pull-left');
         $('#security-mobile-slider').carousel('dispose');
         $('.malware-removal.green-gradients').addClass('py-10').removeClass('py-3');;
         $('.csoc').addClass('light-grey-background');

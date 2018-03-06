@@ -37,6 +37,7 @@ $.fn.isOnScreen = function(){
   jQuery.fn[sr] = function (fn, threshhold) { return fn ? this.bind('scroll', debounce(fn, threshhold)) : this.trigger(sr); };
 })(jQuery, 'smartscroll');
 function countingUp(){
+  var time = 3000;
   $('.Countries').animateNumber({
       number: 190,
       numberStep: function(now, tween) {
@@ -45,7 +46,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.Endpoints').animateNumber({
       number: 100,
@@ -55,7 +56,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.unique').animateNumber({
       number: 800,
@@ -65,7 +66,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.threats').animateNumber({
       number: 500,
@@ -75,7 +76,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.analyzed').animateNumber({
       number: 13,
@@ -85,7 +86,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.performance').animateNumber({
       number: 13,
@@ -95,7 +96,7 @@ function countingUp(){
         target.text(floored_number + '%');
       }
     },
-    5000
+    time
   );
   $('.blocked').animateNumber({
       number: 15,
@@ -105,7 +106,7 @@ function countingUp(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.Support').animateNumber({
       number: 99.9,
@@ -115,11 +116,12 @@ function countingUp(){
         target.text(floored_number + '%');
       }
     },
-    5000
+    time
   );
   return false;
 }
 function countingUpAbout(){
+  var time = 3000;
   $('.virus-count').animateNumber({
       number: 25,
       numberStep: function(now, tween) {
@@ -128,7 +130,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.internet-count').animateNumber({
       number: 50,
@@ -138,7 +140,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.business-count').animateNumber({
       number: 700,
@@ -148,7 +150,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.digital-count').animateNumber({
       number: 2,
@@ -158,7 +160,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.partner-count').animateNumber({
       number: 8,
@@ -168,7 +170,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.global-count').animateNumber({
       number: 1000,
@@ -178,7 +180,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.private-count').animateNumber({
       number: 8,
@@ -188,7 +190,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   $('.found-count').animateNumber({
       number: 1998,
@@ -198,7 +200,7 @@ function countingUpAbout(){
         target.text(floored_number);
       }
     },
-    5000
+    time
   );
   return false;
 }

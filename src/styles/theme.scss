@@ -7,6 +7,7 @@ $grey-accent: #969C9C;
 $success-green: #1FC469;
 $medium-blue: #3f4563;
 $grey: #EDF0F3;
+$grey60: rgba(150, 156, 156, 0.6);
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
 $blue: #03A9F4;
@@ -62,6 +63,9 @@ body{
   padding-left: 50px;
   padding-right: 50px;
 }
+select.form-control:not([size]):not([multiple]) {
+  height: initial;
+}
 .dropdown-toggle::after{
   display: none;
 }
@@ -69,6 +73,9 @@ a:not([href]):not([tabindex]),
 a:hover{
   color: $blue;
   text-decoration: none;
+}
+.bg-success{
+  background-color: $success-green !important; 
 }
 .badge-primary{
   background-color: $blue;
@@ -94,7 +101,7 @@ label{
   color: $grey-accent;
 }
 .dropdown-item{
-  padding: 10px 10px;
+  padding: 10px 30px;
 }
 /*==== End ====*/
 
@@ -519,7 +526,6 @@ ul.baraja-container li {
   font-size: 10px;
   font-weight: bold;
   color: #FFF;
-  text-transform: uppercase;
   text-align: center;
   line-height: 20px;
   transform: rotate(-45deg);
@@ -588,7 +594,7 @@ ul.baraja-container li {
     height: 21px;
     width: 16px;
     position: absolute;
-    left: -20px;
+    left: -24px;
     transform: scaleX(-1);
     margin-top: -4px;
   }
@@ -809,7 +815,7 @@ ul.baraja-container li {
   a{
     .btn-text{
       overflow: hidden;
-      padding: 17px 60px;
+      padding: 0.7rem 2.5rem;
       position: relative;
       height: 58px;
     }
@@ -953,13 +959,6 @@ ul.baraja-container li {
     width: 194px;
     left: 140px;
   }
-  a.btn .icon-arrow-right-white,
-  a.btn .icon-arrow-right,{
-    width: 21px;
-    position: relative;
-    left: 21px;
-    top: -3px;
-  }
   .hack-img:before {
     content: "";
     background: url({{'free-laptop.svg' | asset_url}}) no-repeat;
@@ -970,9 +969,6 @@ ul.baraja-container li {
     left: 271px;
     z-index: -1;
   }
-  // background: url("free-laptop.svg") no-repeat;
-  // background-position: 47.5% 80%;
-  // background-size: 606px;
   padding-top: 2.1rem;
 }
 /*==== End ====*/
@@ -1121,10 +1117,10 @@ ul.baraja-container li {
     height: 106px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3F4563',endColorstr='#4E7096' , GradientType=1);
     background-position: 0px 0;
-    height: 145px;
+    height: 79px;
     width: 100%;
     top: -43px;
-    transform: skewY(-2deg);
+    transform: skewY(-1deg);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 38%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 38%);
   }
@@ -1145,15 +1141,15 @@ ul.baraja-container li {
     bottom: -74px;
     -webkit-clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 53%, 100% 100%, 0 100%);
-    transform: skewY(-2deg);
+    transform: skewY(0.7deg);
   }
   .container{
-    transform: skewY(-2deg);
+    transform: skewY(-0.7deg);
   }
   background: linear-gradient(90deg, rgba(47, 52, 73, 1) 0%, rgba(47, 52, 73, 1) 10%, rgba(63, 69, 99, 1) 90%, rgba(63, 69, 99, 1) 100%);
   background-size: cover;
   top: 72px;
-  transform: skewY(2deg);
+  transform: skewY(0.7deg);
 }
 /*==== End ====*/
 /*==== Malware green bug section ====*/
@@ -1199,12 +1195,43 @@ ul.baraja-container li {
     margin: auto;
     display: none;
   }
+  &:before{
+    top: -16px;
+    transform: skewY(-1deg);
+  }
+  .bug-backgrounds{
+    &:before{
+      content: "";
+      position: absolute;
+      background: url({{'icon-bug-trail.svg' | asset_url}}) no-repeat;
+      height: 480px;
+      width: 440px;
+      right: 23%;
+      top: -60px;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      background: url({{'icon-worm.svg' | asset_url}}) no-repeat;
+      height: 120px;
+      width: 100px;
+      bottom: -55px;
+      left: 28%;
+    }
+  }
+  &:after{
+    
+    bottom: -21px;
+  }
+  .container{
+    transform: skewY(-1deg);
+  }
   background: url({{'number-bg.svg' | asset_url}}), #23e390;
-  transform: skewY(2deg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  top: 71px;
+  transform: skewY(0.7deg);
+  top: 37px;
   padding: 4rem 0;
   margin-bottom: 247px;
 }
@@ -1256,7 +1283,7 @@ ul.baraja-container li {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url({{'green-chevron-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
+    background: url({{'icon-green-caret-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
   select.blue-outline {
     border: 1px solid $blue;
@@ -1270,7 +1297,7 @@ ul.baraja-container li {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url({{'blue-chevron-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
+    background: url({{'icon-blue-caret-down_1.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
   .progress{
     height: rem(10);
@@ -2349,12 +2376,12 @@ ul.baraja-container li {
     width: 89px;
   }
 }
-
+.slide-up,
+.slide-down{
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
 .have-malware{
-  .slide-up,
-  .slide-down{
-    transition: all 1s ease 0s;
-  }
   .slide-down{
     margin-top: 0px;
     margin-bottom: -240px;
@@ -2370,10 +2397,6 @@ ul.baraja-container li {
   left: -117px;
 }
 .DDoS{
-  .slide-up,
-  .slide-down{
-    transition: all 1s ease 0s;
-  }
   .slide-down{
     margin-top: 0px;
     margin-bottom: -240px;
@@ -2390,10 +2413,6 @@ ul.baraja-container li {
   min-height:223px;
 }
 .hacked-solution{
-  .slide-up,
-  .slide-down{
-    transition: all 1s ease 0s;
-  }
   .slide-down{
     margin-top: 0px;
     margin-bottom: -240px;
@@ -2408,12 +2427,8 @@ ul.baraja-container li {
   top: -49px;
 }
 .high-cost{
-  .slide-up,
   .slide-down{
-    transition: all 1s ease 0s;
-  }
-  .slide-down{
-    margin-top: 0px;
+    margin-top: 38px;
     margin-bottom: -240px;
   }
   .move-up{

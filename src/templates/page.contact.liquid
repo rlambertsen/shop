@@ -155,7 +155,8 @@
         </div>
         <div class="tech-form hidden mt-3">
           <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Technical Support team</p>
-          <form action="#" class="free-malware-form needs-validation tech" novalidate>
+          <form class="free-malware-form needs-validation tech" novalidate>
+            <input type="hidden" value="Technical" name="FormType">
             <div class="form-group">
               <label for="ContactFormName" class="show-mobile-768">{{ 'contact.form.name' | t }}</label>
               <input type="text"
