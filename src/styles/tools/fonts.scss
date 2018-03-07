@@ -1070,6 +1070,7 @@ p {margin-bottom: 1.3rem;}
   font-family : 'Work Sans';
   font-size : rem(47);
   font-weight: 200;
+  line-height: 1.4;
 }
 .HeaderA-Level3{
   font-family : Work Sans;
@@ -1124,7 +1125,7 @@ p {margin-bottom: 1.3rem;}
 }
 .HeaderB-Level4{
   font-family : 'Montserrat';
-  font-weight : bold;
+  font-weight : 500;
   font-size : rem(26);
   letter-spacing : 1px;
 }
@@ -1205,6 +1206,9 @@ p {margin-bottom: 1.3rem;}
 .fs24{
   font-size: rem(24);
 }
+.fs25{
+  font-size: rem(25);
+}
 .fs26{
   font-size: rem(26)
 }
@@ -1262,5 +1266,8 @@ p {margin-bottom: 1.3rem;}
 }
 .lspN2{
   letter-spacing: -2px;
+}
+.lsp3{
+  letter-spacing: rem(3);
 }
 /*==== End ====*/

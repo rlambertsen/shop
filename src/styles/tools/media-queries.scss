@@ -50,6 +50,9 @@
   }
 }
 @media screen and (max-width: 1920px){
+  .malware-banner {
+    background: url(icon-malware-loop.svg) 0% 0 no-repeat,url(icon-malware-loop.svg) 14% 0 no-repeat,url(icon-malware-loop.svg) 88% 0 no-repeat,url(icon-malware-loop.svg) 100% 0 no-repeat,$red;
+  }
   .malware-bug .icon-worm {
     width: 96px;
     position: absolute;

@@ -14,6 +14,7 @@ $blue: #03A9F4;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
 $input-grey: rgba(207, 214, 218, 0.4);
+$offWhite: rgba(255, 255, 255, 0.34);
 /*======End Color vars========*/
 /*==== Base font sizing classes ====*/
 
@@ -120,7 +121,6 @@ a{
     color: $blue;
     text-decoration: none;
   }
-  padding-bottom: 3px;
   cursor: pointer;
   color: $blue;
 }
@@ -131,6 +131,11 @@ a.text-decoration-none:hover,
 a.text-decoration-none:active,
 a.text-decoration-none:visited{
   text-decoration: none;
+}
+a.text-decoration-underline:hover,
+a.text-decoration-underline:active,
+a.text-decoration-underline:visited{
+  text-decoration: underline;
 }
 /*==== End ====*/
 .z1{
@@ -399,10 +404,10 @@ ul.baraja-container li {
     background : linear-gradient(90deg, rgba(35, 227, 144, 1) 0%, rgba(35, 227, 144, 0.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23E390',endColorstr='#23E390' , GradientType=1);
     position: absolute;
-    height: 57px;
+    height: 38px;
     width: 100%;
     top: -23px;
-    transform: skewY(-1deg);
+    transform: skewY(-0.7deg);
     z-index: -1;
   }
   &:after{
@@ -416,27 +421,24 @@ ul.baraja-container li {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#23E390',endColorstr='#23E390' , GradientType=1);
     content: "";
     position: absolute;
-    height: 53px;
+    height: 40px;
     width: 100%;
-    bottom: -30px;
-    transform: skewY(-1deg);
+    bottom: -19px;
+    transform: skewY(-0.7deg);
     z-index: -1;
   }
   .container{
-    transform: skewY(-1deg);
+    transform: skewY(-0.7deg);
     padding-top: 45px;
     padding-bottom: 41px;
   }
   background: #23e390;
-  transform: skewY(1deg);
+  transform: skewY(0.7deg);
   background-repeat: no-repeat;
   position: relative;
   margin-top: 9px;
 }
 /*==== End ====*/
-.phoneNumber{
-  text-decoration: underline;
-}
 
 /*===== Chrome only styles =====*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -484,11 +486,11 @@ ul.baraja-container li {
 .inner-page-tabs{
   .nav-link{
     .icon{
-      width: 25px;
-      height: 25px;
+      width: 20px;
       vertical-align: middle;
       margin-right: 10px;
     }
+    letter-spacing: 0.5px;
     padding: rem(20) 0 rem(20) rem(20);
   }
   .nav-link.active:before {
@@ -588,16 +590,19 @@ ul.baraja-container li {
   list-style-image: url({{ 'icon-green-check.svg' |asset_url }});
 }
 .green-bg-check{
+  li{
+    margin: 40px 0 0;
+  }
   li:before{
     content: "";
     background: url({{'icon-green-check.svg' | asset_url}}) no-repeat;
-    height: 21px;
-    width: 16px;
+    height: 25px;
+    width: 25px;
     position: absolute;
-    left: -24px;
-    transform: scaleX(-1);
-    margin-top: -4px;
+    left: -14px;
   }
+
+  list-style: none;
   position: relative;
   margin-left: 19px;
 }
@@ -1254,6 +1259,14 @@ ul.baraja-container li {
 /**==== End ====/
 /*==== Price Box ====*/
 .price-box{
+  .green-bg-check{
+    li{
+      &:before{
+        left: -26px;
+      }
+      margin: 0;
+    }
+  }
   .dollar-sign{
     position: relative;
     top: -24px;
@@ -1552,7 +1565,7 @@ ul.baraja-container li {
       border-width: 14px;
       margin-left: -229px;
       transform: rotate(273deg);
-      top: 202px;
+      top: 170px;
     }
 
     position: absolute;
@@ -1562,8 +1575,8 @@ ul.baraja-container li {
     border-radius: 0.2rem 0.2rem 0.2rem 0rem;
     right: 507px;
     left: auto;
-    top: 39%;
-    height: 215px;
+    top: 43%;
+    height: 184px;
   }
   background: url({{'world-wide.svg' | asset_url}}) center center no-repeat;
   height: 649px;
@@ -2057,9 +2070,7 @@ ul.baraja-container li {
 }
 .footer{
   .site-logo{
-    position: relative;
-    left: 16px;
-    top: -6px;
+    left: 0;
   }
   .social-text{
     left: 46px;

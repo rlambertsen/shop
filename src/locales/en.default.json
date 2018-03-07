@@ -327,5 +327,18 @@
   },
   "support": {
     "title": "Support"
+  },
+  "site_links":{
+    "home": "/",
+    "benefits": "/pages/benefits",
+    "csoc": "/pages/expert-monitoring-assistance",
+    "cdn": "/pages/content-delivery-network",
+    "siem": "/pages/security-information-event-management-siem",
+    "waf": "/pages/web-application-firewall",
+    "contact": "/pages/contact",
+    "malware": "/pages/malware-removal",
+    "compare": "/pages/compare",
+    "support": "/pages/support",
+    "pricing": "/pages/pricing"
   }
 }

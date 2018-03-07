@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30.38" height="21.21" viewBox="0 0 30.38 21.21">
-  <title>icon-green-check</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Home_-_1200" data-name="Home - 1200">
-      <g id="Pricing">
-        <g id="Premium">
-          <g id="Big_Check" data-name="Big Check">
-            <polyline points="0.5 10.46 10.54 20.5 29.88 0.5" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-miterlimit: 10;fill-rule: evenodd"/>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg id="micro-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polyline class="green-stroke" points="2.65 9.88 7.67 14.89 17.34 4.89"/></svg>

@@ -26,6 +26,14 @@ a.white-text:hover{
   color: $white;
   text-decoration: underline;
 }
+a.white-link{
+  &:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+  }
+  color: #fff;
+}
 /*===== End ======*/
 /*==== Background colors ====*/
 .grey-background{

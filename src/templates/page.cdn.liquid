@@ -8,7 +8,7 @@
     </div>
   </div>
 </section>
-<div class="world-wide position-relative show-mobile-992">
+<section class="world-wide position-relative show-mobile-992">
   <div class="popup hidden">
     <div class="row">
       <div class="col-sm-7">
@@ -25,13 +25,13 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 <section>
   <div class="container text-center">
     <div class="row">
       <div class="col-sm-12">
-        <p class="mx-auto">It’s the most critical feature of the cWatch Web security stack. Since website performance and reliability can directly affect your organization’s branding, customer experience, competitve edge and profitability, the days of serving a site from one measly server are dead.</p>
-        <p class="mx-auto mt-4">Sites hosted from a single location lack capabilities, hackers see them as prime targets for DDoS attacks, bot attacks, content scraping, ransomware and more. Additionally, poor connectivity, bandwidth and reliability now adversely impact how search engines view and rank your website. Nowadays, every website needs a CDN—cWatch Web has your back.</p>
+        <p class="w-90 mx-auto lh-17">It’s the most critical feature of the cWatch Web security stack. Since website performance and reliability can directly affect your organization’s branding, customer experience, competitve edge and profitability, the days of serving a site from one measly server are dead.</p>
+        <p class="w-90 mx-auto lh-17 mt-4">Sites hosted from a single location lack capabilities, hackers see them as prime targets for DDoS attacks, bot attacks, content scraping, ransomware and more. Additionally, poor connectivity, bandwidth and reliability now adversely impact how search engines view and rank your website. Nowadays, every website needs a CDN—cWatch Web has your back.</p>
       </div>
     </div>
   </div>
@@ -40,16 +40,20 @@
   <div class="popup">
     <div class="row">
       <div class="col-sm-7">
-        <p class="mont font-weight-bold">PoP <br> Point of Presence</p>
+        <p class="mont font-weight-bold"><span class="fs25">PoP</span> <br> <span class="fs20">Point of Presence</span></p>
       </div>
       <div class="col-sm-5 text-center">
-        {% include 'icon-sm-shield' %}
-        {% include 'icon-sm-firewall' %}
+        <a href="{{'site_links.siem' | t}}">
+          {% include 'icon-sm-shield' %}
+        </a>
+        <a href="{{'site_links.waf' | t}}">
+          {% include 'icon-sm-firewall' %}
+        </a>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <p class="fs15">Each POP safeguard’s your site with the real-time visibility of  SIEM and the advanced firewall defense of WAF.</p>
+        <p class="fs15">Each POP safeguard’s your site with the real-time visibility of <a href="{{'site_links.siem' | t}}" class="border-bottom border-white white-link">SIEM</a> and the advanced firewall defense of <a href="{{'site_links.waf' | t}}" class="border-bottom border-white white-link">WAF</a>.</p>
       </div>
     </div>
   </div>
@@ -66,7 +70,7 @@
         <div class="nav flex-column nav-pills mont fs14 vert-tabs-green" id="cdn-tabs" role="tablist" aria-orientation="vertical">
           <a class="mb-2 nav-link active position-relative" id="v-pills-home-tab" data-toggle="pill" href="#Advanced" role="tab" aria-controls="Advanced" aria-selected="true">
             {% include 'icon-green-check' %} 
-            Experience the Power of a Global Cloud
+            Experience a Global Cloud
           </a>
           <a class="mb-2 nav-link position-relative" id="v-pills-profile-tab" data-toggle="pill" href="#Detection" role="tab" aria-controls="Detection" aria-selected="false">
             {% include 'icon-green-check' %} 
@@ -95,48 +99,48 @@
           <div class="tab-pane fade show active" id="Advanced" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Experience the Power of a Global Cloud</p>
-                <p>You’ll instantly tap into Comodo’s global network of 29 Points of Presence (PoP) and feel the power of this global cloud. These 29 edge servers ensure super-fast delivery and protect your origin server with ease. It’s not just about the number of PoPs, this network knows how to scale too.</p><p> In the cWatch Web control panel, there are the essential controls to reduce onboarding, provide transparency and actionable intelligence so you remain in complete control.</p>
+                <h2 class="HeaderB-Level4 mb-4">Experience the Power of a Global Cloud</h2>
+                <p class="lh-17">You’ll instantly tap into Comodo’s global network of 29 Points of Presence (PoP) and feel the power of this global cloud. These 29 edge servers ensure super-fast delivery and protect your origin server with ease. It’s not just about the number of PoPs, this network knows how to scale too.</p><p class="lh-17"> In the cWatch Web control panel, there are the essential controls to reduce onboarding, provide transparency and actionable intelligence so you remain in complete control.</p>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Detection" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Imporve Website Performance</p>
-                <p>Your users will thank you later. The CDN pushes all of your web assets to the high-speed edge servers so the content is closer to your users. It shaves seconds off of site load times. </p><p>The traffic-shaping logic and the wholly-owned routers ensure the fastest delivery route is always the top priority. There’s even peering agreements already in place with over 600 ISPs all over the world, the heavy-lifting is done. Enjoy</p>
+                <h2 class="HeaderB-Level4 mb-4">Imporve Website Performance</h2>
+                <p class="lh-17">Your users will thank you later. The CDN pushes all of your web assets to the high-speed edge servers so the content is closer to your users. It shaves seconds off of site load times. </p><p class="lh-17">The traffic-shaping logic and the wholly-owned routers ensure the fastest delivery route is always the top priority. There’s even peering agreements already in place with over 600 ISPs all over the world, the heavy-lifting is done. Enjoy</p>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Monitoring" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Thwart DDoS Attempts</p>
-                <p>cWatch Web’s scalable protection will stop the largest Distributed-Denial-of-Service attacks out there. </p><p>The low latency PoPs even have strategically placed sink holes to tame stubborn attacks if necessary. And of course, there’s Layer 3, 4, 5, 6, 7 protection to keep SYN floods and UDP floods in check at all times.</p>
+                <h2 class="HeaderB-Level4 mb-4">Thwart DDoS Attempts</h2>
+                <p class="lh-17">cWatch Web’s scalable protection will stop the largest Distributed-Denial-of-Service attacks out there. </p><p class="lh-17">The low latency PoPs even have strategically placed sink holes to tame stubborn attacks if necessary. And of course, there’s Layer 3, 4, 5, 6, 7 protection to keep SYN floods and UDP floods in check at all times.</p>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Website" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Increase Search Engine Ranking</p>
-                <p>Page speed is an extremely important ranking factor ever since Google announced it’s mobile-first indexing strategy. It quickly became a key success indicator for high SEO rankings.</p><p> Lucky for you, this CDN will instantly improve your page load speeds dramatically. By seconds. Think about it, you’ll be delivering content from a location that is closer to the user. It’s faster.</p>
+                <h2 class="HeaderB-Level4 mb-4">Increase Search Engine Ranking</h2>
+                <p class="lh-17">Page speed is an extremely important ranking factor ever since Google announced it’s mobile-first indexing strategy. It quickly became a key success indicator for high SEO rankings.</p><p class="lh-17"> Lucky for you, this CDN will instantly improve your page load speeds dramatically. By seconds. Think about it, you’ll be delivering content from a location that is closer to the user. It’s faster.</p>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="manage" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Enhance Website Security</p>
-                <p>Once you’re hooked in to the network, you get to piggy-back off all of the security in place everywhere. We’re talking continuous network scanning, like regular ping sweeps, port scans, vulnerability scans, etc.</p><p> Each PoP has things like automation and configuration management in place as a malware defense mechanism.</p>
+                <h2 class="HeaderB-Level4 mb-4">Enhance Website Security</h2>
+                <p class="lh-17">Once you’re hooked in to the network, you get to piggy-back off all of the security in place everywhere. We’re talking continuous network scanning, like regular ping sweeps, port scans, vulnerability scans, etc.</p><p class="lh-17"> Each PoP has things like automation and configuration management in place as a malware defense mechanism.</p>
               </div>
             </div>
           </div>
           <div class="tab-pane fade" id="Maintain" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="row">
               <div class="col-sm-12">
-                <p class="HeaderB-Level4">Maintain High Availability</p>
-                <p>By eliminating the risk of single point failure, you’ll be able to achieve and maintain high availability 24x7x365.</p><p> In other words, if your server or one of the CDN’s edge server goes down for any reason, the other Points of Presence can pick up the slack to ensure no application interruption on the user’s end. Ever.</p>
+                <h2 class="HeaderB-Level4 mb-4">Maintain High Availability</h2>
+                <p class="lh-17">By eliminating the risk of single point failure, you’ll be able to achieve and maintain high availability 24x7x365.</p><p class="lh-17"> In other words, if your server or one of the CDN’s edge server goes down for any reason, the other Points of Presence can pick up the slack to ensure no application interruption on the user’s end. Ever.</p>
               </div>
             </div>
           </div>
@@ -149,7 +153,7 @@
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <p class="HeaderA-Level2">With cWatch Web's Content Delivery Network (CDN), you will...</p>
+        <h2 class="HeaderA-Level2 mb-4">With cWatch Web's Content Delivery Network (CDN), you will...</h2>
       </div>
     </div>
     <div class="row">
@@ -166,8 +170,8 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Experience the Power of a Global Cloud</p>
-                <p>You’ll instantly tap into Comodo’s global network of 29 Points of Presence (PoP) and feel the power of this global cloud. These 29 edge servers ensure super-fast delivery and protect your origin server with ease. It’s not just about the number of PoPs, this network knows how to scale too.</p><p> In the cWatch Web control panel, there are the essential controls to reduce onboarding, provide transparency and actionable intelligence so you remain in complete control.</p>
+                <h2 class="HeaderB-Level4 mb-4">Experience the Power of a Global Cloud</h2>
+                <p class="lh-17">You’ll instantly tap into Comodo’s global network of 29 Points of Presence (PoP) and feel the power of this global cloud. These 29 edge servers ensure super-fast delivery and protect your origin server with ease. It’s not just about the number of PoPs, this network knows how to scale too.</p><p class="lh-17"> In the cWatch Web control panel, there are the essential controls to reduce onboarding, provide transparency and actionable intelligence so you remain in complete control.</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -179,8 +183,8 @@
             </div>
             <div class="carousel-item">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Imporve Website Performance</p>
-                <p>Your users will thank you later. The CDN pushes all of your web assets to the high-speed edge servers so the content is closer to your users. It shaves seconds off of site load times. </p><p>The traffic-shaping logic and the wholly-owned routers ensure the fastest delivery route is always the top priority. There’s even peering agreements already in place with over 600 ISPs all over the world, the heavy-lifting is done. Enjoy</p>
+                <h2 class="HeaderB-Level4 mb-4">Imporve Website Performance</h2>
+                <p class="lh-17">Your users will thank you later. The CDN pushes all of your web assets to the high-speed edge servers so the content is closer to your users. It shaves seconds off of site load times. </p><p class="lh-17">The traffic-shaping logic and the wholly-owned routers ensure the fastest delivery route is always the top priority. There’s even peering agreements already in place with over 600 ISPs all over the world, the heavy-lifting is done. Enjoy</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -192,8 +196,8 @@
             </div>
             <div class="carousel-item">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Thwart DDoS Attempts</p>
-                <p>cWatch Web’s scalable protection will stop the largest Distributed-Denial-of-Service attacks out there. </p><p>The low latency PoPs even have strategically placed sink holes to tame stubborn attacks if necessary. And of course, there’s Layer 3, 4, 5, 6, 7 protection to keep SYN floods and UDP floods in check at all times.</p>
+                <h2 class="HeaderB-Level4 mb-4">Thwart DDoS Attempts</h2>
+                <p class="lh-17">cWatch Web’s scalable protection will stop the largest Distributed-Denial-of-Service attacks out there. </p><p class="lh-17">The low latency PoPs even have strategically placed sink holes to tame stubborn attacks if necessary. And of course, there’s Layer 3, 4, 5, 6, 7 protection to keep SYN floods and UDP floods in check at all times.</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -205,8 +209,8 @@
             </div>
             <div class="carousel-item">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Increase Search Engine Ranking</p>
-                <p>Page speed is an extremely important ranking factor ever since Google announced it’s mobile-first indexing strategy. It quickly became a key success indicator for high SEO rankings.</p><p> Lucky for you, this CDN will instantly improve your page load speeds dramatically. By seconds. Think about it, you’ll be delivering content from a location that is closer to the user. It’s faster.</p>
+                <h2 class="HeaderB-Level4 mb-4">Increase Search Engine Ranking</h2>
+                <p class="lh-17">Page speed is an extremely important ranking factor ever since Google announced it’s mobile-first indexing strategy. It quickly became a key success indicator for high SEO rankings.</p><p class="lh-17"> Lucky for you, this CDN will instantly improve your page load speeds dramatically. By seconds. Think about it, you’ll be delivering content from a location that is closer to the user. It’s faster.</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -218,8 +222,8 @@
             </div>
             <div class="carousel-item">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Enhance Website Security</p>
-                <p>Once you’re hooked in to the network, you get to piggy-back off all of the security in place everywhere. We’re talking continuous network scanning, like regular ping sweeps, port scans, vulnerability scans, etc.</p><p> Each PoP has things like automation and configuration management in place as a malware defense mechanism.</p>
+                <h2 class="HeaderB-Level4 mb-4">Enhance Website Security</h2>
+                <p class="lh-17">Once you’re hooked in to the network, you get to piggy-back off all of the security in place everywhere. We’re talking continuous network scanning, like regular ping sweeps, port scans, vulnerability scans, etc.</p><p class="lh-17"> Each PoP has things like automation and configuration management in place as a malware defense mechanism.</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -231,8 +235,8 @@
             </div>
             <div class="carousel-item">
               <div class="slide-content text-center">
-                <p class="HeaderB-Level4">Maintain High Availability</p>
-                <p>By eliminating the risk of single point failure, you’ll be able to achieve and maintain high availability 24x7x365.</p><p> In other words, if your server or one of the CDN’s edge server goes down for any reason, the other Points of Presence can pick up the slack to ensure no application interruption on the user’s end. Ever.</p>
+                <h2 class="HeaderB-Level4 mb-4">Maintain High Availability</h2>
+                <p class="lh-17">By eliminating the risk of single point failure, you’ll be able to achieve and maintain high availability 24x7x365.</p><p class="lh-17"> In other words, if your server or one of the CDN’s edge server goes down for any reason, the other Points of Presence can pick up the slack to ensure no application interruption on the user’s end. Ever.</p>
                 <div class="row">
                   <div class="col-12">
                     <p class="blue-text m-0">NEXT</p>
@@ -252,7 +256,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <p class="fs47 work fw200">The Smarter Way to Serve Up Content</p>
+        <h2 class="fs47 work fw200 mb-4">The Smarter Way to Serve Up Content</h2>
         <p class="w-75 mx-auto pt-2">cWatch Web’s secure CDN utilizes cutting-edge cloud technologies and the latest hardware to accelerate the delivery of content (images, videos, CSS, etc...) to users much faster and more securely, no matter where they’re at in the world.</p>
       </div>
     </div>
@@ -275,7 +279,7 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <p class="HeaderB-Level4">How your new CDN will work...</p>
+        <h3 class="HeaderB-Level4 mb-4">How your new CDN will work...</h3>
         <p class="FirstFeatureParagraph">When a visitor attempts to access your site, the request is sent to a cached version of your site located on the geographically closest Point of Presence (PoP) on Comodo’s global network of 29 strategically placed PoPs or edge servers, drastically reducing latency, improving site speed and becoming your first layer of defense.</p>
         <p class="FirstFeatureParagraph">These edge servers boast almost unlimited bandwidth, making it easier to manage traffic spikes, minimize unplanned downtime and mitigate any DDoS attack thrown your way. Also, this boost in page load speeds has a tremendously positive impact on your SEO ratings.</p>
       </div>
@@ -283,18 +287,14 @@
         <div class="mt-4">
           {% include 'icon-download' %}
         </div>
-        <a href="tel:" class="">
-          <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
-          <p class="fs15">Download Now</p>
-        </a>
+        <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
+        <a href="tel:" class="fs15 text-decoration-underline">Download Now</a>
       </div>
       <div class="col-sm-12 text-center mt-3 show-mobile-992">
         <div class="drop-shadow p-3 br-4 w-75 mx-auto">
           {% include 'icon-download' %}
-          <a href="tel:" class="">
-            <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
-            <p class="fs15">Download Now</p>
-          </a>
+          <p class="FeatureText-Level3 mb-1 black-text">How a CDN Works (Infographic)</p>
+          <a href="tel:" class="fs15 text-decoration-underline">Donwload Now</a>
         </div>
       </div>
     </div>
@@ -304,12 +304,12 @@
   <div class="container px-2">
     <div class="row text-center">
       <div class="col-sm-12">
-        <p class="HeaderA-Level2 mt-2">The Performance benefits of cWatch Web include:</p>
+        <h2 class="HeaderA-Level2 mt-2">The Performance benefits of cWatch Web include:</h2>
       </div>
     </div>
     <div class="row mb-5">
       <div class="col-sm-5 offset-sm-1">
-        <ul class="green-check-plain HeaderB-Level5">
+        <ul class="green-bg-check HeaderB-Level5 fw500">
           <li>Imporved user Experience</li>
           <li>Better SEO Ranking</li>
           <li>Greater Webdsite Availability</li>
@@ -319,7 +319,7 @@
         </ul>
       </div>
       <div class="col-sm-6">
-        <ul class="green-check-plain HeaderB-Level5">
+        <ul class="green-bg-check HeaderB-Level5 fw500">
           <li>Minimized Unexpected Downtime</li>
           <li>DDoS Attack Prevention</li>
           <li>Reduced Bounce Rates</li>
@@ -336,7 +336,7 @@
     </div>
     <div class="row text-center chat-links">
       <div class="col-sm-6">
-        <a href="tel:" class="btn btn-success btn-rd btn-longer my-3 text-uppercase fs15">
+        <a href="tel:" class="btn btn-success btn-rd btn-longer my-3 text-uppercase fs15 right">
           see all service packages
           <span class="hide-mobile-992">
             {% include 'icon-arrow-right-white' %}
@@ -344,7 +344,7 @@
         </a>
       </div>
       <div class="col-sm-6">
-        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500">{% include 'icon-chat-dots' %} click to chat</a>
+        <a href="tel:" class="btn btn-outline-success btn-rd btn-longer my-3 mont fs15 text-uppercase fw500 left">{% include 'icon-chat-dots' %} click to chat</a>
       </div>
     </div>
     <div class="row text-center">
