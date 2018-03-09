@@ -79,7 +79,7 @@
 /*=== End ===*/
 //shadows
 .drop-shadow{
-  @include prefix(box-shadow, 0px 0px 14px rgba(55,62,90,0.2), webkit moz ms o spec);
+  @include prefix(box-shadow, 0px 0px 14px rgba(55,62,90,0.2), webkit ms spec);
 }
 .drop-shadow-sides{
   box-shadow:10px 0px 10px -7px rgba(0,0,0,0.23), -10px 0px 10px -7px rgba(0,0,0,0.23);

@@ -373,21 +373,16 @@ $(function() {
   });
   /*==== End ====*/
   /*==== Tooltip / Popover  ====*/
-  $('.tool-tip').popover({
-    container: 'body'
-  });
-  $('body').popover({
-    trigger: 'focus'
-  });
+  // $('.tool-tip').popover({
+  //   container: 'body'
+  // });
+  $('[data-toggle="tooltip"]').tooltip()
+  // $('body').popover({
+  //   trigger: 'focus'
+  // });
   /*==== End ====*/
 
-  /*==== Price page collapse event binds ====*/
-  $('.icon-green-plus').click(function (e) {
-    $('svg use').attr('xlink:href', function(i,attr){
-      return attr == '#plus' ? '#minus': '#plus';
-    });
-  });
-  /*==== End ====*/
+  
   /*==== Pricing page sticky prices mnenu ====*/
   if (window.location.pathname === '/pages/pricing'){
     var windowSize = window.innerWidth;
@@ -754,5 +749,12 @@ $(function() {
     e.preventDefault();
     $(this).parents('.page-hero').hide().siblings().show();
   })
-    
+
+  //pricing hover on click
+  $('[aria-controls="clean"]').click(function(){
+    $(this).toggleClass('accent-grey1-background row-box-shadow');
+    $('svg use').attr('xlink:href', function(i,attr){
+      return attr == '#plus' ? '#minus': '#plus';
+    });
+  });
 });

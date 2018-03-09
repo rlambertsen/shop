@@ -104,6 +104,14 @@ label{
 .dropdown-item{
   padding: 10px 30px;
 }
+.tooltip-inner{
+  background-color: $grey;
+  color: inherit;
+  box-shadow: 0px 0px 14px rgba(55,62,90,0.2);
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+  border-top-color: $grey;
+}
 /*==== End ====*/
 
 
@@ -166,15 +174,16 @@ Above should be modifer classes only (fonts, colors, sizing etc)
 /*==== MAIN HEADER Drop down styles====*/
 .nav-item{
   .dropdown-menu{
-    @include prefix(border, none, webkit moz ms o spec);
-    @include prefix(box-shadow, 0px 0px 26px 0px rgba(189,189,189,1), webkit moz ms o spec);
-    @include prefix(margin-top, 46px, webkit moz ms o spec);
-    @include prefix(opacity, 0, webkit moz ms o spec);
-    @include prefix(animation, dropdown 0.2s ease-out forwards, webkit moz ms o spec);
+    border: none;
+    @include prefix(box-shadow, 0px 0px 26px 0px rgba(189,189,189,1), webkit spec);
+    margin-top: 46px;
+    opacity: 0;
+    animation: dropdown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: margin, opacity;
   }
   .dropdown-menu.show{
-    @include prefix(margin-top, 0, webkit moz ms o spec);
-    @include prefix(opacity, 1, webkit moz ms o spec);
+    margin-top: 0;
+    opacity: 1;
   }
   .dropdown-menu:before {
     @include prefix(bottom, 100%, webkit moz ms o spec);
@@ -1315,8 +1324,14 @@ ul.baraja-container li {
   .progress{
     height: rem(10);
   }
-  //border: 1px solid #edf0f3;
-  //border-radius: rem(4);
+  .green-bg-check--smaller{
+    li:before{
+      height: 10px;
+      width: 10px;
+      left: -14px;
+      margin-top: 8px;
+    }
+  }
   padding: rem(30) rem(40);
   display: flex;
   flex-direction: column;
@@ -1621,8 +1636,7 @@ ul.baraja-container li {
     padding-right: 4px;
   }
   .icon-green-check {
-    width: 16px;
-    margin-right: 9px;
+    width: 25px;
   }
   .price-box{
     padding: rem(30) rem(40);
@@ -1630,7 +1644,8 @@ ul.baraja-container li {
   .icon-green-plus{
     width: 18px;
     vertical-align: middle;
-    height: 22px;
+    height: 18px;
+    margin: 10px 10px 12px 0;
   }
   .icon-question{
     width: 18px;
@@ -1640,6 +1655,9 @@ ul.baraja-container li {
       margin-right: 0;
       margin-left: 21px;
     }
+  }
+  .progress {
+    height: 0.4rem;
   }
 }
 .price-block-mobile{
@@ -1673,12 +1691,13 @@ ul.baraja-container li {
     margin-right: 10px;
   }
   .icon-green-check{
-    width: 18px;
+    width: 25px;
     vertical-align: super;
     margin-left: 18px;
   }
   .icon-question{
     width: 18px;
+    vertical-align: middle;
   }
 }
 .product-features-mobile{
@@ -2451,6 +2470,12 @@ ul.baraja-container li {
   }
   top: -53px;
   min-height: 190px;
+}
+.row-hover:hover{
+  background-color: $accent-grey1;
+}
+.row-box-shadow{
+  @include prefix(box-shadow, 0px 18px 18px -18px rgba(0,0,0,0.75), spec webkit);
 }
 @import url('tools/icon_enhance_animated.scss');
 @import url('tools/icon_protect_animated.scss');
