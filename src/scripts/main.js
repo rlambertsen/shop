@@ -255,7 +255,46 @@ function cartUpdate(lineId, cartUL){
     }
   });
 }
+function getStuff(form){
+  $.ajax({
+    type: "GET", 
+    url: 'https://sandboxapi.cwatchstore.com/api/token/Get', 
+    data: stuff,                 
+      contentType: 'JSON' 
+  }).then(function (response) {
+      window.localStorage.setItem('string', response);
+      sendForm(form);
+  }).fail(function (err)  {
+      //do noting
+  });
+}
+function sendForm(form){
+  $.ajax({
+    type: "POST", 
+    url: 'https://sandboxapi.cwatchstore.com/api/contactform/post',
+    data: $(form).serialize(),
+    headers: {
+      'Authorization': 'Bearer '+ localStorage.getItem('string')
+    } 
+  }).done(function(xhr, data, textStatus){
+    if (xhr === true){
+      $(form).trigger("reset")
+      $(form).find('.btn').attr('disabled', true);
+      $(form).addClass('hidden');
+      $('.success-form').removeClass('hidden');
+    }
+  }).fail(function(xhr, data, textStatus){
+    if (xhr.status === 401){
+      $(form).addClass('hidden');
+      $('.server-error').removeClass('hidden');
+    }
+  })
+}
 /*==== End ====*/
+var stuff = {
+  username: 'menefrEs7$sta85atrerubras',
+  password: '$utr?qebutUref3crax2m*qax'
+} 
 /*==== Document Ready only below ====*/
 $(function() {
   $('#preview-bar-iframe').remove();
@@ -382,7 +421,18 @@ $(function() {
   // });
   /*==== End ====*/
 
-  
+  if (window.location.pathname === '/pages/contact' || window.location.pathname === 'pages/malware-removal'){
+    $.ajax({
+      type: "GET", 
+      url: 'https://sandboxapi.cwatchstore.com/api/token/Get', 
+      data: stuff,                 
+        contentType: 'JSON' 
+    }).then(function (response) {
+        window.localStorage.setItem('string', response);
+    }).fail(function (err)  {
+        //do noting
+    });
+  }
   /*==== Pricing page sticky prices mnenu ====*/
   if (window.location.pathname === '/pages/pricing'){
     var windowSize = window.innerWidth;
@@ -675,6 +725,7 @@ $(function() {
   /*==== contact us blue box ====*/ 
   $('.form-type-select').click(function(){
     $this = $(this);
+    $('.success-form').addClass('hidden');
     if ($this.hasClass('blue-background')){
       //nothing
     } else{
@@ -729,17 +780,33 @@ $(function() {
           event.preventDefault();
           event.stopPropagation();
           $('.checkbox-error').show();
+          form.classList.add('was-validated');
         }
         if (form.checkValidity() === true && $('[type="checkbox"]').is(':checked')){
           event.preventDefault();
           event.stopPropagation();
           $('.checkbox-error').hide();
-          var formData = $(form).serialize();
-          $.post('https://sandboxapi.cwatchstore.com/api/contactform/post', formData).then(function(response){
-            console.log(response)
+          $.ajax({
+            type: "POST", 
+            url: 'https://sandboxapi.cwatchstore.com/api/contactform/post',
+            data: $(form).serialize(),
+            headers: {
+              'Authorization': 'Bearer '+ localStorage.getItem('string')
+            } 
+          }).done(function(xhr, data, textStatus){
+            if (xhr === true){
+              $(form).trigger("reset")
+              $(form).find('.btn').attr('disabled', true);
+              $(form).addClass('hidden');
+              $('.success-form').removeClass('hidden');
+            }
+          }).fail(function(xhr, data, textStatus){
+            if (xhr.status === 401){
+              getStuff(form);
+            }
           })
         }
-        form.classList.add('was-validated');
+        
       }, false);
     });
   }, false);
