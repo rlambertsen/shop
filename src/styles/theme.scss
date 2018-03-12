@@ -2484,4 +2484,37 @@ ul.baraja-container li {
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss'); 
 
-
+.popover{
+  .popover-header{
+    padding: .5rem .75rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: #f7f7f7;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    border: none;
+  }
+  .popover-body{
+    font-family: "lato";
+    font-size: 14px;
+    letter-spacing: 0.14px;
+    background-color: #f7f7f7;
+  }
+  box-shadow: 0px 0px 14px rgba(55,62,90,0.2);
+  font-family: inherit;
+  border: none;
+}
+.popover.bs-popover-auto[x-placement^=top] .arrow::before, .popover.bs-popover-top .arrow::before {
+  bottom: -.8rem;
+  margin-left: -.8rem;
+  border-top-color: rgba(0,0,0,0);
+}
+.popover.bs-popover-auto[x-placement^=top] .arrow::after, .popover.bs-popover-top .arrow::after {
+  bottom: calc((.8rem - 1px) * -1);
+  margin-left: -.8rem;
+  border-top-color: #f7f7f7;
+}

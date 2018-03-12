@@ -412,13 +412,12 @@ $(function() {
   });
   /*==== End ====*/
   /*==== Tooltip / Popover  ====*/
-  // $('.tool-tip').popover({
-  //   container: 'body'
-  // });
-  $('[data-toggle="tooltip"]').tooltip()
-  // $('body').popover({
-  //   trigger: 'focus'
-  // });
+  $('.tool-tip').popover({
+    container: 'body'
+  });
+  $('body').popover({
+    trigger: 'focus'
+  });
   /*==== End ====*/
 
   if (window.location.pathname === '/pages/contact' || window.location.pathname === 'pages/malware-removal'){
