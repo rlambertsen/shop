@@ -534,8 +534,8 @@ $(function() {
       $('.how-it-works-numbers').find('.green-circle').removeClass('green-circle').addClass('grey-circle');
       $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-circle').removeClass('grey-circle');
     } else {
-      $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('grey-text');
-      $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('grey-text');
+      $('.how-it-works-numbers').find('.green-text').removeClass('green-text').addClass('blue-text');
+      $('.how-it-works-numbers').find('[data-step="'+next+'"]').addClass('green-text').removeClass('blue-text');
     }
   });
   $('.show-mobile-992 div').click(function(e){
@@ -543,14 +543,17 @@ $(function() {
       var number = $(this).data('step') - 1;
       $('#how-it-works').carousel(number);  
     }
-    
+  });
+  $('.hide-mobile-992 span').click(function(e){
+    if ($(this).attr('data-step')){
+      var number = $(this).data('step') - 1;
+      $('#how-it-works').carousel(number);  
+    }
   });
   $('.icon-green-circle-arrow-left').click(function(e){
-    $this = $(this);
     $('#how-it-works').carousel('prev');
   });
   $('.icon-green-circle-arrow-right').click(function(e){
-    $this = $(this);
     $('#how-it-works').carousel('next');
   });
 

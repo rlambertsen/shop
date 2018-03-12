@@ -10,6 +10,7 @@ $grey: #EDF0F3;
 $grey60: rgba(150, 156, 156, 0.6);
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
+$grey-50: rgba(237, 240, 243, 0.50);
 $blue: #03A9F4;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
@@ -64,8 +65,13 @@ body{
   padding-left: 50px;
   padding-right: 50px;
 }
-select.form-control:not([size]):not([multiple]) {
-  height: initial;
+#compare{
+  #MainContent{
+    .container{
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
 }
 .dropdown-toggle::after{
   display: none;
@@ -95,8 +101,20 @@ a:hover{
   cursor: pointer;
 }
 .form-control{
-  background-color: #edf0f36e;
+  background-color: $grey-50;
   border-color: rgba(207,214,218,0.5);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-weight: 300;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-weight: 300;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-weight: 300;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-weight: 300;
 }
 label{
   color: $grey-accent;
@@ -306,7 +324,7 @@ Plugin css
 .green-check-before{
   &:before{
     content: "";
-    background: url('icon-green-check.svg') no-repeat;
+    background: url({{'icon-green-check.svg' | asset_url}}) no-repeat;
     height: 20px;
     width: 30px;
     left: -51px;
@@ -320,7 +338,7 @@ Plugin css
 .blue-check-before{
   &:before{
     content: "";
-    background: url('icon-blue-check.svg') no-repeat;
+    background: url({{'icon-blue-check.svg' | asset_url}}) no-repeat;
     height: 20px;
     width: 30px;
     left: -51px;
@@ -647,6 +665,7 @@ ul.baraja-container li {
   background-color: #eee;
   top: 0;
   left: -42px;
+  border-radius: 0.15rem;
 }
 
 /* On mouse-over, add a grey background color */
@@ -678,7 +697,7 @@ ul.baraja-container li {
   width: 5px;
   height: 10px;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -702,6 +721,12 @@ ul.baraja-container li {
   left: 24px;
   z-index: 10;
 }
+#malware-removal,
+#compare{
+  .breadcrumbs{
+    top: 0;
+  }
+}
 /*==== End ====*/
 
 
@@ -711,7 +736,7 @@ ul.baraja-container li {
 .site-logo{
   width: 262px;
   position: relative;
-  left: 20px;
+  //left: 20px;
 }
 .search-desktop{
   position: relative;
@@ -1164,6 +1189,12 @@ ul.baraja-container li {
   background-size: cover;
   top: 72px;
   transform: skewY(0.7deg);
+}
+#about-us{
+  .counting-numbers:after{
+    height: 105px;
+    bottom: -34px;
+  }
 }
 /*==== End ====*/
 /*==== Malware green bug section ====*/
@@ -1682,10 +1713,13 @@ ul.baraja-container li {
 }
 /*==== Product features ====*/
 .product-features{
-  .icon-shield-green,
-  .icon-green-guy,
-  .icon-green-fire-wall,
-  .icon-green-cloud{
+  .icon-siem-sm,
+  .icon-csoc-sm,
+  .icon-waf-sm,
+  .icon-cdn-sm{
+    path{
+      fill: $success-green;
+    }
     width: 39px;
     vertical-align: middle;
     margin-right: 10px;
@@ -1693,11 +1727,19 @@ ul.baraja-container li {
   .icon-green-check{
     width: 25px;
     vertical-align: super;
-    margin-left: 18px;
+    margin-left: 23px;
   }
   .icon-question{
     width: 18px;
     vertical-align: middle;
+  }
+  .dollar-sign{
+    position: relative;
+    top: -24px;
+  }
+  .cents{
+    position: relative;
+    top: -30px;
   }
 }
 .product-features-mobile{
@@ -1715,6 +1757,14 @@ ul.baraja-container li {
 /*==== End ====*/
 /*==== sticky price menu ====*/
 .sticky-prices{
+  .dollar-sign{
+    position: relative;
+    top: -24px;
+  }
+  .cents{
+    position: relative;
+    top: -30px;
+  }
   background-color: #fff;
 }
 /*==== End ====*/
@@ -1792,7 +1842,9 @@ ul.baraja-container li {
   .icon{
     width: 50px;
     height: 50px;
-    fill: $blue;
+    path{
+      fill: $blue;
+    }
   }
 }
 .show-grey{
@@ -1981,7 +2033,16 @@ ul.baraja-container li {
     width: 12px;
     vertical-align: middle;
   }
+  .green-gradients{
+    .container{
+      padding-top: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  padding: 4.4rem 0;
 }
+  
 .malware-removal > .container{
   > .row{
     &:before,&:after{
@@ -1989,19 +2050,19 @@ ul.baraja-container li {
       position: absolute;
     }
     &:before{
-      background: url({{'icon-fishing.svg' | asset_url}}) no-repeat;
+      background: url({{'icon-phishing.svg' | asset_url}}) no-repeat;
       width: 480px;
       height: 300px;
       z-index: 1;
-      top: -54px;
-      left: 160px;
+      top: -50px;
+      left: 145px;
     }
     &:after{
       background: url({{'icon-clear-crap.svg' | asset_url}}) no-repeat;
       width: 480px;
       height: 300px;
       z-index: 1;
-      bottom: -81px;
+      bottom: -30px;
     }
     > .col-lg-12{
       &:before,&:after{
@@ -2024,7 +2085,6 @@ ul.baraja-container li {
       }
     }
   }
-    
   &:before,&:after{
     content: "";
     position: absolute;
@@ -2033,14 +2093,15 @@ ul.baraja-container li {
     background: url({{'icon-fly-bugs.svg' | asset_url}}) no-repeat;
     width: 480px;
     height: 300px;
-    left: -730px;
+    left: -471px;
+    top: 62px;
   }
   &:after{
     background: url({{'icon-bug-trail.svg' | asset_url}}) no-repeat;
     width: 463px;
     height: 500px;
-    right: -70px;
-    top: 0px;
+    right: -76px;
+    top: 31px;
   }
   .icon-sm-worm{
     bottom: 23%;
@@ -2067,6 +2128,16 @@ ul.baraja-container li {
       height: 25px;
       vertical-align: middle;
       margin-right: 10px;
+    }
+    .green-check-before{
+      &:before{
+        height: 15px;
+        width: 15px;
+        left: -51px;
+        position: absolute;
+        top: 5px;
+      }
+      position: relative;
     }
     .icon-green-line{
       max-width: 210px;
@@ -2243,8 +2314,11 @@ ul.baraja-container li {
   .sales-form,
   .tech-form{
     .icon-chat-set-sm,
-    .icon-blue-chat-dots,
-    .icon-blue-mail{
+    .icon-chat-dots,
+    .icon-mail{
+      path{
+        fill: $blue;
+      }
       width: 20px;
       height: inherit;
       vertical-align: middle;
@@ -2335,15 +2409,25 @@ ul.baraja-container li {
     top: -12px;
     position: relative;
   }
-  .icon-green-bug-single,
-  .icon-blue-protect-shield,
-  .icon-blue-fire-wall,
-  .icon-blue-person,
-  .icon-blue-cloud{
+  .icon-green-bug-single{
     width: 40px;
     vertical-align: middle;
     height: 40px;
   }
+  .icon-siem-sm,
+  .icon-waf-sm,
+  .icon-cdn-sm,
+  .icon-csoc-sm{
+    path{
+      fill: $blue;
+    }
+    width: 40px;
+    vertical-align: middle;
+    height: 40px;
+  }
+}
+.other-price{
+  font-weight: 600;
 }
 .compare-mobile{
   .circle{
@@ -2486,12 +2570,7 @@ ul.baraja-container li {
 
 .popover{
   .popover-header{
-    padding: .5rem .75rem;
-    margin-bottom: 0;
-    color: inherit;
-    background-color: #f7f7f7;
-    border-top-left-radius: calc(.3rem - 1px);
-    border-top-right-radius: calc(.3rem - 1px);
+    background-color: #dcdcdc;
     font-family: "Montserrat";
     font-weight: bold;
     font-size: 15px;
@@ -2502,19 +2581,15 @@ ul.baraja-container li {
     font-family: "lato";
     font-size: 14px;
     letter-spacing: 0.14px;
-    background-color: #f7f7f7;
+    background-color: #dcdcdc;
   }
   box-shadow: 0px 0px 14px rgba(55,62,90,0.2);
   font-family: inherit;
   border: none;
 }
-.popover.bs-popover-auto[x-placement^=top] .arrow::before, .popover.bs-popover-top .arrow::before {
-  bottom: -.8rem;
-  margin-left: -.8rem;
-  border-top-color: rgba(0,0,0,0);
+.popover.bs-popover-auto[x-placement^=right] .arrow::before, .popover.bs-popover-right .arrow::before {
+  border-right-color: rgba(0,0,0,0);
 }
-.popover.bs-popover-auto[x-placement^=top] .arrow::after, .popover.bs-popover-top .arrow::after {
-  bottom: calc((.8rem - 1px) * -1);
-  margin-left: -.8rem;
-  border-top-color: #f7f7f7;
+.popover.bs-popover-auto[x-placement^=right] .arrow::after, .popover.bs-popover-right .arrow::after {
+  border-right-color: #dcdcdc;
 }

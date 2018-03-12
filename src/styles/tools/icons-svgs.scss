@@ -112,20 +112,20 @@ g {
 /*==== Icons in BTNS ====*/
 .btn{
   .icon{
-    vertical-align: middle;
+    vertical-align: sub;
   }
   .icon-arrow-right-white{
-    width: 19px;
+    width: 20px;
     margin-left: 11px;
     transform: rotateY(180deg);
     margin-top: -4px;
   }
   .icon-chat-dots{
     margin-right: 11px;
-    width: 19px;
+    width: 20px;
   }
   .icon-mail{
-    width: 19px;
+    width: 20px;
     margin-right: 11px;
   }
 }

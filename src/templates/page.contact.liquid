@@ -14,29 +14,25 @@
       <div class="col-lg-4 offset-lg-2">
         <div class="border-top border-bottom border-left border-right border-grey-light br-4 p-3 pointer form-type-select blue-background white-text form-group" data-type="sales">
           <div class="show-grey hidden mb-4">
-            {% include 'icon-grey-headset' %}
-            {% include 'icon-no-check' %}
+            {% include 'icon-grey-headset' %} 
           </div>
           <div class="show-white  mb-4">
             {% include 'icon-white-headset' %}
-            {% include 'icon-blue-check-bg' %}
           </div>
-          <h2 class="HeaderB-Level5 fs20">Sales Support</h2>
-          <p class="fs14">Click here for general sales, pricing or product specifications. Our representatives are standing by.</p>
+          <h2 class="HeaderB-Level5 fs20 fw500">Sales Support</h2>
+          <p class="fs16">Click here for general sales, pricing or product specifications. Our representatives are standing by.</p>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="border-top border-bottom border-left border-right border-grey-light br-4 p-3 pointer form-type-select" data-type="tech">
           <div class="show-grey mb-4">
             {% include 'icon-gears-sm' %}
-            {% include 'icon-no-check' %}
           </div>
           <div class="show-white hidden mb-4">
             {% include 'icon-gears-sm' %}
-            {% include 'icon-blue-check-bg' %}
           </div>
-          <h2 class="HeaderB-Level5 fs20">Technical Support</h2>
-          <p class="fs14">Click here if you need technical assistance. Please have your account or order number ready to help us assist you.</p>
+          <h2 class="HeaderB-Level5 fs20 fw500">Technical Support</h2>
+          <p class="fs16">Click here if you need technical assistance. Please have your account or order number ready.</p>
         </div>
       </div>
     </div>
@@ -44,19 +40,19 @@
       <div class="col-md-6">
         <div class="sales-form">
           <p class="HeaderA-Level3">Sales Support</p>
-          <p class="HeaderB-Level4 w-75">Meeting all your website security needs today and into the future.</p>
-          <p class="fs17">Have questions about our product features and benefits, reseller opportunities, billing, finance or general sales questions?  Need help determining which pricing package is right for you?  Contact us today... our 24/7 Customer Experience Specialists are standing by ready to assist you.</p>
-          <p class="pl-3 mb-2">{% include 'icon-chat-set-sm' %} <a href="{{'phone.link' | t}}" class="HeaderA-Level4 blue-text">{{'phone.number' | t}}</a></p>
-          <p class="pl-3 mb-2">{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
-          <p class="pl-3 mb-2">{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+          <p class="mont fs26 fw600 w-75">Meeting all your website security needs today and into the future.</p>
+          <p class="fs17 w-85">Have questions about our product features and benefits, reseller opportunities, billing, finance or general sales questions?  Need help determining which pricing package is right for you?  Contact us today... our 24/7 Customer Experience Specialists are standing by ready to assist you.</p>
+          <p class="mb-2">{% include 'icon-chat-set-sm' %} <a href="{{'phone.link' | t}}" class="HeaderA-Level4 blue-text fw600">{{'phone.number' | t}}</a></p>
+          <p class="mb-2">{% include 'icon-chat-dots' %} <a href="tel:" class="lato fs20 fw400 border-hover--blue">Chat with Sales Support</a></p>
+          <p class="mb-2">{% include 'icon-mail' %}<a href="mailto:" class="lato fs20 fw400 border-hover--blue">Email Us</a></p>
         </div>
         <div class="tech-form hidden">
           <p class="HeaderA-Level3">Technical Support</p>
-          <p class="HeaderB-Level4 w-75">Leave web security to the pros. Focus on your business.</p>
-          <p class="fs17">Our dedicated Support team is available 24/7 to resolve any issues you may have with setup, management, dashboard tuning or to answer any general technical questions you may have. We strive to make your experience with cWatch Web a pleasant one.</p>
-          <p class="pl-3 mb-2">{% include 'icon-chat-set-sm' %} <a href="{{'phone.link' | t}}" class="HeaderA-Level4 blue-text">{{'phone.number' | t}}</a></p>
-          <p class="pl-3 mb-2">{% include 'icon-blue-chat-dots' %} <a href="tel:" class="HeaderA-Level4">Chat with Sales Support</a></p>
-          <p class="pl-3 mb-2">{% include 'icon-blue-mail' %}<a href="mailto:" class="HeaderA-Level4">Email Us</a></p>
+          <p class="mont fs26 fw600 w-75">Leave web security to the pros. Focus on your business.</p>
+          <p class="fs17 w-85">Our dedicated Support team is available 24/7 to resolve any issues you may have with setup, management, dashboard tuning or to answer any general technical questions you may have. We strive to make your experience with cWatch Web a pleasant one.</p>
+          <p class="mb-2">{% include 'icon-chat-set-sm' %} <a href="{{'phone.link' | t}}" class="HeaderA-Level4 blue-text fw600">{{'phone.number' | t}}</a></p>
+          <p class="mb-2">{% include 'icon-chat-dots' %} <a href="tel:" class="lato fs20 fw400 border-hover--blue">Chat with Sales Support</a></p>
+          <p class="mb-2">{% include 'icon-mail' %}<a href="mailto:" class="lato fs20 fw400 border-hover--blue">Email Us</a></p>
           <hr>
           <div class="row">
             <div class="col-sm-4 text-center">
@@ -70,7 +66,7 @@
       </div>
       <div class="col-md-6">
         <div class="sales-form mt-3">
-          <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Sales Support team</p>
+          <p class="fs17 grey-text w-75 mx-auto text-center fw300 font-italic">Please use the form below to submit a message to our Sales Support team</p>
           <div class="hidden success-form mt-5 text-center">
             <h2 class="HeaderB-Level4">Thank you for contacting us, we will be in touch shortly!</h2>
           </div>
@@ -160,7 +156,7 @@
           </form>
         </div>
         <div class="tech-form hidden mt-3">
-          <p class="fs17 grey-text w-75 mx-auto text-center">Please use the form below to submit a message to our Technical Support team</p>
+          <p class="fs17 grey-text w-75 mx-auto text-center fw300 font-italic" >Please use the form below to submit a message to our Technical Support team</p>
           <div class="hidden server-error mt-5 text-center">
             <h2 class="HeaderB-Level4">Oh no! There must something wrong on our end, please give us a call instead!</h2>
           </div>
