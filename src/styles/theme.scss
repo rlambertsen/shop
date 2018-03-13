@@ -2,16 +2,20 @@
 /*===== Colors vars======*/
 $red: #C41230;
 $white: #fff;
-$darkish-blue: #373E5A;
+//$darkish-blue: #373E5A;
+$darkish-blue: #444452;
 $grey-accent: #969C9C;
-$success-green: #1FC469;
+//$success-green: #1FC469;
+$success-green: #22A364;
 $medium-blue: #3f4563;
 $grey: #EDF0F3;
 $grey60: rgba(150, 156, 156, 0.6);
 $light-grey: rgba(237, 240, 243, 0.22);
 $grey-40: rgba(237, 240, 243, 0.40);
 $grey-50: rgba(237, 240, 243, 0.50);
-$blue: #03A9F4;
+//$blue: #03A9F4;
+$blue: #1976CC;
+$light-blue: #6EC0FF;
 $accent-grey1: rgba(209, 213, 219, 0.15);
 $green: #23e390;
 $input-grey: rgba(207, 214, 218, 0.4);
@@ -722,7 +726,9 @@ ul.baraja-container li {
   z-index: 10;
 }
 #malware-removal,
-#compare{
+#compare,
+#contact,
+#support{
   .breadcrumbs{
     top: 0;
   }
@@ -1338,6 +1344,13 @@ ul.baraja-container li {
     appearance: none;
     background: url({{'icon-green-caret-down.svg' | asset_url}}) 94%/7% no-repeat #fff;
   }
+  select.light-blue-outline {
+    border: 1px solid $light-blue;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url({{'icon-light-blue-caret.svg' | asset_url}}) 94%/7% no-repeat #fff;
+  }
   select.blue-outline {
     border: 1px solid $blue;
     -webkit-appearance: none;
@@ -1718,7 +1731,7 @@ ul.baraja-container li {
   .icon-waf-sm,
   .icon-cdn-sm{
     path{
-      fill: $success-green;
+      fill: $blue;
     }
     width: 39px;
     vertical-align: middle;
@@ -1733,6 +1746,16 @@ ul.baraja-container li {
     width: 18px;
     vertical-align: middle;
   }
+  .dollar-sign{
+    position: relative;
+    top: -24px;
+  }
+  .cents{
+    position: relative;
+    top: -30px;
+  }
+}
+.buy-now-btns{
   .dollar-sign{
     position: relative;
     top: -24px;
@@ -2054,7 +2077,7 @@ ul.baraja-container li {
       width: 480px;
       height: 300px;
       z-index: 1;
-      top: -50px;
+      top: -12px;
       left: 145px;
     }
     &:after{
@@ -2290,6 +2313,8 @@ ul.baraja-container li {
 }
 /*==== Free malware form ====*/
 .free-malware-form{
+  position: relative;
+  z-index: 1021;
   .form-control:focus label{
     color: $blue;
   }
@@ -2477,12 +2502,15 @@ ul.baraja-container li {
 }
 #support{
   .icon-chat-set-sm,
-  .icon-blue-chat-dots,
-  .icon-blue-mail{
+  .icon-chat-dots,
+  .icon-mail{
+    path{
+      fill: $blue;
+    }
     width: 20px;
     margin-right: 10px;
     height: 20px;
-    vertical-align: text-top;
+    vertical-align: middle;
   }
 }
 .site-cdn{
@@ -2567,7 +2595,15 @@ ul.baraja-container li {
 @import url('tools/icon_detect_animated.scss');  
 /*==== Site wide media quieries ====*/
 @import url('tools/media-queries.scss'); 
-
+.faq-select{
+  text-align-last: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(icon-light-blue-caret.svg) 94%/4% no-repeat #fff;
+  font-size: 30px;
+  padding: 11px 0;
+  height: auto !important;
+}
 .popover{
   .popover-header{
     background-color: #dcdcdc;

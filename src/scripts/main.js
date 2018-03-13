@@ -282,6 +282,7 @@ function sendForm(form){
       $(form).find('.btn').attr('disabled', true);
       $(form).addClass('hidden');
       $('.success-form').removeClass('hidden');
+      window.localStorage.removeItem('string')
     }
   }).fail(function(xhr, data, textStatus){
     if (xhr.status === 401){
@@ -420,7 +421,7 @@ $(function() {
   });
   /*==== End ====*/
 
-  if (window.location.pathname === '/pages/contact' || window.location.pathname === 'pages/malware-removal'){
+  if (window.location.pathname === '/pages/contact' || window.location.pathname === 'pages/malware-removal' || window.location.pathname === 'pages/partners'){
     $.ajax({
       type: "GET", 
       url: 'https://sandboxapi.cwatchstore.com/api/token/Get', 
@@ -801,6 +802,7 @@ $(function() {
               $(form).find('.btn').attr('disabled', true);
               $(form).addClass('hidden');
               $('.success-form').removeClass('hidden');
+              window.localStorage.removeItem('string')
             }
           }).fail(function(xhr, data, textStatus){
             if (xhr.status === 401){
@@ -813,17 +815,39 @@ $(function() {
     });
   }, false);
   
-  //login page reset password actions 
+  /**
+  @
+  @ login page reset password actions
+  @ 
+  **/
   $('.recover').click(function(e){
     e.preventDefault();
     $(this).parents('.page-hero').hide().siblings().show();
   })
 
-  //pricing hover on click
-  $('[aria-controls="clean"]').click(function(){
-    $(this).toggleClass('accent-grey1-background row-box-shadow');
-    $('svg use').attr('xlink:href', function(i,attr){
-      return attr == '#plus' ? '#minus': '#plus';
-    });
+  /**
+  @
+  @ pricing page desktop top table accordion style with out using card class
+  @ 
+  **/
+  $('.row[data-toggle="collapse"]').click(function(e){
+    $this = $(this)
+    if ($this.hasClass('accent-grey1-background row-box-shadow')){
+      $this.toggleClass('accent-grey1-background row-box-shadow');
+      $this.find('svg use').attr('xlink:href', function(i,attr){
+        return attr == '#plus' ? '#minus': '#plus';
+      });
+    } else {
+      $open = $this.parents('.container').find('.accent-grey1-background.row-box-shadow');
+      $open.removeClass('accent-grey1-background row-box-shadow')
+      $($open.attr('href')).collapse('toggle')
+      $open.find('svg use').attr('xlink:href', function(i,attr){
+        return attr == '#plus' ? '#minus': '#plus';
+      });
+      $this.toggleClass('accent-grey1-background row-box-shadow');
+      $this.find('svg use').attr('xlink:href', function(i,attr){
+        return attr == '#plus' ? '#minus': '#plus';
+      });
+    }
   });
 });
