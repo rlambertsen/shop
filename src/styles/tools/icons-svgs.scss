@@ -6,6 +6,9 @@ g {
 .medium-blue{
   fill: $medium-blue;
 }
+.svg-blue{
+  fill: $blue;
+}
 .svg-grey{
   fill: $grey-accent;
 }
@@ -28,6 +31,7 @@ g {
 .light-blue-stroke{fill:none;stroke:#4e7096;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}
 .medium-blue-stroke{fill:none;stroke:#3f4563;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}
 .benefit-bullets{font-family:Lato;font-size:15px;color:#373e5a;}
+.red-stroke{fill:none;stroke:#C41230;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 //fills
 .blue{fill:#373e5a;}
 .grey{fill:#969c9c;}
@@ -91,11 +95,11 @@ g {
   top: -5px;
   right: -12px;
 }
-.green-icon-circle .icon,
+.blue-icon .icon,
 .red-icon-circle .icon {
   width: 50px;
   height: 50px;
-}
+} 
 .icon-download {
   width: 55px;
 }
@@ -193,24 +197,24 @@ g {
     width: 480px;
   }
   .icon-money-cloud{
-    top: -440px;
-    left: -423px;
-    width: 590px;
+    top: -420px;
+    left: -239px;
+    width: 460px;
   }
   .icon-number-screen{
     top: -372px;
     width: 379px;
-    left: 356px;
+    left: 246px;
   }
   .icon-alarm-clock{
     top: -166px;
     width: 150px;
-    right: -300px;
+    right: -225px
   }
   .icon-credit-cards-falling{
     top: -294px;
     width: 162px;
-    right: -27px;
+    right: 43px;
   }
 }
 @keyframes fadeIn{
@@ -330,4 +334,7 @@ g {
   margin-top: 30px;
 }
 /*=== End Malware banner bugs ===*/
+.icon-cracked-laptop{
+  max-width: 784px;
+}
 /*=== End Icons ====*/

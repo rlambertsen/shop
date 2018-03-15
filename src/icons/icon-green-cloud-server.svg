@@ -9,13 +9,13 @@
             <path d="M33.5,5.54q-.84.12-1.67.32A18.29,18.29,0,0,0,24,9.9" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
             <path d="M13.56,19.31a13.35,13.35,0,0,0-6.88,8.2" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
             <circle cx="67.65" cy="47.04" r="30.43" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M62.68,17c8.61,3.88,14.87,15.65,14.87,29.57,0,14.71-7,27-16.35,30.16" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M46.75,69c-6.47-6.47-2.08-21.35,9.8-33.24S83.32,19.51,89.79,26" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M89.28,68.48c-6.42,6.42-21.26,2-33.14-9.9s-16.32-26.72-9.9-33.14" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M97.73,42.17c0,3.46-13.48,6.26-30.1,6.26s-30.1-2.8-30.1-6.26" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M42.22,30.44c3.06-8.06,18.11-9.83,33.63-4s25.62,17.18,22.56,25.25" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M52.07,66.68c-8.9-3.6-14.85-10.1-14.85-17.53" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-            <path d="M97.83,43.62A14.19,14.19,0,0,1,99,49.14c0,11.33-13.82,20.51-30.87,20.51a43,43,0,0,1-16-3" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M62.68,17c8.61,3.88,14.87,15.65,14.87,29.57,0,14.71-7,27-16.35,30.16" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M46.75,69c-6.47-6.47-2.08-21.35,9.8-33.24S83.32,19.51,89.79,26" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M89.28,68.48c-6.42,6.42-21.26,2-33.14-9.9s-16.32-26.72-9.9-33.14" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M97.73,42.17c0,3.46-13.48,6.26-30.1,6.26s-30.1-2.8-30.1-6.26" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M42.22,30.44c3.06-8.06,18.11-9.83,33.63-4s25.62,17.18,22.56,25.25" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M52.07,66.68c-8.9-3.6-14.85-10.1-14.85-17.53" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+            <path d="M97.83,43.62A14.19,14.19,0,0,1,99,49.14c0,11.33-13.82,20.51-30.87,20.51a43,43,0,0,1-16-3" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
             <path d="M33.68,51.8H55.14A3.18,3.18,0,0,1,58.31,55v2.51a3.18,3.18,0,0,1-3.17,3.17H38.24a6.15,6.15,0,0,0-4.33,5.75v5.23" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
             <rect x="9.77" y="34.3" width="48.53" height="8.85" rx="2.87" ry="2.87" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
             <line x1="43.6" y1="38.77" x2="51.16" y2="38.77" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>

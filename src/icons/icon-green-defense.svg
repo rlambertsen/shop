@@ -34,14 +34,14 @@
             <line x1="49.76" y1="7.56" x2="49.76" y2="45.42" style="fill: none;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 1.906606674194336,2.859910011291504"/>
             <circle cx="49.77" cy="28.46" r="3.16" style="fill: #fff;stroke: #373e5a;stroke-linecap: round;stroke-linejoin: round"/>
             <g>
-              <path d="M40.68,35.75a9.93,9.93,0,0,1-.22-14.57" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-              <path d="M36.87,38a14.38,14.38,0,0,1-.23-19.17" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-              <path d="M44.49,33.45a5.74,5.74,0,0,1-.32-10" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M40.68,35.75a9.93,9.93,0,0,1-.22-14.57" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M36.87,38a14.38,14.38,0,0,1-.23-19.17" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M44.49,33.45a5.74,5.74,0,0,1-.32-10" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
             </g>
             <g>
-              <path d="M58.59,35.75a9.93,9.93,0,0,0,.22-14.57" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-              <path d="M62.4,38a14.38,14.38,0,0,0,.23-19.17" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
-              <path d="M54.78,33.45a5.74,5.74,0,0,0,.32-10" style="fill: none;stroke: #1fc469;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M58.59,35.75a9.93,9.93,0,0,0,.22-14.57" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M62.4,38a14.38,14.38,0,0,0,.23-19.17" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
+              <path d="M54.78,33.45a5.74,5.74,0,0,0,.32-10" style="fill: none;stroke: #1976CC;stroke-linecap: round;stroke-linejoin: round"/>
             </g>
             <circle cx="49.77" cy="57.53" r="0.66" style="fill: #373e5a"/>
             <circle cx="25.66" cy="5.43" r="0.66" style="fill: #373e5a"/>

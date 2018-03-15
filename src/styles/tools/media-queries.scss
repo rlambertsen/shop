@@ -84,6 +84,19 @@
     }
   }
 }
+@media screen and (max-width: 1332px){
+  .have-malware{
+    top: -30px;
+    left: -41px;
+    right: -70px;
+  }
+  .DDoS{
+    top: -30px;
+    right: -15px;
+    min-height: 223px;
+    left: -80px;
+  }
+}
 @media screen and (max-width: 1199px){
   .icon-enhance_animated{
     left: 10px;
@@ -98,6 +111,12 @@
   }
   .icon-respond_animated{
     left: -38px;
+  }
+  .security-hide-mobile{
+    display: none;
+  }
+  .security-show-mobile{
+    display: block;
   }
 }
 @media screen and (max-width: 990px){
@@ -171,6 +190,11 @@
     }
     .icon-worm {
       top: 215px;
+    }
+    .icon-number-screen{
+      top: -386px;
+      left: 119px;
+      width: 437px;
     }
   }
   .hacked{
@@ -285,7 +309,6 @@
   .war-floor,
   .tab-security-info,
   .reporting,
-  .security-hide-mobile,
   .protect,
   .icon-bug-trail,
   .footer,

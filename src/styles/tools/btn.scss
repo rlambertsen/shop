@@ -147,6 +147,9 @@
 .btn-success-text-shadow{
   @include long-shadow($type: text, $color: darken(#1FC469, 2.5%), $length: 40, $fadeout: false, $skew: true, $direction: right);
 }
+.btn-blue-text-shadow{
+  @include long-shadow($type: text, $color:  darken($blue, 10%), $length: 40, $fadeout: false, $skew: true, $direction: right);
+}
 .btn-cta-rd{
   border-radius: 2.35rem;
 }

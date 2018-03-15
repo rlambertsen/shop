@@ -4,8 +4,8 @@
     <g id="Artwork">
       <g id="Target">
         <g id="arrow_next" data-name="arrow next">
-          <circle cx="32.99" cy="32.99" r="32.49" style="fill: none;stroke: #1fc469;stroke-miterlimit: 10"/>
-          <polyline id="arrow" points="24.46 33.36 40.09 33.36 39.72 33.74 36.78 36.67 36.78 37.73 41.52 32.99 41.51 32.99 41.52 32.98 36.78 28.25 36.78 29.3 39.72 32.24 40.09 32.62 37.86 32.62 24.46 32.62" style="fill: #1fc469"/>
+          <circle cx="32.99" cy="32.99" r="32.49" style="fill: none;stroke: #1976CC;stroke-miterlimit: 10"/>
+          <polyline id="arrow" points="24.46 33.36 40.09 33.36 39.72 33.74 36.78 36.67 36.78 37.73 41.52 32.99 41.51 32.99 41.52 32.98 36.78 28.25 36.78 29.3 39.72 32.24 40.09 32.62 37.86 32.62 24.46 32.62" style="fill: #1976CC"/>
         </g>
       </g>
     </g>

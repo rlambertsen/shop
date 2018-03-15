@@ -324,7 +324,7 @@ $(function() {
     $this = $(this);
     if ($('[data-tab="2"]').hasClass('btn-danger active') && $this.hasClass('btn-light')){
       $('[data-tab="2"]').removeClass('btn-danger active').addClass('btn-light');
-      $this.removeClass('btn-light').addClass('btn-success active');
+      $this.removeClass('btn-light').addClass('btn-blue active');
       $('[data-tab="one"]').removeClass('hidden').addClass('show');
       $('[data-tab="two"]').addClass('hidden').removeClass('show');
     } else{
@@ -333,8 +333,8 @@ $(function() {
   });
   $('[data-tab="2"]').click(function(){
     $this = $(this);
-    if ($('[data-tab="1"]').hasClass('btn-success active') && $this.hasClass('btn-light')){
-      $('[data-tab="1"]').removeClass('btn-success active').addClass('btn-light');
+    if ($('[data-tab="1"]').hasClass('btn-blue active') && $this.hasClass('btn-light')){
+      $('[data-tab="1"]').removeClass('btn-blue active').addClass('btn-light');
       $this.removeClass('btn-light').addClass('btn-danger active');
       $('[data-tab="two"]').removeClass('hidden').addClass('show');
       $('[data-tab="one"]').addClass('hidden').removeClass('show');
@@ -718,10 +718,11 @@ $(function() {
   /*==== End ====*/
 
   /*==== svg change colors ====*/
+  $(document).find('svg path.svg-green').addClass('svg-blue').removeClass('svg-green');
   $('#protect-tabs a').click(function(){
     $this = $(this);
-    $this.siblings().find('svg path.svg-green').addClass('svg-grey').removeClass('svg-green');
-    $this.find('svg path').addClass('svg-green').removeClass('svg-grey');
+    $this.siblings().find('svg path.svg-blue').addClass('svg-grey').removeClass('svg-blue');
+    $this.find('svg path').addClass('svg-blue').removeClass('svg-grey');
   });
   /*==== End ====*/
 
