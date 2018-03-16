@@ -1358,10 +1358,12 @@ ul.baraja-container li {
     }
   }
   .dollar-sign{
-    vertical-align: top;
+    position: relative;
+    top: -22px;
   }
   .cents{
-    vertical-align: top;
+    position: relative;
+    top: -28px;
   }
   .icon{
     width: 50px;
@@ -1831,11 +1833,11 @@ ul.baraja-container li {
 .sticky-prices{
   .dollar-sign{
     position: relative;
-    top: -24px;
+    top: -13px;
   }
   .cents{
     position: relative;
-    top: -30px;
+    top: -19px;
   }
   background-color: #fff;
 }
