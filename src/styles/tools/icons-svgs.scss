@@ -116,7 +116,7 @@ g {
 /*==== Icons in BTNS ====*/
 .btn{
   .icon{
-    vertical-align: sub;
+    vertical-align: middle;
   }
   .icon-arrow-right-white{
     width: 20px;
@@ -150,7 +150,7 @@ g {
   position: absolute;
   width: 350px;
   top: -151px;
-  left: 103px;
+  left: 143px;
   z-index: -1;
 }
 .top-right-shield{
@@ -212,9 +212,9 @@ g {
     right: -225px
   }
   .icon-credit-cards-falling{
-    top: -294px;
-    width: 162px;
-    right: 43px;
+    top: -264px;
+    width: 112px;
+    right: 63px;
   }
 }
 @keyframes fadeIn{

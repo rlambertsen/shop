@@ -16,6 +16,9 @@
     }
   }
 }
+.btn-light{
+  color: $darkish-blue;
+}
 .plus{
   position: relative;
   width: 30px;
@@ -120,6 +123,7 @@
     background-color: $blue;
     border-color: lighten($blue, 10%);
   }
+  color: $blue;
   border-color: $blue;
 }
 .btn-outline-success{

@@ -118,6 +118,9 @@
   .security-show-mobile{
     display: block;
   }
+  .hacked .hack-img:before {
+    left: 180px;
+  }
 }
 @media screen and (max-width: 990px){
   div[class^='w-']{
@@ -182,7 +185,11 @@
     }
     background: $green;
   }
-  
+  #mobile-security-tabs{
+    .carousel-item{
+      min-height: 1080px;
+    }
+  }
   #security-mobile-slider{
     .icon-bug-3 {
       top: -370px;
@@ -200,7 +207,7 @@
   .hacked{
     .hack-img:before {
     top: -237px;
-    left: 0;
+    left: 80px;
     }
   }
   .site-logo{
@@ -284,7 +291,7 @@
     left: -17px;
     }
   }
-  .green-gradients{
+  .blue-inner-page-bg{
     &:before,
     &:after{
       content: none;
@@ -418,7 +425,7 @@
   }
   .hacked{
     .hack-img:before {
-    left: -80px;
+    left: 10px;
     }
   }
   .mobile-protect{ 
@@ -440,6 +447,16 @@
   }
   .fade-white{
     background: none;
+  }
+  #mobile-protect-slider{
+    .carousel-item{
+      min-height: 940px;
+    }
+  }
+  #mobile-security-tabs{
+    .carousel-item{
+      min-height: 1130px;
+    }
   }
 }
 @media screen and (max-width: 575px){
@@ -471,6 +488,9 @@
   #mobile-security-tabs{
     .HeaderA-Level2{
       font-size: rem(33);
+    }
+    .carousel-item{
+      min-height: 1503px;
     }
   }
   .mobile-protect{ 

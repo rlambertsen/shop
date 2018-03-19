@@ -1222,8 +1222,6 @@ ul.baraja-container li {
     width: 100%;
     top: -43px;
     transform: skewY(-1deg);
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 38%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 0% 38%);
   }
   &:after{
     //content: "";
@@ -1247,7 +1245,7 @@ ul.baraja-container li {
   .container{
     transform: skewY(-0.7deg);
   }
-  background: linear-gradient(180deg, rgba(68, 68, 82, 1) 1.45%, rgba(25, 118, 204, 1) 100%);
+  background: linear-gradient(180deg, rgba(68, 68, 82, 1) 1.45%, rgb(39, 101, 163) 100%);
 
   background-size: cover;
   top: 72px;
@@ -1280,6 +1278,8 @@ ul.baraja-container li {
   &:before{
     top: -22px;
     transform: skewY(-1deg);
+    height: 48px;
+    mix-blend-mode: color;
   }
   &:after{
     content: "";
@@ -1352,10 +1352,13 @@ ul.baraja-container li {
   .green-bg-check{
     li{
       &:before{
-        left: -26px;
+        left: -28px;
+        height: 20px;
+        width: 20px;
       }
       margin: 0;
     }
+    margin-left: 28px; 
   }
   .dollar-sign{
     position: relative;
@@ -1991,6 +1994,10 @@ ul.baraja-container li {
         height: 120px;
       }
     }
+  }
+  .icon-blue-arrow-right{
+    width: 12px;
+    height: 12px;
   }
   .icon-blue-hand-left-right{
     width: 75px;
@@ -2644,12 +2651,6 @@ ul.baraja-container li {
 .row-box-shadow{
   @include prefix(box-shadow, 0px 18px 18px -18px rgba(0,0,0,0.75), spec webkit);
 }
-@import url('tools/icon_enhance_animated.scss');
-@import url('tools/icon_protect_animated.scss');
-@import url('tools/icon_respond_animated.scss');
-@import url('tools/icon_detect_animated.scss');  
-/*==== Site wide media quieries ====*/
-@import url('tools/media-queries.scss'); 
 .faq-select{
   text-align-last: center;
   -webkit-appearance: none;
@@ -2659,6 +2660,13 @@ ul.baraja-container li {
   padding: 11px 0;
   height: auto !important;
 }
+
+@import url('tools/icon_enhance_animated.scss');
+@import url('tools/icon_protect_animated.scss');
+@import url('tools/icon_respond_animated.scss');
+@import url('tools/icon_detect_animated.scss');  
+/*==== Site wide media quieries ====*/
+@import url('tools/media-queries.scss'); 
 .popover{
   .popover-header{
     background-color: #dcdcdc;
