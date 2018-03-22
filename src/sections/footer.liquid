@@ -7,13 +7,13 @@
         </a>
         <p class="darkish-blue-text fs13 fw600 mb-0">cWatch Store</p>
         <ul class="list-unstyled fs13 darkish-blue-text lh-2">
-          <li>(555) 555-5555 Main</li>
+          <li><a href="{{'phone.link' | t}}">{{'phone.number' | t}}</a> Main</li>
           <li>(555) 555-5555 Support</li>
         </ul>
-        <address>
+        <address itemscope itemtype="http://schema.org/PostalAddress">
           <ul class="list-unstyled fs13 darkish-blue-text lh-2">
-            <li>146 2nd Street N. #201</li>
-            <li>St. Petersburg, FL 33704</li>
+            <li itemprop="streetAddress">146 2nd Street N. #201</li>
+            <li><span itemprop="addressLocality">Saint Petersburg</span>, <span itemprop="addressRegion">FL</span> <span itemprop="postalCode">33704</span></li>
           </ul>
         </address>
       </div>
@@ -95,6 +95,16 @@
         <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
           <img src="{{ 'cwatch-logo.svg' | asset_url }}" alt="{{ section.settings.logo.alt | default: shop.name }}" itemprop="logo">
         </a>
+        <ul class="list-unstyled fs13 darkish-blue-text lh-2">
+          <li><a href="{{'phone.link' | t}}">{{'phone.number' | t}}</a> Main</li>
+          <li>(555) 555-5555 Support</li>
+        </ul>
+        <address itemscope itemtype="http://schema.org/PostalAddress">
+          <ul class="list-unstyled fs13 darkish-blue-text lh-2">
+            <li itemprop="streetAddress">146 2nd Street N. #201</li>
+            <li><span itemprop="addressLocality">Saint Petersburg</span>, <span itemprop="addressRegion">FL</span> <span itemprop="postalCode">33704</span></li>
+          </ul>
+        </address>
       </div>
     </div>
     <div class="row m-0">
