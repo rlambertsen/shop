@@ -1358,7 +1358,6 @@ ul.baraja-container li {
       }
       margin: 0;
     }
-    margin-left: 28px; 
   }
   .dollar-sign{
     position: relative;
@@ -2428,8 +2427,11 @@ ul.baraja-container li {
   }
   .content{
     .icon-chat-set-sm,
-    .icon-blue-chat-dots,
-    .icon-blue-mail{
+    .icon-chat-dots,
+    .icon-mail{
+      path{
+        fill: $blue;
+      }
       width: 60px;
     }
     .icon-tool-box{
@@ -2527,6 +2529,11 @@ ul.baraja-container li {
     border-radius: 50%;
     margin: 0 auto;
     border:none;
+  }
+  .logo-size{
+    .icon{
+      width: 200px;
+    }
   }
   .green-circle{
     background: $success-green;
@@ -2664,7 +2671,9 @@ ul.baraja-container li {
   padding: 11px 0;
   height: auto !important;
 }
-
+.dilb{
+  display: inline-block;
+}
 @import url('tools/icon_enhance_animated.scss');
 @import url('tools/icon_protect_animated.scss');
 @import url('tools/icon_respond_animated.scss');

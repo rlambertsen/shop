@@ -123,6 +123,9 @@
   }
 }
 @media screen and (max-width: 990px){
+  .nav-item .dropdown-menu{
+    animation: none;
+  }
   div[class^='w-']{
     width: 100% !important;
   }
@@ -183,7 +186,8 @@
       justify-content: center;
       align-items: center;
     }
-    background: $green;
+    background: -webkit-gradient(linear, 50.04% 8.72%, 49.91% 157.56%, color-stop(0, #1976cc), color-stop(0.02, #1c78ce), color-stop(0.303, #3f97e3), color-stop(0.5688, #59aef2), color-stop(0.8084, #69bbfc), color-stop(0.9988, #6ec0ff));
+    color: #fff;
   }
   #mobile-security-tabs{
     .carousel-item{

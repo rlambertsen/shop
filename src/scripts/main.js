@@ -646,6 +646,62 @@ $(function() {
   });
   /*=== End ====*/
 
+  /*==== Price select box actions ====*/
+  var bizMonth = '<span class="dollar-sign fs26 fw300">$</span>24<span class="fs20">.</span><span class="cents fs20 fw300">90</span>';
+  var bizYear = '<span class="dollar-sign fs26 fw300">$</span>249<span class="fs20">.</span><span class="cents fs20 fw300">00</span>';
+  var proMonth = '<span class="dollar-sign fs26 fw300">$</span>9<span class="fs20">.</span><span class="cents fs20 fw300">90</span>';
+  var proYear = '<span class="dollar-sign fs26 fw300">$</span>99<span class="fs20">.</span><span class="cents fs20 fw300">00</span>';
+  $('select[name="price_select"]').on('change', function(e){
+    $this = $(this);
+    $this.parents('.price-box').find('.btn').attr('data-id', $this.val());
+    if ($this.attr('id') === 'business_price_select'){
+      if ($this.find(':selected').data('type') === 'month'){
+        $this.parents('.price-box').find('.price').html(bizMonth)
+        if ($('.sticky-prices')){
+          $('.sticky-prices').find('.biz-price').html(bizMonth)
+          $('.product-features').find('.biz-price').html(bizMonth)
+          $('.product-features').find('.monthly').removeClass('hidden')
+          $('.product-features').find('.yearly').addClass('hidden')
+          $('.sticky-prices').find('.monthly').removeClass('hidden')
+          $('.sticky-prices').find('.yearly').addClass('hidden')
+        }
+      } else{
+        $this.parents('.price-box').find('.price').html(bizYear)
+        if ($('.sticky-prices')){
+          $('.sticky-prices').find('.biz-price').html(bizYear)
+          $('.product-features').find('.biz-price').html(bizYear)
+          $('.product-features').find('.monthly').addClass('hidden')
+          $('.product-features').find('.yearly').removeClass('hidden')
+          $('.sticky-prices').find('.monthly').addClass('hidden')
+          $('.sticky-prices').find('.yearly').removeClass('hidden')
+        }
+      }
+    } else if ($this.attr('id') === 'pro_price_select'){
+      if ($this.find(':selected').data('type') === 'month'){
+        $this.parents('.price-box').find('.price').html(proMonth)
+        if ($('.sticky-prices')){
+          $('.sticky-prices').find('.pro-price').html(proMonth)
+          $('.product-features').find('.pro-price').html(proMonth)
+          $('.product-features').find('.monthly').removeClass('hidden')
+          $('.product-features').find('.yearly').addClass('hidden')
+          $('.sticky-prices').find('.monthly').removeClass('hidden')
+          $('.sticky-prices').find('.yearly').addClass('hidden')
+        }
+      } else{
+        $this.parents('.price-box').find('.price').html(proYear)
+        if ($('.sticky-prices')){
+          $('.sticky-prices').find('.pro-price').html(proYear)
+          $('.product-features').find('.pro-price').html(proYear)
+          $('.product-features').find('.monthly').addClass('hidden')
+          $('.product-features').find('.yearly').addClass('hidden')
+          $('.sticky-prices').find('.monthly').addClass('hidden')
+          $('.sticky-prices').find('.yearly').removeClass('hidden')
+        }
+      }
+    }
+      
+  })
+  /*==== End ====*/
 
   /*==== Home page laptop computer section show/hide on hover ====*/
   $('.no-hov').mouseenter(function(){
@@ -851,4 +907,10 @@ $(function() {
       });
     }
   });
+
+
+
+  $.get('/admin/orders/373328543786/transactions.json').then(function(response){
+    console.log(response)
+  })
 });
